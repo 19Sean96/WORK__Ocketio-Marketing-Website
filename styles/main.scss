@@ -1,45 +1,8 @@
+@import './variables';
 @import "./fonts";
 
-body {
-    background-color: beige;
-}
-
-p {
-    font-size: 22px;
-    margin-left: 100px;
-}
+@import "./globals";
+@import './text';
 
 
-.j-text {
-    font-family: 'Plus Jakarta Text';
-}
-
-.j-display {
-    font-family: 'Plus Jakarta Display';
-}
-
-.italic {
-    font-style: italic;
-}
-
-._200 {
-    font-weight: 200;
-}
-._300 {
-    font-weight: 300;
-}
-._400 {
-    font-weight: 400;
-}
-._500 {
-    font-weight: 500;
-}
-._600 {
-    font-weight: 600;
-}
-._700 {
-    font-weight: 700;
-}
-._800 {
-    font-weight: 800;
-}
+@import './components/index';
