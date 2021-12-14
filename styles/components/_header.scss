@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 45px;
+    grid-column: 1/13;
+    &--logo {
+        max-width: 250px;
+        min-width: 150px;
+        width: 10vw;
+    }
+
+    &--nav {
+
+        &--list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        &--item {
+            list-style: none;
+            margin: 8px 25px;
+            font-size: 19px;
+            cursor: pointer;
+        }
+    }
+}
