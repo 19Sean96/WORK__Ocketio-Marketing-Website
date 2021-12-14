@@ -5,6 +5,7 @@ import { GTM_ID, pageview } from '../lib/gtm'
 import '../styles/main.scss'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
+
   useEffect(() => {
     router.events.on('routeChangeComplete', pageview)
     return () => {

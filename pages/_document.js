@@ -5,7 +5,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/wirewise-favicon.ico" />
+        </Head>
         <body>
           <noscript>
             <iframe
