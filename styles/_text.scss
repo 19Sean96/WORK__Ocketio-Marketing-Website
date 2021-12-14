@@ -1,3 +1,19 @@
+@mixin heading
+    (
+    $font-size,
+    $font-weight, 
+    $line-height, 
+    $letter-spacing, 
+    ) 
+{
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+
+
 .j-text {
     font-family: 'Plus Jakarta Text';
 }
@@ -46,3 +62,16 @@ span,
 a {
     font-family: 'Plus Jakarta Text';
 }
+
+
+h1, .h1 { @include heading(56px, 500, 127.5%, .035em) }
+
+h2, .h2 { @include heading(50px, 500, 127.5%, .035) }
+
+h3, .h3 { @include heading(48px, 500, 120%, .025em) }
+
+h4, .h4 { @include heading(37px, 500, 145%, .025em) }
+
+h5, .h5 { @include heading(24px, 400, 120%, .035em) }
+
+h6, .h6 { @include heading(20px, 700, 145%, .025) }
