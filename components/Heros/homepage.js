@@ -31,7 +31,7 @@ ${(props) =>
   `translate(calc(-10vw - ${
     50 + (props.mouseCoord[0] * 5)
   }px), 
-  calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 5)}px))`};`
+  calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 2)}px))`};`
 
 const HeroHome = ({ mouseCoord}) => {
 
@@ -100,9 +100,7 @@ const HeroHome = ({ mouseCoord}) => {
           />
           <StyledSub1
             id="heroImageSub1"
-            className={`image-group__image${
-              offset === 0 ? " heroImageSub1" : ""
-            }`}
+            className={`image-group__image`}
             layout="responsive"
             src={heroImageSub1}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
@@ -111,9 +109,7 @@ const HeroHome = ({ mouseCoord}) => {
           />
           <StyledSub2
             id="heroImageSub2"
-            className={`image-group__image${
-              offset === 0 ? " heroImageSub2" : ""
-            } `}
+            className={`image-group__image`}
             layout="responsive"
             src={heroImageSub2}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
@@ -122,9 +118,7 @@ const HeroHome = ({ mouseCoord}) => {
           />
           <StyledSub3
             id="heroImageSub3"
-            className={`image-group__image${
-              offset === 0 ? " heroImageSub3" : ""
-            } `}
+            className={`image-group__image`}
             layout="fixed"
             width={232}
             src={heroImageSub3}

@@ -59,28 +59,26 @@
     #heroImageMain {
         transform: scale(1);
         z-index: 5;
+
     }
 
     #heroImageSub1 {
         z-index: 10;
+        transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
+
     }
 
     #heroImageSub2 {
         z-index: 10;
+        transition: transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
+
     }
 
-    
     #heroImageSub3 {
         box-shadow: none;
-        z-index: 5
-    }
+        z-index: 5;
+        transition: transform 5s cubic-bezier(0.22, 1, 0.36, 1);
 
-    .heroImageSub1 {
-      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .heroImageSub2 {
-      transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
   }
