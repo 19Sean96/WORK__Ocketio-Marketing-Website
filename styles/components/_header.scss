@@ -1,13 +1,4 @@
 
-@keyframes line-in {
-    0% {
-        transform: translate(-300%);
-    }
-    100% {
-        transform: translate(-50%);
-    }
-}
-
 .header {
   width: 100%;
   display: flex;
@@ -19,6 +10,7 @@
     max-width: 250px;
     min-width: 150px;
     width: 10vw;
+    cursor: pointer;
   }
 
   &--nav {
@@ -39,13 +31,43 @@
       transition: 0.1s ease-in-out;
       box-shadow: rgba($off-black, 0) 0 11px 13px -10px;
       overflow: hidden;
-      &:hover {
+
+      a {
+        color: $off-black;
+        text-decoration: none;
+      }
+      &:hover,
+      &:active,
+      &:focus {
         box-shadow: rgba($off-black, 0.25) 0 11px 13px -15px;
 
-        &::after {
+        &::before {
             transform: translate(-50%);
-            animation: line-in .175s ease-in-out 0 1 forward both;
+            transition: .175s all ease-in-out;
         }
+        &::after {
+          transform: translate(-50%);
+          transition: 0s all .175s ease-in-out;
+      }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: calc(100% - 24px);
+        height: 3px;
+        background: linear-gradient(
+          89.39deg,
+          #139bbf -2.31%,
+          #27c1bc 61.2%,
+          #1688f2 116.24%
+        );
+        border-radius: 68px;
+        transform: translate(-300%);
+        transition: 0s all ease-in-out;
+      
       }
 
       &::after {
@@ -62,10 +84,9 @@
           #1688f2 116.24%
         );
         border-radius: 68px;
-        transform: translate(-300%);
-        animation: line-in .175s ease-in-out 0 1 forward both;
-
-        
+        transform: translate(300%);
+        transition: .175s all ease-in-out;
+      
       }
     }
   }
