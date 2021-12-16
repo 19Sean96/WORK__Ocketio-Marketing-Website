@@ -1,9 +1,7 @@
 import Link from "next/link";
-import ContentWrapper from "./ContentWrapper";
 
 const Header = () => {
   return (
-    <ContentWrapper>
       <header className="header">
         <div className="header--logo">
           <Link href="/">
@@ -35,7 +33,6 @@ const Header = () => {
           try beta
         </button>
       </header>
-    </ContentWrapper>
   );
 };
 
