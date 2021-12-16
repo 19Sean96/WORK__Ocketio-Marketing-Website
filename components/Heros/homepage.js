@@ -5,25 +5,33 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import ContentWrapper from "../ContentWrapper";
-import heroImageMain from "../../public/images/landing-hero_main.png";
-import heroImageSub1 from "../../public/images/landing-hero_sub-1.png";
-import heroImageSub2 from "../../public/images/landing-hero_sub-2.png";
-
+import heroImageMain from "../../public/images/Homepage-Landing_Hero-Main.png";
+import heroImageSub1 from "../../public/images/Homepage-Landing_Hero-Sub_1.png";
+import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
+import heroImageSub3 from '../../public/images/Homepage-Landing_Hero-Sub_3.png'
 const StyledSub1 = styled(Image)`
-transform: scale(0.525)
+transform: scale(0.375)
 ${(props) => 
-  `translate(calc(-70vw - ${
+  `translate(calc(-860px - 31vw - ${
     15 + (props.mouseCoord[0] * 15)
   }px), 
-  calc(-12.5vw - ${props.offset / 3 + 15 + (props.mouseCoord[1] * 15)}px))`};`
+  calc(2.5vw - ${props.offset / 3 + 15 + (props.mouseCoord[1] * 15)}px))`};`
 
 const StyledSub2 = styled(Image)`
-transform: scale(0.575)
+transform: scale(0.38)
 ${(props) => 
-  `translate(calc(60vw - ${
+  `translate(calc(400px + 47.5vw - ${
     50 + (props.mouseCoord[0] * 50)
   }px), 
-  calc(-17.5vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};`
+  calc( -300px - 16vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};`
+
+const StyledSub3 = styled(Image)`
+transform: scale(1)
+${(props) => 
+  `translate(calc(-10vw - ${
+    50 + (props.mouseCoord[0] * 5)
+  }px), 
+  calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 5)}px))`};`
 
 const HeroHome = ({ mouseCoord}) => {
 
@@ -108,6 +116,18 @@ const HeroHome = ({ mouseCoord}) => {
             } `}
             layout="responsive"
             src={heroImageSub2}
+            alt="this is the dashboard page. It shows user information, status and company performance statistics."
+            offset={offset}
+            mouseCoord={mouseCoord}
+          />
+          <StyledSub3
+            id="heroImageSub3"
+            className={`image-group__image${
+              offset === 0 ? " heroImageSub3" : ""
+            } `}
+            layout="fixed"
+            width={232}
+            src={heroImageSub3}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
             mouseCoord={mouseCoord}
