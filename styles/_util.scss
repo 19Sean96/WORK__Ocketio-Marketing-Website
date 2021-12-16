@@ -1,0 +1,33 @@
+.w50 {
+    width: 50%;
+}
+.w45 {
+    width: 45%;
+}
+
+.all-columns {
+    grid-column: 1/13;
+}
+
+.f {
+    display: flex;
+    
+    &-align-center {
+        align-items: center;
+    }
+
+    &-align-stretch {
+        align-items: stretch;
+    }
+
+    &-justify-between {
+        justify-content: space-between;
+    }
+
+    &-justify-stretch {
+        justify-content: stretch;
+    }
+    &-no-wrap {
+        flex-wrap: nowrap;
+    }
+}
