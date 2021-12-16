@@ -64,8 +64,9 @@ a {
 }
 
 .p-large {
-    font-size: 24px;
-    line-height: 175%;
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: 500;
 }
 
 .p-small {
@@ -74,7 +75,7 @@ a {
 }
 
 
-h1, .h1 { @include heading(56px, 500, 127.5%, .035em) }
+h1, .h1 { @include heading(60px, 500, 127.5%, .0025em) }
 
 h2, .h2 { @include heading(50px, 500, 127.5%, .035) }
 
