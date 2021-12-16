@@ -63,6 +63,16 @@ a {
     font-family: 'Plus Jakarta Text';
 }
 
+.p-large {
+    font-size: 24px;
+    line-height: 175%;
+}
+
+.p-small {
+    font-size: 20px;
+    line-height: 175%;
+}
+
 
 h1, .h1 { @include heading(56px, 500, 127.5%, .035em) }
 
@@ -72,6 +82,6 @@ h3, .h3 { @include heading(48px, 500, 120%, .025em) }
 
 h4, .h4 { @include heading(37px, 500, 145%, .025em) }
 
-h5, .h5 { @include heading(24px, 400, 120%, .035em) }
+h5, .h5 { @include heading(24px, 700, 120%, .035em) }
 
 h6, .h6 { @include heading(20px, 700, 145%, .025) }
