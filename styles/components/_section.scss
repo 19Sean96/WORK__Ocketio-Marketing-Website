@@ -1,0 +1,73 @@
+.section {
+
+    margin-top: 222px;
+
+    &__with-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    &__with-flex {
+        display: flex;
+    }
+
+    &--heading {
+        grid-column: 4/10;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 90px;
+        h2,p {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+#firstBannerHomepage {
+    gap: 30px;
+
+    .h4 {
+        margin-bottom: 12px;
+    }
+
+    .image_wrapper {
+        position: relative;
+        min-width: 500px;
+        & > span,
+        & > div {
+            grid-area: overlay;
+            max-width: 100%;
+            overflow: visible !important;
+        }
+    }
+
+    #worldMap {
+        position: relative;
+        transform-origin: 0% 50%;
+        transform: scale(1.25);
+    }
+
+
+}
+
+#sectionWhoHomepage {
+    .card {
+        width: 31.5%;
+        padding: 50px;
+        background-color: $white;
+
+        h5 {
+            margin-bottom: 18px;
+        }
+        &__wrapper {
+            gap: 40px;
+        }
+    }
+}
