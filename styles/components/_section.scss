@@ -71,3 +71,37 @@
         }
     }
 }
+
+#sectionWhatHomepage {
+    .section {
+
+        &--body {
+            grid-column: 1/13;
+            grid-row: 2/3;
+
+            &--item {
+                
+                .checklist {
+                    margin-top: 27px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 18px;
+                    &--item {
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+                        .check {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+
+                &.reversed {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
