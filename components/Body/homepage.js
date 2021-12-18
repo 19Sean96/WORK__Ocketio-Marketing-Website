@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { useState, useEffect } from "react";
 import styled from "styled-components";
@@ -14,15 +15,15 @@ const FirstBanner = (props) => {
   return (
     <ContentWrapper>
       <section
-        className="section section__with-flex f-align-center f-justify-between all-columns"
+        className="section section__with-grid all-columns"
         id="firstBannerHomepage"
       >
-        <div className="w50">
-          <h4 className="h4">
+        <div className="banner--message">
+          <h5 className="h5">
             Wirewise is a VPN designed for easy, secure network access. It's
             that simple.
-          </h4>
-          <p className="p-large">
+          </h5>
+          <p className="p-small">
             Two years ago we started searching for a capable WireGuard® VPN that
             could support a growing distributed team. But the available
             solutions were too clunky, too expensive, or just didn't have the
@@ -30,8 +31,8 @@ const FirstBanner = (props) => {
             able to find.
           </p>
         </div>
-        <div className="w45 image_wrapper">
-          <Image src={worldMap} id="worldMap" alt="World Map" />
+        <div className="image_wrapper banner--image">
+          <Image src={worldMap} id="worldMap" alt="World Map" layout="responsive"/>
         </div>
       </section>
     </ContentWrapper>
@@ -169,7 +170,7 @@ const WhatSection = (props) => {
           </p>
         </div>
         <div className="section--body">
-          {whatSectionContent.map((item) => (
+          {whatSectionContent.map((item, i) => (
             <WhatSectionItem
               reversed={item.reversed}
               img={item.image.src}
@@ -178,15 +179,28 @@ const WhatSection = (props) => {
               title={item.title}
               par={item.par}
               list={item.list}
+              key={'what-item-' + i}
             />
           ))}
+          <div className="cta-group">
+            <Link href="/pricing">
+              <button className="cta btn btn--filled j-text _600 capitalize">
+                create a network
+              </button>
+            </Link>
+            <Link href="/features">
+              <button className="cta btn btn--bordered j-text _600 capitalize">
+                learn more
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </ContentWrapper>
   );
 };
 
-function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
+function WhatSectionItem({ reversed, img, alt, imgID, title, par, list, }) {
   return (
     <article
       className={`f f-justify-between f-align-center section--body--item${
@@ -197,8 +211,8 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
         <h4 className="h4 capitalize">{title}</h4>
         <p className="p-small">{par}</p>
         <ul className="checklist">
-          {list.map((item) => (
-            <li className="checklist--item">
+          {list.map((item, i ) => (
+            <li className="checklist--item" key={'item-' + i}>
               <img src="/images/check.svg" alt="check icon" className="check" />
               <h5 className="h5 _400">{item}</h5>
             </li>
