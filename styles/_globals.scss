@@ -27,6 +27,12 @@ body {
     padding-left: 2.5vw; padding-right: 2.5vw;
 }
 
+@media (min-width: 2160px) {
+    .main_wrapper {
+        max-width: 1880px;
+    }
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -71,4 +77,11 @@ body {
         backdrop-filter: blur(3px);
     }
 }
+
+
+.cta-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+  }
 

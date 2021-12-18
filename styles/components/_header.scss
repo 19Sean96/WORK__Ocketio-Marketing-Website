@@ -7,8 +7,8 @@
   justify-content: space-between;
   max-width: 1800px;
   &--logo {
-    max-width: 175px;
-    min-width: 100px;
+    max-width: 225px;
+    min-width: 175px;
     width: 10vw;
     cursor: pointer;
   }
@@ -87,6 +87,33 @@
         transform: translate(300%);
         transition: .175s all ease-in-out;
       
+      }
+    }
+
+    &__mobile {
+      position: fixed;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
+      background-color: white;
+      width: 100vw;
+      height: 100vh;
+      transform: translate(-50%, -50%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+
+          a {
+            text-align: center;
+          }
+        }
       }
     }
   }
