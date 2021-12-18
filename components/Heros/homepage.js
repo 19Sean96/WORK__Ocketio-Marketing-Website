@@ -33,23 +33,8 @@ ${(props) =>
   }px), 
   calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 2)}px))`};`
 
-const HeroHome = ({ mouseCoord}) => {
+const HeroHome = ({ mouseCoord, offset}) => {
 
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    function handleScroll() {
-      setOffset(window.pageYOffset);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    // window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      // window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
 
   useEffect(() => {
     console.log(mouseCoord)
