@@ -12,7 +12,7 @@
     grid-row: 1/2;
 
     position: relative;
-    z-index: 10;
+    z-index: 30;
 
     h1 {
       text-align: center;
@@ -32,11 +32,25 @@
       .p-large {
         width: 95%;
       }
+
+      h1 {
+        margin-bottom: 18px;
+      }
     }
 
     @media (max-width: 1020px) {
       grid-column: 2/12;
-
+    }
+    @media (max-width: 820px) {
+      h1 {
+        margin-bottom: 11px;
+      }
+    }
+    @media (max-width: 575px) {
+      h1 {
+        margin-top: -65px;
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -47,8 +61,9 @@
     grid-row: 2/3;
     min-height: 33vw;
     margin-top: 80px;
+    margin-bottom: -150px;
     position: relative;
-    padding: 0 2.25vw;
+    padding: 0 7.5vmax;
     display: grid;
     grid-template-areas: "overlay";
 
@@ -68,9 +83,9 @@
     }
 
     #heroImageMain {
-        transform: scale(1);
+      transform: scale(1);
         z-index: 5;
-        box-shadow: 0 -30px 84px -11px rgba($black, 0.166);
+        box-shadow: 0 -30px 84px -11px rgba($black, 0.066);
 
     }
 
@@ -93,9 +108,79 @@
 
     }
 
+    @media (max-width: 1200px) {
+      padding: 0 2.5vmax;
+    }
+
+    @media (max-width: 850px) {
+      #heroImageMain {
+        transform: scale(1.15) translateY(35px);
+      }
+    }
+
+    @media (max-width: 575px) {
+      #heroImageMain {
+        transform: scale(1.45) translate(35px, 15px);
+      }
+    }
   }
 
   // #heroImageSub1,
   // #heroImageSub2 {
   // }
+
+  @media (max-width: 575px) {
+    margin-top: 95px;
+  }
+}
+
+
+#features-hero {
+  grid-column: 1/13;
+  align-content: space-between;
+  &-message {
+    grid-column: 1/6;
+    align-self: stretch;
+
+    h2 {
+      margin-bottom: 12px;
+    }
+
+    .cta-group {
+     margin-top: 150px; 
+    }
+  }
+
+  .image-group {
+    grid-column: 7/13;
+    align-self: flex-start;
+    position: relative;
+    display: grid;
+    grid-template-areas: 'overlay';
+
+    & > span,
+    & > div {
+      grid-area: overlay;
+      max-width: 100%;
+      overflow: visible !important;
+    }
+
+    &__image {
+      min-height: 0 !important;
+      height: auto !important;
+      margin-top: 0 !important;
+    }
+
+
+    #featuresHeroImageMain {
+      box-shadow: 0 -10px 184px -11px rgba($off-black, .15);
+    }
+
+    #featuresHeroImageAside {
+      right: 0;
+      top: 50%;
+      transform: translateX(50%) scale(.5);
+      box-shadow: 0 -4px 53px -8px rgba($off-black, .18);
+    }
+  }
 }
