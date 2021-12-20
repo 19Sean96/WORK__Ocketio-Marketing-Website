@@ -46,15 +46,15 @@ a {
 
 h1, .h1 { @include heading(60px, 500, 127.5%, .0025em) }
 
-h2, .h2 { @include heading(50px, 500, 127.5%, .035) }
+h2, .h2 { @include heading(50px, 500, 127.5%, .035em) }
 
-h3, .h3 { @include heading(48px, 500, 120%, .025em) }
+h3, .h3 { @include heading(44px, 500, 120%, .025em) }
 
 h4, .h4 { @include heading(37px, 500, 145%, .025em) }
 
 h5, .h5 { @include heading(28px, 500, 120%, .035em) }
 
-h6, .h6 { @include heading(20px, 700, 145%, .025) }
+h6, .h6 { @include heading(23px, 700, 145%, .025) }
 
 
 .j-text {
@@ -93,8 +93,11 @@ h6, .h6 { @include heading(20px, 700, 145%, .025) }
 
 @media (max-width: 1920px) {
     h1, .h1 { @include heading(50px, 500, 127.5%, .0025em) }
-    h5, .h5 { @include heading(24px, 400, 120%, .035em) }
 
+    h3, .h3 { @include heading(40px, 500, 127.5%, .035em)}
+    h4, .h4 { @include heading(32px, 500, 145%, .025em) }
+    h5, .h5 { @include heading(24px, 400, 120%, .035em) }
+    h6, .h6 { @include heading(20px, 700, 145%, .025) }
 
     .p-large {
         font-size: 22px;
@@ -110,4 +113,19 @@ h6, .h6 { @include heading(20px, 700, 145%, .025) }
 
 
     .p-large { font-size: 21px; }
+}
+
+@media (max-width: 820px) {
+    h1, .h1 { @include heading(36px, 500, 127.5%, .0025em) }
+    h5, .h5 { @include heading(22px, 400, 120%, .035em) }
+
+
+    .p-large { font-size: 18px; }
+}
+
+@media (max-width: 530px) {
+    h1, .h1 { @include heading(32px, 500, 127.5%, .0025em) }
+
+
+    .p-large { font-size: 17px; }
 }
