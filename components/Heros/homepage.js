@@ -15,7 +15,33 @@ ${(props) =>
   `translate(calc(-860px - 31vw - ${
     15 + (props.mouseCoord[0] * 15)
   }px), 
-  calc(2.5vw - ${props.offset / 3 + 15 + (props.mouseCoord[1] * 15)}px))`};`
+  calc(2.5vw - ${props.offset / 7 + 15 + (props.mouseCoord[1] * 15)}px))`};
+  
+  @media (max-width: 1200px) {
+    transform: scale(0.45)
+    ${(props) => 
+      `translate(calc(-250px - 71vw - ${
+        15 + (props.mouseCoord[0] * 15)
+      }px), 
+      calc(2.5vw - ${props.offset / 7 + 15 + (props.mouseCoord[1] * 15)}px))`};
+  }
+  @media (max-width: 850px) {
+    transform: scale(0.485)
+    ${(props) => 
+      `translate(calc(-71vw - ${
+        15 + (props.mouseCoord[0] * 15)
+      }px), 
+      calc(8.5vw - ${props.offset / 7 + 15 + (props.mouseCoord[1] * 15)}px))`};
+  }
+  @media (max-width: 575px) {
+    transform: scale(0.75)
+    ${(props) => 
+      `translate(calc(-41vw - ${
+        15 + (props.mouseCoord[0] * 15)
+      }px), 
+      calc(25vw - ${props.offset / 7 + 15 + (props.mouseCoord[1] * 15)}px))`};
+  }
+  `
 
 const StyledSub2 = styled(Image)`
 transform: scale(0.38)
@@ -23,7 +49,35 @@ ${(props) =>
   `translate(calc(400px + 47.5vw - ${
     50 + (props.mouseCoord[0] * 50)
   }px), 
-  calc( -300px - 16vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};`
+  calc( -300px - 16vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};
+  
+  @media (max-width: 1200px) {
+
+    transform: scale(0.46)
+    ${(props) => 
+      `translate(calc(100px + 72.5vw - ${
+        50 + (props.mouseCoord[0] * 50)
+      }px), 
+      calc( -50px - 28vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};
+  }
+
+  @media (max-width: 850px) {
+    transform: scale(0.54)
+    ${(props) => 
+      `translate(calc(68.5vw - ${
+        50 + (props.mouseCoord[0] * 50)
+      }px), 
+      calc( -18vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};
+  }
+  @media (max-width: 575px) {
+    transform: scale(0.84)
+    ${(props) => 
+      `translate(calc(58.5vw - ${
+        50 + (props.mouseCoord[0] * 50)
+      }px), 
+      calc( -12vw - ${props.offset / 3 + 50 + (props.mouseCoord[1] * 50)}px))`};
+  }
+  `
 
 const StyledSub3 = styled(Image)`
 transform: scale(1)
@@ -31,7 +85,27 @@ ${(props) =>
   `translate(calc(-10vw - ${
     50 + (props.mouseCoord[0] * 5)
   }px), 
-  calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 2)}px))`};`
+  calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 2)}px))`};
+  
+  @media (max-width: 1200px) {
+
+    transform: scale(.9)
+    ${(props) => 
+      `translate(calc(-10vw - ${
+        50 + (props.mouseCoord[0] * 5)
+      }px), 
+      calc(2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 2)}px))`};
+  }
+  @media (max-width: 850px) {
+
+    transform: scale(.82)
+    ${(props) => 
+      `translate(calc(-15vw - ${
+        50 + (props.mouseCoord[0] * 5)
+      }px), 
+      calc(-2.5vw - ${props.offset / -7 + 5 + (props.mouseCoord[1] * 2)}px))`};
+  }
+  `
 
 const HeroHome = ({ mouseCoord, offset}) => {
 
