@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import Menu from "./SVG/menu";
-
+import Logo from './SVG/logo'
 const Header = ({ isMobile, scrollOffset }) => {
   const [menuOpen, toggleMenuOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const Header = ({ isMobile, scrollOffset }) => {
         <header className="header">
           <div className="header--logo">
             <Link href="/">
-              <img src="/wirewise-logo.svg" alt="Logo for WireWise" />
+              <Logo menuOpen={menuOpen}/>
             </Link>
           </div>
           <Nav isMobile={isMobile} menuOpen={menuOpen} />
