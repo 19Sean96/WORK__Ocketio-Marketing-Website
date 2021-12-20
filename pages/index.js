@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <main className="main" id="main" onMouseMove={(e) => handleMouseMove(e)}>
-      <Header isMobile={isMobile}/>
+      <Header isMobile={isMobile} scrollOffset={scrollOffset}/>
       <Hero mouseCoord={mouseCoord} offset={scrollOffset} />
       <FirstBanner />
       <WhoSection />
