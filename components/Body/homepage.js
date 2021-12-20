@@ -18,19 +18,17 @@ const FirstBanner = (props) => {
         className="section section__with-grid all-columns"
         id="firstBannerHomepage"
       >
-        <div className="banner--message">
-          <h5 className="h5">
+          <h5 className="h5 banner--title">
             Wirewise is a VPN designed for easy, secure network access. It's
             that simple.
           </h5>
-          <p className="p-small">
+          <p className="p-small banner--paragraph">
             Two years ago we started searching for a capable WireGuard® VPN that
             could support a growing distributed team. But the available
             solutions were too clunky, too expensive, or just didn't have the
             right features. So now we're developing the VPN we wish we'd been
             able to find.
           </p>
-        </div>
         <div className="image_wrapper banner--image">
           <Image src={worldMap} id="worldMap" alt="World Map" layout="responsive"/>
         </div>
@@ -47,7 +45,7 @@ const WhoSection = (props) => {
         id="sectionWhoHomepage"
       >
         <div className="section--heading">
-          <h2 className="h2">Who is it for?</h2>
+          <h3 className="h3">Who is it for?</h3>
           <p className="p-small">
             No solution is perfect for everyone, but Wirewise adds useful
             features to a cutting-edge VPN protocol in a way that we think makes
@@ -162,7 +160,7 @@ const WhatSection = (props) => {
         id="sectionWhatHomepage"
       >
         <div className="section--heading">
-          <h2 className="h2">What makes it great?</h2>
+          <h3 className="h3">What makes it great?</h3>
           <p className="p-small">
             No solution is perfect for everyone, but Wirewise adds useful
             features to a cutting-edge VPN protocol in a way that we think makes
@@ -214,7 +212,7 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list, }) {
           {list.map((item, i ) => (
             <li className="checklist--item" key={'item-' + i}>
               <img src="/images/check.svg" alt="check icon" className="check" />
-              <h5 className="h5 _400">{item}</h5>
+              <h6 className="h6 _400">{item}</h6>
             </li>
           ))}
         </ul>
