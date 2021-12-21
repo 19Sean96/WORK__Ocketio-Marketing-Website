@@ -14,7 +14,9 @@ const Header = ({ isMobile, scrollOffset }) => {
         <header className="header">
           <div className="header--logo">
             <Link href="/">
+              <a>
               <Logo menuOpen={menuOpen}/>
+              </a>
             </Link>
           </div>
           <Nav isMobile={isMobile} menuOpen={menuOpen} />
