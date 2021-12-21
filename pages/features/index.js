@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Header from "../../components/Header";
 import { Hero } from "../../components/Heros/features";
+import { ArchitectureSection, FineTunedControlSection, OptimizedExperienceSection, SetupSection } from "../../components/Body/features"; 
 
 export default function Features() {
   // Holds the X and Y value of the mouse cursor position
@@ -64,6 +65,10 @@ export default function Features() {
     <main className="main" id="main">
       <Header isMobile={isMobile} scrollOffset={scrollOffset}/>
       <Hero mouseCoord={mouseCoord} offset={scrollOffset}/>
+      <ArchitectureSection />
+      <FineTunedControlSection />
+      <OptimizedExperienceSection />
+      <SetupSection />
     </main>
   );
 }
