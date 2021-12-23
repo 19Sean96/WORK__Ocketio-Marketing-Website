@@ -1,17 +1,19 @@
-import { useEffect } from 'react'
-import Script from 'next/script'
-import { useRouter } from 'next/router'
-import { GTM_ID, pageview } from '../lib/gtm'
-import '../styles/main.scss'
+import { useEffect } from "react";
+import Script from "next/script";
+import { useRouter } from "next/router";
+import { GTM_ID, pageview } from "../lib/gtm";
+import { AppWrapper } from "../Context";
+import "../styles/main.scss";
+
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', pageview)
+    router.events.on("routeChangeComplete", pageview);
     return () => {
-      router.events.off('routeChangeComplete', pageview)
-    }
-  }, [router.events])
+      router.events.off("routeChangeComplete", pageview);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -28,9 +30,11 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <Component {...pageProps} />
+      <AppWrapper>
+        <Component {...pageProps} />
+      </AppWrapper>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
