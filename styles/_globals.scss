@@ -26,6 +26,14 @@ body {
 
 
 .main_wrapper {
+    max-width: 1372px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-left: 2.5vw; padding-right: 2.5vw;
+}
+
+.hero_wrapper {
     max-width: 1572px;
     margin: 0 auto;
     display: grid;
@@ -35,6 +43,9 @@ body {
 
 @media (min-width: 2160px) {
     .main_wrapper {
+        max-width: 1680px;
+    }
+    .hero_wrapper {
         max-width: 1880px;
     }
 }

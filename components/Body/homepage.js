@@ -11,6 +11,10 @@ import GraphicStreamlined from "../../public/images/WW_Website_Homepage-Graphics
 import GraphicEfficient from "../../public/images/WW_Website_Homepage-Graphics-Efficient.png";
 import GraphicCostEffective from "../../public/images/WW_Website_Homepage-Graphics_Cost-effective.png";
 
+import Card1 from "../../public/images/step-1.png";
+import Card2 from "../../public/images/step-2.png";
+import Card3 from "../../public/images/step-3.png";
+
 const FirstBanner = (props) => {
   return (
     <ContentWrapper>
@@ -18,19 +22,24 @@ const FirstBanner = (props) => {
         className="section section__with-grid all-columns"
         id="firstBannerHomepage"
       >
-          <h5 className="h5 banner--title">
-            Wirewise is a VPN designed for easy, secure network access. It's
-            that simple.
-          </h5>
-          <p className="p-small banner--paragraph">
-            Two years ago we started searching for a capable WireGuard® VPN that
-            could support a growing distributed team. But the available
-            solutions were too clunky, too expensive, or just didn't have the
-            right features. So now we're developing the VPN we wish we'd been
-            able to find.
-          </p>
+        <h5 className="h5 banner--title">
+          Wirewise is a VPN designed for easy, secure network access. It's that
+          simple.
+        </h5>
+        <p className="p-small banner--paragraph">
+          Two years ago we started searching for a capable WireGuard® VPN that
+          could support a growing distributed team. But the available solutions
+          were too clunky, too expensive, or just didn't have the right
+          features. So now we're developing the VPN we wish we'd been able to
+          find.
+        </p>
         <div className="image_wrapper banner--image">
-          <Image src={worldMap} id="worldMap" alt="World Map" layout="responsive"/>
+          <Image
+            src={worldMap}
+            id="worldMap"
+            alt="World Map"
+            layout="responsive"
+          />
         </div>
       </section>
     </ContentWrapper>
@@ -55,25 +64,58 @@ const WhoSection = (props) => {
 
         <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
           <article className="card">
-            <h5 className="h5 capitalize">individual users</h5>
-            <p className="p-small">
-              Share access to personal projects, test development work, or
-              improve your gaming experience.
-            </p>
+            <div className="card--text">
+              <h5 className="h5 capitalize">individual users</h5>
+              <p className="p-small">
+                Share access to personal projects, test development work, or
+                improve your gaming experience.
+              </p>
+            </div>
+            <div className="card__image__wrapper">
+              <Image
+                src={Card1}
+                id="cardOneImg"
+                className="card__image"
+                alt="image 1"
+                layout="responsive"
+              />
+            </div>
           </article>
           <article className="card">
-            <h5 className="h5 capitalize">small business teams</h5>
-            <p className="p-small">
-              Grant a handful of remote employees access to internal resources
-              without unnecessary complexity.
-            </p>
+            <div className="card--text">
+              <h5 className="h5 capitalize">small business teams</h5>
+              <p className="p-small">
+                Grant a handful of remote employees access to internal resources
+                without unnecessary complexity.
+              </p>
+            </div>
+            <div className="card__image__wrapper">
+              <Image
+                src={Card2}
+                id="cardTwoImg"
+                className="card__image"
+                alt="image 2"
+                layout="responsive"
+              />
+            </div>
           </article>
           <article className="card">
-            <h5 className="h5 capitalize">mid-sized companies</h5>
-            <p className="p-small">
-              Manage network controls in a way that scales alongside a growing
-              business effort.
-            </p>
+            <div className="card--text">
+              <h5 className="h5 capitalize">mid-sized companies</h5>
+              <p className="p-small">
+                Manage network controls in a way that scales alongside a growing
+                business effort.
+              </p>
+            </div>
+            <div className="card__image__wrapper">
+              <Image
+                src={Card3}
+                id="cardThreeImg"
+                className="card__image"
+                alt="image 3"
+                layout="responsive"
+              />
+            </div>
           </article>
         </article>
       </section>
@@ -177,7 +219,7 @@ const WhatSection = (props) => {
               title={item.title}
               par={item.par}
               list={item.list}
-              key={'what-item-' + i}
+              key={"what-item-" + i}
             />
           ))}
           <div className="cta-group">
@@ -198,31 +240,28 @@ const WhatSection = (props) => {
   );
 };
 
-function WhatSectionItem({ reversed, img, alt, imgID, title, par, list, }) {
+function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
   return (
-    <article
-      className={`f f-justify-between f-align-center section--body--item${
-        reversed ? " reversed" : ""
-      }`}
-    >
-      <div className="w45">
+    <article className={`section--body--item${reversed ? " reversed" : ""}`}>
+      <div className="text-block">
         <h4 className="h4 capitalize">{title}</h4>
         <p className="p-small">{par}</p>
-        <ul className="checklist">
-          {list.map((item, i ) => (
-            <li className="checklist--item" key={'item-' + i}>
-              <img src="/images/check.svg" alt="check icon" className="check" />
-              <h6 className="h6 _400">{item}</h6>
-            </li>
-          ))}
-        </ul>
       </div>
-      <div className="w45">
+      <ul className="checklist">
+        {list.map((item, i) => (
+          <li className="checklist--item" key={"item-" + i}>
+            <img src="/images/check.svg" alt="check icon" className="check" />
+            <h6 className="h6 _400">{item}</h6>
+          </li>
+        ))}
+      </ul>
+      <div className="image__wrapper">
         <Image
           src={img}
           alt={alt}
           id={imgID}
-          className="section--body--item__image"
+          className="section--body--item__image image"
+          // layout="responsive"
         />
       </div>
     </article>

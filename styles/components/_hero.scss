@@ -110,6 +110,7 @@
 
     @media (max-width: 1200px) {
       padding: 0 2.5vmax;
+      margin-bottom: -185px;
     }
 
     @media (max-width: 850px) {
@@ -122,6 +123,10 @@
       #heroImageMain {
         transform: scale(1.45) translate(35px, 15px);
       }
+    }
+
+    @media (max-width: 500px) {
+      margin-bottom: -225px;
     }
   }
 
