@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
 import Header from "../../components/Header";
+import { ContactPortal, MoreContact, ContactFAQ } from "../../components/Body/contact";
+
 import { useAppContext } from "../../Context";
 
 export default function Contact() {
@@ -8,7 +10,10 @@ export default function Contact() {
 
   return (
     <main className="main" id="main">
-      <Header isMobile={isMobile}/>
+      <Header isMobile={isMobile} scrollOffset={scrollOffset}/>
+      <ContactPortal />
+      <MoreContact />
+      <ContactFAQ />
     </main>
   );
 }
