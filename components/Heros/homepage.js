@@ -126,6 +126,7 @@ const HeroHome = ({ mouseCoord, offset }) => {
             layout="responsive"
             src={heroImageMain}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
+            priority
           />
           <StyledSub1
             id="heroImageSub1"
@@ -135,6 +136,7 @@ const HeroHome = ({ mouseCoord, offset }) => {
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
             mouseCoord={mouseCoord}
+            priority
           />
           <StyledSub2
             id="heroImageSub2"
@@ -144,6 +146,7 @@ const HeroHome = ({ mouseCoord, offset }) => {
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
             mouseCoord={mouseCoord}
+            priority
           />
           <StyledSub3
             id="heroImageSub3"
@@ -154,6 +157,7 @@ const HeroHome = ({ mouseCoord, offset }) => {
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
             mouseCoord={mouseCoord}
+            priority
           />
         </div>
       </section>
