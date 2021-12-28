@@ -23,7 +23,9 @@ body {
     width: 100vw;
     max-width: 100vw;
 }
-
+input:-webkit-autofill {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}             
 
 .main_wrapper {
     max-width: 1372px;

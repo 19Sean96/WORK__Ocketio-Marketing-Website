@@ -20,14 +20,21 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
+h6, .h6,
+label {
     font-family: 'Plus Jakarta Display';
 }
 
 p, 
 span,
-a {
+a,
+input,
+textarea {
     font-family: 'Plus Jakarta Text';
+}
+
+input, textarea, label {
+    font-size: 16px;
 }
 
 .p-large {
