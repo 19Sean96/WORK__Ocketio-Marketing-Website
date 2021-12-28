@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Header from "../../components/Header";
+
 import { useAppContext } from "../../Context";
 
 export default function Pricing() {
@@ -9,6 +10,7 @@ export default function Pricing() {
   return (
     <main className="main" id="main">
       <Header isMobile={isMobile}/>
+
     </main>
   );
 }
