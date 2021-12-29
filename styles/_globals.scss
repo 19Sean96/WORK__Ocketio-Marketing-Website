@@ -28,7 +28,7 @@ input:-webkit-autofill {
 }             
 
 .main_wrapper {
-    max-width: 1372px;
+    max-width: calc(1222px + 5vw);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
