@@ -143,8 +143,9 @@
 #features-hero {
   grid-column: 1/13;
   align-content: space-between;
+  margin-top: 150px;
   &-message {
-    grid-column: 1/6;
+    grid-column: 1/7;
     align-self: stretch;
 
     h2 {
@@ -152,12 +153,12 @@
     }
 
     .cta-group {
-     margin-top: 150px; 
+     margin-top: 35px; 
     }
   }
 
   .image-group {
-    grid-column: 7/13;
+    grid-column: 8/13;
     align-self: flex-start;
     position: relative;
     display: grid;
