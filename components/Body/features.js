@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import ContentWrapper from "../ContentWrapper";
-
+import HoverInfoBox from "../util/HoverInfoBox";
 import howItWorksDiagram from "../../public/images/how-it-works-diagram.png";
 import optimizeExperienceImage from "../../public/images/features-body_optimize-experience.png";
 import Step1 from "../../public/images/step-1.png";
@@ -19,8 +19,47 @@ import linuxLogo from "../../public/images/logos/linux-logo.svg";
 import androidLogo from "../../public/images/logos/android-logo.svg";
 
 const ArchitectureSection = (props) => {
+  const [hoverInfoBox, toggleHoverInfoBox] = useState("");
+  const [specifiedInfo, specifyInfo] = useState({});
+
+  const OSTips = [
+    {
+      title: "managed devices",
+      slug: "managedDevices",
+      message:
+        "a managed device is a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
+    },
+    {
+      title: "supervised devices",
+      slug: "supervisedDevices",
+      message:
+        "supervised devices support Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
+    },
+    {
+      title: "gateway management",
+      slug: "gatewayManagement",
+      message:
+        "THe purpose of gateway management is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
+    },
+  ];
+
   return (
     <ContentWrapper>
+      <HoverInfoBox
+        title={
+          hoverInfoBox
+            ? OSTips[OSTips.findIndex((tip) => tip.slug === hoverInfoBox)].title
+            : ""
+        }
+        message={
+          hoverInfoBox
+            ? OSTips[OSTips.findIndex((tip) => tip.slug === hoverInfoBox)]
+                .message
+            : ""
+        }
+        visible={hoverInfoBox}
+      />
+
       <section
         className="section section__with-grid all-columns"
         id="architectureSection"
@@ -76,32 +115,39 @@ const ArchitectureSection = (props) => {
             enable or disable access to your network for these clients.
           </p>
         </div>
-        <article
-          id="supportedOS"
-          className="banner all-columns f f-justify-between"
-        >
-          <div className="item item-1">
-            <h6 className="h6 capitalize">managed devices</h6>
+        <article id="supportedOS" className="banner f f-justify-between">
+          <div
+            className="item item-1"
+            onMouseEnter={(e) => toggleHoverInfoBox("managedDevices")}
+            onMouseLeave={(e) => toggleHoverInfoBox("")}
+          >
+            <h6 className="h6 capitalize">
+              managed <span className="last-word">devices</span>
+            </h6>
             <div className="item--img__wrapper">
               <Image
                 src={windowsLogo}
                 id="windowsLogo"
                 className="item--img"
-                alt="Windows Logo
-                    "
+                alt="Windows Logo"
               />
             </div>
           </div>
           <span className="divider"></span>
-          <div className="item item-2">
-            <h6 className="h6 capitalize">supervised devices</h6>
+          <div
+            className="item item-2"
+            onMouseEnter={(e) => toggleHoverInfoBox("supervisedDevices")}
+            onMouseLeave={(e) => toggleHoverInfoBox("")}
+          >
+            <h6 className="h6 capitalize">
+              supervised <span className="last-word">devices</span>
+            </h6>
             <div className="item--img__wrapper">
               <Image
                 src={appleLogos}
                 id="windowsLogo"
                 className="item--img"
-                alt="Windows Logo
-                    "
+                alt="Windows Logo"
               />
               <Image
                 src={linuxLogo}
@@ -114,21 +160,25 @@ const ArchitectureSection = (props) => {
                 src={androidLogo}
                 id="windowsLogo"
                 className="item--img"
-                alt="Windows Logo
-                    "
+                alt="Windows Logo"
               />
             </div>
           </div>
           <span className="divider"></span>
-          <div className="item item-3">
-            <h6 className="h6 capitalize">gateway management</h6>
+          <div
+            className="item item-3"
+            onMouseEnter={(e) => toggleHoverInfoBox("gatewayManagement")}
+            onMouseLeave={(e) => toggleHoverInfoBox("")}
+          >
+            <h6 className="h6 capitalize">
+              gateway <span className="last-word">management</span>
+            </h6>
             <div className="item--img__wrapper">
               <Image
                 src={androidLogo}
                 id="windowsLogo"
                 className="item--img"
-                alt="Windows Logo
-                    "
+                alt="Windows Logo"
               />
             </div>
           </div>
@@ -265,13 +315,12 @@ const StyledSlideshowItem = styled(Image)`
   opacity: ${(props) => (props.active ? "1" : "0")};
   transform: translateY(
     ${(props) => (props.active ? "0%" : props.previous ? "100%" : "-100%")}
-
   );
 `;
 
 const StyledTab = styled.li`
-    opacity: ${props => props.active ? 1 : .165};
-`
+  opacity: ${(props) => (props.active ? 1 : 0.165)};
+`;
 
 const SetupSection = (props) => {
   const [previousTab, setPreviousTab] = useState(null);
