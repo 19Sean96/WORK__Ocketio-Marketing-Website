@@ -7,14 +7,14 @@ import { useAppContext } from "../../Context";
 
 export default function Features() {
 
-  const { mouseCoord, scrollOffset, isMobile, handleMouseMove } = useAppContext()
+  const { mouseCoord, mousePositionPixels, scrollOffset, isMobile, handleMouseMove } = useAppContext()
 
 
   return (
-    <main className="main" id="main">
+    <main className="main" id="main" onMouseMove={e => handleMouseMove(e)}>
       <Header isMobile={isMobile} scrollOffset={scrollOffset}/>
       <Hero mouseCoord={mouseCoord} offset={scrollOffset}/>
-      <ArchitectureSection />
+      <ArchitectureSection mouseCoord={mouseCoord}/>
       <FineTunedControlSection />
       <OptimizedExperienceSection />
       <SetupSection />
