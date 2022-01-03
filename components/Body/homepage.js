@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 
+import useObserver from "../../Observer";
+
 import ContentWrapper from "../ContentWrapper";
 import worldMap from "../../public/images/world-map.png";
 import GraphicSecure from "../../public/images/WW_Website_Homepage-Graphics-Secure.png";
@@ -47,11 +49,23 @@ const FirstBanner = (props) => {
 };
 
 const WhoSection = (props) => {
+
+  const [ containerRef, isVisible ] = useObserver({
+    root: null,
+    rootMargin: '0px',
+    threshold: .3
+  })
+
+
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="sectionWhoHomepage"
+        ref={containerRef}
+        style={{
+          opacity: isVisible ? 1 : 0
+        }}
       >
         <div className="section--heading">
           <h3 className="h3">Who is it for?</h3>
@@ -195,13 +209,23 @@ const WhatSection = (props) => {
     },
   ];
 
+  const [ containerRef, isVisible ] = useObserver({
+    root: null,
+    rootMargin: '0px',
+    threshold: .15
+  })
+
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="sectionWhatHomepage"
+        ref={containerRef}
+        style={{
+          opacity: isVisible ? 1 : 0
+        }}
       >
-        <div className="section--heading">
+        <div className="section--heading" >
           <h3 className="h3">What makes it great?</h3>
           <p className="p-small">
             No solution is perfect for everyone, but Wirewise adds useful
