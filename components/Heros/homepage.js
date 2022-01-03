@@ -87,9 +87,7 @@ const StyledSub3 = styled(Image)`
 `;
 
 const HeroHome = ({ mouseCoord, offset }) => {
-  useEffect(() => {
-    console.log(mouseCoord);
-  }, [mouseCoord]);
+
 
   return (
     <div className="hero_wrapper">

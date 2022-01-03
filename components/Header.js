@@ -38,7 +38,7 @@ const Header = ({ isMobile, scrollOffset }) => {
 };
 
 function Nav({ isMobile, menuOpen }) {
-  console.log((isMobile && menuOpen) || !isMobile);
+  // console.log((isMobile && menuOpen) || !isMobile);
   const [navStyle, updateNavStyle] = useState();
 
   useEffect(() => {
