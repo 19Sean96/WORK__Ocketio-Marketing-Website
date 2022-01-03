@@ -52,8 +52,8 @@ const WhoSection = (props) => {
 
   const [ containerRef, isVisible ] = useObserver({
     root: null,
-    rootMargin: '0px',
-    threshold: .3
+    rootMargin: '40px',
+    threshold:  0
   })
 
 
@@ -211,8 +211,8 @@ const WhatSection = (props) => {
 
   const [ containerRef, isVisible ] = useObserver({
     root: null,
-    rootMargin: '0px',
-    threshold: .15
+    rootMargin: '40px',
+    threshold: 0
   })
 
   return (

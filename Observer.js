@@ -20,7 +20,7 @@ const useObserver = ( options ) => {
         return () => {
             if (containerRef.current) observer.unobserve(containerRef.current)
         }
-    }, [containerRef, options])
+    }, [])
 
     return [containerRef, isVisible]
 }
