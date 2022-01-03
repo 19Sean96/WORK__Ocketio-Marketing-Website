@@ -211,7 +211,7 @@ const WhatSection = (props) => {
 
   const [ containerRef, isVisible ] = useObserver({
     root: null,
-    rootMargin: '40px',
+    rootMargin: `-${window.innerHeight / 10}px`,
     threshold: 0
   })
 
