@@ -18,11 +18,27 @@ import Card2 from "../../public/images/step-2.png";
 import Card3 from "../../public/images/step-3.png";
 
 const FirstBanner = (props) => {
+  // let observerOptions = {
+  //   root: null,
+  //   rootMargin: 0,
+  //   threshold: 0
+  // }
+
+  // useEffect(() => {
+  //   observerOptions.rootMargin = `-${window.innerHeight / 12}px`
+  // }, [])
+
+  // const [ containerRef, isVisible ] = useObserver(observerOptions)
+
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="firstBannerHomepage"
+        // ref={containerRef}
+        // style={{
+        //   opacity: isVisible ? 1 : 0
+        // }}
       >
         <h5 className="h5 banner--title">
           Wirewise is a VPN designed for easy, secure network access. It's that
@@ -50,11 +66,17 @@ const FirstBanner = (props) => {
 
 const WhoSection = (props) => {
 
-  const [ containerRef, isVisible ] = useObserver({
+  let observerOptions = {
     root: null,
-    rootMargin: '40px',
-    threshold:  0
-  })
+    rootMargin: '0px',
+    threshold: 0.15
+  }
+
+  // useEffect(() => {
+  //   observerOptions.rootMargin = `-${window.innerHeight / 6.25}px`
+  // }, [])
+
+  const [ containerRef, isVisible ] = useObserver(observerOptions)
 
 
   return (
@@ -92,6 +114,8 @@ const WhoSection = (props) => {
                 className="card__image"
                 alt="image 1"
                 layout="responsive"
+                placeholder='blur'
+
               />
             </div>
           </article>
@@ -110,6 +134,8 @@ const WhoSection = (props) => {
                 className="card__image"
                 alt="image 2"
                 layout="responsive"
+                placeholder='blur'
+
               />
             </div>
           </article>
@@ -128,6 +154,8 @@ const WhoSection = (props) => {
                 className="card__image"
                 alt="image 3"
                 layout="responsive"
+                placeholder='blur'
+
               />
             </div>
           </article>
@@ -138,6 +166,14 @@ const WhoSection = (props) => {
 };
 
 const WhatSection = (props) => {
+
+  let observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: .1
+  }
+
+
   const whatSectionContent = [
     {
       title: `it's secure.`,
@@ -209,11 +245,7 @@ const WhatSection = (props) => {
     },
   ];
 
-  const [ containerRef, isVisible ] = useObserver({
-    root: null,
-    rootMargin: `-${window.innerHeight / 10}px`,
-    threshold: 0
-  })
+  const [ containerRef, isVisible ] = useObserver(observerOptions)
 
   return (
     <ContentWrapper>
@@ -285,6 +317,7 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
           alt={alt}
           id={imgID}
           className="section--body--item__image image"
+          placeholder='blur'
           // layout="responsive"
         />
       </div>

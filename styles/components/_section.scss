@@ -1,7 +1,7 @@
 .section {
   margin-top: 222px;
-  transition: opacity .22s ease-in-out;
-  
+  transition: opacity .22s ease-in-out .18s;
+
   &__with-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
