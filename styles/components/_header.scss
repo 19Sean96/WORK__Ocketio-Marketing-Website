@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1800px;
+
+
   &--logo {
     position: relative;
     z-index: 200;
@@ -29,7 +31,7 @@
   &__wrapper {
       background: rgba(255,255,255, .8);
       backdrop-filter: blur(10px);
-      position: fixed;
+      position: relative;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -171,5 +173,13 @@
 
   &--cta {
     padding: 16px 32px;
+
+    &__wrapper {
+      width: 10vw;
+      max-width: 225px;
+      min-width: 175px;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
