@@ -2,20 +2,26 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import Menu from "./SVG/menu";
-import Logo from './SVG/logo'
+import Logo from "./SVG/logo";
 const Header = ({ isMobile, scrollOffset }) => {
   const [menuOpen, toggleMenuOpen] = useState(false);
 
   return (
     <>
-      <div className="header__wrapper" style={{
-        boxShadow: scrollOffset > 0 ? '0 1px 25px -10px rgba(5,5,5, 0.25)' : '0 1px 25px -10px rgba(5,5,5, 0)'
-      }}>
+      <div
+        className="header__wrapper"
+        // style={{
+        //   boxShadow:
+        //     scrollOffset > 0
+        //       ? "0 1px 25px -10px rgba(5,5,5, 0.25)"
+        //       : "0 1px 25px -10px rgba(5,5,5, 0)",
+        // }}
+      >
         <header className="header">
           <div className="header--logo">
             <Link href="/">
               <a>
-              <Logo menuOpen={menuOpen}/>
+                <Logo menuOpen={menuOpen} />
               </a>
             </Link>
           </div>
@@ -26,9 +32,11 @@ const Header = ({ isMobile, scrollOffset }) => {
               <Menu menuOpen={menuOpen} />
             </button>
           ) : (
-            <button className="header--cta btn btn--filled j-text _600 capitalize">
-              try beta
-            </button>
+            <div className="header--cta__wrapper">
+              <button className="header--cta btn btn--filled j-text _600 capitalize">
+                try beta
+              </button>
+            </div>
           )}
         </header>
       </div>

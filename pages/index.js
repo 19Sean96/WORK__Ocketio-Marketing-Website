@@ -7,6 +7,7 @@ import {
   WhoSection,
   WhatSection,
 } from "../components/Body/homepage";
+import EmailIntakeBanner from "../components/util/EmailIntakeBanner";
 
 import { useAppContext } from "../Context";
 
@@ -16,11 +17,13 @@ export default function Home() {
 
   return (
     <main className="main" id="main" onMouseMove={(e) => handleMouseMove(e)}>
+      <span id="vertLineCenter"></span>
       <Header isMobile={isMobile} scrollOffset={scrollOffset}/>
-      <Hero mouseCoord={mouseCoord} offset={scrollOffset} />
+      <Hero offset={scrollOffset} />
       <FirstBanner />
       <WhoSection />
       <WhatSection />
+      <EmailIntakeBanner />
     </main>
   );
 }
