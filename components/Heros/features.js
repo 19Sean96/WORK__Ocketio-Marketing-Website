@@ -42,14 +42,6 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             alt="This is a dashboard showing stats representing the features of the app"
             priority
           />
-          <Image
-            id="featuresHeroImageAside"
-            className="image-group__image"
-            layout="responsive"
-            src={featuresHeroImageAside}
-            alt="some other image"
-            priority
-          />
         </div>
       </section>
     </ContentWrapper>
