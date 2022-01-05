@@ -1,31 +1,28 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useAppContext } from "../Context";
 
 import Menu from "./SVG/menu";
 import Logo from "./SVG/logo";
-const Header = ({ isMobile, scrollOffset }) => {
+const Header = () => {
   const [menuOpen, toggleMenuOpen] = useState(false);
+
+  const { isMobile } = useAppContext()
 
   return (
     <>
-      <div
-        className="header__wrapper"
-        // style={{
-        //   boxShadow:
-        //     scrollOffset > 0
-        //       ? "0 1px 25px -10px rgba(5,5,5, 0.25)"
-        //       : "0 1px 25px -10px rgba(5,5,5, 0)",
-        // }}
-      >
+      <div className="header__wrapper" style={{
+        position: (isMobile && menuOpen) ? 'fixed' : 'relative'
+      }}>
         <header className="header">
           <div className="header--logo">
             <Link href="/">
               <a>
-                <Logo menuOpen={menuOpen} />
+                <Logo menuOpenOnMobile={menuOpen && isMobile} />
               </a>
             </Link>
           </div>
-          <Nav isMobile={isMobile} menuOpen={menuOpen} />
+          {!isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} />}
           {/* should change to link */}
           {isMobile ? (
             <button id="menuIcon" onClick={(e) => toggleMenuOpen(!menuOpen)}>
@@ -40,7 +37,8 @@ const Header = ({ isMobile, scrollOffset }) => {
           )}
         </header>
       </div>
-      <span className="header__placeholder"></span>
+      {/* <span className="header__placeholder"></span> */}
+      {isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} />}
     </>
   );
 };
@@ -75,17 +73,17 @@ function Nav({ isMobile, menuOpen }) {
       style={navStyle}
     >
       <ul className="header--nav--list">
-        <li className="j-text _600 header--nav--item capitalize">
+        <li className="j-text _400 header--nav--item capitalize">
           <Link href="/features">
             <a>features</a>
           </Link>
         </li>
-        <li className="j-text _600 header--nav--item capitalize">
+        <li className="j-text _400 header--nav--item capitalize">
           <Link href="/pricing">
             <a>pricing</a>
           </Link>
         </li>
-        <li className="j-text _600 header--nav--item capitalize">
+        <li className="j-text _400 header--nav--item capitalize">
           <Link href="/contact">
             <a>contact</a>
           </Link>
