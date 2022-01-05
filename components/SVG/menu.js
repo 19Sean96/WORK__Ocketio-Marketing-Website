@@ -14,7 +14,7 @@ const Menu = ({ menuOpen }) => (
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M29 3H1V1H29V3Z"
-        fill="black"
+        fill={menuOpen ? 'white' : 'black'}
         style={{
           opacity: menuOpen ? 0 : 1,
           transform: menuOpen ? 'translateY(6px)' : 'translateY(0)',
@@ -26,7 +26,7 @@ const Menu = ({ menuOpen }) => (
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M29 9H1V7H29V9Z"
-        fill="black"
+        fill={menuOpen ? 'white' : 'black'}
         style={{
           transform: menuOpen ? 'rotate(40.5deg) translate(-1px, -4px)' : 'rotate(0) translate(0,0)',
           transition: '.1s all .06125s ease-in-out'
@@ -37,7 +37,7 @@ const Menu = ({ menuOpen }) => (
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M29 15H1V13H29V15Z"
-        fill="black"
+        fill={menuOpen ? 'white' : 'black'}
         style={{
           transform: menuOpen ? 'rotate(-40.5deg) translate(-17px, 0px)' : 'rotate(0) translate(0,0)',
           transition: '.1s all .06125s ease-in-out'
@@ -48,7 +48,7 @@ const Menu = ({ menuOpen }) => (
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M29 21H1V19H29V21Z"
-        fill="black"
+        fill={menuOpen ? 'white' : 'black'}
         style={{
           opacity: menuOpen ? 0 : 1,
           transform: menuOpen ? 'translateY(-6px)' : 'translateY(0)',
