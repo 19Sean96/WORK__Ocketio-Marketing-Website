@@ -6,7 +6,7 @@ import { AppWrapper } from "../Context";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/main.scss";
-
+import 'animate.css'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
