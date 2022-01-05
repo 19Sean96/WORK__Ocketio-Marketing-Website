@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 
-import useObserver from "../../Observer";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 import worldMap from "../../public/images/world-map.png";
 import GraphicSecure from "../../public/images/WW_Website_Homepage-Graphics-Secure.png";
@@ -18,9 +17,8 @@ import Card2 from "../../public/images/step-2.png";
 import Card3 from "../../public/images/step-3.png";
 
 import { BsCheckCircle } from "react-icons/bs";
+
 const FirstBanner = (props) => {
-
-
   return (
     <ContentWrapper>
       <section
@@ -56,41 +54,34 @@ const FirstBanner = (props) => {
 };
 
 const WhoSection = (props) => {
-
-  let observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  }
-
-  // useEffect(() => {
-  //   observerOptions.rootMargin = `-${window.innerHeight / 6.25}px`
-  // }, [])
-
-  const [ containerRef, isVisible ] = useObserver(observerOptions)
-
-
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="sectionWhoHomepage"
-        ref={containerRef}
-        style={{
-          opacity: isVisible ? 1 : 0
-        }}
       >
-        <div className="section--heading">
+        <ScrollAnimation
+          animateIn="animate__fadeInLeft"
+          duration={0.9}
+          // animateOnce={true}
+          className="section--heading"
+        >
+          {/* <div className="section--heading"> */}
           <h3 className="h3">Who is it for?</h3>
           <p className="p-small">
             No solution is perfect for everyone, but Wirewise adds useful
             features to a cutting-edge VPN protocol in a way that we think makes
             it an excellent option for teams of many sizes.
           </p>
-        </div>
-
+          {/* </div> */}
+        </ScrollAnimation>
         <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
-          <article className="card">
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={0.8}
+            // animateOnce={true}
+            className="card"
+          >
             <div className="card--text">
               <h5 className="h5 capitalize">individual users</h5>
               <p className="p-small">
@@ -105,12 +96,17 @@ const WhoSection = (props) => {
                 className="card__image"
                 alt="image 1"
                 layout="responsive"
-                placeholder='blur'
-
+                placeholder="blur"
               />
             </div>
-          </article>
-          <article className="card">
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={0.8}
+            // animateOnce={true}
+            className="card"
+            delay={200}
+          >
             <div className="card--text">
               <h5 className="h5 capitalize">small business teams</h5>
               <p className="p-small">
@@ -125,12 +121,17 @@ const WhoSection = (props) => {
                 className="card__image"
                 alt="image 2"
                 layout="responsive"
-                placeholder='blur'
-
+                placeholder="blur"
               />
             </div>
-          </article>
-          <article className="card">
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={0.8}
+            // animateOnce={true}
+            className="card"
+            delay={400}
+          >
             <div className="card--text">
               <h5 className="h5 capitalize">mid-sized companies</h5>
               <p className="p-small">
@@ -145,11 +146,10 @@ const WhoSection = (props) => {
                 className="card__image"
                 alt="image 3"
                 layout="responsive"
-                placeholder='blur'
-
+                placeholder="blur"
               />
             </div>
-          </article>
+          </ScrollAnimation>
         </article>
       </section>
     </ContentWrapper>
@@ -157,14 +157,6 @@ const WhoSection = (props) => {
 };
 
 const WhatSection = (props) => {
-
-  let observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: .1
-  }
-
-
   const whatSectionContent = [
     {
       title: `it's secure.`,
@@ -236,26 +228,25 @@ const WhatSection = (props) => {
     },
   ];
 
-  const [ containerRef, isVisible ] = useObserver(observerOptions)
-
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="sectionWhatHomepage"
-        ref={containerRef}
-        style={{
-          opacity: isVisible ? 1 : 0
-        }}
       >
-        <div className="section--heading" >
+        <ScrollAnimation
+          animateIn="animate__fadeInLeft"
+          duration={0.9}
+          // animateOnce={true}
+          className="section--heading"
+        >
           <h3 className="h3">What makes it great?</h3>
           <p className="p-small">
             No solution is perfect for everyone, but Wirewise adds useful
             features to a cutting-edge VPN protocol in a way that we think makes
             it an excellent option for teams of many sizes.
           </p>
-        </div>
+        </ScrollAnimation>
         <div className="section--body">
           {whatSectionContent.map((item, i) => (
             <WhatSectionItem
@@ -290,32 +281,39 @@ const WhatSection = (props) => {
 function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
   return (
     <article className={`section--body--item${reversed ? " reversed" : ""}`}>
-      <div className="text-block">
+      <ScrollAnimation
+        animateIn={reversed ? "animate__fadeInRight" : "animate__fadeInLeft"}
+        className="text-block"
+      >
         <h4 className="h4 capitalize">{title}</h4>
         <p className="p-small">{par}</p>
-      </div>
+      </ScrollAnimation>
       <ul className="checklist">
         {list.map((item, i) => (
           <li className="checklist--item" key={"item-" + i}>
-            <BsCheckCircle style={{
-              width: '22px',
-              height: '22px',
-              fill: '#1688F2'
-            }}/>
-            <h6 className="p-small _400">{item}</h6>
+            <ScrollAnimation duration={1 - (i * .1)} delay={i * 125} animateIn="animate__fadeInUp" className="checklist--item">
+              <BsCheckCircle
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  fill: "#1688F2",
+                }}
+              />
+              <h6 className="p-small _400">{item}</h6>
+            </ScrollAnimation>
           </li>
         ))}
       </ul>
-      <div className="image__wrapper">
+      <ScrollAnimation animateIn="animate__fadeIn" duration={.7} className="image__wrapper" delay={150}>
         <Image
           src={img}
           alt={alt}
           id={imgID}
           className="section--body--item__image image"
-          placeholder='blur'
+          placeholder="blur"
           // layout="responsive"
         />
-      </div>
+      </ScrollAnimation>
     </article>
   );
 }
