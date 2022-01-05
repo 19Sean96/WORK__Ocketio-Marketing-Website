@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1800px;
+  max-width: 1600px;
+  max-width: 1222px;
 
 
   &--logo {
@@ -29,8 +30,8 @@
     height: 83px;
   }
   &__wrapper {
-      background: rgba(255,255,255, .8);
-      backdrop-filter: blur(10px);
+      background: transparent;
+      // backdrop-filter: blur(10px);
       position: relative;
       top: 0;
       left: 50%;
@@ -134,7 +135,7 @@
       z-index: 100;
       top: 50vh;
       left: 50vw;
-      background-color: $secondary-blue;
+      background-color: #252939;
       width: 100vw;
       height: 100vh;
       backdrop-filter: blur(10px);
