@@ -17,18 +17,9 @@ import Card1 from "../../public/images/step-1.png";
 import Card2 from "../../public/images/step-2.png";
 import Card3 from "../../public/images/step-3.png";
 
+import { BsCheckCircle } from "react-icons/bs";
 const FirstBanner = (props) => {
-  // let observerOptions = {
-  //   root: null,
-  //   rootMargin: 0,
-  //   threshold: 0
-  // }
 
-  // useEffect(() => {
-  //   observerOptions.rootMargin = `-${window.innerHeight / 12}px`
-  // }, [])
-
-  // const [ containerRef, isVisible ] = useObserver(observerOptions)
 
   return (
     <ContentWrapper>
@@ -306,8 +297,12 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
       <ul className="checklist">
         {list.map((item, i) => (
           <li className="checklist--item" key={"item-" + i}>
-            <img src="/images/check.svg" alt="check icon" className="check" />
-            <h6 className="h6 _400">{item}</h6>
+            <BsCheckCircle style={{
+              width: '22px',
+              height: '22px',
+              fill: '#1688F2'
+            }}/>
+            <h6 className="p-small _400">{item}</h6>
           </li>
         ))}
       </ul>
