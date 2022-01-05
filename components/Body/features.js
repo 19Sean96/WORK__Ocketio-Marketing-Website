@@ -13,10 +13,9 @@ import Step3 from "../../public/images/step-3.png";
 import Step4 from "../../public/images/step-4.png";
 import Step5 from "../../public/images/step-5.png";
 
-import windowsLogo from "../../public/images/logos/windows-logo.svg";
-import appleLogos from "../../public/images/logos/apple-logos.svg";
-import linuxLogo from "../../public/images/logos/linux-logo.svg";
-import androidLogo from "../../public/images/logos/android-logo.svg";
+import { BsWindows, BsApple } from "react-icons/bs";
+
+import { DiAndroid, DiLinux } from "react-icons/di";
 
 const ArchitectureSection = (props) => {
   const [hoverInfoBox, toggleHoverInfoBox] = useState("");
@@ -45,7 +44,7 @@ const ArchitectureSection = (props) => {
 
   return (
     <ContentWrapper>
-      <HoverInfoBox
+      {/* <HoverInfoBox
         title={
           hoverInfoBox
             ? OSTips[OSTips.findIndex((tip) => tip.slug === hoverInfoBox)].title
@@ -58,12 +57,78 @@ const ArchitectureSection = (props) => {
             : ""
         }
         visible={hoverInfoBox}
-      />
+      /> */}
 
       <section
         className="section section__with-grid all-columns"
         id="architectureSection"
       >
+        <h6 className="h6 banner--heading">Wirewise runs on</h6>
+        <article id="supportedOS" className="banner f f-justify-between">
+          <div
+            className="item item-1"
+            onMouseEnter={(e) => toggleHoverInfoBox("managedDevices")}
+            onMouseLeave={(e) => toggleHoverInfoBox("")}
+          >
+            <div className="item--img__wrapper">
+              <BsWindows
+                style={{
+                  height: "40px",
+                  width: "auto",
+                }}
+              /><span className="item--img--text">Windows</span>
+            </div>
+            <h6 className="h6 capitalize">
+              managed <span className="last-word">devices</span>
+            </h6>
+          </div>
+          <div
+            className="item item-2"
+            onMouseEnter={(e) => toggleHoverInfoBox("supervisedDevices")}
+            onMouseLeave={(e) => toggleHoverInfoBox("")}
+          >
+            <div className="item--img__wrapper">
+              <BsApple
+                style={{
+                  height: "40px",
+                  width: "auto",
+                }}
+              /><span className="item--img--text">MacOS<br />iOS</span>
+              <DiLinux
+                style={{
+                  height: "40px",
+                  width: "auto",
+                }}
+              /><span className="item--img--text">Linux</span>
+              <DiAndroid
+                style={{
+                  height: "40px",
+                  width: "auto",
+                }}
+              /><span className="item--img--text">Android</span>
+            </div>
+            <h6 className="h6 capitalize">
+              supervised <span className="last-word">devices</span>
+            </h6>
+          </div>
+          <div
+            className="item item-3"
+            onMouseEnter={(e) => toggleHoverInfoBox("gatewayManagement")}
+            onMouseLeave={(e) => toggleHoverInfoBox("")}
+          >
+            <div className="item--img__wrapper">
+              <DiLinux
+                style={{
+                  height: "40px",
+                  width: "auto",
+                }}
+              /><span className="item--img--text">Linux</span>
+            </div>
+            <h6 className="h6 capitalize">
+              gateway <span className="last-word">management</span>
+            </h6>
+          </div>
+        </article>
         <div className="section--heading">
           <h3 className="h3 capitalize">Thoughtful architecture</h3>
           <p className="p-small">
@@ -80,7 +145,7 @@ const ArchitectureSection = (props) => {
           />
         </div>
         <div className="text-block text-block-1">
-          <h4 className="h4 capitalize">industry-leading encryption</h4>
+          <h5 className="h5 capitalize">industry-leading encryption</h5>
           <p className="p-small">
             Wirewise uses the WireGuard encryption framework, a new industry
             standard for securing tunneled traffic. With its state of the art
@@ -92,7 +157,7 @@ const ArchitectureSection = (props) => {
           </p>
         </div>
         <div className="text-block text-block-2">
-          <h4 className="h4 capitalize">small business teams</h4>
+          <h5 className="h5 capitalize">small business teams</h5>
           <p className="p-small">
             For a tunnel to be established, the network gateway and its
             associated devices need to know each other’s private encryption key.
@@ -104,7 +169,7 @@ const ArchitectureSection = (props) => {
           </p>
         </div>
         <div className="text-block text-block-3">
-          <h4 className="h4 capitalize">extensible client support</h4>
+          <h5 className="h5 capitalize">extensible client support</h5>
           <p className="p-small">
             Do you have other devices besides Windows machines that need to
             access your network right now? We're working diligently to provide
@@ -115,77 +180,6 @@ const ArchitectureSection = (props) => {
             enable or disable access to your network for these clients.
           </p>
         </div>
-        <article id="supportedOS" className="banner f f-justify-between">
-          <div
-            className="item item-1"
-            onMouseEnter={(e) => toggleHoverInfoBox("managedDevices")}
-            onMouseLeave={(e) => toggleHoverInfoBox("")}
-          >
-            <h6 className="h6 capitalize">
-              managed <span className="last-word">devices</span>
-            </h6>
-            <div className="item--img__wrapper">
-              <Image
-                src={windowsLogo}
-                id="windowsLogo"
-                className="item--img"
-                alt="Windows Logo"
-              />
-            </div>
-          </div>
-          <span className="divider"></span>
-          <div
-            className="item item-2"
-            onMouseEnter={(e) => toggleHoverInfoBox("supervisedDevices")}
-            onMouseLeave={(e) => toggleHoverInfoBox("")}
-          >
-            <h6 className="h6 capitalize">
-              supervised <span className="last-word">devices</span>
-            </h6>
-            <div className="item--img__wrapper">
-              <Image
-                src={appleLogos}
-                id="windowsLogo"
-                className="item--img"
-                alt="Windows Logo"
-              />
-              <Image
-                src={linuxLogo}
-                id="windowsLogo"
-                className="item--img"
-                alt="Windows Logo
-                    "
-              />
-              <Image
-                src={androidLogo}
-                id="windowsLogo"
-                className="item--img"
-                alt="Windows Logo"
-              />
-            </div>
-          </div>
-          <span className="divider"></span>
-          <div
-            className="item item-3"
-            onMouseEnter={(e) => toggleHoverInfoBox("gatewayManagement")}
-            onMouseLeave={(e) => toggleHoverInfoBox("")}
-          >
-            <h6 className="h6 capitalize">
-              gateway <span className="last-word">management</span>
-            </h6>
-            <div className="item--img__wrapper">
-              <Image
-                src={androidLogo}
-                id="windowsLogo"
-                className="item--img"
-                alt="Windows Logo"
-              />
-            </div>
-          </div>
-          <p className="p-small capitalize" id="explain">
-            what do these mean?
-          </p>
-        </article>
       </section>
     </ContentWrapper>
   );
@@ -313,9 +307,9 @@ const OptimizedExperienceSection = (props) => {
 
 const StyledSlideshowItem = styled(Image)`
   opacity: ${(props) => (props.active ? "1" : "0")};
-  transform: translateY(
-    ${(props) => (props.active ? "0%" : props.previous ? "100%" : "-100%")}
-  );
+  // transform: translateY(
+  //   ${(props) => (props.active ? "0%" : props.previous ? "100%" : "-100%")}
+  // );
 `;
 
 const StyledTab = styled.li`
