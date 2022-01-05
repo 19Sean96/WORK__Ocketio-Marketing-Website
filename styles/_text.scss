@@ -30,7 +30,7 @@ span,
 a,
 input,
 textarea {
-    font-family: 'Plus Jakarta Text';
+    font-family: 'Plus Jakarta Display';
 }
 
 input, textarea, label {
@@ -40,13 +40,13 @@ input, textarea, label {
 .p-large {
     font-size: 28px;
     line-height: 1.5em;
-    font-weight: 500;
+    font-weight: 400;
     color: $gray-text;
 }
 
 .p-small {
     font-size: 20px;
-    line-height: 145%;
+    line-height: 160%;
     color: $gray-text;
 }
 
@@ -100,14 +100,14 @@ h6, .h6 { @include heading(23px, 500, 145%, .025) }
 
 @media (max-width: 1920px) {
     h1, .h1 { @include heading(50px, 500, 127.5%, .0025em) }
-    h2, .h2 { @include heading(44px, 500, 127.5%, .035em) }
+    h2, .h2 { @include heading(40px, 500, 127.5%, .035em) }
     h3, .h3 { @include heading(40px, 500, 127.5%, .035em)}
     h4, .h4 { @include heading(32px, 500, 145%, .025em) }
     h5, .h5 { @include heading(24px, 400, 120%, .035em) }
     h6, .h6 { @include heading(20px, 700, 145%, .025) }
 
     .p-large {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .p-small {
