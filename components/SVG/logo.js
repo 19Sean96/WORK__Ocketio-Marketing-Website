@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const StyledLogo = styled.svg`
   .cls-1 {
-    fill: ${props => props.menuOpen ? '#fff' : '#000'};
+    fill: ${(props) => (props.menuOpen ? "#fff" : "#000")};
     stroke-miterlimit: 10;
   }
   .cls-2 {
-    fill: ${props => props.menuOpen ? '#fff' : '#27c1bc'};
+    fill: ${(props) => (props.menuOpen ? "#fff" : "#27c1bc")};
   }
   .cls-2,
   .cls-3,
@@ -14,20 +14,18 @@ const StyledLogo = styled.svg`
     fill-rule: evenodd;
   }
   .cls-3 {
-    fill: ${props => props.menuOpen ? '#fff' : '#139bbf'};
+    fill: ${(props) => (props.menuOpen ? "#fff" : "#139bbf")};
   }
   .cls-4 {
-    fill: ${props => props.menuOpen ? '#fff' : '#e55217'};
+    fill: ${(props) => (props.menuOpen ? "#fff" : "#e55217")};
   }
 `;
 
-const Logo = ({ menuOpen }) => (
+const Logo = ({ menuOpenOnMobile }) => (
   <StyledLogo
-    id="Layer_1"
-    data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 2103.74 367.46"
-    menuOpen={menuOpen}
+    menuOpen={menuOpenOnMobile}
   >
     <path
       class="cls-1"
