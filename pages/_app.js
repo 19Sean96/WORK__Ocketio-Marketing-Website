@@ -3,7 +3,10 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import { GTM_ID, pageview } from "../lib/gtm";
 import { AppWrapper } from "../Context";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../styles/main.scss";
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -31,7 +34,10 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <AppWrapper>
+        
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </AppWrapper>
     </>
   );

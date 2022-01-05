@@ -13,12 +13,11 @@ import { useAppContext } from "../Context";
 
 export default function Home() {
 
-  const { mouseCoord, scrollOffset, isMobile, handleMouseMove } = useAppContext()
+  const { scrollOffset, handleMouseMove } = useAppContext()
 
   return (
     <main className="main" id="main" onMouseMove={(e) => handleMouseMove(e)}>
       <span id="vertLineCenter"></span>
-      <Header isMobile={isMobile} scrollOffset={scrollOffset}/>
       <Hero offset={scrollOffset} />
       <FirstBanner />
       <WhoSection />
