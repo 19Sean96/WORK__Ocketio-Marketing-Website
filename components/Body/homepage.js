@@ -12,9 +12,9 @@ import GraphicStreamlined from "../../public/images/WW_Website_Homepage-Graphics
 import GraphicEfficient from "../../public/images/WW_Website_Homepage-Graphics-Efficient.png";
 import GraphicCostEffective from "../../public/images/WW_Website_Homepage-Graphics_Cost-effective.png";
 
-import Card1 from "../../public/images/step-1.png";
-import Card2 from "../../public/images/step-2.png";
-import Card3 from "../../public/images/step-3.png";
+import Card1 from "../../public/images/individual.png";
+import Card2 from "../../public/images/small-business.png";
+import Card3 from "../../public/images/mid-sized-company.png";
 
 import { BsCheckCircle } from "react-icons/bs";
 
