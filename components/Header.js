@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../Context";
 
@@ -7,13 +8,29 @@ import Logo from "./SVG/logo";
 const Header = () => {
   const [menuOpen, toggleMenuOpen] = useState(false);
 
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenuOpen(false)
+    }
+  }, [router.asPath])
 
   return (
     <>
-      <div className="header__wrapper" style={{
-        position: (isMobile && menuOpen) ? 'fixed' : 'relative'
+      <div className="header__placeholder" style={{
+        height: isMobile && menuOpen ? '52px' : '0px',
+        margin: isMobile && menuOpen ? '25px auto' : '0'
       }}>
+        
+      </div>
+      <div
+        className="header__wrapper"
+        style={{
+          position: isMobile && menuOpen ? "fixed" : "relative",
+        }}
+      >
         <header className="header">
           <div className="header--logo">
             <Link href="/">
@@ -38,15 +55,15 @@ const Header = () => {
         </header>
       </div>
       {/* <span className="header__placeholder"></span> */}
-      {isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} />}
+      {isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} toggleMenuOpen={toggleMenuOpen}/>}
     </>
   );
 };
 
-function Nav({ isMobile, menuOpen }) {
+function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
   // console.log((isMobile && menuOpen) || !isMobile);
   const [navStyle, updateNavStyle] = useState();
-
+  const router = useRouter();
   useEffect(() => {
     if (!isMobile) {
       updateNavStyle({
@@ -75,17 +92,35 @@ function Nav({ isMobile, menuOpen }) {
       <ul className="header--nav--list">
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/features">
-            <a>features</a>
+            <a
+              style={{
+                color: router.pathname === "/features" ? "#1688f2" : "#252939",
+              }}
+            >
+              features
+            </a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/pricing">
-            <a>pricing</a>
+            <a
+              style={{
+                color: router.pathname === "/pricing" ? "#1688f2" : "#252939",
+              }}
+            >
+              pricing
+            </a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/contact">
-            <a>contact</a>
+            <a
+              style={{
+                color: router.pathname === "/contact" ? "#1688f2" : "#252939",
+              }}
+            >
+              contact
+            </a>
           </Link>
         </li>
         {/* <li className="j-text header--nav--item">blog</li> */}
