@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useAppContext } from "../../Context";
+import ScrollAnimation from "react-animate-on-scroll";
+
 import ContentWrapper from "../../components/ContentWrapper";
 import FAQList from "../../components/util/FAQ";
 export default function Pricing() {
@@ -28,17 +28,20 @@ export default function Pricing() {
   ];
   return (
     <main className="main" id="main">
-
       <ContentWrapper>
         <section className="section__with-grid all-columns" id="pricing">
-          <div className="section--heading">
+          <ScrollAnimation
+            animateIn="animate__fadeInLeft"
+            duration={0.9}
+            className="section--heading"
+          >
             <h2 className="h2">Pricing</h2>
             <p className="p-small">
               Pick a plan and get up and running. It's that simple.
             </p>
-          </div>
+          </ScrollAnimation>
           <div className="section--body">
-            <div className="section--body--item" id="priceFree">
+            <ScrollAnimation duration={.7} delay={400} animateIn="animate__fadeInLeft" className="section--body--item" id="priceFree">
               <h6 className="price--type capitalize h6">free</h6>
               <h4 className="h4 price--num">$ 0.00 USD</h4>
               <p className="p-small price--rate">monthly per user</p>
@@ -51,8 +54,8 @@ export default function Pricing() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 semper sceleris.
               </p>
-            </div>
-            <div className="section--body--item" id="priceMonthly">
+            </ScrollAnimation>
+            <ScrollAnimation duration={.9} delay={200} animateIn="animate__fadeInLeft"  className="section--body--item" id="priceMonthly">
               <h6 className="price--type capitalize h6">monthly</h6>
               <h4 className="h4 price--num">$ 10.00 USD</h4>
               <p className="p-small price--rate">monthly per user</p>
@@ -65,8 +68,8 @@ export default function Pricing() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 semper sceleris.
               </p>
-            </div>
-            <div className="section--body--item" id="priceAnnual">
+            </ScrollAnimation>
+            <ScrollAnimation duration={1.1} delay={0} animateIn="animate__fadeInLeft"  className="section--body--item" id="priceAnnual">
               <h6 className="price--type capitalize h6">annual</h6>
               <h4 className="h4 price--num">$ 8.00 USD</h4>
               <p className="p-small price--rate">monthly per user</p>
@@ -79,9 +82,9 @@ export default function Pricing() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 semper sceleris.
               </p>
-            </div>
+            </ScrollAnimation>
           </div>
-          <div className="section--footer">
+          <ScrollAnimation duration={.75} delay={700} animateIn="animate__fadeInUp" className="section--footer">
             <h6 className="h6">Need a custom plan?</h6>
             <p className="p-small">
               <Link href="/contact">
@@ -89,20 +92,22 @@ export default function Pricing() {
               </Link>
               <span> for information on enterprise pricing.</span>
             </p>
-          </div>
+          </ScrollAnimation>
         </section>
       </ContentWrapper>
 
-    <ContentWrapper>
-      <section className="section__with-grid all-columns" id="pricingFAQ">
-        <div className="section--heading">
-          <h4 className="h4 capitalize">frequently asked questions</h4>
-        </div>
-        <div className="section--body">
-          <FAQList list={faqs}/>
-        </div>
-      </section>
-    </ContentWrapper>
+      <ContentWrapper>
+        <section className="section__with-grid all-columns" id="pricingFAQ">
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            duration={0.9} className="section--heading">
+            <h4 className="h4 capitalize">frequently asked questions</h4>
+          </ScrollAnimation>
+          <div className="section--body">
+            <FAQList list={faqs} />
+          </div>
+        </section>
+      </ContentWrapper>
     </main>
   );
 }

@@ -1,23 +1,24 @@
 import { useState, useRef } from "react";
 import { BsChevronRight } from "react-icons/bs";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const FAQList = ({ list }) => {
   return (
     <section className="faq--list">
-      {list.map(({ question, answer }) => (
-        <FAQListItem question={question} answer={answer} />
+      {list.map(({ question, answer }, i) => (
+        <FAQListItem question={question} answer={answer} key={i} index={i}/>
       ))}
     </section>
   );
 };
 
-const FAQListItem = ({ question, answer }) => {
+const FAQListItem = ({ question, answer, index }) => {
   const [isOpen, toggleOpen] = useState(false);
 
   const ref = useRef();
   //   console.log(ref.current.clientHeight);
   return (
-    <article className="faq--list--item" onClick={(e) => toggleOpen(!isOpen)}>
+    <ScrollAnimation animateIn="animate__fadeInLeft" animateOut="animate__fadeOutRight" duration={.95 - (index * .1)}  delay={index * 150} className="faq--list--item" onClick={(e) => toggleOpen(!isOpen)} key={index}>
       <div className="heading">
         <h6
           className="h6"
@@ -72,7 +73,7 @@ const FAQListItem = ({ question, answer }) => {
           {answer}
         </p>
       </div>
-    </article>
+    </ScrollAnimation>
   );
 };
 

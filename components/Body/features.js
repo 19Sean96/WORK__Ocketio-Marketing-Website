@@ -3,9 +3,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 
+import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 import HoverInfoBox from "../util/HoverInfoBox";
-import howItWorksDiagram from "../../public/images/how-it-works-diagram.png";
+import howItWorksDiagram from "../../public/images/_WW_Website_Features-Diagram.png";
 import optimizeExperienceImage from "../../public/images/features-body_optimize-experience.png";
 import Step1 from "../../public/images/step-1.png";
 import Step2 from "../../public/images/step-2.png";
@@ -65,86 +66,121 @@ const ArchitectureSection = (props) => {
       >
         <h6 className="h6 banner--heading">Wirewise runs on</h6>
         <article id="supportedOS" className="banner f f-justify-between">
-          <div
+          <ScrollAnimation
+            animateIn="animate__fadeInUp"
+            duration={1.2}
             className="item item-1"
             onMouseEnter={(e) => toggleHoverInfoBox("managedDevices")}
             onMouseLeave={(e) => toggleHoverInfoBox("")}
           >
             <div className="item--img__wrapper">
               <BsWindows
-                style={{
-                  height: "40px",
-                  width: "auto",
-                }}
-              /><span className="item--img--text">Windows</span>
+                className="item--img"
+                // style={{
+                //   height: "40px",
+                //   width: "auto",
+                // }}
+              />
+              <span className="item--img--text">Windows</span>
             </div>
             <h6 className="h6 capitalize">
               managed <span className="last-word">devices</span>
             </h6>
-          </div>
-          <div
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            duration={0.8}
+            delay={550}
             className="item item-2"
             onMouseEnter={(e) => toggleHoverInfoBox("supervisedDevices")}
             onMouseLeave={(e) => toggleHoverInfoBox("")}
           >
             <div className="item--img__wrapper">
               <BsApple
-                style={{
-                  height: "40px",
-                  width: "auto",
-                }}
-              /><span className="item--img--text">MacOS<br />iOS</span>
+                className="item--img"
+                // style={{
+                //   height: "40px",
+                //   width: "auto",
+                // }}
+              />
+              <span className="item--img--text">
+                MacOS
+                <br />
+                iOS
+              </span>
               <DiLinux
-                style={{
-                  height: "40px",
-                  width: "auto",
-                }}
-              /><span className="item--img--text">Linux</span>
+                className="item--img"
+                // style={{
+                //   height: "40px",
+                //   width: "auto",
+                // }}
+              />
+              <span className="item--img--text">Linux</span>
               <DiAndroid
-                style={{
-                  height: "40px",
-                  width: "auto",
-                }}
-              /><span className="item--img--text">Android</span>
+                className="item--img"
+                // style={{
+                //   height: "40px",
+                //   width: "auto",
+                // }}
+              />
+              <span className="item--img--text">Android</span>
             </div>
             <h6 className="h6 capitalize">
               supervised <span className="last-word">devices</span>
             </h6>
-          </div>
-          <div
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeInUp"
+            duration={1.2}
             className="item item-3"
             onMouseEnter={(e) => toggleHoverInfoBox("gatewayManagement")}
             onMouseLeave={(e) => toggleHoverInfoBox("")}
           >
             <div className="item--img__wrapper">
               <DiLinux
-                style={{
-                  height: "40px",
-                  width: "auto",
-                }}
-              /><span className="item--img--text">Linux</span>
+                className="item--img"
+                // style={{
+                //   height: "40px",
+                //   width: "auto",
+                // }}
+              />
+              <span className="item--img--text">Linux</span>
             </div>
             <h6 className="h6 capitalize">
               gateway <span className="last-word">management</span>
             </h6>
-          </div>
+          </ScrollAnimation>
         </article>
-        <div className="section--heading">
+        <ScrollAnimation
+          animateIn="animate__fadeInLeft"
+          duration={0.9}
+          // animateOnce={true}
+          className="section--heading"
+        >
           <h3 className="h3 capitalize">Thoughtful architecture</h3>
           <p className="p-small">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
             felis, et id aliquam ac tincidunt.
           </p>
-        </div>
-        <div className="image_wrapper">
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeIn"
+          duration={0.8}
+          delay={450}
+          className="image_wrapper"
+        >
           <Image
             src={howItWorksDiagram}
             id="howItWorksDiagram"
             alt="Diagram explaining how WireWise works"
             layout="responsive"
           />
-        </div>
-        <div className="text-block text-block-1">
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeInRight"
+          duration={0.95}
+          className="text-block text-block-1"
+        >
           <h5 className="h5 capitalize">industry-leading encryption</h5>
           <p className="p-small">
             Wirewise uses the WireGuard encryption framework, a new industry
@@ -155,8 +191,13 @@ const ArchitectureSection = (props) => {
             enables roaming across networks and instant connections, minimizing
             the need for user interaction.
           </p>
-        </div>
-        <div className="text-block text-block-2">
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeInRight"
+          duration={0.8}
+          delay={175}
+          className="text-block text-block-2"
+        >
           <h5 className="h5 capitalize">small business teams</h5>
           <p className="p-small">
             For a tunnel to be established, the network gateway and its
@@ -167,8 +208,13 @@ const ArchitectureSection = (props) => {
             defined settings and conditions, such as last authenticated or
             connected date, will instantly quarantine inactive devices.
           </p>
-        </div>
-        <div className="text-block text-block-3">
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeInRight"
+          duration={0.65}
+          delay={325}
+          className="text-block text-block-3"
+        >
           <h5 className="h5 capitalize">extensible client support</h5>
           <p className="p-small">
             Do you have other devices besides Windows machines that need to
@@ -179,7 +225,7 @@ const ArchitectureSection = (props) => {
             WireGuard client. This enables you to quickly and conditionally
             enable or disable access to your network for these clients.
           </p>
-        </div>
+        </ScrollAnimation>
       </section>
     </ContentWrapper>
   );
@@ -192,56 +238,77 @@ const FineTunedControlSection = (props) => {
         className="section section__with-grid all-columns"
         id="fineTunedControlSection"
       >
-        <section className="section--heading">
+        <ScrollAnimation
+          animateIn="animate__fadeInLeft"
+          duration={0.9}
+          // animateOnce={true}
+          className="section--heading"
+        >
           <h3 className="h3 capitalize">fine-tuned control</h3>
           <p className="p-small">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
             felis, et id aliquam ac tincidunt.
           </p>
-        </section>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeInUp"
+          duration={0.88}
+          className="img-block"
+        >
+          <Image
+            src={optimizeExperienceImage}
+            id="optimizeExperienceImage"
+            alt="Screenshot illustrating the optimized experience you get when using WireWise"
+          />
+        </ScrollAnimation>
         <div className="text-blocks">
-          <div className="text-block">
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={1.2}
+            className="text-block text-block-1"
+          >
             <h6 className="h6 capitalize">configure DNS</h6>
             <p className="p-small">
               Manage core settings and configuration from a streamlined online
               interface
             </p>
-          </div>
-          <div className="text-block">
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={1}
+            delay={300}
+            className="text-block text-block-2"
+          >
             <h6 className="h6 capitalize">multiple authentication options</h6>
             <p className="p-small">
               An always-on status guarantees that users connect seamlessly every
               time
             </p>
-          </div>
-          <div className="text-block">
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={0.8}
+            delay={600}
+            className="text-block text-block-3"
+          >
             <h6 className="h6 capitalize">Comprehensive activity logging</h6>
             <p className="p-small">
               A detailed event log ensures you can keep tabs on network activity
               and issues
             </p>
-          </div>
-          <div className="text-block">
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            duration={0.6}
+            delay={900}
+            className="text-block text-block-4"
+          >
             <h6 className="h6 capitalize">Detailed device info</h6>
             <p className="p-small">
               Register all your devices together and forego complex individual
               configuration
             </p>
-          </div>
-          <div className="text-block">
-            <h6 className="h6 capitalize">configure DNS</h6>
-            <p className="p-small">
-              Manage core settings and configuration from a streamlined online
-              interface
-            </p>
-          </div>
-          <div className="text-block">
-            <h6 className="h6 capitalize">configure DNS</h6>
-            <p className="p-small">
-              Manage core settings and configuration from a streamlined online
-              interface
-            </p>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
     </ContentWrapper>
@@ -263,41 +330,64 @@ const OptimizedExperienceSection = (props) => {
           </p>
         </div>
         <div className="section--body">
-          <div className="text-blocks">
-            <div className="text-block">
+          <div className="text-blocks text-blocks-1">
+            <ScrollAnimation
+              animateIn="animate__fadeInDown"
+              duration={1.2}
+              className="text-block"
+            >
               <h6 className="h6 capitalize">Cloud-based admin console</h6>
               <p className="p-small">
                 Manage core configuration and device permissions from a clean
                 web user interface
               </p>
-            </div>
-            <div className="text-block">
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateIn="animate__fadeInDown"
+              duration={1}
+              delay={300}
+              className="text-block"
+            >
               <h6 className="h6 capitalize">Minimal on-prem footprint</h6>
               <p className="p-small">
                 Skip extra hardware and third-party applications for easier
                 training and tighter compliance
               </p>
-            </div>
+            </ScrollAnimation>
           </div>
-          <div className="image__wrapper">
+          <ScrollAnimation
+            animateIn="animate__fadeInUp"
+            duration={0.88}
+            className="image__wrapper"
+          >
             <Image
               src={optimizeExperienceImage}
               id="optimizeExperienceImage"
               alt="Screenshot illustrating the optimized experience you get when using WireWise"
             />
-          </div>
-          <div className="text-blocks">
-            <div className="text-block">
+          </ScrollAnimation>
+          <div className="text-blocks text-blocks-2">
+            <ScrollAnimation
+              animateIn="animate__fadeInDown"
+              duration={0.8}
+              delay={600}
+              className="text-block"
+            >
               <h6 className="h6 capitalize">Streamlined setup wizard</h6>
               <p className="p-small">
                 Get started in just minutes with a guided setup process that
                 ensures nothing is missed
               </p>
-            </div>
-            <div className="text-block">
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateIn="animate__fadeInDown"
+              duration={0.6}
+              delay={900}
+              className="text-block"
+            >
               <h6 className="h6 capitalize">Simplified billing</h6>
               <p className="p-small">Focus on the work with</p>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -358,24 +448,35 @@ const SetupSection = (props) => {
         <article className="section--body">
           <ul className="tabs">
             {tabs.map((tab, i) => (
-              <StyledTab
-                className={`tab tab-${i + 1}`}
-                key={i}
-                active={i === activeTab}
-                onClick={(e) => {
-                  setPreviousTab(activeTab);
-                  setActiveTab(i);
-                }}
+              <ScrollAnimation
+                className="tab--outer"
+                animateIn="animate__fadeInLeft"
+                duration={1 - i * 0.05}
+                delay={i * 100}
               >
-                <span className="tab--num">{i + 1}</span>
-                <div className="tab--text">
-                  <h6 className="h6">{tab.title}</h6>
-                  <p className="p-small">{tab.par}</p>
-                </div>
-              </StyledTab>
+                <StyledTab
+                  className={`tab tab-${i + 1}`}
+                  key={i}
+                  active={i === activeTab}
+                  onClick={(e) => {
+                    setPreviousTab(activeTab);
+                    setActiveTab(i);
+                  }}
+                >
+                  <span className="tab--num">{i + 1}</span>
+                  <div className="tab--text">
+                    <h6 className="h6">{tab.title}</h6>
+                    <p className="p-small">{tab.par}</p>
+                  </div>
+                </StyledTab>
+              </ScrollAnimation>
             ))}
           </ul>
-          <div className="image__wrapper display">
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            duration={0.88}
+            className="image__wrapper display"
+          >
             <div className="slideshow">
               <StyledSlideshowItem
                 className="slideshow--item"
@@ -423,7 +524,7 @@ const SetupSection = (props) => {
                 previous={previousTab === 4}
               />
             </div>
-          </div>
+          </ScrollAnimation>
         </article>
       </section>
     </ContentWrapper>
