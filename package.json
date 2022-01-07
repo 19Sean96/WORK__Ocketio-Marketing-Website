@@ -15,6 +15,7 @@
     "react-hook-form": "^7.22.4",
     "react-icons": "^4.3.1",
     "react-number-format": "^4.9.0",
+    "react-swipe": "^6.0.4",
     "sass": "^1.44.0",
     "styled-components": "^5.3.3"
   },

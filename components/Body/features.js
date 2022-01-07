@@ -13,11 +13,12 @@ import Step2 from "../../public/images/step-2.png";
 import Step3 from "../../public/images/step-3.png";
 import Step4 from "../../public/images/step-4.png";
 import Step5 from "../../public/images/step-5.png";
-
-import { BsWindows, BsApple } from "react-icons/bs";
+import { useAppContext } from "../../Context";
+import { BsWindows, BsApple, BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 import { DiAndroid, DiLinux } from "react-icons/di";
 
+import ReactSwipe from "react-swipe";
 const ArchitectureSection = (props) => {
   const [hoverInfoBox, toggleHoverInfoBox] = useState("");
   const [specifiedInfo, specifyInfo] = useState({});
@@ -404,6 +405,10 @@ const StyledSlideshowItem = styled(Image)`
 
 const StyledTab = styled.li`
   opacity: ${(props) => (props.active ? 1 : 0.165)};
+
+  @media (max-width: 875px) {
+    opacity: ${(props) => (props.active ? 1 : 0)};
+  }
 `;
 
 const SetupSection = (props) => {
@@ -432,6 +437,7 @@ const SetupSection = (props) => {
       par: "Quickly add new users and devices in seconds",
     },
   ];
+
   return (
     <ContentWrapper>
       <section
@@ -472,6 +478,26 @@ const SetupSection = (props) => {
               </ScrollAnimation>
             ))}
           </ul>
+          <div className="slides-number-group">
+            <BsArrowLeft
+              className="j-display _700 slides-number-group--item"
+              style={{
+                opacity: activeTab === 0 ? 1 : 0.6,
+              }}
+              onClick={(e) => setActiveTab(activeTab > 0 ? activeTab - 1 : 4)}
+            >
+              1
+            </BsArrowLeft>
+            <BsArrowRight
+              className="j-display _700 slides-number-group--item"
+              style={{
+                opacity: activeTab === 1 ? 1 : 0.6,
+              }}
+              onClick={(e) => setActiveTab(activeTab <= 3 ? activeTab + 1 : 0)}
+            >
+              2
+            </BsArrowRight>
+          </div>
           <ScrollAnimation
             animateIn="animate__fadeIn"
             duration={0.88}

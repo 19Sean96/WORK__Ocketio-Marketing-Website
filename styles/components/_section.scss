@@ -1011,7 +1011,7 @@
       }
 
       @media (max-width: 575px) {
-        grid-template-columns: repeat(12,1fr);
+        grid-template-columns: repeat(12, 1fr);
 
         .text-blocks {
           grid-column: 2/12;
@@ -1019,12 +1019,10 @@
           &-1 {
             grid-row: 2/3;
             margin-top: 24px;
-
           }
           &-2 {
             grid-row: 3/4;
           }
-
         }
 
         .image__wrapper {
@@ -1034,8 +1032,6 @@
       }
     }
   }
-
-
 }
 
 #setupSection {
@@ -1046,7 +1042,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      position: relative;
       .tabs {
         display: flex;
         flex-direction: row;
@@ -1075,7 +1071,7 @@
           }
 
           &--num {
-            font-size: 37px;
+            font-size: 28px;
             font-weight: 600;
             width: 75px;
             text-align: center;
@@ -1098,6 +1094,7 @@
           &--text {
             h6 {
               font-weight: 800;
+              font-size: 16px;
             }
             p {
               font-size: 16px;
@@ -1124,12 +1121,43 @@
           & > span,
           & > div {
             grid-area: overlay;
+            height: 100%;
+
+            & > span,
+            & > div {
+              height: 100% !important;
+            }
           }
 
           &--item {
             position: absolute;
             transition: 0.35s ease-in-out all;
+            height: 100%;
           }
+
+          @media (max-width: 875px) {
+            &--item {
+              position: relative;
+            }
+          }
+        }
+      }
+
+      .slides-number-group {
+        display: none;
+        width: 90vw;
+        // min-width: 290px;
+        justify-content: center;
+        gap: 2vw;
+        &--item {
+          font-size: 28px;
+          border-radius: 50%;
+          padding: 8px;
+          width: 56px;
+          height: 56px;
+          background-color: #4eb4cf;
+          color: #fff;
+          border: none;
         }
       }
 
@@ -1149,27 +1177,33 @@
         }
       }
 
-      @media (max-width: 825px) {
+      @media (max-width: 875px) {
         justify-content: center;
         position: relative;
         flex-direction: column-reverse;
         .tabs {
-          width: calc((100vw / 12) * 10);
+          width: calc((100vw / 12) * 8);
+          min-width: 280px;
           position: relative;
           min-height: 170px;
           margin-top: 44px;
-          .tab--outer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100;
-            min-height: 170px;
-          }
-
           .tab {
             position: absolute;
             top: 0;
             left: 0;
+
+            &--num {
+              display: none;
+            }
+
+            &--outer {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100;
+              min-height: 170px;
+            }
+
           }
         }
 
@@ -1180,6 +1214,72 @@
           min-width: 290px;
           max-width: none;
           max-height: none;
+        }
+
+        .slides-number-group {
+          display: flex;
+          position: absolute;
+          justify-content: space-between;
+          z-index: 100;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%,60vw);
+        }
+      }
+
+      @media (max-width: 575px) {
+        .tabs {
+          .tab {
+            padding: 12px 19px;
+            gap: 10px;
+            &--outer {
+              display: flex;
+              align-items: center;
+              justify-content: stretch;
+              gap: 20px;
+              width: 100%;
+            }
+
+            &--num {
+              font-size: 20px;
+              font-weight: 600;
+              width: 60px;
+              text-align: center;
+              color: #fff;
+              position: relative;
+
+              &::before {
+                content: "";
+                z-index: -1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #4eb4cf;
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+              }
+            }
+            &--text {
+              h6 {
+                font-weight: 800;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .slides-number-group {
+          gap: 1.5vw;
+          &--item {
+            font-size: 20px;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+          }
         }
       }
     }

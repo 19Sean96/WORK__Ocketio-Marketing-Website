@@ -23,7 +23,7 @@ export function AppWrapper({ children }) {
     }
 
     function handleResize() {
-      if (window.innerWidth <= 875) {
+      if (window.innerWidth < 875) {
         setMobile(true);
         console.log("MOBILE");
       } else {
