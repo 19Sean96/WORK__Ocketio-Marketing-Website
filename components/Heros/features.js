@@ -19,7 +19,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       <section className="section section__with-grid" id="features-hero">
         <div id="features-hero-message">
             <h2 className="h2">
-              All of the essentials, none of the complexity.
+              All of the essentials. <br />None of the complexity.
             </h2>
             <p className="p-large">
               Wirewise is fundamentally a tool built on top of WireGuard.
