@@ -67,23 +67,23 @@ const WhoSection = (props) => {
       >
         <ScrollAnimation
           animateIn="animate__fadeInLeft"
-          duration={0.9}
+          duration={0.7}
           // animateOnce={true}
           className="section--heading"
         >
           {/* <div className="section--heading"> */}
-          <h3 className="h3">Who is it for?</h3>
+          <h3 className="h3">Great for Teams of All Sizes</h3>
           <p className="p-small">
-            No solution is perfect for everyone, but Wirewise adds useful
-            features to a cutting-edge VPN protocol in a way that we think makes
-            it an excellent option for teams of many sizes.
+            Wirewise adds useful features to a cutting-edge VPN protocol in a
+            way that we think makes it an excellent option for teams of many
+            sizes.
           </p>
           {/* </div> */}
         </ScrollAnimation>
         <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
           <ScrollAnimation
             animateIn="animate__fadeInUp"
-            duration={0.8}
+            duration={0.7}
             // animateOnce={true}
             className="card"
           >
@@ -107,10 +107,10 @@ const WhoSection = (props) => {
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="animate__fadeInUp"
-            duration={0.8}
+            duration={0.7}
             // animateOnce={true}
             className="card"
-            delay={200}
+            delay={100}
           >
             <div className="card--text">
               <h6 className="h6 capitalize">small business teams</h6>
@@ -132,10 +132,10 @@ const WhoSection = (props) => {
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="animate__fadeInUp"
-            duration={0.8}
+            duration={0.7}
             // animateOnce={true}
             className="card"
-            delay={400}
+            delay={200}
           >
             <div className="card--text">
               <h6 className="h6 capitalize">mid-sized companies</h6>
@@ -247,9 +247,9 @@ const WhatSection = (props) => {
         >
           <h3 className="h3">What makes it great?</h3>
           <p className="p-small">
-            No solution is perfect for everyone, but Wirewise adds useful
-            features to a cutting-edge VPN protocol in a way that we think makes
-            it an excellent option for teams of many sizes.
+            Wirewise has been built with a set of core attributes that just
+            might make it the best solution for your real-world network security
+            needs.
           </p>
         </ScrollAnimation>
         <div className="section--body">
@@ -296,7 +296,12 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
       <ul className="checklist">
         {list.map((item, i) => (
           <li className="checklist--item" key={"item-" + i}>
-            <ScrollAnimation duration={1 - (i * .1)} delay={i * 125} animateIn="animate__fadeInUp" className="checklist--item">
+            <ScrollAnimation
+              duration={1 - i * 0.1}
+              delay={i * 125}
+              animateIn="animate__fadeInUp"
+              className="checklist--item"
+            >
               <BsCheckCircle
                 style={{
                   width: "22px",
@@ -309,7 +314,12 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
           </li>
         ))}
       </ul>
-      <ScrollAnimation animateIn="animate__fadeIn" duration={.7} className="image__wrapper" delay={150}>
+      <ScrollAnimation
+        animateIn="animate__fadeIn"
+        duration={0.7}
+        className="image__wrapper"
+        delay={150}
+      >
         <Image
           src={img}
           alt={alt}
