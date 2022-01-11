@@ -23,6 +23,7 @@ h5, .h5,
 h6, .h6,
 label {
     font-family: 'Plus Jakarta Display';
+    margin-inline: auto;
 }
 
 p, 
@@ -31,6 +32,8 @@ a,
 input,
 textarea {
     font-family: 'Plus Jakarta Display';
+    margin-inline: auto;
+
 }
 
 input, textarea, label {
