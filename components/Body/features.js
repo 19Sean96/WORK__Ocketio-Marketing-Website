@@ -178,7 +178,7 @@ const ArchitectureSection = (props) => {
           />
         </ScrollAnimation>
         <ScrollAnimation
-          animateIn="animate__fadeInRight"
+          animateIn="animate__fadeInUp"
           duration={0.95}
           className="text-block text-block-1"
         >
@@ -194,7 +194,7 @@ const ArchitectureSection = (props) => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation
-          animateIn="animate__fadeInRight"
+          animateIn="animate__fadeInUp"
           duration={0.8}
           delay={175}
           className="text-block text-block-2"
@@ -211,7 +211,7 @@ const ArchitectureSection = (props) => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation
-          animateIn="animate__fadeInRight"
+          animateIn="animate__fadeInUp"
           duration={0.65}
           delay={325}
           className="text-block text-block-3"
