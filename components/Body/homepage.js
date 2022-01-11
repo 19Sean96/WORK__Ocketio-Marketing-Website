@@ -82,13 +82,13 @@ const WhoSection = (props) => {
         </ScrollAnimation>
         <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateIn="animate__fadeInUp"
             duration={0.8}
             // animateOnce={true}
             className="card"
           >
             <div className="card--text">
-              <h5 className="h5 capitalize">individual users</h5>
+              <h6 className="h6 capitalize">individual users</h6>
               <p className="p-small">
                 Share access to personal projects, test development work, or
                 improve your gaming experience.
@@ -106,14 +106,14 @@ const WhoSection = (props) => {
             </div>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateIn="animate__fadeInUp"
             duration={0.8}
             // animateOnce={true}
             className="card"
             delay={200}
           >
             <div className="card--text">
-              <h5 className="h5 capitalize">small business teams</h5>
+              <h6 className="h6 capitalize">small business teams</h6>
               <p className="p-small">
                 Grant a handful of remote employees access to internal resources
                 without unnecessary complexity.
@@ -131,14 +131,14 @@ const WhoSection = (props) => {
             </div>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateIn="animate__fadeInUp"
             duration={0.8}
             // animateOnce={true}
             className="card"
             delay={400}
           >
             <div className="card--text">
-              <h5 className="h5 capitalize">mid-sized companies</h5>
+              <h6 className="h6 capitalize">mid-sized companies</h6>
               <p className="p-small">
                 Manage network controls in a way that scales alongside a growing
                 business effort.
