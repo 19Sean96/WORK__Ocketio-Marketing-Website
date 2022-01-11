@@ -41,7 +41,7 @@ const Footer = () => {
                         </li>
                     </ul>
                     <ul className="footer--nav__left">
-                        <li className="j-text p-small _700 bold">Utility Pages</li>
+                        <li className="j-text p-small _700 bold">Legal</li>
                         <li className="p-small">
                             <Link href="/privacy">
                                 <a>Privacy</a>
