@@ -109,6 +109,7 @@ const ContactPortal = (props) => {
               }`}
             >
               <input
+                required
                 className="section--form--input"
                 type="text"
                 {...register("fullName", { required: true })}
@@ -130,6 +131,7 @@ const ContactPortal = (props) => {
               }`}
             >
               <input
+              
                 className="section--form--input"
                 type="text"
                 {...register("companyName", { required: false })}
@@ -146,10 +148,11 @@ const ContactPortal = (props) => {
               delay={300}
               duration={0.6}
               className={`section--form--input__wrapper half ${
-                watchAllInputs?.email?.length > 0 ? "has-value" : ""
+                watchAllInputs?.emailInput?.length > 0 ? "has-value" : ""
               }`}
             >
               <input
+              required
                 type="email"
                 {...register("emailInput", { required: true })}
                 className="section--form--input"
@@ -177,6 +180,7 @@ const ContactPortal = (props) => {
                   fieldState: { invalid, isTouched, isDirty, error },
                 }) => (
                   <NumberFormat
+                  required
                     format="+1 (###) ###-####"
                     mask="_"
                     onValueChange={(v) => onChange(v.value)}
@@ -203,6 +207,7 @@ const ContactPortal = (props) => {
               <textarea
                 {...register("message", { required: false })}
                 className="section--form--input"
+                required
               />
               <label
                 htmlFor="message"
