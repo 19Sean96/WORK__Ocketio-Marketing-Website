@@ -7,10 +7,15 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 import worldMap from "../../public/images/world-map.png";
-import GraphicSecure from "../../public/images/WW_Website_Homepage-Graphics-Secure.png";
-import GraphicStreamlined from "../../public/images/WW_Website_Homepage-Graphics-Streamlined.png";
-import GraphicEfficient from "../../public/images/WW_Website_Homepage-Graphics-Efficient.png";
-import GraphicCostEffective from "../../public/images/WW_Website_Homepage-Graphics_Cost-effective.png";
+// import GraphicSecure from "../../public/images/WW_Website_Homepage-Graphics-Secure.png";
+// import GraphicStreamlined from "../../public/images/WW_Website_Homepage-Graphics-Streamlined.png";
+// import GraphicEfficient from "../../public/images/WW_Website_Homepage-Graphics-Efficient.png";
+// import GraphicCostEffective from "../../public/images/WW_Website_Homepage-Graphics_Cost-effective.png";
+
+import GraphicSecure from "../../public/images/secure.png";
+import GraphicStreamlined from "../../public/images/streamlined.png";
+import GraphicEfficient from "../../public/images/efficient.png";
+import GraphicCostEffective from "../../public/images/cost-effective.png";
 
 import Card1 from "../../public/images/individual.png";
 import Card2 from "../../public/images/small-business.png";
