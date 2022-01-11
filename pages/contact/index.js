@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 
 import { ContactPortal, MoreContact, ContactFAQ } from "../../components/Body/contact";
 

@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 
-import Header from "../components/Header";
 import { Hero } from "../components/Heros/homepage";
 import {
   FirstBanner,

@@ -1,11 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import ContentWrapper from "../ContentWrapper";
 import heroImageMain from "../../public/images/Homepage-Landing_Hero-Main.png";
 import heroImageSub1 from "../../public/images/Homepage-Landing_Hero-Sub_1.png";
 import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
@@ -114,12 +112,12 @@ const HeroHome = ({ offset }) => {
           >
             <div className="cta-group">
               <Link href="/pricing">
-                <button className="cta btn btn--filled j-text _600 capitalize">
+                <button className="cta btn btn--filled j-text _600 capitalize" aria-label="Get started with the beta program">
                   try beta
                 </button>
               </Link>
               <Link href="/features">
-                <button className="cta btn btn--bordered j-text _600 capitalize">
+                <button className="cta btn btn--bordered j-text _600 capitalize" aria-label="Get additional information about Wirewise">
                   learn more
                 </button>
               </Link>

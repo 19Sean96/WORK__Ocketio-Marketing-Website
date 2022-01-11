@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 
-import { useAppContext } from "../../Context";
 import ContentWrapper from "../../components/ContentWrapper";
 export default function Pricing() {
   const paragraphs = [

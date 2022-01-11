@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import NumberFormat from "react-number-format";
 import ContentWrapper from "../ContentWrapper";
@@ -152,11 +151,11 @@ const ContactPortal = (props) => {
             >
               <input
                 type="email"
-                {...register("email", { required: true })}
+                {...register("emailInput", { required: true })}
                 className="section--form--input"
               />
               <label
-                htmlFor="email"
+                htmlFor="emailInput"
                 className="section--form--input__label j-display _400"
               >
                 Email Address

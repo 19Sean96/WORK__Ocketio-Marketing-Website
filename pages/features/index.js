@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 
 import { Hero } from "../../components/Heros/features";
 import { ArchitectureSection, FineTunedControlSection, OptimizedExperienceSection, SetupSection } from "../../components/Body/features"; 

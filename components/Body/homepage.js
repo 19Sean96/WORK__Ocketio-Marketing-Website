@@ -1,16 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useState, useEffect } from "react";
-import styled from "styled-components";
-
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 import worldMap from "../../public/images/world-map.png";
-// import GraphicSecure from "../../public/images/WW_Website_Homepage-Graphics-Secure.png";
-// import GraphicStreamlined from "../../public/images/WW_Website_Homepage-Graphics-Streamlined.png";
-// import GraphicEfficient from "../../public/images/WW_Website_Homepage-Graphics-Efficient.png";
-// import GraphicCostEffective from "../../public/images/WW_Website_Homepage-Graphics_Cost-effective.png";
 
 import GraphicSecure from "../../public/images/secure.png";
 import GraphicStreamlined from "../../public/images/streamlined.png";
@@ -267,12 +260,12 @@ const WhatSection = (props) => {
           ))}
           <div className="cta-group">
             <Link href="/pricing">
-              <button className="cta btn btn--filled j-text _600 capitalize">
+              <button className="cta btn btn--filled j-text _600 capitalize" aria-label="Get started with our beta program by creating a network">
                 create a network
               </button>
             </Link>
             <Link href="/features">
-              <button className="cta btn btn--bordered j-text _600 capitalize">
+              <button className="cta btn btn--bordered j-text _600 capitalize" aria-label="Get additional information about Wirewise">
                 learn more
               </button>
             </Link>

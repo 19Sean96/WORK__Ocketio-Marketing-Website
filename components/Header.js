@@ -42,12 +42,12 @@ const Header = () => {
           {!isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} />}
           {/* should change to link */}
           {isMobile ? (
-            <button id="menuIcon" onClick={(e) => toggleMenuOpen(!menuOpen)}>
+            <button id="menuIcon" onClick={(e) => toggleMenuOpen(!menuOpen)} aria-label={menuOpen ? 'close mobile navigation' : 'open mobile navigation'}>
               <Menu menuOpen={menuOpen} />
             </button>
           ) : (
             <div className="header--cta__wrapper">
-              <button className="header--cta btn btn--filled j-text _600 capitalize">
+              <button className="header--cta btn btn--filled j-text _600 capitalize" aria-label="Get started with the beta program">
                 try beta
               </button>
             </div>
@@ -126,7 +126,7 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
         {/* <li className="j-text header--nav--item">blog</li> */}
       </ul>
       {isMobile && (
-        <button className="header--cta btn btn--filled j-text _600 capitalize">
+        <button className="header--cta btn btn--filled j-text _600 capitalize" aria-label="Get started with the beta program">
           try beta
         </button>
       )}

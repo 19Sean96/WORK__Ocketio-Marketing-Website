@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="footer--bot">
                 <div className="j-display footer--copyright">© {currentYear} Unwired Revolution</div>
                 <div className="footer--social__wrapper">
-                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
                         <BsLinkedin 
                             style={{
                                 height:"25px",
