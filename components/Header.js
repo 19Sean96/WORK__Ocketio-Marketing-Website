@@ -29,13 +29,14 @@ const Header = () => {
         className="header__wrapper"
         style={{
           position: isMobile && menuOpen ? "fixed" : "relative",
+          background: router.pathname === '/features' ? '#252939' : 'transparent'
         }}
       >
         <header className="header">
           <div className="header--logo">
             <Link href="/">
               <a>
-                <Logo menuOpenOnMobile={menuOpen && isMobile} />
+                <Logo menuOpenOnMobile={menuOpen && isMobile} darkMode={router.pathname === '/features'}/>
               </a>
             </Link>
           </div>
@@ -43,12 +44,12 @@ const Header = () => {
           {/* should change to link */}
           {isMobile ? (
             <button id="menuIcon" onClick={(e) => toggleMenuOpen(!menuOpen)} aria-label={menuOpen ? 'close mobile navigation' : 'open mobile navigation'}>
-              <Menu menuOpen={menuOpen} />
+              <Menu menuOpen={menuOpen} darkMode={router.pathname === '/features'} />
             </button>
           ) : (
             <div className="header--cta__wrapper">
-              <button className="header--cta btn btn--filled j-text _600 capitalize" aria-label="Get started with the beta program">
-                try beta
+              <button className="header--cta btn btn--filled j-text _600" aria-label="Get started with the beta program">
+                Try the Beta
               </button>
             </div>
           )}
@@ -105,7 +106,7 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
           <Link href="/pricing">
             <a
               style={{
-                color: router.pathname === "/pricing" ? "#1688f2" : "#252939",
+                color: router.pathname === "/pricing" ? "#1688f2" : router.pathname === '/features' ? '#fff' : "#252939",
               }}
             >
               pricing
@@ -116,7 +117,7 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
           <Link href="/contact">
             <a
               style={{
-                color: router.pathname === "/contact" ? "#1688f2" : "#252939",
+                color: router.pathname === "/contact" ? "#1688f2" : router.pathname === '/features' ? '#fff' : "#252939",
               }}
             >
               contact
@@ -126,8 +127,8 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
         {/* <li className="j-text header--nav--item">blog</li> */}
       </ul>
       {isMobile && (
-        <button className="header--cta btn btn--filled j-text _600 capitalize" aria-label="Get started with the beta program">
-          try beta
+        <button className="header--cta btn btn--filled j-text _600" aria-label="Get started with the beta program">
+          Try the Beta
         </button>
       )}
     </nav>

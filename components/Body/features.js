@@ -65,93 +65,6 @@ const ArchitectureSection = (props) => {
         className="section section__with-grid all-columns"
         id="architectureSection"
       >
-        <h6 className="h6 banner--heading">Wirewise runs on</h6>
-        <article id="supportedOS" className="banner f f-justify-between">
-          <ScrollAnimation
-            animateIn="animate__fadeInUp"
-            duration={1.2}
-            className="item item-1"
-            onMouseEnter={(e) => toggleHoverInfoBox("managedDevices")}
-            onMouseLeave={(e) => toggleHoverInfoBox("")}
-          >
-            <div className="item--img__wrapper">
-              <BsWindows
-                className="item--img"
-                // style={{
-                //   height: "40px",
-                //   width: "auto",
-                // }}
-              />
-              <span className="item--img--text">Windows</span>
-            </div>
-            <h6 className="h6 capitalize">
-              managed <span className="last-word">devices</span>
-            </h6>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            duration={0.8}
-            delay={550}
-            className="item item-2"
-            onMouseEnter={(e) => toggleHoverInfoBox("supervisedDevices")}
-            onMouseLeave={(e) => toggleHoverInfoBox("")}
-          >
-            <div className="item--img__wrapper">
-              <BsApple
-                className="item--img"
-                // style={{
-                //   height: "40px",
-                //   width: "auto",
-                // }}
-              />
-              <span className="item--img--text">
-                MacOS
-                <br />
-                iOS
-              </span>
-              <DiLinux
-                className="item--img"
-                // style={{
-                //   height: "40px",
-                //   width: "auto",
-                // }}
-              />
-              <span className="item--img--text">Linux</span>
-              <DiAndroid
-                className="item--img"
-                // style={{
-                //   height: "40px",
-                //   width: "auto",
-                // }}
-              />
-              <span className="item--img--text">Android</span>
-            </div>
-            <h6 className="h6 capitalize">
-              supervised <span className="last-word">devices</span>
-            </h6>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeInUp"
-            duration={1.2}
-            className="item item-3"
-            onMouseEnter={(e) => toggleHoverInfoBox("gatewayManagement")}
-            onMouseLeave={(e) => toggleHoverInfoBox("")}
-          >
-            <div className="item--img__wrapper">
-              <DiLinux
-                className="item--img"
-                // style={{
-                //   height: "40px",
-                //   width: "auto",
-                // }}
-              />
-              <span className="item--img--text">Linux</span>
-            </div>
-            <h6 className="h6 capitalize">
-              gateway <span className="last-word">management</span>
-            </h6>
-          </ScrollAnimation>
-        </article>
         <ScrollAnimation
           animateIn="animate__fadeInLeft"
           duration={0.9}
@@ -160,8 +73,9 @@ const ArchitectureSection = (props) => {
         >
           <h3 className="h3 capitalize">Thoughtful architecture</h3>
           <p className="p-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
-            felis, et id aliquam ac tincidunt.
+            Built from the ground up to facilitate all the complex relationships
+            involved in network access management. Here’s what it looks like
+            when we pop the hood.
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -186,8 +100,8 @@ const ArchitectureSection = (props) => {
           <p className="p-small">
             Wirewise uses the WireGuard encryption framework, a new industry
             standard for securing tunneled traffic. With its state of the art
-            cryptography and a code base just 1% the size of legacy
-            technologies, you can rest easy that Wirewise is secure and
+            cryptography and a code base just 1% the size of technologies
+            leveraging OpenVPN, you can rest easy that Wirewise is secure and
             auditable against attacks. Its highly performant protocol also
             enables roaming across networks and instant connections, minimizing
             the need for user interaction.
@@ -201,13 +115,7 @@ const ArchitectureSection = (props) => {
         >
           <h5 className="h5 capitalize">small business teams</h5>
           <p className="p-small">
-            For a tunnel to be established, the network gateway and its
-            associated devices need to know each other’s private encryption key.
-            Wirewise efficiently manages the distribution and updating of
-            authorized keys on both gateways and end user devices so access can
-            be revoked as quickly as it is granted. Automatic controls based on
-            defined settings and conditions, such as last authenticated or
-            connected date, will instantly quarantine inactive devices.
+          For a tunnel to be established, the network gateway and its devices need to know each other’s private encryption keys. Wirewise efficiently manages the distribution and updating of authorized keys on gateways and end user devices so access can be revoked as quickly as it is granted. Automatic controls based on defined settings and conditions, such as last authenticated date, will instantly quarantine inactive devices.
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -218,13 +126,7 @@ const ArchitectureSection = (props) => {
         >
           <h5 className="h5 capitalize">extensible client support</h5>
           <p className="p-small">
-            Do you have other devices besides Windows machines that need to
-            access your network right now? We're working diligently to provide
-            support for additional platforms.In the meantime, we’ve got you
-            covered since Wirewise allows authenticated users to generate and
-            download a configuration file that can then be uploaded into a
-            WireGuard client. This enables you to quickly and conditionally
-            enable or disable access to your network for these clients.
+            Do you have other devices besides Windows machines that need to access your network? Good news, we're working diligently to provide support for additional platforms. In the meantime, we’ve got you covered since Wirewise allows authenticated users to generate and download a config file that can be uploaded into a WireGuard client. This enables you to quickly and conditionally enable or disable access to your network for these clients.
           </p>
         </ScrollAnimation>
       </section>
@@ -247,8 +149,7 @@ const FineTunedControlSection = (props) => {
         >
           <h3 className="h3 capitalize">fine-tuned control</h3>
           <p className="p-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
-            felis, et id aliquam ac tincidunt.
+          No network administrator’s life needs to be harder. Mission-critical features allow you to simplifiy access management while dialing in core configuration.
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -268,10 +169,9 @@ const FineTunedControlSection = (props) => {
             duration={1.2}
             className="text-block text-block-1"
           >
-            <h6 className="h6 capitalize">configure DNS</h6>
+            <h6 className="h6 capitalize">Multiple Authentication Options</h6>
             <p className="p-small">
-              Manage core settings and configuration from a streamlined online
-              interface
+            Use your existing auth provider to streamline access and enforce access requirements
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -280,10 +180,10 @@ const FineTunedControlSection = (props) => {
             delay={300}
             className="text-block text-block-2"
           >
-            <h6 className="h6 capitalize">multiple authentication options</h6>
+            <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
             <p className="p-small">
-              An always-on status guarantees that users connect seamlessly every
-              time
+            A detailed event log ensures you can keep tabs on network activity and issues
+
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -292,10 +192,9 @@ const FineTunedControlSection = (props) => {
             delay={600}
             className="text-block text-block-3"
           >
-            <h6 className="h6 capitalize">Comprehensive activity logging</h6>
+            <h6 className="h6 capitalize">Detailed Device Info</h6>
             <p className="p-small">
-              A detailed event log ensures you can keep tabs on network activity
-              and issues
+            See all registered devices in one place and monitor connection status, authentication schedules, and more
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -304,10 +203,10 @@ const FineTunedControlSection = (props) => {
             delay={900}
             className="text-block text-block-4"
           >
-            <h6 className="h6 capitalize">Detailed device info</h6>
+            <h6 className="h6 capitalize">configure DNS</h6>
             <p className="p-small">
-              Register all your devices together and forego complex individual
-              configuration
+            Manage core settings and configuration from a streamlined online
+              interface
             </p>
           </ScrollAnimation>
         </div>
@@ -326,8 +225,7 @@ const OptimizedExperienceSection = (props) => {
         <div className="section--heading">
           <h3 className="h3 capitalize">optimized experience</h3>
           <p className="p-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
-            felis, et id aliquam ac tincidunt.
+          A platform as usable as it is capable ensures that administrators and users alike can take full advantage of its protection while almost forgetting it’s there.
           </p>
         </div>
         <div className="section--body">
@@ -386,8 +284,8 @@ const OptimizedExperienceSection = (props) => {
               delay={900}
               className="text-block"
             >
-              <h6 className="h6 capitalize">Simplified billing</h6>
-              <p className="p-small">Focus on the work with</p>
+              <h6 className="h6 capitalize">Always On Connection</h6>
+              <p className="p-small">An uninterrupted conntection guarantees that your team members connect seamlessly every time</p>
             </ScrollAnimation>
           </div>
         </div>
@@ -426,7 +324,7 @@ const SetupSection = (props) => {
     },
     {
       title: "Install your gateway",
-      par: "Manage users simply through the streamlined interface",
+      par: "Select your plan and create your account.",
     },
     {
       title: "Configure security settings",
@@ -447,8 +345,7 @@ const SetupSection = (props) => {
         <div className="section--heading">
           <h3 className="h3 capitalize">straightforward setup</h3>
           <p className="p-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
-            felis, et id aliquam ac tincidunt.
+          Forget all the manual configuration historically required for WireGuard configuration. Instead get up and running in minutes with a delightfully simple setup process and accessible admin panel.
           </p>
         </div>
         <article className="section--body">

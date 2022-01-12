@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledLogo = styled.svg`
   .cls-1 {
-    fill: ${(props) => (props.menuOpen ? "#fff" : "#000")};
+    fill: ${(props) => (props.menuOpen || props.darkMode ? "#fff" : "#000")};
     stroke-miterlimit: 10;
   }
   .cls-2 {
@@ -21,11 +21,12 @@ const StyledLogo = styled.svg`
   }
 `;
 
-const Logo = ({ menuOpenOnMobile }) => (
+const Logo = ({ menuOpenOnMobile, darkMode }) => (
   <StyledLogo
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 2103.74 367.46"
     menuOpen={menuOpenOnMobile}
+    darkMode={darkMode}
   >
     <path
       className="cls-1"
