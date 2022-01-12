@@ -20,9 +20,10 @@ const EmailIntakeBanner = (props) => {
         id="emailIntake"
       >
         <div className="section--heading">
-          <h4 className="h4">
-            Be the first to know when we launch features and updates.
-          </h4>
+          <h5 className="h5">
+            Be the first to know.
+          </h5>
+          <p className="p-small">Follow along as we test, tweak, and improve the beta to make sure you never miss a beat.</p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="section--form">
           <div

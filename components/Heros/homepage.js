@@ -112,8 +112,8 @@ const HeroHome = ({ offset }) => {
           >
             <div className="cta-group">
               <Link href="/pricing">
-                <button className="cta btn btn--filled j-text _600 capitalize" aria-label="Get started with the beta program">
-                  try beta
+                <button className="cta btn btn--filled j-text _600" aria-label="Get started with the beta program">
+                  Try the Beta
                 </button>
               </Link>
               <Link href="/features">

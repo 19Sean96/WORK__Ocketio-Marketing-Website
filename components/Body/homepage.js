@@ -28,15 +28,15 @@ const FirstBanner = (props) => {
         // }}
       >
         <h5 className="h5 banner--title">
-          Wirewise is a VPN designed for easy, secure network access. It's that
-          simple.
+          Designed for easy, secure remote access management. <br />
+          It’s that simple.
         </h5>
         <p className="p-small banner--paragraph">
-          Two years ago we started searching for a capable WireGuard® VPN that
-          could support a growing distributed team. But the available solutions
-          were too clunky, too expensive, or just didn't have the right
-          features. So now we're developing the VPN we wish we'd been able to
-          find.
+          A couple years ago we started searching for a capable WireGuard® VPN
+          that could easily support a growing distributed team. But the
+          available solutions were too clunky, too expensive, or just didn't
+          have the right features. So now we're developing the VPN we wish we'd
+          been able to find.
         </p>
         <div className="image_wrapper banner--image">
           <Image
@@ -65,11 +65,11 @@ const WhoSection = (props) => {
           className="section--heading"
         >
           {/* <div className="section--heading"> */}
-          <h3 className="h3">Great for Teams of All Sizes</h3>
+          <h3 className="h3">Who is it for?</h3>
           <p className="p-small">
             Wirewise adds useful features to a cutting-edge VPN protocol in a
-            way that we think makes it an excellent option for teams of many
-            sizes.
+            way that makes it an excellent option whether you’re a small shop or
+            a growing enterprise
           </p>
           {/* </div> */}
         </ScrollAnimation>
@@ -209,7 +209,7 @@ const WhatSection = (props) => {
     },
     {
       title: `it's cost-effective.`,
-      par: `Effective security shouldn't break the bank. A straightforward pricing structure makes it easy to try the product and affordable to get your people and their devices safely connected, no matter how many there are.`,
+      par: `Reliable security shouldn't break the bank. A straightforward pricing structure makes it easy to try the product and affordable to get your people and their devices safely connected, no matter how many there are.`,
 
       image: {
         src: GraphicCostEffective,
@@ -218,7 +218,7 @@ const WhatSection = (props) => {
       },
 
       list: [
-        "Three free devices",
+        "Full feature parity across plans",
         "Simple pricing structure",
         "Affordable at any size",
       ],
@@ -240,9 +240,8 @@ const WhatSection = (props) => {
         >
           <h3 className="h3">What makes it great?</h3>
           <p className="p-small">
-            Wirewise has been built with a set of core attributes that just
-            might make it the best solution for your real-world network security
-            needs.
+            Wirewise is built with a set of core attributes that just might make
+            it the best solution for your real-world network security needs.
           </p>
         </ScrollAnimation>
         <div className="section--body">
@@ -260,12 +259,18 @@ const WhatSection = (props) => {
           ))}
           <div className="cta-group">
             <Link href="/pricing">
-              <button className="cta btn btn--filled j-text _600 capitalize" aria-label="Get started with our beta program by creating a network">
+              <button
+                className="cta btn btn--filled j-text _600 capitalize"
+                aria-label="Get started with our beta program by creating a network"
+              >
                 create a network
               </button>
             </Link>
             <Link href="/features">
-              <button className="cta btn btn--bordered j-text _600 capitalize" aria-label="Get additional information about Wirewise">
+              <button
+                className="cta btn btn--bordered j-text _600 capitalize"
+                aria-label="Get additional information about Wirewise"
+              >
                 learn more
               </button>
             </Link>

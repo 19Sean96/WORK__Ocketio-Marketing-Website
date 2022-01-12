@@ -37,27 +37,26 @@ export default function Pricing() {
           >
             <h2 className="h2">Pricing</h2>
             <p className="p-small">
-              Pick a plan and get up and running. It's that simple.
+            Try the beta completely free, and sign up to be notified when the paid version launches
             </p>
           </ScrollAnimation>
           <div className="section--body">
             <ScrollAnimation duration={.7} delay={400} animateIn="animate__fadeInLeft" className="section--body--item" id="priceFree">
               <h6 className="price--type capitalize h6">free</h6>
               <h4 className="h4 price--num">$ 0.00 USD</h4>
-              <p className="p-small price--rate">monthly per user</p>
+              <p className="p-small price--rate">monthly per device</p>
               <Link href="#">
                 <button className="price--cta btn btn--filled capitalize">
                   get started
                 </button>
               </Link>
               <p className="p-small price--message">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                semper sceleris.
+              Register up to three devices and create a single network, with access to all the platform’s features.
               </p>
             </ScrollAnimation>
-            <ScrollAnimation duration={.9} delay={200} animateIn="animate__fadeInLeft"  className="section--body--item" id="priceMonthly">
+            <ScrollAnimation duration={.9} delay={200} animateIn="animate__fadeInLeft"  className="section--body--item blurred" id="priceMonthly">
               <h6 className="price--type capitalize h6">monthly</h6>
-              <h4 className="h4 price--num">$ 10.00 USD</h4>
+              <h4 className="h4 price--num">$ XX.XX USD</h4>
               <p className="p-small price--rate">monthly per user</p>
               <Link href="#">
                 <button className="price--cta btn btn--filled capitalize">
@@ -69,9 +68,9 @@ export default function Pricing() {
                 semper sceleris.
               </p>
             </ScrollAnimation>
-            <ScrollAnimation duration={1.1} delay={0} animateIn="animate__fadeInLeft"  className="section--body--item" id="priceAnnual">
+            <ScrollAnimation duration={1.1} delay={0} animateIn="animate__fadeInLeft"  className="section--body--item blurred" id="priceAnnual">
               <h6 className="price--type capitalize h6">annual</h6>
-              <h4 className="h4 price--num">$ 8.00 USD</h4>
+              <h4 className="h4 price--num">$ XX.XX USD</h4>
               <p className="p-small price--rate">monthly per user</p>
               <Link href="#">
                 <button className="price--cta btn btn--filled capitalize">
@@ -85,7 +84,7 @@ export default function Pricing() {
             </ScrollAnimation>
           </div>
           <ScrollAnimation duration={.75} delay={700} animateIn="animate__fadeInUp" className="section--footer">
-            <h6 className="h6">Need a custom plan?</h6>
+            <h6 className="h6">Interested in a custom plan?</h6>
             <p className="p-small">
               <Link href="/contact">
                 <a>Contact us</a>
