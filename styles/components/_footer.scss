@@ -6,6 +6,10 @@
   padding-bottom: 20px;
   margin-top: 250px;
 
+  @media (min-width: 2160px) {
+    max-width: 1880px;
+  }
+  
   &--top {
     display: flex;
     justify-content: space-between;
