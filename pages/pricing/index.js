@@ -3,6 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import ContentWrapper from "../../components/ContentWrapper";
 import FAQList from "../../components/util/FAQ";
+import EmailIntakeInput from "../../components/util/EmailIntakeInput";
 export default function Pricing() {
   const faqs = [
     {
@@ -37,11 +38,21 @@ export default function Pricing() {
           >
             <h2 className="h2">Pricing</h2>
             <p className="p-small">
-            Try the beta completely free, and sign up to be notified when the paid version launches
+              Try the beta completely free, and sign up to be notified when the
+              paid version launches
             </p>
           </ScrollAnimation>
+          <div className="section--form__wrapper">
+            <EmailIntakeInput />
+          </div>
           <div className="section--body">
-            <ScrollAnimation duration={.7} delay={400} animateIn="animate__fadeInLeft" className="section--body--item" id="priceFree">
+            <ScrollAnimation
+              duration={0.7}
+              delay={400}
+              animateIn="animate__fadeInLeft"
+              className="section--body--item"
+              id="priceFree"
+            >
               <h6 className="price--type capitalize h6">free</h6>
               <h4 className="h4 price--num">$ 0.00 USD</h4>
               <p className="p-small price--rate">monthly per device</p>
@@ -51,10 +62,17 @@ export default function Pricing() {
                 </button>
               </Link>
               <p className="p-small price--message">
-              Register up to three devices and create a single network, with access to all the platform’s features.
+                Register up to three devices and create a single network, with
+                access to all the platform’s features.
               </p>
             </ScrollAnimation>
-            <ScrollAnimation duration={.9} delay={200} animateIn="animate__fadeInLeft"  className="section--body--item blurred" id="priceMonthly">
+            <ScrollAnimation
+              duration={0.9}
+              delay={200}
+              animateIn="animate__fadeInLeft"
+              className="section--body--item blurred"
+              id="priceMonthly"
+            >
               <h6 className="price--type capitalize h6">monthly</h6>
               <h4 className="h4 price--num">$ XX.XX USD</h4>
               <p className="p-small price--rate">monthly per user</p>
@@ -68,7 +86,13 @@ export default function Pricing() {
                 semper sceleris.
               </p>
             </ScrollAnimation>
-            <ScrollAnimation duration={1.1} delay={0} animateIn="animate__fadeInLeft"  className="section--body--item blurred" id="priceAnnual">
+            <ScrollAnimation
+              duration={1.1}
+              delay={0}
+              animateIn="animate__fadeInLeft"
+              className="section--body--item blurred"
+              id="priceAnnual"
+            >
               <h6 className="price--type capitalize h6">annual</h6>
               <h4 className="h4 price--num">$ XX.XX USD</h4>
               <p className="p-small price--rate">monthly per user</p>
@@ -83,7 +107,12 @@ export default function Pricing() {
               </p>
             </ScrollAnimation>
           </div>
-          <ScrollAnimation duration={.75} delay={700} animateIn="animate__fadeInUp" className="section--footer">
+          <ScrollAnimation
+            duration={0.75}
+            delay={700}
+            animateIn="animate__fadeInUp"
+            className="section--footer"
+          >
             <h6 className="h6">Interested in a custom plan?</h6>
             <p className="p-small">
               <Link href="/contact">
@@ -99,7 +128,9 @@ export default function Pricing() {
         <section className="section__with-grid all-columns" id="pricingFAQ">
           <ScrollAnimation
             animateIn="animate__fadeIn"
-            duration={0.9} className="section--heading">
+            duration={0.9}
+            className="section--heading"
+          >
             <h4 className="h4 capitalize">frequently asked questions</h4>
           </ScrollAnimation>
           <div className="section--body">
