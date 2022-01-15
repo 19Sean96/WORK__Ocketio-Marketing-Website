@@ -34,7 +34,7 @@ const BlogItem = ({
         )}
       </p>
       <h5 className="h5 blog--title">{title}</h5>
-      <p className="p-small blog--body">{ReactHtmlParser(body)}</p>
+      <caption className="p-small blog--body s">{ReactHtmlParser(body)}</caption>
 
       <Link
         href={{
