@@ -13,5 +13,8 @@ module.exports = {
                 headers: securityHeaders
             }
         ]
+    },
+    images: {
+        domains: ['143.198.146.26']
     }
 }
