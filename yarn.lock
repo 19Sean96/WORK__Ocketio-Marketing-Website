@@ -1572,11 +1572,6 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash.isequal@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
-
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -1938,7 +1933,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.9, prop-types@^15.6.0:
+prop-types@^15.5.9:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2066,14 +2061,10 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-swipe@^6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/react-swipe/-/react-swipe-6.0.4.tgz#76e53599b1a093d5a3a841c7f391ef0abcc1babb"
-  integrity sha512-NIF+gVOqPpE8GyCg0ssFC+fPgeqCwNnvqFU/A8nDAOvoncW3KjSVFwgkYNnErHvpFZGmsVw4SLWK96n7+mnChg==
-  dependencies:
-    lodash.isequal "^4.5.0"
-    prop-types "^15.6.0"
-    swipe-js-iso "^2.1.5"
+react-swipeable@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-6.2.0.tgz#057271cb7a6fb4af9d2a3f6d80ccdf33e2f64d47"
+  integrity sha512-nWQ8dEM8e/uswZLSIkXUsAnQmnX4MTcryOHBQIQYRMJFDpgDBSiVbKsz/BZVCIScF4NtJh16oyxwaNOepR6xSw==
 
 react@>=14, react@^17.0.2:
   version "17.0.2"
@@ -2370,11 +2361,6 @@ supports-color@^8.0.0:
   integrity sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==
   dependencies:
     has-flag "^4.0.0"
-
-swipe-js-iso@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.1.5.tgz#9b0eea8b9740487e6169d655184fc6440b6a2e34"
-  integrity sha512-yTTU5tDYEvtKfCD8PN+Rva25acJwogUCd6wPT1n1im/MOJlg6PtHiPKaaNK7HDBiIrWThA/WRbJZbox2letghg==
 
 timers-browserify@2.0.12:
   version "2.0.12"

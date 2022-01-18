@@ -1,14 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import ContentWrapper from "../ContentWrapper";
 
 import featuresHeroImageMain from "../../public/images/features-hero_main.png";
-import featuresHeroImageAside from "../../public/images/features-hero_aside.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import { BsWindows, BsApple, BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { BsWindows, BsApple } from "react-icons/bs";
 
 import { DiAndroid, DiLinux } from "react-icons/di";
 const HeroFeatures = ({ mouseCoord, offset }) => {

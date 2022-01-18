@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 import ScrollAnimation from "react-animate-on-scroll";
@@ -13,13 +13,10 @@ import Step2 from "../../public/images/step-2.png";
 import Step3 from "../../public/images/step-3.png";
 import Step4 from "../../public/images/step-4.png";
 import Step5 from "../../public/images/step-5.png";
-import { useAppContext } from "../../Context";
-import { BsWindows, BsApple, BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { useSwipeable } from "react-swipeable";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
-import { DiAndroid, DiLinux } from "react-icons/di";
-
-import ReactSwipe from "react-swipe";
-const ArchitectureSection = (props) => {
+const ArchitectureSection = (props) => {7
   const [hoverInfoBox, toggleHoverInfoBox] = useState("");
   const [specifiedInfo, specifyInfo] = useState({});
 
@@ -43,6 +40,9 @@ const ArchitectureSection = (props) => {
         "THe purpose of gateway management is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
     },
   ];
+
+
+
 
   return (
     <ContentWrapper>
@@ -336,6 +336,13 @@ const SetupSection = (props) => {
     },
   ];
 
+  const swipeHandlers = useSwipeable({
+    onSwiped: evtData => console.log("SWIPED!", evtData),
+    onSwipedLeft: evtData => setActiveTab(activeTab < tabs.length - 1 ? activeTab + 1 : 0),
+    onSwipedRight: evtData => setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1)
+  })
+
+
   return (
     <ContentWrapper>
       <section
@@ -400,7 +407,7 @@ const SetupSection = (props) => {
             duration={0.88}
             className="image__wrapper display"
           >
-            <div className="slideshow">
+            <div className="slideshow" {...swipeHandlers}>
               <StyledSlideshowItem
                 className="slideshow--item"
                 src={Step1}
