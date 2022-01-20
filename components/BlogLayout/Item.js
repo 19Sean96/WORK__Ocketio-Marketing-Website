@@ -23,12 +23,10 @@ const BlogItem = ({
         year: "numeric",
       }
     );
-  console.log(`http://143.198.146.26/assets/${imgId}`);
   return (
     <article className="blog">
       <div className="blog__top">
         <p className="p-small blog--info">
-          By <span className="blog--author">{author} - </span>
           <span className="blog--date">{formatDate(dateWritten)} - </span>
           <span className="blog--time-to-read">{timeToRead}</span>
           {dateUpdated && (
@@ -62,6 +60,7 @@ const BlogItem = ({
             layout="fill"
             className="blog--img"
             objectFit="cover"
+            // placeholder="blur"
           />
         </div>
       </div>
