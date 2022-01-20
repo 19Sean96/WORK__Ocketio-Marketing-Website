@@ -1,5 +1,5 @@
 .section {
-  margin-top: 222px;
+  margin-top: 182px;
   transition: opacity 0.22s ease-in-out 0.18s;
 
   &__with-grid {
@@ -36,7 +36,7 @@
   }
 
   @media (max-width: 1200px) {
-    margin-top: 166px;
+    margin-top: 136px;
 
     &--heading {
       margin-bottom: 72px;
@@ -51,7 +51,7 @@
     }
   }
   @media (max-width: 960px) {
-    margin-top: 122px;
+    margin-top: 92px;
 
     &--heading {
       margin-bottom: 58px;
@@ -66,7 +66,7 @@
     }
   }
   @media (max-width: 800px) {
-    margin-top: 92px;
+    margin-top: 76px;
 
     &--heading {
       grid-column: 3/11;
@@ -83,7 +83,7 @@
   }
 
   @media (max-width: 550px) {
-    margin-top: 74px;
+    margin-top: 62px;
 
     &--heading {
       grid-column: 2/12;
@@ -101,7 +101,7 @@
 }
 
 #firstBannerHomepage {
-  margin-top: 111px;
+  margin-top: 55px;
   column-gap: 15px;
   row-gap: 0;
 
@@ -116,7 +116,7 @@
       grid-column: 1/6;
       grid-row: 1/2;
       align-self: flex-end;
-      padding-right: 2vw;
+      padding-right: 9vw;
     }
     &--paragraph {
       grid-column: 1/6;
@@ -148,7 +148,7 @@
   }
 
   @media (max-width: 960px) {
-    margin-top: 10vw;
+    margin-top: 5vw;
 
     .banner {
       &--title {
@@ -197,6 +197,21 @@
 }
 
 #sectionWhoHomepage {
+  margin-top: 142px;
+
+  @media (max-width: 1200px) {
+    margin-top: 112px;
+  }
+  @media (max-width: 960px) {
+    margin-top: 82px;
+  }
+  @media (max-width: 800px) {
+    margin-top: 72px;
+  }
+  @media (max-width: 550px) {
+    margin-top: 58px;
+  }
+
   .card {
     width: 31.5%;
     background-color: $white;
@@ -545,6 +560,7 @@
   padding: 64px 44px;
   margin-bottom: 90px;
   margin-top: 167px;
+  border-radius: 8px;
   .section {
     &--heading {
       max-width: 450px;
@@ -556,6 +572,10 @@
         text-align: left;
         margin-left: 0;
         color: $off-white;
+      }
+
+      p {
+        opacity: 0.6;
       }
     }
 
@@ -620,7 +640,14 @@
 
     .section {
       &--heading {
-        text-align: center;
+        max-width: 800px;
+        * {
+          text-align: center;
+        }
+
+        h4 {
+          margin-left: auto;
+        }
       }
 
       &--form {
@@ -645,6 +672,8 @@
   }
 
   @media (max-width: 480px) {
+    padding: 52px 24px;
+
     .section {
       &--form {
         display: flex;
@@ -875,8 +904,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 30px;
-        width: 52.5%;
-
+        width: 100%;
+        &__wrapper {
+          width: 52.5%;
+        }
         .tab {
           transition: 0.125s ease-in-out all;
           display: flex;
@@ -990,12 +1021,16 @@
 
       @media (max-width: 1150px) {
         .tabs {
-          width: 47.5%;
+          &__wrapper {
+            width: 47.5%;
+          }
         }
       }
       @media (max-width: 1000px) {
         .tabs {
-          width: 45%;
+          &__wrapper {
+            width: 45%;
+          }
         }
 
         .display {
@@ -1009,11 +1044,14 @@
         position: relative;
         flex-direction: column-reverse;
         .tabs {
-          width: calc((100vw / 12) * 8);
-          min-width: 280px;
           position: relative;
           min-height: 170px;
           margin-top: 44px;
+
+          &__wrapper {
+            width: calc((100vw / 12) * 8);
+            min-width: 280px;
+          }
           .tab {
             position: absolute;
             top: 0;
@@ -1121,7 +1159,7 @@
 
   .section {
     &--heading {
-      margin-bottom: 44px;
+      margin-bottom: 24px;
       h2 {
         margin-bottom: 25px;
       }
@@ -1187,8 +1225,8 @@
         align-items: center;
         column-gap: 47px;
         row-gap: 40px;
-        margin-bottom: 70px;
-        margin-top: 35px;
+        margin-bottom: 75px;
+        margin-top: 5px;
       }
 
       @media (max-width: 480px) {
