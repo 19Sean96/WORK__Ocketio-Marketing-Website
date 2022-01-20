@@ -21,9 +21,9 @@ const EmailIntakeBanner = (props) => {
         id="emailIntake"
       >
         <div className="section--heading">
-          <h5 className="h5">
+          <h4 className="h4">
             Be the first to know.
-          </h5>
+          </h4>
           <p className="p-small">Follow along as we test, tweak, and improve the beta to make sure you never miss a beat.</p>
         </div>
         <EmailIntakeInput />
