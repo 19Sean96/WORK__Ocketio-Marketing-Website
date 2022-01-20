@@ -18,19 +18,19 @@ const StyledSub1 = styled(Image)`
     transform: scale(0.45)
       ${(props) =>
         `translate(calc(-250px - 71vw), 
-      calc(2.5vw - ${props.offset / 7 + 15 + -0.4 * 15}px))`};
+      calc(2.5vw - ${props.offset / 10 + 15 + -0.4 * 15}px))`};
   }
   @media (max-width: 850px) {
     transform: scale(0.485)
       ${(props) =>
         `translate(-71vw, 
-      calc(8.5vw - ${props.offset / 7 + 15 + -0.4 * 15}px))`};
+      calc(8.5vw - ${props.offset / 10 + 15 + -0.4 * 12}px))`};
   }
   @media (max-width: 575px) {
-    transform: scale(0.75)
+    transform: scale(0.65)
       ${(props) =>
-        `translate(-41vw, 
-      calc(25vw - ${props.offset / 7 + 15 + -0.4 * 15}px))`};
+        `translate(-55vw, 
+      calc(25vw - ${props.offset / 15 + 15 + -0.4 * 10}px))`};
   }
 `;
 
@@ -44,20 +44,20 @@ const StyledSub2 = styled(Image)`
     transform: scale(0.46)
       ${(props) =>
         `translate(calc(100px + 72.5vw), 
-      calc( -50px - 28vw - ${props.offset / 3 + 50 + -0.4 * 50}px))`};
+      calc( -50px - 28vw - ${props.offset / 6 + 100 + -0.4 * 150}px))`};
   }
 
   @media (max-width: 850px) {
     transform: scale(0.54)
       ${(props) =>
         `translate(68.5vw, 
-      calc( -18vw - ${props.offset / 3 + 50 + -0.4 * 50}px))`};
+      calc( -18vw - ${props.offset / 9 + 150 + -0.4 * 150}px))`};
   }
   @media (max-width: 575px) {
-    transform: scale(0.84)
+    transform: scale(0.64)
       ${(props) =>
         `translate(58.5vw, 
-      calc( -12vw - ${props.offset / 3 + 50 + -0.4 * 50}px))`};
+      calc( -29vw - ${props.offset / 12 + 50 + -0.4 * 150}px))`};
   }
 `;
 
@@ -71,13 +71,13 @@ const StyledSub3 = styled(Image)`
     transform: scale(0.9)
       ${(props) =>
         `translate(calc(-10vw - 45px), 
-      calc(2.5vw - ${props.offset / -7 + 5 + -0.4 * 2}px))`};
+      calc(2.5vw - ${props.offset / -12 + 5 + -0.4 * 2}px))`};
   }
   @media (max-width: 850px) {
     transform: scale(0.82)
       ${(props) =>
-        `translate(calc(-15vw - 45px), 
-      calc(-2.5vw - ${props.offset / -7 + 5 + -0.4 * 2}px))`};
+        `translate(calc(-20vw - 45px), 
+      calc(-2.5vw - ${props.offset / -16 + 5 + -0.4 * 2}px))`};
   }
 `;
 
