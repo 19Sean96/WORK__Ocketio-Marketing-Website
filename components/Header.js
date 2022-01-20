@@ -13,42 +13,59 @@ const Header = () => {
 
   useEffect(() => {
     if (menuOpen) {
-      toggleMenuOpen(false)
+      toggleMenuOpen(false);
     }
-  }, [router.asPath])
+  }, [router.asPath]);
 
   return (
     <>
-      <div className="header__placeholder" style={{
-        height: isMobile && menuOpen ? '52px' : '0px',
-        margin: isMobile && menuOpen ? '25px auto' : '0'
-      }}>
-        
-      </div>
+      <div
+        className="header__placeholder"
+        style={{
+          height: isMobile && menuOpen ? "52px" : "0px",
+          margin: isMobile && menuOpen ? "25px auto" : "0",
+        }}
+      ></div>
       <div
         className="header__wrapper"
         style={{
           position: isMobile && menuOpen ? "fixed" : "relative",
-          background: router.pathname === '/features' ? '#252939' : 'transparent'
+          background:
+            router.pathname === "/features" ? "#252939" : "transparent",
         }}
       >
         <header className="header">
           <div className="header--logo">
             <Link href="/">
               <a>
-                <Logo menuOpenOnMobile={menuOpen && isMobile} darkMode={router.pathname === '/features'}/>
+                <Logo
+                  menuOpenOnMobile={menuOpen && isMobile}
+                  darkMode={router.pathname === "/features"}
+                />
               </a>
             </Link>
           </div>
           {!isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} />}
           {/* should change to link */}
           {isMobile ? (
-            <button id="menuIcon" onClick={(e) => toggleMenuOpen(!menuOpen)} aria-label={menuOpen ? 'close mobile navigation' : 'open mobile navigation'}>
-              <Menu menuOpen={menuOpen} darkMode={router.pathname === '/features'} />
+            <button
+              id="menuIcon"
+              onClick={(e) => toggleMenuOpen(!menuOpen)}
+              aria-label={
+                menuOpen ? "close mobile navigation" : "open mobile navigation"
+              }
+            >
+              <Menu
+                menuOpen={menuOpen}
+                darkMode={router.pathname === "/features"}
+              />
             </button>
           ) : (
             <div className="header--cta__wrapper">
-              <button className="header--cta btn btn--filled j-text _600" aria-label="Get started with the beta program">
+              <button
+                className="header--cta btn btn--filled j-text _600"
+                aria-label="Get started with the beta program"
+              >
                 Try the Beta
               </button>
             </div>
@@ -56,7 +73,13 @@ const Header = () => {
         </header>
       </div>
       {/* <span className="header__placeholder"></span> */}
-      {isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} toggleMenuOpen={toggleMenuOpen}/>}
+      {isMobile && (
+        <Nav
+          isMobile={isMobile}
+          menuOpen={menuOpen}
+          toggleMenuOpen={toggleMenuOpen}
+        />
+      )}
     </>
   );
 };
@@ -93,41 +116,26 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
       <ul className="header--nav--list">
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/features">
-            <a
-              style={{
-                color: router.pathname === "/features" ? "#1688f2" : "#252939",
-              }}
-            >
-              features
-            </a>
+            <a>features</a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/pricing">
-            <a
-              style={{
-                color: router.pathname === "/pricing" ? "#1688f2" : router.pathname === '/features' ? '#fff' : "#252939",
-              }}
-            >
-              pricing
-            </a>
+            <a>pricing</a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/contact">
-            <a
-              style={{
-                color: router.pathname === "/contact" ? "#1688f2" : router.pathname === '/features' ? '#fff' : "#252939",
-              }}
-            >
-              contact
-            </a>
+            <a>contact</a>
           </Link>
         </li>
         {/* <li className="j-text header--nav--item">blog</li> */}
       </ul>
       {isMobile && (
-        <button className="header--cta btn btn--filled j-text _600" aria-label="Get started with the beta program">
+        <button
+          className="header--cta btn btn--filled j-text _600"
+          aria-label="Get started with the beta program"
+        >
           Try the Beta
         </button>
       )}
