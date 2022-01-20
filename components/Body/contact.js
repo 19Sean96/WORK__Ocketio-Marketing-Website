@@ -31,7 +31,7 @@ const ContactPortal = (props) => {
         id="contactPortal"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
+          animateIn="animate__fadeInDown"
           duration={0.9}
           className="section--heading"
         >
@@ -244,8 +244,8 @@ const MoreContact = (props) => {
         id="moreContact"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
-          duration={0.9}
+          animateIn="animate__fadeInDown"
+          duration={0.6}
           className="section--heading"
         >
           <h4 className="h4 capitalize">more points of contact</h4>
@@ -257,22 +257,22 @@ const MoreContact = (props) => {
         </ScrollAnimation>
         <article className="section--body">
           <ScrollAnimation
-            animateIn="animate__fadeInLeft"
+            animateIn="animate__fadeInUp"
             className="section--body--item__wrapper"
-            duration={0.8}
+            duration={0.4}
           >
             <a href="mailto:sales@wirewise.io" className="section--body--item">
               <BsBriefcase />
               <ScrollAnimation
                 animateIn="animate__fadeInDown"
-                delay={200}
+                delay={100}
                 duration={0.8}
               >
                 <h6 className="h6 capitalize">sales</h6>
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="animate__fadeInDown"
-                delay={500}
+                delay={200}
                 duration={0.8}
               >
                 <p className="p-small text">
@@ -282,7 +282,7 @@ const MoreContact = (props) => {
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="animate__fadeInUp"
-                delay={500}
+                delay={300}
                 duration={0.8}
               >
                 <p className="p-small capitalize cta">contact sales</p>
@@ -290,10 +290,10 @@ const MoreContact = (props) => {
             </a>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInLeft"
+            animateIn="animate__fadeInUp"
             className="section--body--item__wrapper"
-            duration={0.8}
-            delay={150}
+            duration={0.4}
+            delay={111}
           >
             <a
               href="mailto:support@wirewise.io"
@@ -302,14 +302,14 @@ const MoreContact = (props) => {
               <BsLifePreserver />
               <ScrollAnimation
                 animateIn="animate__fadeInDown"
-                delay={350}
+                delay={100}
                 duration={0.8}
               >
                 <h6 className="h6 capitalize">help & support</h6>
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="animate__fadeInDown"
-                delay={650}
+                delay={200}
                 duration={0.8}
               >
                 <p className="p-small text">
@@ -319,7 +319,7 @@ const MoreContact = (props) => {
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="animate__fadeInUp"
-                delay={650}
+                delay={300}
                 duration={0.8}
               >
                 <p className="p-small capitalize cta">contact support</p>
@@ -327,23 +327,23 @@ const MoreContact = (props) => {
             </a>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInLeft"
+            animateIn="animate__fadeInUp"
             className="section--body--item__wrapper"
-            duration={0.8}
-            delay={300}
+            duration={0.4}
+            delay={222}
           >
             <a href="mailto:press@wirewise.io" className="section--body--item">
               <BsNewspaper />
               <ScrollAnimation
                 animateIn="animate__fadeInDown"
-                delay={500}
+                delay={100}
                 duration={0.8}
               >
                 <h6 className="h6 capitalize">media & press</h6>
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="animate__fadeInDown"
-                delay={800}
+                delay={200}
                 duration={0.8}
               >
                 <p className="p-small text">
@@ -353,7 +353,7 @@ const MoreContact = (props) => {
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="animate__fadeInUp"
-                delay={800}
+                delay={300}
                 duration={0.8}
               >
                 <p className="p-small capitalize cta">contact media</p>
@@ -397,8 +397,8 @@ const ContactFAQ = (props) => {
         id="contactFAQ"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
-          duration={0.9}
+          animateIn="animate__fadeInDown"
+          duration={0.48}
           className="section--heading"
         >
           <h4 className="h4 capitalize">frequently asked questions</h4>

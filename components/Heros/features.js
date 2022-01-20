@@ -16,7 +16,11 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
   }, [mouseCoord]);
 
   return (
-    <ScrollAnimation duration={.3} animateIn="animate__fadeInDown" className="full-width_wrapper">
+    <ScrollAnimation
+      duration={0.3}
+      animateIn="animate__fadeInDown"
+      className="full-width_wrapper"
+    >
       <ContentWrapper>
         <section className="section section__with-grid" id="features-hero">
           <div id="features-hero-message">
@@ -95,34 +99,22 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               onMouseLeave={(e) => toggleHoverInfoBox("")}
             >
               <div className="item--img__wrapper">
-                <BsApple
-                  className="item--img"
-                  // style={{
-                  //   height: "40px",
-                  //   width: "auto",
-                  // }}
-                />
-                <span className="item--img--text">
-                  MacOS
-                  <br />
-                  iOS
-                </span>
-                <DiLinux
-                  className="item--img"
-                  // style={{
-                  //   height: "40px",
-                  //   width: "auto",
-                  // }}
-                />
-                <span className="item--img--text">Linux</span>
-                <DiAndroid
-                  className="item--img"
-                  // style={{
-                  //   height: "40px",
-                  //   width: "auto",
-                  // }}
-                />
-                <span className="item--img--text">Android</span>
+                <div className="item-2__1 item-2__subitem">
+                  <BsApple className="item--img" />
+                  <span className="item--img--text">
+                    MacOS
+                    <br />
+                    iOS
+                  </span>
+                </div>
+                <div className="item-2__2 item-2__subitem">
+                  <DiLinux className="item--img" />
+                  <span className="item--img--text">Linux</span>
+                </div>
+                <div className="item-2__3 item-2__subitem">
+                  <DiAndroid className="item--img" />
+                  <span className="item--img--text">Android</span>
+                </div>
               </div>
               <h6 className="h6 capitalize">
                 supervised <span className="last-word">devices</span>

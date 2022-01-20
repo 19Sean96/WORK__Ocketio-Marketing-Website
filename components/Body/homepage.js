@@ -22,30 +22,48 @@ const FirstBanner = (props) => {
       <section
         className="section section__with-grid all-columns"
         id="firstBannerHomepage"
-        // ref={containerRef}
-        // style={{
-        //   opacity: isVisible ? 1 : 0
-        // }}
       >
-        <h5 className="h5 banner--title">
-          Designed for easy, secure remote access management. <br />
-          It’s that simple.
-        </h5>
-        <p className="p-small banner--paragraph">
-          A couple years ago we started searching for a capable WireGuard® VPN
-          that could easily support a growing distributed team. But the
-          available solutions were too clunky, too expensive, or just didn't
-          have the right features. So now we're developing the VPN we wish we'd
-          been able to find.
-        </p>
-        <div className="image_wrapper banner--image">
+        <ScrollAnimation
+          animateIn="animate__fadeInDown"
+          duration={0.54}
+          className="banner--title"
+          offset={-100}
+        >
+          <h5 className="h5">
+            Designed for easy, secure remote access management. <br />
+            It’s that simple.
+          </h5>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeInUp"
+          duration={0.68}
+          className="banner--paragraph"
+          offset={-100}
+
+        >
+          <p className="p-small">
+            A couple years ago we started searching for a capable WireGuard® VPN
+            that could easily support a growing distributed team. But the
+            available solutions were too clunky, too expensive, or just didn't
+            have the right features. So now we're developing the VPN we wish
+            we'd been able to find.
+          </p>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="animate__fadeIn"
+          duration={0.6}
+          delay={350}
+          className="image_wrapper banner--image"
+          offset={-100}
+
+        >
           <Image
             src={worldMap}
             id="worldMap"
             alt="World Map"
             layout="responsive"
           />
-        </div>
+        </ScrollAnimation>
       </section>
     </ContentWrapper>
   );
@@ -59,8 +77,9 @@ const WhoSection = (props) => {
         id="sectionWhoHomepage"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
-          duration={0.7}
+          animateIn="animate__fadeInDown"
+          duration={0.44}
+          offset={-186}
           // animateOnce={true}
           className="section--heading"
         >
@@ -233,8 +252,10 @@ const WhatSection = (props) => {
         id="sectionWhatHomepage"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
+          animateIn="animate__fadeInDown"
           duration={0.9}
+          offset={-186}
+
           // animateOnce={true}
           className="section--heading"
         >
@@ -285,8 +306,9 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
   return (
     <article className={`section--body--item${reversed ? " reversed" : ""}`}>
       <ScrollAnimation
-        animateIn={reversed ? "animate__fadeInRight" : "animate__fadeInLeft"}
+        animateIn={"animate__fadeInDown"}
         className="text-block"
+        duration={.6}
       >
         <h4 className="h4 capitalize">{title}</h4>
         <p className="p-small">{par}</p>
@@ -296,7 +318,8 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
           <li className="checklist--item" key={"item-" + i}>
             <ScrollAnimation
               duration={1 - i * 0.1}
-              delay={i * 125}
+              delay={i * 25}
+              offset={-128}
               animateIn="animate__fadeInUp"
               className="checklist--item"
             >

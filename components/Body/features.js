@@ -16,7 +16,8 @@ import Step5 from "../../public/images/step-5.png";
 import { useSwipeable } from "react-swipeable";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
-const ArchitectureSection = (props) => {7
+const ArchitectureSection = (props) => {
+  7;
   const [hoverInfoBox, toggleHoverInfoBox] = useState("");
   const [specifiedInfo, specifyInfo] = useState({});
 
@@ -41,33 +42,16 @@ const ArchitectureSection = (props) => {7
     },
   ];
 
-
-
-
   return (
     <ContentWrapper>
-      {/* <HoverInfoBox
-        title={
-          hoverInfoBox
-            ? OSTips[OSTips.findIndex((tip) => tip.slug === hoverInfoBox)].title
-            : ""
-        }
-        message={
-          hoverInfoBox
-            ? OSTips[OSTips.findIndex((tip) => tip.slug === hoverInfoBox)]
-                .message
-            : ""
-        }
-        visible={hoverInfoBox}
-      /> */}
-
       <section
         className="section section__with-grid all-columns"
         id="architectureSection"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
-          duration={0.9}
+          animateIn="animate__fadeInDown"
+          duration={0.44}
+          offset={-186}
           // animateOnce={true}
           className="section--heading"
         >
@@ -115,7 +99,13 @@ const ArchitectureSection = (props) => {7
         >
           <h5 className="h5 capitalize">small business teams</h5>
           <p className="p-small">
-          For a tunnel to be established, the network gateway and its devices need to know each other’s private encryption keys. Wirewise efficiently manages the distribution and updating of authorized keys on gateways and end user devices so access can be revoked as quickly as it is granted. Automatic controls based on defined settings and conditions, such as last authenticated date, will instantly quarantine inactive devices.
+            For a tunnel to be established, the network gateway and its devices
+            need to know each other’s private encryption keys. Wirewise
+            efficiently manages the distribution and updating of authorized keys
+            on gateways and end user devices so access can be revoked as quickly
+            as it is granted. Automatic controls based on defined settings and
+            conditions, such as last authenticated date, will instantly
+            quarantine inactive devices.
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -126,7 +116,13 @@ const ArchitectureSection = (props) => {7
         >
           <h5 className="h5 capitalize">extensible client support</h5>
           <p className="p-small">
-            Do you have other devices besides Windows machines that need to access your network? Good news, we're working diligently to provide support for additional platforms. In the meantime, we’ve got you covered since Wirewise allows authenticated users to generate and download a config file that can be uploaded into a WireGuard client. This enables you to quickly and conditionally enable or disable access to your network for these clients.
+            Do you have other devices besides Windows machines that need to
+            access your network? Good news, we're working diligently to provide
+            support for additional platforms. In the meantime, we’ve got you
+            covered since Wirewise allows authenticated users to generate and
+            download a config file that can be uploaded into a WireGuard client.
+            This enables you to quickly and conditionally enable or disable
+            access to your network for these clients.
           </p>
         </ScrollAnimation>
       </section>
@@ -142,14 +138,17 @@ const FineTunedControlSection = (props) => {
         id="fineTunedControlSection"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInLeft"
-          duration={0.9}
+          animateIn="animate__fadeInDown"
+          duration={0.44}
+          offset={-186}
           // animateOnce={true}
           className="section--heading"
         >
           <h3 className="h3 capitalize">fine-tuned control</h3>
           <p className="p-small">
-          No network administrator’s life needs to be harder. Mission-critical features allow you to simplifiy access management while dialing in core configuration.
+            No network administrator’s life needs to be harder. Mission-critical
+            features allow you to simplifiy access management while dialing in
+            core configuration.
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -171,7 +170,8 @@ const FineTunedControlSection = (props) => {
           >
             <h6 className="h6 capitalize">Multiple Authentication Options</h6>
             <p className="p-small">
-            Use your existing auth provider to streamline access and enforce access requirements
+              Use your existing auth provider to streamline access and enforce
+              access requirements
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -182,8 +182,8 @@ const FineTunedControlSection = (props) => {
           >
             <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
             <p className="p-small">
-            A detailed event log ensures you can keep tabs on network activity and issues
-
+              A detailed event log ensures you can keep tabs on network activity
+              and issues
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -194,7 +194,8 @@ const FineTunedControlSection = (props) => {
           >
             <h6 className="h6 capitalize">Detailed Device Info</h6>
             <p className="p-small">
-            See all registered devices in one place and monitor connection status, authentication schedules, and more
+              See all registered devices in one place and monitor connection
+              status, authentication schedules, and more
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -205,7 +206,7 @@ const FineTunedControlSection = (props) => {
           >
             <h6 className="h6 capitalize">configure DNS</h6>
             <p className="p-small">
-            Manage core settings and configuration from a streamlined online
+              Manage core settings and configuration from a streamlined online
               interface
             </p>
           </ScrollAnimation>
@@ -222,12 +223,19 @@ const OptimizedExperienceSection = (props) => {
         className="section section__with-grid all-columns"
         id="optimizedExperienceSection"
       >
-        <div className="section--heading">
+        <ScrollAnimation
+          animateIn="animate__fadeInDown"
+          duration={0.44}
+          offset={-186}
+          className="section--heading"
+        >
           <h3 className="h3 capitalize">optimized experience</h3>
           <p className="p-small">
-          A platform as usable as it is capable ensures that administrators and users alike can take full advantage of its protection while almost forgetting it’s there.
+            A platform as usable as it is capable ensures that administrators
+            and users alike can take full advantage of its protection while
+            almost forgetting it’s there.
           </p>
-        </div>
+        </ScrollAnimation>
         <div className="section--body">
           <div className="text-blocks text-blocks-1">
             <ScrollAnimation
@@ -285,7 +293,10 @@ const OptimizedExperienceSection = (props) => {
               className="text-block"
             >
               <h6 className="h6 capitalize">Always On Connection</h6>
-              <p className="p-small">An uninterrupted conntection guarantees that your team members connect seamlessly every time</p>
+              <p className="p-small">
+                An uninterrupted conntection guarantees that your team members
+                connect seamlessly every time
+              </p>
             </ScrollAnimation>
           </div>
         </div>
@@ -337,11 +348,12 @@ const SetupSection = (props) => {
   ];
 
   const swipeHandlers = useSwipeable({
-    onSwiped: evtData => console.log("SWIPED!", evtData),
-    onSwipedLeft: evtData => setActiveTab(activeTab < tabs.length - 1 ? activeTab + 1 : 0),
-    onSwipedRight: evtData => setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1)
-  })
-
+    onSwiped: (evtData) => console.log("SWIPED!", evtData),
+    onSwipedLeft: (evtData) =>
+      setActiveTab(activeTab < tabs.length - 1 ? activeTab + 1 : 0),
+    onSwipedRight: (evtData) =>
+      setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1),
+  });
 
   return (
     <ContentWrapper>
@@ -349,39 +361,48 @@ const SetupSection = (props) => {
         className="section section__with-grid all-columns"
         id="setupSection"
       >
-        <div className="section--heading">
+        <ScrollAnimation
+          animateIn="animate__fadeInDown"
+          duration={0.44}
+          offset={-186}
+          className="section--heading"
+        >
           <h3 className="h3 capitalize">straightforward setup</h3>
           <p className="p-small">
-          Forget all the manual configuration historically required for WireGuard configuration. Instead get up and running in minutes with a delightfully simple setup process and accessible admin panel.
+            Forget all the manual configuration historically required for
+            WireGuard configuration. Instead get up and running in minutes with
+            a delightfully simple setup process and accessible admin panel.
           </p>
-        </div>
+        </ScrollAnimation>
         <article className="section--body">
-          <ul className="tabs">
-            {tabs.map((tab, i) => (
-              <ScrollAnimation
-                className="tab--outer"
-                animateIn="animate__fadeInLeft"
-                duration={1 - i * 0.05}
-                delay={i * 100}
-              >
-                <StyledTab
-                  className={`tab tab-${i + 1}`}
-                  key={i}
-                  active={i === activeTab}
-                  onClick={(e) => {
-                    setPreviousTab(activeTab);
-                    setActiveTab(i);
-                  }}
-                >
-                  <span className="tab--num">{i + 1}</span>
-                  <div className="tab--text">
-                    <h6 className="h6">{tab.title}</h6>
-                    <p className="p-small">{tab.par}</p>
-                  </div>
-                </StyledTab>
-              </ScrollAnimation>
-            ))}
-          </ul>
+          <ScrollAnimation
+            className="tabs__wrapper"
+            animateIn="animate__fadeInUp"
+            duration={0.725}
+          >
+            <ul className="tabs">
+              {tabs.map((tab, i) => (
+                <div className="tab--outer">
+                  <StyledTab
+                    className={`tab tab-${i + 1}`}
+                    key={i}
+                    active={i === activeTab}
+                    onClick={(e) => {
+                      setPreviousTab(activeTab);
+                      setActiveTab(i);
+                    }}
+                  >
+                    <span className="tab--num">{i + 1}</span>
+                    <div className="tab--text">
+                      <h6 className="h6">{tab.title}</h6>
+                      <p className="p-small">{tab.par}</p>
+                    </div>
+                  </StyledTab>
+                </div>
+              ))}
+            </ul>
+          </ScrollAnimation>
+
           <div className="slides-number-group">
             <BsArrowLeft
               className="j-display _700 slides-number-group--item"
