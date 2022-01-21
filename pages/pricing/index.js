@@ -106,6 +106,10 @@ export default function Pricing() {
                 semper sceleris.
               </p>
             </ScrollAnimation>
+
+            <caption id="comingSoonBanner">
+              <p className="p-large j-display _500">Paid tiers coming soon.</p>
+            </caption>
           </div>
           <ScrollAnimation
             duration={0.75}
