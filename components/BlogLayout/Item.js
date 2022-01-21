@@ -2,19 +2,19 @@ import ReactHtmlParser from "react-html-parser";
 import Link from "next/link";
 import Image from "next/image";
 import { BsArrowRightCircle } from "react-icons/bs";
-
+import readingTime from "reading-time";
 const BlogItem = ({
   author,
   dateWritten,
   dateUpdated,
-  timeToRead,
   title,
   body,
   id,
   imgId,
 }) => {
+  const readStats = readingTime(body)
   const formatDate = (date) =>
-    new Date(date).toLocaleDateString(
+    new Date(date).toLocaleDateString( 
       {},
       {
         timeZone: "UTC",
@@ -28,7 +28,7 @@ const BlogItem = ({
       <div className="blog__top">
         <p className="p-small blog--info">
           <span className="blog--date">{formatDate(dateWritten)} - </span>
-          <span className="blog--time-to-read">{timeToRead}</span>
+          <span className="blog--time-to-read">{readStats.text}</span>
           {dateUpdated && (
             <p className="blog--date__updated italic">
               Updated {formatDate(dateUpdated)}

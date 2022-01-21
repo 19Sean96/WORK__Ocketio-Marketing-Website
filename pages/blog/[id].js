@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import readingTime from "reading-time";
 import ReactHtmlParser from "react-html-parser";
 import ContentWrapper from "../../components/ContentWrapper";
 const Blog = ({ blog_posts }) => {
@@ -17,6 +18,8 @@ const Blog = ({ blog_posts }) => {
         year: "numeric",
       }
     );
+  const readStats = readingTime(blog.post_body);
+
   return (
     <ContentWrapper>
       <section className="section all-columns" id="blogPage">
@@ -24,11 +27,10 @@ const Blog = ({ blog_posts }) => {
           <div className="text">
             <h2 className="h2">{blog.post_title}</h2>
             <p className="p-small blog--info">
-              By <span className="blog--author">{blog.post_author} - </span>
               <span className="blog--date">
-                {formatDate(blog.date_created)} - {" "}
+                {formatDate(blog.date_created)} -{" "}
               </span>
-              <span className="blog--time-to-read">{"7 min"}</span>
+              <span className="blog--time-to-read">{readStats.text}</span>
               {blog.date_updated && (
                 <p className="blog--date__updated italic">
                   Updated {formatDate(blog.date_updated)}
