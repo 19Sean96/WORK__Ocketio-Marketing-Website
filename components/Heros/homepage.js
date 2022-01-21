@@ -81,6 +81,33 @@ const StyledSub3 = styled(Image)`
   }
 `;
 
+const StyledMain = styled(Image)`
+transform: scale(1)
+${(props) =>
+  `translate(0, 
+calc(2.5vw - ${props.offset / -25 + -0.4}px))`};
+
+@media (max-width: 1200px) {
+transform: scale(1)
+  ${(props) =>
+    `translate(0, 
+  calc(2.5vw - ${props.offset / -45 + -0.4}px))`};
+}
+@media (max-width: 850px) {
+transform: scale(1.15)
+  ${(props) =>
+    `translate(0, 
+  calc(-2.5vw - ${props.offset / -75 - 35}px))`};
+}
+@media (max-width: 575px) {
+  transform: scale(1.45)
+    ${(props) =>
+      `translate(0, 
+    calc(-2.5vw - ${props.offset / -75 - 35}px))`};
+  }
+
+`;
+
 const HeroHome = ({ offset }) => {
   return (
     <div className="hero_wrapper">
@@ -126,7 +153,7 @@ const HeroHome = ({ offset }) => {
         </div>
 
         <div className="image-group" offset={offset}>
-          <Image
+          <StyledMain
             id="heroImageMain"
             className={`image-group__image${
               offset === 0 ? " heroImageMain" : ""
@@ -134,6 +161,7 @@ const HeroHome = ({ offset }) => {
             layout="responsive"
             src={heroImageMain}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
+            offset={offset}
             priority
           />
           <StyledSub1

@@ -77,46 +77,30 @@
       height: auto !important;
       margin-top: 0 !important;
       box-shadow: 0 50px 132px -11px rgba($black, 0.065);
-      // transition: 1s ease-out transform .2s;
+      transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     #heroImageMain {
-      transform: scale(1);
       z-index: 5;
       box-shadow: 0 30px 84px -11px rgba($black, 0.066);
     }
 
     #heroImageSub1 {
       z-index: 10;
-      transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     #heroImageSub2 {
       z-index: 10;
-      transition: transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     #heroImageSub3 {
       box-shadow: none;
       z-index: 5;
-      transition: transform 5s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     @media (max-width: 1200px) {
       padding: 0 2.5vmax;
       margin-bottom: -185px;
-    }
-
-    @media (max-width: 850px) {
-      #heroImageMain {
-        transform: scale(1.15) translateY(35px);
-      }
-    }
-
-    @media (max-width: 575px) {
-      #heroImageMain {
-        transform: scale(1.45) translate(35px, 15px);
-      }
     }
 
     @media (max-width: 500px) {
