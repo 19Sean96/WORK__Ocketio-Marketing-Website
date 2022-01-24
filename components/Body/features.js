@@ -16,12 +16,16 @@ import Step5 from "../../public/images/step-5.png";
 import { useSwipeable } from "react-swipeable";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { useAppContext } from "../../Context";
+import {
+  AzureADLogo,
+  Auth0Logo,
+  GSuiteLogo,
+  OktaLogo,
+} from "../SVG/ThirdPartyLogos";
 const animateOnce = true;
 
 const ArchitectureSection = (props) => {
-
-
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
   const [hoverInfoBox, toggleHoverInfoBox] = useState("");
   const [specifiedInfo, specifyInfo] = useState({});
 
@@ -139,7 +143,7 @@ const ArchitectureSection = (props) => {
 };
 
 const FineTunedControlSection = (props) => {
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
 
   return (
     <ContentWrapper>
@@ -231,8 +235,29 @@ const FineTunedControlSection = (props) => {
   );
 };
 
+const ThirdPartyAuthentication = (props) => {
+  return (
+    <ContentWrapper>
+      <section
+        className="section__with-grid all-columns"
+        id="thirdPartyAuth"
+      >
+        <div className="section--heading">
+          <h6 className="h6">3rd Party Authentication</h6>
+        </div>
+        <div className="section--body">
+          <AzureADLogo />
+          <OktaLogo />
+          <Auth0Logo />
+          <GSuiteLogo />
+        </div>
+      </section>
+    </ContentWrapper>
+  );
+};
+
 const OptimizedExperienceSection = (props) => {
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
 
   return (
     <ContentWrapper>
@@ -341,7 +366,7 @@ const StyledTab = styled.li`
 `;
 
 const SetupSection = (props) => {
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
 
   const [previousTab, setPreviousTab] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
@@ -510,6 +535,7 @@ const SetupSection = (props) => {
 export {
   ArchitectureSection,
   FineTunedControlSection,
+  ThirdPartyAuthentication,
   OptimizedExperienceSection,
   SetupSection,
 };

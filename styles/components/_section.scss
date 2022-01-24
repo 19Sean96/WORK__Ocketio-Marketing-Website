@@ -821,6 +821,65 @@
   }
 }
 
+#thirdPartyAuth {
+  margin-top: 165px;
+  .section {
+    &--heading {
+
+      * {
+        text-align: center;
+      }
+    }
+    &--body {
+      grid-row: 2/3;
+      grid-column: 2/12;
+      background-color: #f5f5f5;
+      border-radius: 6px;
+      padding: 50px 80px;
+      gap: 22.5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      svg {
+        position: relative;
+        transform: scale(1);
+        transform-origin: center center;
+      }
+    }
+
+    @media (max-width: 950px) {
+      &--body {
+        padding: 35px 60px;
+
+        svg {
+          transform: scale(.8)
+        }
+      }
+    }
+
+    @media (max-width: 750px) {
+      &--body {
+        padding: 25px 45px;
+        justify-content: center;
+        flex-wrap: wrap;
+        svg {
+          transform: scale(.95);
+          width: 45%;
+        }
+      }
+    }
+
+    @media (max-width: 425px) {
+      &--body {
+        padding: 25px 15px;
+        gap: 15px;
+      }
+    }
+  }
+}
+
 #optimizedExperienceSection {
   .section {
     &--body {
@@ -828,7 +887,7 @@
       grid-column: 1/13;
 
       display: flex;
-      gap: 7.5vw;
+      gap: 30px;
 
       .text-blocks {
         flex-grow: 2;
@@ -910,6 +969,7 @@
         width: 100%;
         &__wrapper {
           width: 52.5%;
+          max-width: 500px;
         }
         .tab {
           transition: 0.125s ease-in-out all;
