@@ -1,3 +1,4 @@
+
 #landing-hero {
   margin-top: 100px;
   grid-column: 1/13;
@@ -70,7 +71,36 @@
       grid-area: overlay;
       max-width: 100%;
       overflow: visible !important;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      animation-name: fadeInDownShort;
+
+      &:first-child {
+        animation-delay: 0.45s;
+        animation-name: fadeInUpShort;
+        animation-duration: 0.9s;
+      }
+  
+      &:nth-child(2) {
+        animation-name: fadeInLeftShort;
+        animation-delay: 0s;
+        animation-duration: 0.88s;
+      }
+  
+      &:nth-child(3) {
+        animation-name: fadeInDownShort;
+        animation-delay: 0.3s;
+        animation-duration: 0.88s;
+      }
+  
+      &:last-child {
+        animation-name: fadeInDownShort;
+        animation-delay: 0.15s;
+        animation-duration: 0.88s;
+      }
     }
+
+
 
     &__image {
       min-height: 0 !important;
@@ -83,19 +113,35 @@
     #heroImageMain {
       z-index: 5;
       box-shadow: 0 30px 84px -11px rgba($black, 0.066);
+
+      & > span,
+      & > div {
+      }
     }
 
     #heroImageSub1 {
       z-index: 10;
+
+      & > span,
+      & > div {
+      }
     }
 
     #heroImageSub2 {
       z-index: 10;
+
+      & > span,
+      & > div {
+      }
     }
 
     #heroImageSub3 {
       box-shadow: none;
       z-index: 5;
+
+      & > span,
+      & > div {
+      }
     }
 
     @media (max-width: 1200px) {
@@ -125,7 +171,7 @@
     grid-column: 1/7;
     align-self: center;
     margin-left: 3.3vw;
-    margin-right: .65vw;
+    margin-right: 0.65vw;
     > *,
     > * > * {
       color: $off-white;
@@ -136,7 +182,7 @@
     }
 
     p {
-      opacity: .6;
+      opacity: 0.6;
     }
 
     .cta-group {
@@ -202,7 +248,6 @@
       left: 50%;
       transform: translate(-50%, calc(-100% - 12px));
       color: $off-white;
-
     }
 
     .item {
@@ -260,7 +305,7 @@
       &-2 {
         flex-grow: 3;
         position: relative;
-        
+
         &__subitem {
           display: flex;
           align-items: center;
@@ -329,12 +374,21 @@
         }
       }
     }
+
+    &-message {
+      grid-column: 1/6;
+    }
+
+    .image-group {
+      grid-column: 6/13;
+    }
   }
 
   @media (max-width: 875px) {
     .banner {
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 10px;
       .item {
         width: calc(50% - 3.5px);
         max-width: 400px;
@@ -367,10 +421,58 @@
         }
       }
     }
+
+    &-message {
+      grid-column: 2/12;
+
+      h2 {
+        margin-bottom: 4px;
+      }
+
+      * {
+        text-align: center;
+      }
+
+      .cta-group {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .image-group {
+      grid-column: 2/12;
+      grid-row: 2/3;
+      margin-top: 45px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .banner {
+      margin-top: -10px;
+    }
+    h2 {
+      margin-top: -25px;
+    }
+    .cta-group {
+      flex-direction: row;
+
+      button {
+        width: 44vw;
+        min-width: 140px;
+      }
+    }
+    .image-group {
+      grid-column: 1/13;
+    }
   }
 
   @media (max-width: 450px) {
+
+    &-message {
+      grid-column: 1/13;
+    }
     .banner {
+      margin-top: -60px;
       .item {
         width: 100%;
         &-3 {

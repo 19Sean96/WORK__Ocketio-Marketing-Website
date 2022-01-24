@@ -106,7 +106,7 @@
   row-gap: 0;
 
   .h5 {
-    margin-bottom: 32px;
+    margin-bottom: 1.2em;
     line-height: 145%;
     font-weight: 500;
   }
@@ -176,7 +176,6 @@
       &--title {
         grid-column: 2/12;
         grid-row: 1/2;
-        margin-bottom: 18px;
       }
       &--paragraph {
         grid-column: 2/12;
@@ -584,6 +583,10 @@
       width: 100%;
       position: relative;
       flex-grow: 1;
+
+      &__wrapper {
+        flex-grow: 1;
+      }
       &--input {
         height: 76px;
         padding: 8px 160px 8px 20px;
