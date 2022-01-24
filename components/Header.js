@@ -31,7 +31,7 @@ const Header = () => {
         style={{
           position: isMobile && menuOpen ? "fixed" : "relative",
           background:
-            router.pathname === "/features" ? "#252939" : "transparent",
+            router.pathname === "/features" || router.pathname.includes('/blog') ? "#252939" : "transparent",
         }}
       >
         <header className="header">
@@ -40,7 +40,7 @@ const Header = () => {
               <a>
                 <Logo
                   menuOpenOnMobile={menuOpen && isMobile}
-                  darkMode={router.pathname === "/features"}
+                  darkMode={router.pathname === "/features" || router.pathname.includes('/blog')}
                 />
               </a>
             </Link>
@@ -57,7 +57,7 @@ const Header = () => {
             >
               <Menu
                 menuOpen={menuOpen}
-                darkMode={router.pathname === "/features"}
+                darkMode={router.pathname === "/features" || router.pathname.includes('/blog')}
               />
             </button>
           ) : (

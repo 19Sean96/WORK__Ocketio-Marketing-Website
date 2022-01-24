@@ -4,6 +4,10 @@ import Image from "next/image";
 import readingTime from "reading-time";
 import ReactHtmlParser from "react-html-parser";
 import ContentWrapper from "../../components/ContentWrapper";
+import ScrollAnimation from "react-animate-on-scroll";
+
+const animateOnce = true;
+
 const Blog = ({ blog_posts }) => {
   const router = useRouter();
   const id = parseInt(router.query.id);
@@ -23,30 +27,57 @@ const Blog = ({ blog_posts }) => {
   return (
     <ContentWrapper>
       <section className="section all-columns" id="blogPage">
-        <div className="section--heading">
-          <div className="text">
-            <h2 className="h2">{blog.post_title}</h2>
-            <p className="p-small blog--info">
-              <span className="blog--date">
-                {formatDate(blog.date_created)} -{" "}
-              </span>
-              <span className="blog--time-to-read">{readStats.text}</span>
-              {blog.date_updated && (
-                <p className="blog--date__updated italic">
-                  Updated {formatDate(blog.date_updated)}
+        <ScrollAnimation
+          animateOnce={animateOnce}
+          duration={0.6}
+          animateIn="animate__fadeInDown"
+          className="full-width_wrapper"
+        >
+          <div className="section--heading">
+            <div className="text">
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                animateIn="animate__fadeInDown"
+                duration={1.5}
+                delay={300}
+              >
+                <h2 className="h2">{blog.post_title}</h2>
+              </ScrollAnimation>
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                animateIn="animate__fadeInUp"
+                duration={0.995}
+                delay={450}
+              >
+                <p className="p-small blog--info">
+                  <span className="blog--date">
+                    {formatDate(blog.date_created)} -{" "}
+                  </span>
+                  <span className="blog--time-to-read">{readStats.text}</span>
+                  {blog.date_updated && (
+                    <p className="blog--date__updated italic">
+                      Updated {formatDate(blog.date_updated)}
+                    </p>
+                  )}
                 </p>
-              )}
-            </p>
+              </ScrollAnimation>
+            </div>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn="animate__fadeInUp"
+              duration={1.18}
+              delay={225}
+              className="blog--img__wrapper"
+            >
+              <Image
+                src={`http://143.198.146.26/assets/${blog.post_img}`}
+                layout="fill"
+                className="blog--img"
+                objectFit="cover"
+              />
+            </ScrollAnimation>
           </div>
-          <div className="blog--img__wrapper">
-            <Image
-              src={`http://143.198.146.26/assets/${blog.post_img}`}
-              layout="fill"
-              className="blog--img"
-              objectFit="cover"
-            />
-          </div>
-        </div>
+        </ScrollAnimation>
         <div className="section--body">{ReactHtmlParser(blog.post_body)}</div>
       </section>
     </ContentWrapper>

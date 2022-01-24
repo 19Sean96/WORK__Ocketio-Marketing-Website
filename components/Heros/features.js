@@ -19,7 +19,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       animateOnce={animateOnce}
       duration={0.3}
       animateIn="animate__fadeInDown"
-      className="full-width_wrapper"
+      className="full-width_wrapper navy-bg"
     >
       <ContentWrapper>
         <section className="section section__with-grid" id="features-hero">

@@ -3,6 +3,9 @@
     .section {
       &--heading {
         grid-row: 1/2;
+        position: relative;
+
+
       }
       &--body {
         grid-row: 2/3;
@@ -114,6 +117,7 @@
     width: 65%;
     min-width: 275px;
     margin-left:auto; margin-right: auto;
+    margin-top: 0;
   .blog {
     &--info {
       color: #139bbf;
@@ -144,9 +148,25 @@
   .section {
     &--heading {
       align-items: flex-start;
+      position: relative;
+      padding-top: 8vw;
+      color: $white;
+
       p {
         margin-left: 0;
         text-align: left;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 50%;
+        width: 100vw;
+        height: 74.5%;
+        background-color: #252939;
+        transform: translate(-50%,0)
       }
     }
 
