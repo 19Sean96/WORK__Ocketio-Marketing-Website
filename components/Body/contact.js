@@ -12,6 +12,8 @@ import {
   BsNewspaper,
 } from "react-icons/bs";
 
+const animateOnce = true
+
 const ContactPortal = (props) => {
   const {
     register,
@@ -30,7 +32,7 @@ const ContactPortal = (props) => {
         className="section section__with-grid all-columns"
         id="contactPortal"
       >
-        <ScrollAnimation
+        <ScrollAnimation animateOnce={animateOnce}
           animateIn="animate__fadeInDown"
           duration={0.9}
           className="section--heading"
@@ -43,7 +45,7 @@ const ContactPortal = (props) => {
         </ScrollAnimation>
         <div className="section--info">
           <a href="mailto:support@wirewise.io" className="section--info--item">
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
               duration={0.4}
               delay={400}
@@ -56,7 +58,7 @@ const ContactPortal = (props) => {
                 }}
               />
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInRight"
               duration={1.1}
               className="section--info--text"
@@ -66,7 +68,7 @@ const ContactPortal = (props) => {
             </ScrollAnimation>
           </a>
           <a href="tel:4878701054" className="section--info--item">
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
               duration={0.4}
               delay={400}
@@ -79,7 +81,7 @@ const ContactPortal = (props) => {
                 }}
               />
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInRight"
               duration={1.1}
               className="section--info--text"
@@ -89,7 +91,7 @@ const ContactPortal = (props) => {
             </ScrollAnimation>
           </a>
         </div>
-        <ScrollAnimation
+        <ScrollAnimation animateOnce={animateOnce}
           animateIn="animate__fadeInRight"
           delay={0}
           duration={0.7}
@@ -100,7 +102,7 @@ const ContactPortal = (props) => {
             className="section--form"
             id="contactform"
           >
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={200}
               duration={0.6}
@@ -122,7 +124,7 @@ const ContactPortal = (props) => {
                 Full Name
               </label>
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={200}
               duration={0.6}
@@ -143,7 +145,7 @@ const ContactPortal = (props) => {
                 Company Name
               </label>
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={300}
               duration={0.6}
@@ -164,7 +166,7 @@ const ContactPortal = (props) => {
                 Email Address
               </label>
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={300}
               duration={0.6}
@@ -196,7 +198,7 @@ const ContactPortal = (props) => {
                 Phone Number
               </label>
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={400}
               duration={0.6}
@@ -216,7 +218,7 @@ const ContactPortal = (props) => {
                 How can we help?
               </label>
             </ScrollAnimation>
-            <ScrollAnimation
+            <ScrollAnimation animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
               delay={600}
               duration={0.8}
@@ -243,7 +245,7 @@ const MoreContact = (props) => {
         className="section section__with-grid all-columns"
         id="moreContact"
       >
-        <ScrollAnimation
+        <ScrollAnimation animateOnce={animateOnce}
           animateIn="animate__fadeInDown"
           duration={0.6}
           className="section--heading"
@@ -256,21 +258,21 @@ const MoreContact = (props) => {
           </p>
         </ScrollAnimation>
         <article className="section--body">
-          <ScrollAnimation
+          <ScrollAnimation animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             className="section--body--item__wrapper"
             duration={0.4}
           >
             <a href="mailto:sales@wirewise.io" className="section--body--item">
               <BsBriefcase />
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInDown"
                 delay={100}
                 duration={0.8}
               >
                 <h6 className="h6 capitalize">sales</h6>
               </ScrollAnimation>
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInDown"
                 delay={200}
                 duration={0.8}
@@ -280,7 +282,7 @@ const MoreContact = (props) => {
                   elit element
                 </p>
               </ScrollAnimation>
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInUp"
                 delay={300}
                 duration={0.8}
@@ -289,7 +291,7 @@ const MoreContact = (props) => {
               </ScrollAnimation>
             </a>
           </ScrollAnimation>
-          <ScrollAnimation
+          <ScrollAnimation animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             className="section--body--item__wrapper"
             duration={0.4}
@@ -300,14 +302,14 @@ const MoreContact = (props) => {
               className="section--body--item"
             >
               <BsLifePreserver />
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInDown"
                 delay={100}
                 duration={0.8}
               >
                 <h6 className="h6 capitalize">help & support</h6>
               </ScrollAnimation>
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInDown"
                 delay={200}
                 duration={0.8}
@@ -317,7 +319,7 @@ const MoreContact = (props) => {
                   elit element
                 </p>
               </ScrollAnimation>
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInUp"
                 delay={300}
                 duration={0.8}
@@ -326,7 +328,7 @@ const MoreContact = (props) => {
               </ScrollAnimation>
             </a>
           </ScrollAnimation>
-          <ScrollAnimation
+          <ScrollAnimation animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             className="section--body--item__wrapper"
             duration={0.4}
@@ -334,14 +336,14 @@ const MoreContact = (props) => {
           >
             <a href="mailto:press@wirewise.io" className="section--body--item">
               <BsNewspaper />
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInDown"
                 delay={100}
                 duration={0.8}
               >
                 <h6 className="h6 capitalize">media & press</h6>
               </ScrollAnimation>
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInDown"
                 delay={200}
                 duration={0.8}
@@ -351,7 +353,7 @@ const MoreContact = (props) => {
                   elit element
                 </p>
               </ScrollAnimation>
-              <ScrollAnimation
+              <ScrollAnimation animateOnce={animateOnce}
                 animateIn="animate__fadeInUp"
                 delay={300}
                 duration={0.8}
@@ -396,7 +398,7 @@ const ContactFAQ = (props) => {
         className=" section section__with-grid all-columns"
         id="contactFAQ"
       >
-        <ScrollAnimation
+        <ScrollAnimation animateOnce={animateOnce}
           animateIn="animate__fadeInDown"
           duration={0.48}
           className="section--heading"

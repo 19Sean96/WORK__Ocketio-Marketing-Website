@@ -1,15 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import { useEffect } from "react";
-
 import ContentWrapper from "../ContentWrapper";
-
 import featuresHeroImageMain from "../../public/images/features-hero_main.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
-
 import { DiAndroid, DiLinux } from "react-icons/di";
+
+const animateOnce = true;
+
 const HeroFeatures = ({ mouseCoord, offset }) => {
   useEffect(() => {
     console.log(mouseCoord);
@@ -17,6 +16,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
 
   return (
     <ScrollAnimation
+      animateOnce={animateOnce}
       duration={0.3}
       animateIn="animate__fadeInDown"
       className="full-width_wrapper"
@@ -24,12 +24,17 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       <ContentWrapper>
         <section className="section section__with-grid" id="features-hero">
           <div id="features-hero-message">
-            <ScrollAnimation animateIn="animate__fadeInLeft" duration={0.975}>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn="animate__fadeInLeft"
+              duration={0.975}
+            >
               <h2 className="h2">
                 All of the essentials, none of the complexity.
               </h2>
             </ScrollAnimation>
             <ScrollAnimation
+              animateOnce={animateOnce}
               animateIn="animate__fadeInLeft"
               duration={0.95}
               delay={160}
@@ -40,6 +45,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             </ScrollAnimation>
 
             <ScrollAnimation
+              animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
               className="cta-group"
               duration={0.85}
@@ -53,6 +59,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             </ScrollAnimation>
           </div>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInDown"
             duration={0.6}
             delay={450}
@@ -70,6 +77,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
           <article id="supportedOS" className="banner f f-justify-between">
             <h6 className="h6 banner--heading">Available for</h6>
             <ScrollAnimation
+              animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
               duration={1.2}
               className="item item-1"
@@ -91,6 +99,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               </h6>
             </ScrollAnimation>
             <ScrollAnimation
+              animateOnce={animateOnce}
               animateIn="animate__fadeIn"
               duration={0.8}
               delay={550}
@@ -121,6 +130,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               </h6>
             </ScrollAnimation>
             <ScrollAnimation
+              animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
               duration={1.2}
               className="item item-3"

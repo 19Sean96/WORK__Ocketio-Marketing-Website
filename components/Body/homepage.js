@@ -15,8 +15,12 @@ import Card2 from "../../public/images/small-business.png";
 import Card3 from "../../public/images/mid-sized-company.png";
 
 import { BsCheckCircle } from "react-icons/bs";
+import { useAppContext } from "../../Context";
+
+const animateOnce = true;
 
 const FirstBanner = (props) => {
+  const { isMobile } = useAppContext();
   return (
     <ContentWrapper>
       <section
@@ -24,7 +28,8 @@ const FirstBanner = (props) => {
         id="firstBannerHomepage"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.54}
           className="banner--title"
           offset={-100}
@@ -35,11 +40,11 @@ const FirstBanner = (props) => {
           </h5>
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeInUp"
           duration={0.68}
           className="banner--paragraph"
           offset={-100}
-
         >
           <p className="p-small">
             A couple years ago we started searching for a capable WireGuard® VPN
@@ -50,12 +55,12 @@ const FirstBanner = (props) => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeIn"
           duration={0.6}
           delay={350}
           className="image_wrapper banner--image"
           offset={-100}
-
         >
           <Image
             src={worldMap}
@@ -70,6 +75,8 @@ const FirstBanner = (props) => {
 };
 
 const WhoSection = (props) => {
+  const { isMobile } = useAppContext();
+
   return (
     <ContentWrapper>
       <section
@@ -77,7 +84,8 @@ const WhoSection = (props) => {
         id="sectionWhoHomepage"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.44}
           offset={-186}
           // animateOnce={true}
@@ -94,6 +102,7 @@ const WhoSection = (props) => {
         </ScrollAnimation>
         <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             duration={0.7}
             // animateOnce={true}
@@ -118,6 +127,7 @@ const WhoSection = (props) => {
             </div>
           </ScrollAnimation>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             duration={0.7}
             // animateOnce={true}
@@ -143,6 +153,7 @@ const WhoSection = (props) => {
             </div>
           </ScrollAnimation>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             duration={0.7}
             // animateOnce={true}
@@ -174,6 +185,8 @@ const WhoSection = (props) => {
 };
 
 const WhatSection = (props) => {
+  const { isMobile } = useAppContext();
+
   const whatSectionContent = [
     {
       title: `it's secure.`,
@@ -252,10 +265,10 @@ const WhatSection = (props) => {
         id="sectionWhatHomepage"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.9}
           offset={-186}
-
           // animateOnce={true}
           className="section--heading"
         >
@@ -276,24 +289,43 @@ const WhatSection = (props) => {
               par={item.par}
               list={item.list}
               key={"what-item-" + i}
+              isMobile={isMobile}
             />
           ))}
           <div className="cta-group">
             <Link href="/pricing">
-              <button
-                className="cta btn btn--filled j-text _600 capitalize"
-                aria-label="Get started with our beta program by creating a network"
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                animateIn={
+                  isMobile ? "animate__fadeInUp" : "animate__fadeInLeft"
+                }
+                duration={0.675}
+                className="cta"
               >
-                create a network
-              </button>
+                <button
+                  className="btn btn--filled j-text _600 capitalize"
+                  aria-label="Get started with our beta program by creating a network"
+                >
+                  create a network
+                </button>
+              </ScrollAnimation>
             </Link>
             <Link href="/features">
-              <button
-                className="cta btn btn--bordered j-text _600 capitalize"
-                aria-label="Get additional information about Wirewise"
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                animateIn={
+                  isMobile ? "animate__fadeInUp" : "animate__fadeInRight"
+                }
+                duration={0.675}
+                className="cta"
               >
-                learn more
-              </button>
+                <button
+                  className="cta btn btn--bordered j-text _600 capitalize"
+                  aria-label="Get additional information about Wirewise"
+                >
+                  learn more
+                </button>
+              </ScrollAnimation>
             </Link>
           </div>
         </div>
@@ -302,13 +334,23 @@ const WhatSection = (props) => {
   );
 };
 
-function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
+function WhatSectionItem({
+  reversed,
+  img,
+  alt,
+  imgID,
+  title,
+  par,
+  list,
+  isMobile,
+}) {
   return (
     <article className={`section--body--item${reversed ? " reversed" : ""}`}>
       <ScrollAnimation
-        animateIn={"animate__fadeInDown"}
+        animateOnce={animateOnce}
+        animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
         className="text-block"
-        duration={.6}
+        duration={0.6}
       >
         <h4 className="h4 capitalize">{title}</h4>
         <p className="p-small">{par}</p>
@@ -317,6 +359,7 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
         {list.map((item, i) => (
           <li className="checklist--item" key={"item-" + i}>
             <ScrollAnimation
+              animateOnce={animateOnce}
               duration={1 - i * 0.1}
               delay={i * 25}
               offset={-128}
@@ -336,6 +379,7 @@ function WhatSectionItem({ reversed, img, alt, imgID, title, par, list }) {
         ))}
       </ul>
       <ScrollAnimation
+        animateOnce={animateOnce}
         animateIn="animate__fadeIn"
         duration={0.7}
         className="image__wrapper"

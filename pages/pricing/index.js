@@ -4,6 +4,8 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../../components/ContentWrapper";
 import FAQList from "../../components/util/FAQ";
 import EmailIntakeInput from "../../components/util/EmailIntakeInput";
+
+const animateOnce = true;
 export default function Pricing() {
   const faqs = [
     {
@@ -32,6 +34,7 @@ export default function Pricing() {
       <ContentWrapper>
         <section className="section__with-grid all-columns" id="pricing">
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInLeft"
             duration={0.9}
             className="section--heading"
@@ -47,6 +50,7 @@ export default function Pricing() {
           </div>
           <div className="section--body">
             <ScrollAnimation
+              animateOnce={animateOnce}
               duration={0.7}
               delay={400}
               animateIn="animate__fadeInLeft"
@@ -67,6 +71,7 @@ export default function Pricing() {
               </p>
             </ScrollAnimation>
             <ScrollAnimation
+              animateOnce={animateOnce}
               duration={0.9}
               delay={200}
               animateIn="animate__fadeInLeft"
@@ -87,6 +92,7 @@ export default function Pricing() {
               </p>
             </ScrollAnimation>
             <ScrollAnimation
+              animateOnce={animateOnce}
               duration={1.1}
               delay={0}
               animateIn="animate__fadeInLeft"
@@ -112,6 +118,7 @@ export default function Pricing() {
             </caption>
           </div>
           <ScrollAnimation
+            animateOnce={animateOnce}
             duration={0.75}
             delay={700}
             animateIn="animate__fadeInUp"
@@ -131,6 +138,7 @@ export default function Pricing() {
       <ContentWrapper>
         <section className="section__with-grid all-columns" id="pricingFAQ">
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeIn"
             duration={0.9}
             className="section--heading"

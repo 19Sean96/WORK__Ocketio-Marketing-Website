@@ -3,6 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsArrowRightCircle } from "react-icons/bs";
 import readingTime from "reading-time";
+import ScrollAnimation from "react-animate-on-scroll";
+
+const animateOnce = true;
+
 const BlogItem = ({
   author,
   dateWritten,
@@ -11,10 +15,12 @@ const BlogItem = ({
   body,
   id,
   imgId,
+  index,
+  isMobile,
 }) => {
-  const readStats = readingTime(body)
+  const readStats = readingTime(body);
   const formatDate = (date) =>
-    new Date(date).toLocaleDateString( 
+    new Date(date).toLocaleDateString(
       {},
       {
         timeZone: "UTC",
@@ -25,7 +31,12 @@ const BlogItem = ({
     );
   return (
     <article className="blog">
-      <div className="blog__top">
+      <ScrollAnimation
+        animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+        duration={0.6}
+        className="blog__top"
+        animateOnce={animateOnce}
+      >
         <p className="p-small blog--info">
           <span className="blog--date">{formatDate(dateWritten)} - </span>
           <span className="blog--time-to-read">{readStats.text}</span>
@@ -39,8 +50,14 @@ const BlogItem = ({
         <caption className="p-small blog--body s">
           {ReactHtmlParser(body)}
         </caption>
-      </div>
-      <div className="blog__bot">
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateOnce={animateOnce}
+        animateIn="animate__fadeIn"
+        duration={0.6}
+        delay={300}
+        className="blog__bot"
+      >
         <Link
           href={{
             pathname: "/blog/[id]",
@@ -63,7 +80,7 @@ const BlogItem = ({
             // placeholder="blur"
           />
         </div>
-      </div>
+      </ScrollAnimation>
     </article>
   );
 };

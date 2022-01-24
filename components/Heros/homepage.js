@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-
 import heroImageMain from "../../public/images/Homepage-Landing_Hero-Main.png";
 import heroImageSub1 from "../../public/images/Homepage-Landing_Hero-Sub_1.png";
 import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
 import heroImageSub3 from "../../public/images/Homepage-Landing_Hero-Sub_3.png";
+
+const animateOnce = true;
+
 const StyledSub1 = styled(Image)`
   transform: scale(0.375)
     ${(props) =>
@@ -82,30 +83,29 @@ const StyledSub3 = styled(Image)`
 `;
 
 const StyledMain = styled(Image)`
-transform: scale(1)
-${(props) =>
-  `translate(0, 
-calc(2.5vw - ${props.offset / -25 + -0.4}px))`};
-
-@media (max-width: 1200px) {
-transform: scale(1)
-  ${(props) =>
-    `translate(0, 
-  calc(2.5vw - ${props.offset / -45 + -0.4}px))`};
-}
-@media (max-width: 850px) {
-transform: scale(1.15)
-  ${(props) =>
-    `translate(0, 
-  calc(-2.5vw - ${props.offset / -75 - 35}px))`};
-}
-@media (max-width: 575px) {
-  transform: scale(1.45)
+  transform: scale(1)
     ${(props) =>
       `translate(0, 
+calc(2.5vw - ${props.offset / -25 + -0.4}px))`};
+
+  @media (max-width: 1200px) {
+    transform: scale(1)
+      ${(props) =>
+        `translate(0, 
+  calc(2.5vw - ${props.offset / -45 + -0.4}px))`};
+  }
+  @media (max-width: 850px) {
+    transform: scale(1.15)
+      ${(props) =>
+        `translate(0, 
+  calc(-2.5vw - ${props.offset / -75 - 35}px))`};
+  }
+  @media (max-width: 575px) {
+    transform: scale(1.45)
+      ${(props) =>
+        `translate(0, 
     calc(-2.5vw - ${props.offset / -75 - 35}px))`};
   }
-
 `;
 
 const HeroHome = ({ offset }) => {
@@ -114,6 +114,7 @@ const HeroHome = ({ offset }) => {
       <section className="section section__with-grid" id="landing-hero">
         <div id="landing-hero-message">
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInDown"
             duration={0.8}
             delay={50}
@@ -123,6 +124,7 @@ const HeroHome = ({ offset }) => {
             </h1>
           </ScrollAnimation>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInDown"
             duration={0.7}
             delay={250}
@@ -133,18 +135,25 @@ const HeroHome = ({ offset }) => {
             </p>
           </ScrollAnimation>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             duration={0.8}
             delay={350}
           >
             <div className="cta-group">
               <Link href="/pricing">
-                <button className="cta btn btn--filled j-text _600" aria-label="Get started with the beta program">
+                <button
+                  className="cta btn btn--filled j-text _600"
+                  aria-label="Get started with the beta program"
+                >
                   Try the Beta
                 </button>
               </Link>
               <Link href="/features">
-                <button className="cta btn btn--bordered j-text _600 capitalize" aria-label="Get additional information about Wirewise">
+                <button
+                  className="cta btn btn--bordered j-text _600 capitalize"
+                  aria-label="Get additional information about Wirewise"
+                >
                   learn more
                 </button>
               </Link>
@@ -155,7 +164,7 @@ const HeroHome = ({ offset }) => {
         <div className="image-group" offset={offset}>
           <StyledMain
             id="heroImageMain"
-            className={`image-group__image${
+            className={`animate__animated animate__fadeInUp image-group__image${
               offset === 0 ? " heroImageMain" : ""
             }`}
             layout="responsive"
@@ -166,7 +175,7 @@ const HeroHome = ({ offset }) => {
           />
           <StyledSub1
             id="heroImageSub1"
-            className={`image-group__image`}
+            className={`animate__animated image-group__image`}
             layout="responsive"
             src={heroImageSub1}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
@@ -175,7 +184,7 @@ const HeroHome = ({ offset }) => {
           />
           <StyledSub2
             id="heroImageSub2"
-            className={`image-group__image`}
+            className={`animate__animated image-group__image`}
             layout="responsive"
             src={heroImageSub2}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
@@ -184,7 +193,7 @@ const HeroHome = ({ offset }) => {
           />
           <StyledSub3
             id="heroImageSub3"
-            className={`image-group__image`}
+            className={`animate__animated image-group__image`}
             layout="fixed"
             width={232}
             src={heroImageSub3}

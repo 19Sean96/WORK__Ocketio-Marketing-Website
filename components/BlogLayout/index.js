@@ -1,15 +1,28 @@
 import ContentWrapper from "../ContentWrapper";
 import BlogItem from "./Item";
+import ScrollAnimation from "react-animate-on-scroll";
+import { useAppContext } from "../../Context";
+
+const animateOnce = true
 const BlogLayout = ({ blogPosts }) => {
+  const { isMobile } = useAppContext()
+
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns section--blog-list"
         id="blogPosts"
       >
-        <div className="section--heading">
+        <ScrollAnimation
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+          duration={0.625}
+          duration={0.44}
+          offset={-186}
+          className="section--heading"
+          animateOnce={animateOnce}
+        >
           <h2 className="h2">News and Updates</h2>
-        </div>
+        </ScrollAnimation>
         <div className="section--body">
           <div className="blogs">
             {blogPosts.map((blog, i) => (
@@ -25,6 +38,8 @@ const BlogLayout = ({ blogPosts }) => {
                 key={i}
                 id={blog.id}
                 imgId={blog.post_img}
+                index={i}
+                isMobile={isMobile}
               />
             ))}
           </div>

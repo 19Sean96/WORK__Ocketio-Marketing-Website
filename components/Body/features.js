@@ -15,9 +15,13 @@ import Step4 from "../../public/images/step-4.png";
 import Step5 from "../../public/images/step-5.png";
 import { useSwipeable } from "react-swipeable";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { useAppContext } from "../../Context";
+const animateOnce = true;
 
 const ArchitectureSection = (props) => {
-  7;
+
+
+  const { isMobile } = useAppContext()
   const [hoverInfoBox, toggleHoverInfoBox] = useState("");
   const [specifiedInfo, specifyInfo] = useState({});
 
@@ -49,10 +53,10 @@ const ArchitectureSection = (props) => {
         id="architectureSection"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.44}
           offset={-186}
-          // animateOnce={true}
           className="section--heading"
         >
           <h3 className="h3 capitalize">Thoughtful architecture</h3>
@@ -63,6 +67,7 @@ const ArchitectureSection = (props) => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeIn"
           duration={0.8}
           delay={450}
@@ -76,6 +81,7 @@ const ArchitectureSection = (props) => {
           />
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeInUp"
           duration={0.95}
           className="text-block text-block-1"
@@ -92,6 +98,7 @@ const ArchitectureSection = (props) => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeInUp"
           duration={0.8}
           delay={175}
@@ -109,6 +116,7 @@ const ArchitectureSection = (props) => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeInUp"
           duration={0.65}
           delay={325}
@@ -131,6 +139,8 @@ const ArchitectureSection = (props) => {
 };
 
 const FineTunedControlSection = (props) => {
+  const { isMobile } = useAppContext()
+
   return (
     <ContentWrapper>
       <section
@@ -138,20 +148,21 @@ const FineTunedControlSection = (props) => {
         id="fineTunedControlSection"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.44}
           offset={-186}
-          // animateOnce={true}
           className="section--heading"
         >
           <h3 className="h3 capitalize">fine-tuned control</h3>
           <p className="p-small">
             No network administrator’s life needs to be harder. Mission-critical
-            features allow you to simplifiy access management while dialing in
+            features allow you to simplify access management while dialing in
             core configuration.
           </p>
         </ScrollAnimation>
         <ScrollAnimation
+          animateOnce={animateOnce}
           animateIn="animate__fadeInUp"
           duration={0.88}
           className="img-block"
@@ -164,7 +175,8 @@ const FineTunedControlSection = (props) => {
         </ScrollAnimation>
         <div className="text-blocks">
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
             duration={1.2}
             className="text-block text-block-1"
           >
@@ -175,7 +187,8 @@ const FineTunedControlSection = (props) => {
             </p>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
             duration={1}
             delay={300}
             className="text-block text-block-2"
@@ -187,7 +200,8 @@ const FineTunedControlSection = (props) => {
             </p>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
             duration={0.8}
             delay={600}
             className="text-block text-block-3"
@@ -199,7 +213,8 @@ const FineTunedControlSection = (props) => {
             </p>
           </ScrollAnimation>
           <ScrollAnimation
-            animateIn="animate__fadeInDown"
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
             duration={0.6}
             delay={900}
             className="text-block text-block-4"
@@ -217,6 +232,8 @@ const FineTunedControlSection = (props) => {
 };
 
 const OptimizedExperienceSection = (props) => {
+  const { isMobile } = useAppContext()
+
   return (
     <ContentWrapper>
       <section
@@ -224,7 +241,8 @@ const OptimizedExperienceSection = (props) => {
         id="optimizedExperienceSection"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.44}
           offset={-186}
           className="section--heading"
@@ -239,7 +257,8 @@ const OptimizedExperienceSection = (props) => {
         <div className="section--body">
           <div className="text-blocks text-blocks-1">
             <ScrollAnimation
-              animateIn="animate__fadeInDown"
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
               duration={1.2}
               className="text-block"
             >
@@ -250,7 +269,8 @@ const OptimizedExperienceSection = (props) => {
               </p>
             </ScrollAnimation>
             <ScrollAnimation
-              animateIn="animate__fadeInDown"
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
               duration={1}
               delay={300}
               className="text-block"
@@ -263,6 +283,7 @@ const OptimizedExperienceSection = (props) => {
             </ScrollAnimation>
           </div>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             duration={0.88}
             className="image__wrapper"
@@ -275,7 +296,8 @@ const OptimizedExperienceSection = (props) => {
           </ScrollAnimation>
           <div className="text-blocks text-blocks-2">
             <ScrollAnimation
-              animateIn="animate__fadeInDown"
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
               duration={0.8}
               delay={600}
               className="text-block"
@@ -287,7 +309,8 @@ const OptimizedExperienceSection = (props) => {
               </p>
             </ScrollAnimation>
             <ScrollAnimation
-              animateIn="animate__fadeInDown"
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
               duration={0.6}
               delay={900}
               className="text-block"
@@ -307,9 +330,6 @@ const OptimizedExperienceSection = (props) => {
 
 const StyledSlideshowItem = styled(Image)`
   opacity: ${(props) => (props.active ? "1" : "0")};
-  // transform: translateY(
-  //   ${(props) => (props.active ? "0%" : props.previous ? "100%" : "-100%")}
-  // );
 `;
 
 const StyledTab = styled.li`
@@ -321,6 +341,8 @@ const StyledTab = styled.li`
 `;
 
 const SetupSection = (props) => {
+  const { isMobile } = useAppContext()
+
   const [previousTab, setPreviousTab] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -362,7 +384,8 @@ const SetupSection = (props) => {
         id="setupSection"
       >
         <ScrollAnimation
-          animateIn="animate__fadeInDown"
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.44}
           offset={-186}
           className="section--heading"
@@ -376,6 +399,7 @@ const SetupSection = (props) => {
         </ScrollAnimation>
         <article className="section--body">
           <ScrollAnimation
+            animateOnce={animateOnce}
             className="tabs__wrapper"
             animateIn="animate__fadeInUp"
             duration={0.725}
@@ -424,6 +448,7 @@ const SetupSection = (props) => {
             </BsArrowRight>
           </div>
           <ScrollAnimation
+            animateOnce={animateOnce}
             animateIn="animate__fadeIn"
             duration={0.88}
             className="image__wrapper display"
