@@ -6,7 +6,7 @@ const FAQList = ({ list }) => {
   return (
     <ScrollAnimation
       animateIn="animate__fadeInLeft"
-      animateOut="animate__fadeOutRight"
+      animateOnce={true}
       duration={0.65}
       className="faq--list__wrapper"
     >
