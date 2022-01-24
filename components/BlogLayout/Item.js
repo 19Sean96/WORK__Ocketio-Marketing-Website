@@ -30,58 +30,58 @@ const BlogItem = ({
       }
     );
   return (
-    <article className="blog">
-      <ScrollAnimation
-        animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-        duration={0.6}
-        className="blog__top"
-        animateOnce={animateOnce}
-      >
-        <p className="p-small blog--info">
-          <span className="blog--date">{formatDate(dateWritten)} - </span>
-          <span className="blog--time-to-read">{readStats.text}</span>
-          {dateUpdated && (
-            <p className="blog--date__updated italic">
-              Updated {formatDate(dateUpdated)}
-            </p>
-          )}
-        </p>
-        <h5 className="h5 blog--title">{title}</h5>
-        <caption className="p-small blog--body s">
-          {ReactHtmlParser(body)}
-        </caption>
-      </ScrollAnimation>
-      <ScrollAnimation
-        animateOnce={animateOnce}
-        animateIn="animate__fadeIn"
-        duration={0.6}
-        delay={300}
-        className="blog__bot"
-      >
-        <Link
-          href={{
-            pathname: "/blog/[id]",
-            query: {
-              id,
-            },
-          }}
+    <Link
+      href={{
+        pathname: "/blog/[id]",
+        query: {
+          id,
+        },
+      }}
+    >
+      <article className="blog">
+        <ScrollAnimation
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+          duration={0.6}
+          className="blog__top"
+          animateOnce={animateOnce}
         >
-          <a className="p-small blog--cta">
+          <p className="p-small blog--info">
+            <span className="blog--date">{formatDate(dateWritten)} - </span>
+            <span className="blog--time-to-read">{readStats.text}</span>
+            {dateUpdated && (
+              <p className="blog--date__updated italic">
+                Updated {formatDate(dateUpdated)}
+              </p>
+            )}
+          </p>
+          <h5 className="h5 blog--title">{title}</h5>
+          <caption className="p-small blog--body s">
+            {ReactHtmlParser(body)}
+          </caption>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateOnce={animateOnce}
+          animateIn="animate__fadeIn"
+          duration={0.6}
+          delay={300}
+          className="blog__bot"
+        >
+          <p className="p-small blog--cta">
             <span>Read More</span>{" "}
             <BsArrowRightCircle className="icon" width={25} height={25} />
-          </a>
-        </Link>
-        <div className="blog--img__wrapper">
-          <Image
-            src={`http://143.198.146.26/assets/${imgId}`}
-            layout="fill"
-            className="blog--img"
-            objectFit="cover"
-            // placeholder="blur"
-          />
-        </div>
-      </ScrollAnimation>
-    </article>
+          </p>
+          <div className="blog--img__wrapper">
+            <Image
+              src={`http://143.198.146.26/assets/${imgId}`}
+              layout="fill"
+              className="blog--img"
+              objectFit="cover"
+              // placeholder="blur"
+            />
+          </div>
+        </ScrollAnimation>
+      </article>
+    </Link>
   );
 };
 
