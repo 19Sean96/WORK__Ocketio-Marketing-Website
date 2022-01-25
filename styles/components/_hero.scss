@@ -85,6 +85,7 @@
         animation-name: fadeInLeftShort;
         animation-delay: 0s;
         animation-duration: 0.88s;
+        z-index: 1;
       }
   
       &:nth-child(3) {
