@@ -14,7 +14,14 @@ import Step3 from "../../public/images/step-3.png";
 import Step4 from "../../public/images/step-4.png";
 import Step5 from "../../public/images/step-5.png";
 import { useSwipeable } from "react-swipeable";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsArrowLeft,
+  BsKey,
+  BsListUl,
+  BsGear,
+  BsPhone,
+} from "react-icons/bs";
 import { useAppContext } from "../../Context";
 import {
   AzureADLogo,
@@ -184,6 +191,13 @@ const FineTunedControlSection = (props) => {
             duration={1.2}
             className="text-block text-block-1"
           >
+            <BsKey
+              style={{
+                width: "auto",
+                height: 35,
+                marginBottom: "9px",
+              }}
+            />
             <h6 className="h6 capitalize">Multiple Authentication Options</h6>
             <p className="p-small">
               Use your existing auth provider to streamline access and enforce
@@ -197,6 +211,13 @@ const FineTunedControlSection = (props) => {
             delay={300}
             className="text-block text-block-2"
           >
+            <BsListUl
+              style={{
+                width: "auto",
+                height: 35,
+                marginBottom: "9px",
+              }}
+            />
             <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
             <p className="p-small">
               A detailed event log ensures you can keep tabs on network activity
@@ -210,6 +231,13 @@ const FineTunedControlSection = (props) => {
             delay={600}
             className="text-block text-block-3"
           >
+            <BsPhone
+              style={{
+                width: "auto",
+                height: 35,
+                marginBottom: "9px",
+              }}
+            />
             <h6 className="h6 capitalize">Detailed Device Info</h6>
             <p className="p-small">
               See all registered devices in one place and monitor connection
@@ -223,6 +251,13 @@ const FineTunedControlSection = (props) => {
             delay={900}
             className="text-block text-block-4"
           >
+            <BsGear
+              style={{
+                width: "auto",
+                height: 35,
+                marginBottom: "9px",
+              }}
+            />
             <h6 className="h6 capitalize">configure DNS</h6>
             <p className="p-small">
               Manage core settings and configuration from a streamlined online
@@ -238,20 +273,30 @@ const FineTunedControlSection = (props) => {
 const ThirdPartyAuthentication = (props) => {
   return (
     <ContentWrapper>
-      <section
-        className="section__with-grid all-columns"
-        id="thirdPartyAuth"
+      <ScrollAnimation
+        animateOnce={true}
+        animateIn="animate__fadeInUp"
+        duration={0.88}
+        className="all-columns section__with-grid"
       >
-        <div className="section--heading">
-          <h6 className="h6">3rd Party Authentication</h6>
-        </div>
-        <div className="section--body">
-          <AzureADLogo />
-          <OktaLogo />
-          <Auth0Logo />
-          <GSuiteLogo />
-        </div>
-      </section>
+        <section className="section__with-grid all-columns" id="thirdPartyAuth">
+          <ScrollAnimation
+            animateIn="animate__fadeInDown"
+            animateOnce={true}
+            duration={0.88}
+            delay={440}
+            className="section--heading"
+          >
+            <h6 className="h6">3rd Party Authentication</h6>
+          </ScrollAnimation>
+          <div className="section--body">
+            <AzureADLogo />
+            <OktaLogo />
+            <Auth0Logo />
+            <GSuiteLogo />
+          </div>
+        </section>
+      </ScrollAnimation>
     </ContentWrapper>
   );
 };
