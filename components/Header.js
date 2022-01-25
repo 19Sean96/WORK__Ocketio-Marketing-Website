@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../Context";
 
-import Menu from "./SVG/menu";
+import {Menu, MenuV2} from "./SVG/menu";
 import Logo from "./SVG/logo";
 const Header = () => {
   const [menuOpen, toggleMenuOpen] = useState(false);
@@ -55,7 +55,7 @@ const Header = () => {
                 menuOpen ? "close mobile navigation" : "open mobile navigation"
               }
             >
-              <Menu
+              <MenuV2
                 menuOpen={menuOpen}
                 darkMode={router.pathname === "/features" || router.pathname.includes('/blog')}
               />
