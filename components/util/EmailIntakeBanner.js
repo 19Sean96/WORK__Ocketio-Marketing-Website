@@ -18,7 +18,12 @@ const EmailIntakeBanner = (props) => {
 
   return (
     <ContentWrapper>
-      <ScrollAnimation animateIn="animate__fadeInUp" duration={0.623} className="section__with-grid all-columns">
+      <ScrollAnimation
+        animateIn="animate__fadeInUp"
+        animateOnce={true}
+        duration={0.623}
+        className="section__with-grid all-columns"
+      >
         <section
           className="section section__with-grid all-columns"
           id="emailIntake"
@@ -27,6 +32,7 @@ const EmailIntakeBanner = (props) => {
             <ScrollAnimation
               animateIn="animate__fadeInDown"
               duration={0.625}
+              animateOnce={true}
               delay={335}
               className="section--heading--title"
             >
@@ -35,6 +41,7 @@ const EmailIntakeBanner = (props) => {
             <ScrollAnimation
               animateIn="animate__fadeInUp"
               duration={0.625}
+              animateOnce={true}
               delay={445}
               className="section--heading--title"
             >
@@ -47,6 +54,7 @@ const EmailIntakeBanner = (props) => {
           <ScrollAnimation
             animateIn="animate__fadeIn"
             duration={0.555}
+            animateOnce={true}
             delay={488}
             className="section--form__wrapper"
           >
