@@ -90,7 +90,8 @@ const MenuV2 = ({ menuOpen, darkMode }) => {
           fill={subRectColor}
           style={{
             transformOrigin: "50% 50%",
-            transition: ".31s ease-in-out",
+            transition: ".31s ease-in-out all",
+            opacity: menuOpen ? 0 : 1,
             transform: menuOpen ? "scaleY(0%)" : "scaleY(100%)",
           }}
         />
