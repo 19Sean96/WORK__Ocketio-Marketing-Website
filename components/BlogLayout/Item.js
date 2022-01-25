@@ -49,11 +49,6 @@ const BlogItem = ({
             <p className="p-small blog--info">
               <span className="blog--date">{formatDate(dateWritten)} - </span>
               <span className="blog--time-to-read">{readStats.text}</span>
-              {dateUpdated && (
-                <p className="blog--date__updated italic">
-                  Updated {formatDate(dateUpdated)}
-                </p>
-              )}
             </p>
             <h5 className="h5 blog--title">{title}</h5>
             <caption className="p-small blog--body s">
