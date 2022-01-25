@@ -83,27 +83,27 @@ const StyledSub3 = styled(Image)`
 `;
 
 const StyledMain = styled(Image)`
-  transform: scale(1)
+  transform: scale(1) 
     ${(props) =>
-      `translate(0, 
+      ` translate(0, 
 calc(2.5vw - ${props.offset / -25 + -0.4}px))`};
 
   @media (max-width: 1200px) {
-    transform: scale(1)
+    transform: scale(1) 
       ${(props) =>
-        `translate(0, 
+        ` translate(0, 
   calc(2.5vw - ${props.offset / -45 + -0.4}px))`};
   }
   @media (max-width: 850px) {
-    transform: scale(1.15)
+    transform: scale(1.15) 
       ${(props) =>
-        `translate(0, 
+        ` translate(0, 
   calc(-2.5vw - ${props.offset / -75 - 35}px))`};
   }
   @media (max-width: 575px) {
-    transform: scale(1.45)
+    transform: scale(1.35) 
       ${(props) =>
-        `translate(0, 
+        ` translate(0, 
     calc(-2.5vw - ${props.offset / -75 - 35}px))`};
   }
 `;
@@ -164,7 +164,7 @@ const HeroHome = ({ offset }) => {
         <div className="image-group" offset={offset}>
           <StyledMain
             id="heroImageMain"
-            className={`animate__animated animate__fadeInUp image-group__image${
+            className={`animate__animated image-group__image${
               offset === 0 ? " heroImageMain" : ""
             }`}
             layout="responsive"

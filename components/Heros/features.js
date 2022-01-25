@@ -6,10 +6,12 @@ import featuresHeroImageMain from "../../public/images/features-hero_main.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
+import { useAppContext } from "../../Context";
 
 const animateOnce = true;
 
 const HeroFeatures = ({ mouseCoord, offset }) => {
+  const { isMobile } = useAppContext()
   useEffect(() => {
     console.log(mouseCoord);
   }, [mouseCoord]);
@@ -85,13 +87,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               onMouseLeave={(e) => toggleHoverInfoBox("")}
             >
               <div className="item--img__wrapper">
-                <BsWindows
-                  className="item--img"
-                  // style={{
-                  //   height: "40px",
-                  //   width: "auto",
-                  // }}
-                />
+                <BsWindows className="item--img" />
                 <span className="item--img--text">Windows</span>
               </div>
               <h6 className="h6 capitalize">
@@ -100,9 +96,8 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
-              animateIn="animate__fadeIn"
-              duration={0.8}
-              delay={550}
+              animateIn="animate__fadeInUp"
+              duration={isMobile ? 1.2 : 0.8}
               className="item item-2"
               onMouseEnter={(e) => toggleHoverInfoBox("supervisedDevices")}
               onMouseLeave={(e) => toggleHoverInfoBox("")}
@@ -138,13 +133,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               onMouseLeave={(e) => toggleHoverInfoBox("")}
             >
               <div className="item--img__wrapper">
-                <DiLinux
-                  className="item--img"
-                  // style={{
-                  //   height: "40px",
-                  //   width: "auto",
-                  // }}
-                />
+                <DiLinux className="item--img" />
                 <span className="item--img--text">Linux</span>
               </div>
               <h6 className="h6 capitalize">
