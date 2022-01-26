@@ -7,6 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 import HoverInfoBox from "../util/HoverInfoBox";
 import howItWorksDiagram from "../../public/images/_WW_Website_Features-Diagram.png";
+import FeatureDiagram from "../SVG/FeatureDiagram";
 import optimizeExperienceImage from "../../public/images/features-body_optimize-experience.png";
 import Step1 from "../../public/images/step-1.png";
 import Step2 from "../../public/images/step-2.png";
@@ -84,12 +85,13 @@ const ArchitectureSection = (props) => {
           delay={450}
           className="image_wrapper"
         >
-          <Image
+          {/* <Image
             src={howItWorksDiagram}
             id="howItWorksDiagram"
             alt="Diagram explaining how WireWise works"
             layout="responsive"
-          />
+          /> */}
+          <FeatureDiagram />
         </ScrollAnimation>
         <ScrollAnimation
           animateOnce={animateOnce}

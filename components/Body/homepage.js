@@ -3,13 +3,14 @@ import Link from "next/link";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
-import worldMap from "../../public/images/world-map.png";
+// import worldMap from "../../public/images/world-map.png";
+import worldMap from "../../public/images/Wirewise_Website_Homepage-Map.svg";
 
 import GraphicSecure from "../../public/images/secure.png";
 import GraphicStreamlined from "../../public/images/streamlined.png";
 import GraphicEfficient from "../../public/images/efficient.png";
 import GraphicCostEffective from "../../public/images/cost-effective.png";
-
+import MapImg from "../SVG/MapImg";
 import Card1 from "../../public/images/individual.png";
 import Card2 from "../../public/images/small-business.png";
 import Card3 from "../../public/images/mid-sized-company.png";
@@ -62,12 +63,13 @@ const FirstBanner = (props) => {
           className="image_wrapper banner--image"
           offset={-100}
         >
-          <Image
+          {/* <Image
             src={worldMap}
             id="worldMap"
             alt="World Map"
             layout="responsive"
-          />
+          /> */}
+          <MapImg />
         </ScrollAnimation>
       </section>
     </ContentWrapper>
@@ -296,9 +298,7 @@ const WhatSection = (props) => {
             <Link href="/pricing">
               <ScrollAnimation
                 animateOnce={animateOnce}
-                animateIn={
-                  isMobile ? "animate__fadeInUp" : "animate__fadeInLeft"
-                }
+                animateIn="animate__fadeInUp"
                 duration={0.675}
                 className="cta"
               >
@@ -313,9 +313,7 @@ const WhatSection = (props) => {
             <Link href="/features">
               <ScrollAnimation
                 animateOnce={animateOnce}
-                animateIn={
-                  isMobile ? "animate__fadeInUp" : "animate__fadeInRight"
-                }
+                animateIn="animate__fadeInUp"
                 duration={0.675}
                 className="cta"
               >
