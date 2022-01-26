@@ -40,7 +40,7 @@ const BlogItem = ({
     >
       <article className="blog">
         <ScrollAnimation
-          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+          animateIn="animate__fadeInUp"
           duration={0.6}
           animateOnce={animateOnce}
           className="blog__inner"
