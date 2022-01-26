@@ -143,7 +143,7 @@ const HeroHome = ({ offset }) => {
             <div className="cta-group">
               <Link href="/pricing">
                 <button
-                  className="cta btn btn--filled j-text _600"
+                  className="cta btn btn--filled j-text _400"
                   aria-label="Get started with the beta program"
                 >
                   Try the Beta
@@ -151,7 +151,7 @@ const HeroHome = ({ offset }) => {
               </Link>
               <Link href="/features">
                 <button
-                  className="cta btn btn--bordered j-text _600 capitalize"
+                  className="cta btn btn--bordered j-text _400 capitalize"
                   aria-label="Get additional information about Wirewise"
                 >
                   learn more

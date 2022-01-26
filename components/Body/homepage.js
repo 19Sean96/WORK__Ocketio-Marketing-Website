@@ -63,12 +63,6 @@ const FirstBanner = (props) => {
           className="image_wrapper banner--image"
           offset={-100}
         >
-          {/* <Image
-            src={worldMap}
-            id="worldMap"
-            alt="World Map"
-            layout="responsive"
-          /> */}
           <MapImg />
         </ScrollAnimation>
       </section>
@@ -303,7 +297,7 @@ const WhatSection = (props) => {
                 className="cta"
               >
                 <button
-                  className="btn btn--filled j-text _600 capitalize"
+                  className="btn btn--filled j-text _400 capitalize"
                   aria-label="Get started with our beta program by creating a network"
                 >
                   create a network
@@ -318,7 +312,7 @@ const WhatSection = (props) => {
                 className="cta"
               >
                 <button
-                  className="cta btn btn--bordered j-text _600 capitalize"
+                  className="cta btn btn--bordered j-text _400 capitalize"
                   aria-label="Get additional information about Wirewise"
                 >
                   learn more

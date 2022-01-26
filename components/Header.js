@@ -80,7 +80,7 @@ const Header = () => {
           ) : (
             <div className="header--cta__wrapper">
               <button
-                className="header--cta btn btn--filled j-text _600"
+                className="header--cta btn btn--filled j-text _400"
                 aria-label="Get started with the beta program"
               >
                 Try the Beta
@@ -122,7 +122,8 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen, darkMode }) {
         });
       } else {
         updateNavStyle({
-          transform: "translate(-50%, -175%)",
+          transform: "translate(75%, -50%)",
+          opacity: 0
         });
       }
     }
@@ -153,7 +154,7 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen, darkMode }) {
       </ul>
       {isMobile && (
         <button
-          className="header--cta btn btn--filled j-text _600"
+          className="header--cta btn btn--filled j-text _400"
           aria-label="Get started with the beta program"
         >
           Try the Beta
