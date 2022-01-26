@@ -209,15 +209,8 @@
       }
 
       ul li {
-        // list-style: none;
         position: relative;
       }
-
-      // ul li:before {
-      //   content: '>';
-      //   margin-right: 10px;
-      //   font-weight: 900;
-      // }
 
       li {
         font-size: 20px;
@@ -315,23 +308,23 @@
 
       @media (max-width: 1150px) {
         p {
-          font-size: 20px;
+          font-size: 16px;
         }
 
         li {
-          font-size: 18px;
+          font-size: 15px;
         }
         h1 {
-          font-size: 34px;
+          font-size: 31px;
         }
   
         h2 {
-          font-size: 29px;
+          font-size: 27px;
   
         }
   
         h3 {
-          font-size: 25px;
+          font-size: 23px;
         }
       }
 

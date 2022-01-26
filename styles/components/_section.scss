@@ -1,5 +1,5 @@
 .section {
-  margin-top: 182px;
+  margin-top: 142px;
   transition: opacity 0.22s ease-in-out 0.18s;
 
   &__with-grid {
@@ -36,7 +36,7 @@
   }
 
   @media (max-width: 1200px) {
-    margin-top: 136px;
+    margin-top: 116px;
 
     &--heading {
       margin-bottom: 72px;
@@ -51,7 +51,7 @@
     }
   }
   @media (max-width: 960px) {
-    margin-top: 92px;
+    margin-top: 82px;
 
     &--heading {
       margin-bottom: 58px;
@@ -588,15 +588,16 @@
       margin-bottom: 0;
       display: flex;
       flex-direction: column;
+      align-items: stretch;
       gap: 16px;
-      > * {
+      * {
         text-align: left;
         margin-left: 0;
         color: $off-white;
       }
 
       p {
-        opacity: 1;
+        opacity: .8;
       }
     }
 
