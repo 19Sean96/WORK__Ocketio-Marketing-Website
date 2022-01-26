@@ -116,7 +116,7 @@
       grid-column: 1/6;
       grid-row: 1/2;
       align-self: flex-end;
-      padding-right: 9vw;
+      padding-right: 8vw;
     }
     &--paragraph {
       grid-column: 1/6;
@@ -133,18 +133,60 @@
   .image_wrapper {
     position: relative;
     min-width: 500px;
-    & > span,
-    & > div {
-      grid-area: overlay;
-      max-width: 100%;
-      overflow: visible !important;
+  }
+
+  @keyframes pulseInOut {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.25);
     }
   }
 
   #worldMap {
     position: relative;
     transform-origin: 0% 50%;
-    // transform: scale(1.25);
+    max-width: 100%;
+
+    #end-points {
+
+      .end-point {
+        animation: pulseInOut 3s ease-in-out infinite both alternate;
+
+        // .circle {
+          
+        // }
+      }
+    }
+  }
+
+  @media (max-width: 2160px) {
+    .banner {
+
+      &--title {
+        padding-right: 55px;
+      }
+    }
+  }
+
+  @media (max-width: 1920px) {
+    .banner {
+
+      &--title {
+        padding-right: 95px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .banner {
+
+      &--title {
+        padding-right: 5.4vw;
+      }
+    }
   }
 
   @media (max-width: 960px) {
@@ -554,7 +596,7 @@
       }
 
       p {
-        opacity: 0.6;
+        opacity: 1;
       }
     }
 
