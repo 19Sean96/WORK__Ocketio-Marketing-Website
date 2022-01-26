@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../Context";
 
-import {Menu, MenuV2} from "./SVG/menu";
+import { Menu, MenuV2 } from "./SVG/menu";
 import Logo from "./SVG/logo";
 const Header = () => {
   const [menuOpen, toggleMenuOpen] = useState(false);
@@ -31,7 +31,9 @@ const Header = () => {
         style={{
           position: isMobile && menuOpen ? "fixed" : "relative",
           background:
-            router.pathname === "/features" || router.pathname.includes('/blog') ? "#252939" : "transparent",
+            router.pathname === "/features" || router.pathname.includes("/blog")
+              ? "#252939"
+              : "transparent",
         }}
       >
         <header className="header">
@@ -40,12 +42,24 @@ const Header = () => {
               <a>
                 <Logo
                   menuOpenOnMobile={menuOpen && isMobile}
-                  darkMode={router.pathname === "/features" || router.pathname.includes('/blog')}
+                  darkMode={
+                    router.pathname === "/features" ||
+                    router.pathname.includes("/blog")
+                  }
                 />
               </a>
             </Link>
           </div>
-          {!isMobile && <Nav isMobile={isMobile} menuOpen={menuOpen} />}
+          {!isMobile && (
+            <Nav
+              isMobile={isMobile}
+              menuOpen={menuOpen}
+              darkMode={
+                router.pathname === "/features" ||
+                router.pathname.includes("/blog")
+              }
+            />
+          )}
           {/* should change to link */}
           {isMobile ? (
             <button
@@ -57,7 +71,10 @@ const Header = () => {
             >
               <MenuV2
                 menuOpen={menuOpen}
-                darkMode={router.pathname === "/features" || router.pathname.includes('/blog')}
+                darkMode={
+                  router.pathname === "/features" ||
+                  router.pathname.includes("/blog")
+                }
               />
             </button>
           ) : (
@@ -78,13 +95,16 @@ const Header = () => {
           isMobile={isMobile}
           menuOpen={menuOpen}
           toggleMenuOpen={toggleMenuOpen}
+          darkMode={
+            router.pathname === "/features" || router.pathname.includes("/blog")
+          }
         />
       )}
     </>
   );
 };
 
-function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
+function Nav({ isMobile, menuOpen, toggleMenuOpen, darkMode }) {
   // console.log((isMobile && menuOpen) || !isMobile);
   const [navStyle, updateNavStyle] = useState();
   const router = useRouter();
@@ -116,17 +136,17 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen }) {
       <ul className="header--nav--list">
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/features">
-            <a>features</a>
+            <a className={darkMode ? 'darkmode' : ''}>features</a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/pricing">
-            <a>pricing</a>
+            <a className={darkMode ? 'darkmode' : ''}>pricing</a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/contact">
-            <a>contact</a>
+            <a className={darkMode ? 'darkmode' : ''}>contact</a>
           </Link>
         </li>
         {/* <li className="j-text header--nav--item">blog</li> */}
