@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1600px;
   max-width: 1444px;
   margin: auto;
   @media (min-width: 2160px) {
@@ -69,7 +68,7 @@
       list-style: none;
       margin: 0px 25px 4px;
       padding: 16px 12px;
-      font-size: 20px;
+      font-size: 18px;
       cursor: pointer;
       border-radius: 6px;
       position: relative;
@@ -78,10 +77,14 @@
       overflow: hidden;
 
       a {
-        color: $gray-text;
+        color: $off-black;
         text-decoration: none;
         transition: .25s ease-in-out all;
-        font-weight: 500;
+        font-weight: 400;
+
+        &.darkmode {
+          color: $off-white;
+        }
       }
       &:hover,
       &:active,
