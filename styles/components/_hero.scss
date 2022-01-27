@@ -58,11 +58,11 @@
   .image-group {
     grid-column: 2/12;
     grid-row: 2/3;
-    min-height: 33vw;
+    height: 950px;
     margin-top: 98px;
     margin-bottom: -150px;
     position: relative;
-    padding: 0 7.5vmax;
+    padding: 0 200px;
     display: grid;
     grid-template-areas: "overlay";
 
@@ -145,13 +145,37 @@
       }
     }
 
+    @media (max-width: 2160px) {
+      height: 800px;
+    }
+
+    @media (max-width: 1570px) {
+      height: 52vw;
+    }
+
     @media (max-width: 1200px) {
-      padding: 0 2.5vmax;
+      height: 62vw;
+      padding: 0 2.5vmin;
       margin-bottom: -185px;
     }
 
+    @media (max-width: 855px) {
+      height: 73vw;
+    }
+
+    @media (max-width: 675px) {
+      height: 84vw;
+    }
+
+    @media (max-width: 575px) {
+      margin-bottom: -115px;
+      height: 100vw;
+      min-height: 375px;
+      max-height: 487px;
+    }
+
     @media (max-width: 500px) {
-      margin-bottom: -225px;
+      // margin-bottom: -225px;
     }
   }
 

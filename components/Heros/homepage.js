@@ -2,109 +2,107 @@ import Link from "next/link";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-import heroImageMain from "../../public/images/Homepage-Landing_Hero-Main.png";
-import heroImageSub1 from "../../public/images/Homepage-Landing_Hero-Sub_1.png";
-import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
-import heroImageSub3 from "../../public/images/Homepage-Landing_Hero-Sub_3.png";
+// import heroImageMain from "../../public/images/Homepage-Landing_Hero-Main.png";
+// import heroImageSub1 from "../../public/images/Homepage-Landing_Hero-Sub_1.png";
+// import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
+// import heroImageSub3 from "../../public/images/Homepage-Landing_Hero-Sub_3.png";
+
+import heroImageMain from "../../public/images/Homepage_Hero-main.png";
+import heroImageSub1 from "../../public/images/Homepage_Hero-sub1.png";
+import heroImageSub2 from "../../public/images/Homepage_Hero-sub2.png";
+import heroImageSub3 from "../../public/images/Homepage_Hero-sub3.png";
 
 const animateOnce = true;
 
 const StyledSub1 = styled(Image)`
-  transform: scale(0.375)
+  transform-origin: 0 100%;
+  transform: scale(0.45)
     ${(props) =>
-      `translate(calc(-860px - 31vw), 
-  calc(2.5vw - ${props.offset / 7}px))`};
+      `translate(-65%, calc(-40% - ${props.offset / 7}px))`};
 
   @media (max-width: 1200px) {
     transform: scale(0.45)
       ${(props) =>
-        `translate(calc(-250px - 71vw), 
-      calc(2.5vw - ${props.offset / 10 + 15 + -0.4 * 15}px))`};
+        `translate(-65%, calc(-40% - ${props.offset / 10 + 15 + -0.4 * 15}px))`};
   }
   @media (max-width: 850px) {
-    transform: scale(0.485)
+    transform: scale(0.465)
       ${(props) =>
-        `translate(-71vw, 
-      calc(8.5vw - ${props.offset / 10 + 15 + -0.4 * 12}px))`};
+        `translate(-65.5%, calc(-35% - ${props.offset / 10 + 15 + -0.4 * 12}px))`};
   }
   @media (max-width: 575px) {
-    transform: scale(0.65)
+    transform: scale(0.575)
       ${(props) =>
-        `translate(-55vw, 
-      calc(25vw - ${props.offset / 15 + 15 + -0.4 * 10}px))`};
+        `translate(-55%, calc(0% - ${props.offset / 15 + 15 + -0.4 * 10}px))`};
   }
 `;
 
 const StyledSub2 = styled(Image)`
-  transform: scale(0.38)
+  transform-origin: 100% 0;
+  transform: scale(0.52)
     ${(props) =>
-      `translate(calc(400px + 47.5vw), 
-  calc( -300px - 16vw - ${props.offset / 3 + 50 + -0.4 * 50}px))`};
+      `translate(60%, calc(-15% - ${props.offset / 3 + 50 + -0.4 * 50}px))`};
 
   @media (max-width: 1200px) {
     transform: scale(0.46)
       ${(props) =>
-        `translate(calc(100px + 72.5vw), 
-      calc( -50px - 28vw - ${props.offset / 6 + 100 + -0.4 * 150}px))`};
+        `translate(60%, calc(-10% - ${props.offset / 6 + 100 + -0.4 * 150}px))`};
   }
 
   @media (max-width: 850px) {
     transform: scale(0.54)
       ${(props) =>
-        `translate(68.5vw, 
-      calc( -18vw - ${props.offset / 9 + 150 + -0.4 * 150}px))`};
+        `translate(60%, calc( -10% - ${props.offset / 9 + 150 + -0.4 * 150}px))`};
   }
   @media (max-width: 575px) {
-    transform: scale(0.64)
+    transform: scale(0.7)
       ${(props) =>
-        `translate(58.5vw, 
-      calc( -29vw - ${props.offset / 12 + 50 + -0.4 * 150}px))`};
+        `translate(60%, calc( -45% - ${props.offset / 12 + 50 + -0.4 * 150}px))`};
   }
 `;
 
 const StyledSub3 = styled(Image)`
-  transform: scale(1)
+  transform-origin: 0 100%;
+  transform: scale(.85)
     ${(props) =>
-      `translate(calc(-10vw - 45px), 
-  calc(2.5vw - ${props.offset / -7 + 5 + -0.4 * 2}px))`};
+      `translate(-15vw, calc(1vw - ${props.offset / -7 + 5 + -0.4 * 2}px))`};
 
   @media (max-width: 1200px) {
-    transform: scale(0.9)
+    transform: scale(0.8)
       ${(props) =>
-        `translate(calc(-10vw - 45px), 
-      calc(2.5vw - ${props.offset / -12 + 5 + -0.4 * 2}px))`};
+        `translate(-12vw, calc(3vw - ${props.offset / -12 + 5 + -0.4 * 2}px))`};
   }
   @media (max-width: 850px) {
-    transform: scale(0.82)
+    transform: scale(0.6)
       ${(props) =>
-        `translate(calc(-20vw - 45px), 
-      calc(-2.5vw - ${props.offset / -16 + 5 + -0.4 * 2}px))`};
+        `translate(-19vw, calc(4vw - ${props.offset / -16 + 5 + -0.4 * 2}px))`};
+  }
+  @media (max-width: 575px) {
+    transform: scale(0.4)
+      ${(props) =>
+        `translate(-22vw, calc(-62.5vw - ${props.offset / -16 + 5 + -0.4 * 2}px))`};
   }
 `;
 
 const StyledMain = styled(Image)`
-  transform: scale(1) 
+  transform: scale(1)
     ${(props) =>
-      ` translate(0, 
-calc(2.5vw - ${props.offset / -25 + -0.4}px))`};
+      ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
 
   @media (max-width: 1200px) {
-    transform: scale(1) 
+    transform: scale(1)
       ${(props) =>
-        ` translate(0, 
-  calc(2.5vw - ${props.offset / -45 + -0.4}px))`};
+        ` translate(0, calc(0px - ${props.offset / -45 + -0.4}px))`};
   }
   @media (max-width: 850px) {
-    transform: scale(1.15) 
+    transform: scale(1.05)
       ${(props) =>
-        ` translate(0, 
-  calc(-2.5vw - ${props.offset / -75 - 35}px))`};
+        ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
   }
   @media (max-width: 575px) {
-    transform: scale(1.35) 
+    transform: scale(1.25)
       ${(props) =>
-        ` translate(0, 
-    calc(-2.5vw - ${props.offset / -75 - 35}px))`};
+        ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
   }
 `;
 
