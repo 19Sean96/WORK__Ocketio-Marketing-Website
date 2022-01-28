@@ -15,7 +15,7 @@ import Card1 from "../../public/images/individual.png";
 import Card2 from "../../public/images/small-business.png";
 import Card3 from "../../public/images/mid-sized-company.png";
 
-import { BsCheckCircle } from "react-icons/bs";
+import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
 
 const animateOnce = true;
@@ -104,22 +104,19 @@ const WhoSection = (props) => {
             // animateOnce={true}
             className="card"
           >
+            <BsPerson
+              style={{
+                width: "auto",
+                height: "75px",
+                minWidth: '70px'
+              }}
+            />
             <div className="card--text">
-              <h6 className="h6 capitalize">individual users</h6>
+              <h4 className="h6 capitalize">individual users</h4>
               <p className="p-small">
                 Share access to personal projects, test development work, or
                 improve your gaming experience.
               </p>
-            </div>
-            <div className="card__image__wrapper">
-              <Image
-                src={Card1}
-                id="cardOneImg"
-                className="card__image"
-                alt="image 1"
-                layout="responsive"
-                placeholder="blur"
-              />
             </div>
           </ScrollAnimation>
           <ScrollAnimation
@@ -130,23 +127,23 @@ const WhoSection = (props) => {
             className="card"
             delay={100}
           >
+            {" "}
+            <BsShop
+              style={{
+                width: "auto",
+                height: "75px",
+                minWidth: '70px'
+
+              }}
+            />
             <div className="card--text">
-              <h6 className="h6 capitalize">small business teams</h6>
+              <h4 className="h6 capitalize">small business teams</h4>
               <p className="p-small">
                 Grant a handful of remote employees access to internal resources
                 without unnecessary complexity.
               </p>
             </div>
-            <div className="card__image__wrapper">
-              <Image
-                src={Card2}
-                id="cardTwoImg"
-                className="card__image"
-                alt="image 2"
-                layout="responsive"
-                placeholder="blur"
-              />
-            </div>
+
           </ScrollAnimation>
           <ScrollAnimation
             animateOnce={animateOnce}
@@ -156,22 +153,21 @@ const WhoSection = (props) => {
             className="card"
             delay={200}
           >
+            {" "}
+            <BsBuilding
+              style={{
+                width: "auto",
+                height: "75px",
+                minWidth: '70px'
+
+              }}
+            />
             <div className="card--text">
-              <h6 className="h6 capitalize">mid-sized companies</h6>
+              <h4 className="h6 capitalize">mid-sized companies</h4>
               <p className="p-small">
                 Manage network controls in a way that scales alongside a growing
                 business effort.
               </p>
-            </div>
-            <div className="card__image__wrapper">
-              <Image
-                src={Card3}
-                id="cardThreeImg"
-                className="card__image"
-                alt="image 3"
-                layout="responsive"
-                placeholder="blur"
-              />
             </div>
           </ScrollAnimation>
         </article>
