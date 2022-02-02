@@ -13,6 +13,7 @@ import heroImageSub1 from "../../public/images/Homepage_Hero-sub1.png";
 import heroImageSub2 from "../../public/images/Homepage_Hero-sub2.png";
 import heroImageSub3 from "../../public/images/Homepage_Hero-sub3.png";
 
+import { useAppContext } from "../../Context";
 const animateOnce = true;
 
 const StyledSub1 = styled(Image)`
@@ -109,16 +110,7 @@ const StyledMain = styled(Image)`
 
 const HeroHome = ({ offset }) => {
 
-  const [isSafari, setIsSafari] = useState(null)
-
-  useEffect(() => {
-    var x = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    setIsSafari(x)
-
-    console.log("IS IT SAFARI? ", isSafari)
-
-  })
+  const { isSafari } = useAppContext();
 
   return (
     <div className="hero_wrapper">
@@ -132,9 +124,6 @@ const HeroHome = ({ offset }) => {
           >
             <h1 className="h1">
               We couldn't find the right VPN. <br /> So we built it.
-            </h1>
-            <h1 className="h1">
-              Is it safari? {isSafari ? 'yes' : 'no'}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation
@@ -184,8 +173,7 @@ const HeroHome = ({ offset }) => {
             layout="responsive"
             src={heroImageMain}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={offset}
-            offset={0}
+            offset={isSafari ? 0 : offset}
             priority
           />
           <StyledSub1
@@ -194,8 +182,7 @@ const HeroHome = ({ offset }) => {
             layout="responsive"
             src={heroImageSub1}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={offset}
-            offset={0}
+            offset={isSafari ? 0 : offset}
             priority
           />
           <StyledSub2
@@ -204,8 +191,7 @@ const HeroHome = ({ offset }) => {
             layout="responsive"
             src={heroImageSub2}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={offset}
-            offset={0}
+            offset={isSafari ? 0 : offset}
             priority
           />
           <StyledSub3

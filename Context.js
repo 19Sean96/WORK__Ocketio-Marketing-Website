@@ -12,6 +12,9 @@ export function AppWrapper({ children }) {
 
   // Describes if the viewport width is mobile or desktop (875px or less = mobile)
   const [isMobile, setMobile] = useState();
+
+  // Simple boolean hook which tracks whether the browser is Safari based or not
+  const [isSafari, setIsSafari] = useState(null)
   
   const handleMouseMove = ( { clientX, clientY} ) => setMousePositionPixels([clientX, clientY])
 
@@ -32,6 +35,10 @@ export function AppWrapper({ children }) {
       }
     }
 
+    let safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    setIsSafari(safari)
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
@@ -47,7 +54,8 @@ export function AppWrapper({ children }) {
         mousePositionPixels,
         scrollOffset,
         isMobile,
-        handleMouseMove
+        handleMouseMove,
+        isSafari
       }}
     >
       {children}
