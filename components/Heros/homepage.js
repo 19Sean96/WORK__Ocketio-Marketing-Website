@@ -107,6 +107,9 @@ const StyledMain = styled(Image)`
 `;
 
 const HeroHome = ({ offset }) => {
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  console.log("IS IT SAFARI? ", isSafari)
   return (
     <div className="hero_wrapper">
       <section className="section section__with-grid" id="landing-hero">
@@ -119,6 +122,9 @@ const HeroHome = ({ offset }) => {
           >
             <h1 className="h1">
               We couldn't find the right VPN. <br /> So we built it.
+            </h1>
+            <h1 className="h1">
+              Is it safari? {isSafari ? 'yes' : 'no'}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation
