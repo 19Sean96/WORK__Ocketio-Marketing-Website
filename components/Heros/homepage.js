@@ -169,6 +169,7 @@ const HeroHome = ({ offset }) => {
             src={heroImageMain}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
+            offset={0}
             priority
           />
           <StyledSub1
@@ -178,6 +179,7 @@ const HeroHome = ({ offset }) => {
             src={heroImageSub1}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
+            offset={0}
             priority
           />
           <StyledSub2
@@ -187,6 +189,7 @@ const HeroHome = ({ offset }) => {
             src={heroImageSub2}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
+            offset={0}
             priority
           />
           <StyledSub3
@@ -197,6 +200,7 @@ const HeroHome = ({ offset }) => {
             src={heroImageSub3}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={offset}
+            offset={0}
             priority
           />
         </div>
