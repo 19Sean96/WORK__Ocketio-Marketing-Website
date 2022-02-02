@@ -104,6 +104,19 @@
   margin-top: 85px;
   column-gap: 15px;
   row-gap: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200vw;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: -1;
+    background-color: #25293A;
+  }
 
   .h5 {
     margin-bottom: 1.2em;
@@ -117,12 +130,14 @@
       grid-row: 1/2;
       align-self: flex-end;
       padding-right: 8vw;
+      color: $white;
     }
     &--paragraph {
       grid-column: 1/6;
       grid-row: 2/3;
       align-self: flex-start;
       padding-right: 2vw;
+
     }
     &--image {
       grid-column: 6/13;
@@ -234,19 +249,43 @@
 }
 
 #sectionWhoHomepage {
-  margin-top: 142px;
+  padding-top: 142px;
+  margin-top: 0;
+  position: relative;
+
+  .section {
+
+    &--heading {
+
+      h3 {
+        color: $white;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    transform: translateX(-50%);
+    height: 75%;
+    z-index: -1;
+    background-color: #25293A;
+  }
 
   @media (max-width: 1200px) {
-    margin-top: 112px;
+    padding-top: 112px;
   }
   @media (max-width: 960px) {
-    margin-top: 82px;
+    padding-top: 82px;
   }
   @media (max-width: 800px) {
-    margin-top: 72px;
+    padding-top: 72px;
   }
   @media (max-width: 550px) {
-    margin-top: 58px;
+    padding-top: 58px;
   }
 
   .card {
@@ -290,6 +329,10 @@
     }
   }
   @media (max-width: 960px) {
+
+    &::before {
+      height: 65%;
+    }
     .card {
       flex-direction: row;
       width: 70%;

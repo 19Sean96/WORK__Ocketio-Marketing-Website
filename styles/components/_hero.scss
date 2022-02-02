@@ -2,6 +2,35 @@
 #landing-hero {
   margin-top: 100px;
   grid-column: 1/13;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200vw;
+    transform: translateX(-50%);
+    max-height: 950px;
+    height: 60vw;
+    background-color: #25293A;
+    clip-path: polygon(0% 0%, 100% 19vw, 100% 100%, 0% 100%);
+    margin-bottom: -150px;
+  }
+
+  @media (max-width: 855px) {
+    &::before {
+      height: 88vw;
+    }
+  }
+
+  @media (max-width: 575px) {
+    &::before {
+      height: 120vw;
+      max-height: none;
+      min-height: 525px;
+    }
+  }
 
   &-message {
     display: flex;
