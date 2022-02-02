@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {useState, useEffect} from 'react'
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -107,9 +108,18 @@ const StyledMain = styled(Image)`
 `;
 
 const HeroHome = ({ offset }) => {
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-  console.log("IS IT SAFARI? ", isSafari)
+  const [isSafari, setIsSafari] = useState(null)
+
+  useEffect(() => {
+    var x = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    setIsSafari(x)
+
+    console.log("IS IT SAFARI? ", isSafari)
+
+  })
+
   return (
     <div className="hero_wrapper">
       <section className="section section__with-grid" id="landing-hero">
