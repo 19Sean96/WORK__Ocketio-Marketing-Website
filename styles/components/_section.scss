@@ -297,9 +297,16 @@
     align-items: center;
     border-radius: 6px;
     gap: 25px;
-    padding: 40px 35px 45px;
-    box-shadow: 0 5px 9px rgba(10, 10, 10, 0.18);
+    padding: 40px 47.5px 45px;
+    // box-shadow: 0 5px 9px rgba(10, 10, 10, 0.18);
 
+    box-shadow: 
+    0 2px 1px rgba(37,41,58,0.09), 
+    0 4px 2px rgba(37,41,58,0.09), 
+    0 8px 4px rgba(37,41,58,0.09), 
+    0 16px 8px rgba(37,41,58,0.09),
+    0 32px 16px rgba(37,41,58,0.09);
+    font-size: 20px;
     &--text {
       max-width: 100%;
     }
@@ -310,6 +317,7 @@
     }
     p {
       text-align: center;
+      font-size: .85em;
     }
     &__wrapper {
       gap: 38px;
@@ -642,6 +650,7 @@
   margin-bottom: 90px;
   margin-top: 167px;
   border-radius: 8px;
+  box-shadow: 0 8px 13px rgba(10, 10, 10, 0.23);
   .section {
     &--heading {
       max-width: 450px;
@@ -1062,6 +1071,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 25px;
       position: relative;
       .tabs {
         display: flex;
@@ -1127,12 +1137,13 @@
       }
 
       .display {
-        max-width: 720px;
-        min-width: 475px;
-        max-height: 720px;
-        min-height: 475px;
-        width: 25vw;
-        height: 25vw;
+        // max-width: 720px;
+        // min-width: 475px;
+        // max-height: 720px;
+        min-height: 635px;
+        // max-width: 45%;
+        flex-grow: 1;
+        height: 27vw;
         overflow: hidden;
         display: grid;
         grid-template-areas: "overlay";
@@ -1140,7 +1151,7 @@
           position: relative;
           width: 100%;
           grid-area: overlay;
-
+          height: 100%;
           & > span,
           & > div {
             grid-area: overlay;
@@ -1156,14 +1167,19 @@
             position: absolute;
             transition: 0.35s ease-in-out all;
             height: 100%;
+            object-fit: contain;
+            object-position: right;
           }
 
           @media (max-width: 875px) {
             &--item {
               position: relative;
+              object-position: center;
             }
           }
         }
+
+        // @media 
       }
 
       .slides-number-group {

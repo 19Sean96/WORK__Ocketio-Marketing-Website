@@ -9,7 +9,7 @@ import HoverInfoBox from "../util/HoverInfoBox";
 import howItWorksDiagram from "../../public/images/_WW_Website_Features-Diagram.png";
 import FeatureDiagram from "../SVG/FeatureDiagram";
 import optimizeExperienceImage from "../../public/images/features-body_optimize-experience.png";
-import Step1 from "../../public/images/step-1.png";
+import Step1 from "../../public/images/features/setup_steps/step_1-register.svg";
 import Step2 from "../../public/images/step-2.png";
 import Step3 from "../../public/images/step-3.png";
 import Step4 from "../../public/images/step-4.png";
@@ -406,6 +406,25 @@ const StyledSlideshowItem = styled(Image)`
 
 const StyledTab = styled.li`
   opacity: ${(props) => (props.active ? 1 : 0.165)};
+  position: relative;
+
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      box-shadow: 
+      0 1px 1px rgba(37,41,58,.06), 
+      0 2px 2px rgba(37,41,58,.06), 
+      0 4px 4px rgba(37,41,58,.06), 
+      0 8px 8px rgba(37,41,58,.06),
+      0 16px 16px rgba(37,41,58,.06);
+
+      opacity: ${props => props.active ? 1 : 0}
+    }
 
   @media (max-width: 875px) {
     opacity: ${(props) => (props.active ? 1 : 0)};
