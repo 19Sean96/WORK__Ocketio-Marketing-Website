@@ -107,8 +107,11 @@ const WhoSection = (props) => {
             <BsPerson
               style={{
                 width: "auto",
-                height: "75px",
-                minWidth: '70px'
+                height: "55px",
+                minWidth: '70px',
+                position: 'relative',
+                transform: 'scale(1.15)',
+                transformOrigin: '50% 0%'
               }}
             />
             <div className="card--text">
@@ -131,7 +134,7 @@ const WhoSection = (props) => {
             <BsShop
               style={{
                 width: "auto",
-                height: "75px",
+                height: "55px",
                 minWidth: '70px'
 
               }}
@@ -157,7 +160,7 @@ const WhoSection = (props) => {
             <BsBuilding
               style={{
                 width: "auto",
-                height: "75px",
+                height: "55px",
                 minWidth: '70px'
 
               }}
