@@ -36,7 +36,7 @@ const EmailIntakeBanner = (props) => {
               delay={335}
               className="section--heading--title"
             >
-              <h4 className="h4">Be the first to know.</h4>
+              <h4 className="h4">Stay in the loop.</h4>
             </ScrollAnimation>
             <ScrollAnimation
               animateIn="animate__fadeInUp"
@@ -46,7 +46,7 @@ const EmailIntakeBanner = (props) => {
               className="section--heading--title"
             >
               <p className="p-small">
-                Follow along as we test, tweak, and improve the beta to make
+                Follow along as we test, tweak, and improve the platform to make
                 sure you never miss a beat.
               </p>
             </ScrollAnimation>
