@@ -32,7 +32,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               duration={0.975}
             >
               <h2 className="h2">
-                All of the essentials, none of the complexity.
+                All of the essentials,<br /> none of the complexity.
               </h2>
             </ScrollAnimation>
             <ScrollAnimation
