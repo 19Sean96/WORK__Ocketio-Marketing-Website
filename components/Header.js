@@ -150,6 +150,11 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen, darkMode }) {
             <a className={darkMode ? 'darkmode' : ''}>contact</a>
           </Link>
         </li>
+        <li className="j-text _400 header--nav--item capitalize">
+          <Link href="/">
+            <a className={darkMode ? 'darkmode' : ''}>blog</a>
+          </Link>
+        </li>
         {/* <li className="j-text header--nav--item">blog</li> */}
       </ul>
       {isMobile && (
