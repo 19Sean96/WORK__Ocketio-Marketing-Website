@@ -8,7 +8,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 // import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
 // import heroImageSub3 from "../../public/images/Homepage-Landing_Hero-Sub_3.png";
 
-import heroImageMain from "../../public/images/Homepage_Hero-main.png";
+import heroImageMain from "../../public/images/homepage/hero/hero_main-bg.png";
 import heroImageSub1 from "../../public/images/Homepage_Hero-sub1.png";
 import heroImageSub2 from "../../public/images/Homepage_Hero-sub2.png";
 import heroImageSub3 from "../../public/images/Homepage_Hero-sub3.png";
@@ -87,6 +87,7 @@ const StyledSub3 = styled(Image)`
 `;
 
 const StyledMain = styled(Image)`
+
   transform: scale(1)
     ${(props) =>
       ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
@@ -107,6 +108,46 @@ const StyledMain = styled(Image)`
         ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
   }
 `;
+
+const StyledImageGroup = styled.div`
+  & > span {
+
+    &:first-child {
+
+      & > span {
+
+        &::after {
+          top: 50.5%; left: 20%;
+          transform: scale(1)
+          ${(props) =>
+            ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
+
+            @media (max-width: 1200px) {
+              top: 50.95%; left: 20%;
+
+              transform: scale(1)
+                ${(props) =>
+                  ` translate(0, calc(0px - ${props.offset / -35 + -0.4}px))`};
+            }
+            @media (max-width: 850px) {
+              top: 53%; left: 20%;
+
+              transform: scale(1.05)
+                ${(props) =>
+                  ` translate(0, calc(-12% - ${props.offset / -60 - 35}px))`};
+            }
+            @media (max-width: 575px) {
+              top: 63.5%; left: 20%;
+
+              transform: scale(1.25)
+                ${(props) =>
+                  ` translate(0, calc(-12% - ${props.offset / -60 - 35}px))`};
+            }
+        }
+      }
+    }
+  }
+`
 
 const HeroHome = ({ offset }) => {
 
@@ -164,7 +205,7 @@ const HeroHome = ({ offset }) => {
           </ScrollAnimation>
         </div>
 
-        <div className="image-group" offset={offset}>
+        <StyledImageGroup className="image-group" offset={isSafari ? 0 : offset}>
           <StyledMain
             id="heroImageMain"
             className={`animate__animated image-group__image${
@@ -174,6 +215,7 @@ const HeroHome = ({ offset }) => {
             src={heroImageMain}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={isSafari ? 0 : offset}
+            placeholder="blur"
             priority
           />
           <StyledSub1
@@ -183,6 +225,8 @@ const HeroHome = ({ offset }) => {
             src={heroImageSub1}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={isSafari ? 0 : offset}
+            placeholder="blur"
+
             priority
           />
           <StyledSub2
@@ -192,6 +236,8 @@ const HeroHome = ({ offset }) => {
             src={heroImageSub2}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
             offset={isSafari ? 0 : offset}
+            placeholder="blur"
+
             priority
           />
           <StyledSub3
@@ -201,11 +247,10 @@ const HeroHome = ({ offset }) => {
             width={232}
             src={heroImageSub3}
             alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={offset}
-            offset={0}
+            offset={isSafari ? 0 : offset}
             priority
           />
-        </div>
+        </StyledImageGroup>
       </section>
     </div>
   );
