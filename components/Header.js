@@ -44,7 +44,8 @@ const Header = () => {
                   menuOpenOnMobile={menuOpen && isMobile}
                   darkMode={
                     router.pathname === "/features" ||
-                    router.pathname.includes("/blog")
+                    router.pathname.includes("/blog") ||
+                    router.pathname === '/contact'
                   }
                 />
               </a>
@@ -56,7 +57,8 @@ const Header = () => {
               menuOpen={menuOpen}
               darkMode={
                 router.pathname === "/features" ||
-                router.pathname.includes("/blog")
+                router.pathname.includes("/blog") ||
+                router.pathname === '/contact'
               }
             />
           )}
@@ -73,12 +75,14 @@ const Header = () => {
                 menuOpen={menuOpen}
                 darkMode={
                   router.pathname === "/features" ||
-                  router.pathname.includes("/blog")
+                  router.pathname.includes("/blog") ||
+                  router.pathname === '/contact'
                 }
               />
             </button>
           ) : (
             <div className="header--cta__wrapper">
+              <a href="#" className="j-text _500" id="login" aria-label="Log in to your account here">Login</a>
               <button
                 className="header--cta btn btn--filled j-text _400"
                 aria-label="Get started with the beta program"
