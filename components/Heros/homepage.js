@@ -3,15 +3,11 @@ import {useState, useEffect} from 'react'
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-// import heroImageMain from "../../public/images/Homepage-Landing_Hero-Main.png";
-// import heroImageSub1 from "../../public/images/Homepage-Landing_Hero-Sub_1.png";
-// import heroImageSub2 from "../../public/images/Homepage-Landing_Hero-Sub_2.png";
-// import heroImageSub3 from "../../public/images/Homepage-Landing_Hero-Sub_3.png";
 
 import heroImageMain from "../../public/images/homepage/hero/hero_main-bg.png";
-import heroImageSub1 from "../../public/images/Homepage_Hero-sub1.png";
-import heroImageSub2 from "../../public/images/Homepage_Hero-sub2.png";
-import heroImageSub3 from "../../public/images/Homepage_Hero-sub3.png";
+import heroImageSub1 from "../../public/images/homepage/hero/hero_sub-1.png";
+import heroImageSub2 from "../../public/images/homepage/hero/hero_sub-2.png";
+import heroImageSub3 from "../../public/images/homepage/hero/hero_sub-3.png";
 
 import { useAppContext } from "../../Context";
 const animateOnce = true;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
 import ContentWrapper from "../ContentWrapper";
-import featuresHeroImageMain from "../../public/images/features-hero_main.png";
+import featuresHeroImageMain from "../../public/images/temp/features-hero_main.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
