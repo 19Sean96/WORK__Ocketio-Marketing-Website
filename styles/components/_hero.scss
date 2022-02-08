@@ -1,11 +1,10 @@
-
 #landing-hero {
   margin-top: 100px;
   grid-column: 1/13;
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -13,7 +12,7 @@
     transform: translateX(-50%);
     max-height: 950px;
     height: 60vw;
-    background-color: #25293A;
+    background-color: #25293a;
     clip-path: polygon(0% 0%, 100% 19vw, 100% 100%, 0% 100%);
     margin-bottom: -150px;
   }
@@ -108,29 +107,47 @@
         animation-delay: 0.45s;
         animation-name: fadeInUpShort;
         animation-duration: 0.9s;
-      }
+        z-index: 5;
+
+        position: relative;
+
+        & > span {
+          position: relative;
+
+          &::after {
+            @include set-height-to-image-height('../public/images/homepage/hero/hero_main-fg.svg', 85%);
   
+            position: absolute;
+            content: ' ';
+            z-index: 10;
+            transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
+          }
+        }
+
+
+      }
+
       &:nth-child(2) {
         animation-name: fadeInLeftShort;
         animation-delay: 0s;
         animation-duration: 0.88s;
-        z-index: 1;
+        z-index: 10;
       }
-  
+
       &:nth-child(3) {
         animation-name: fadeInDownShort;
         animation-delay: 0.3s;
         animation-duration: 0.88s;
+        z-index: 10;
       }
-  
+
       &:last-child {
         animation-name: fadeInDownShort;
         animation-delay: 0.15s;
         animation-duration: 0.88s;
+        z-index: 5;
       }
     }
-
-
 
     &__image {
       min-height: 0 !important;
@@ -141,37 +158,29 @@
     }
 
     #heroImageMain {
-      z-index: 5;
-      box-shadow: 0 30px 84px -11px rgba($black, 0.066);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
+        0 8px 16px rgba(0, 0, 0, 0.11);
 
-      & > span,
-      & > div {
-      }
     }
 
     #heroImageSub1 {
-      z-index: 10;
+      box-shadow: 0 1px 2px rgba($black, 0.06), 0 2px 4px rgba($black, 0.06),
+        0 4px 8px rgba($black, 0.06), 0 8px 16px rgba($black, 0.06),
+        0 16px 32px rgba($black, 0.06), 0 32px 64px rgba($black, 0.06);
 
-      & > span,
-      & > div {
-      }
     }
 
     #heroImageSub2 {
-      z-index: 10;
+      box-shadow: 0 1px 2px rgba($black, 0.06), 0 2px 4px rgba($black, 0.06),
+        0 4px 8px rgba($black, 0.06), 0 8px 16px rgba($black, 0.06),
+        0 16px 32px rgba($black, 0.06), 0 32px 64px rgba($black, 0.06);
 
-      & > span,
-      & > div {
-      }
     }
 
     #heroImageSub3 {
       box-shadow: none;
-      z-index: 5;
 
-      & > span,
-      & > div {
-      }
     }
 
     @media (max-width: 2160px) {
@@ -207,10 +216,6 @@
       // margin-bottom: -225px;
     }
   }
-
-  // #heroImageSub1,
-  // #heroImageSub2 {
-  // }
 
   @media (max-width: 575px) {
     margin-top: 95px;
@@ -263,17 +268,6 @@
       min-height: 0 !important;
       height: auto !important;
       margin-top: 0 !important;
-    }
-
-    #featuresHeroImageMain {
-      box-shadow: 0 53px 121px -11px rgb(37 41 57 / 8%);
-    }
-
-    #featuresHeroImageAside {
-      right: 0;
-      top: 50%;
-      transform: translateX(50%) scale(0.5);
-      box-shadow: 0 -4px 53px -8px rgba($off-black, 0.18);
     }
   }
 
@@ -397,7 +391,6 @@
         padding: 34px 0 14px;
 
         &-2 {
-
           .item--img__wrapper {
             width: 85%;
           }
@@ -529,7 +522,6 @@
   }
 
   @media (max-width: 450px) {
-
     &-message {
       grid-column: 1/13;
     }

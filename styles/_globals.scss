@@ -30,7 +30,7 @@ input:-webkit-autofill {
 }
 
 .main_wrapper {
-  max-width: calc(1282px + 5vw);
+  max-width: calc(1282px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);

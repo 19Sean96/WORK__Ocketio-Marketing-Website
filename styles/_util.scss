@@ -31,3 +31,13 @@
         flex-wrap: nowrap;
     }
 }
+
+
+@mixin set-height-to-image-height($url, $width) {
+    background-image: url($url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $width;
+    height: 100%;
+    // padding-top: calc($width * .12);
+}

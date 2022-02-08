@@ -301,11 +301,13 @@
     // box-shadow: 0 5px 9px rgba(10, 10, 10, 0.18);
 
     box-shadow: 
-    0 2px 1px rgba(37,41,58,0.09), 
-    0 4px 2px rgba(37,41,58,0.09), 
-    0 8px 4px rgba(37,41,58,0.09), 
-    0 16px 8px rgba(37,41,58,0.09),
-    0 32px 16px rgba(37,41,58,0.09);
+    0 1px 1px rgba(37,41,58,0.09), 
+    0 2px 2px rgba(37,41,58,0.09), 
+    0 4px 4px rgba(37,41,58,0.09), 
+    0 8px 8px rgba(37,41,58,0.09), 
+    0 16px 16px rgba(37,41,58,0.09),
+    0 32px 32px rgba(37,41,58,0.09);
+
     font-size: 20px;
     &--text {
       max-width: 100%;
@@ -650,7 +652,14 @@
   margin-bottom: 90px;
   margin-top: 167px;
   border-radius: 8px;
-  box-shadow: 0 8px 13px rgba(10, 10, 10, 0.23);
+ 
+  box-shadow: 
+    0 1px 1px rgba(10,10,10,0.10), 
+    0 2px 2px rgba(10,10,10,0.10), 
+    0 4px 4px rgba(10,10,10,0.10), 
+    0 8px 8px rgba(10,10,10,0.10), 
+    0 16px 16px rgba(10,10,10,0.10), 
+    0 32px 32px rgba(10,10,10,0.10);
   .section {
     &--heading {
       max-width: 450px;
@@ -1709,6 +1718,7 @@
   align-items: flex-start;
   border-bottom: 1px solid #e9eaf0;
   grid-template-rows: min-content 1fr;
+
   .section {
     &--heading {
       grid-row: 1/2;
@@ -1748,7 +1758,7 @@
       &--icon {
         margin-top: 7px;
         svg {
-          fill: $off-black;
+          fill: $off-white;
           width: 20px;
           height: 20px;
         }
@@ -1757,12 +1767,12 @@
       &--text {
         h6 {
           font-weight: 500;
-          color: $off-black;
+          color: $off-white;
           margin-bottom: 8px;
         }
 
         p {
-          color: #0144e4;
+          color: $primary-orange;
           font-weight: 700;
         }
       }
@@ -1779,8 +1789,13 @@
         grid-column: 7/13;
         padding: 57px 40px 54px;
         border: 1px solid #e9eaf0;
+        background: #fff;
         border-radius: 6px;
         box-shadow: 0 3px 10px 0 rgb(8 15 52 / 4%);
+      }
+
+      #submit {
+        margin: 0;
       }
 
       &--input {
@@ -1790,6 +1805,7 @@
         border: 1px solid #e9eaf0;
         border-radius: 6px;
         box-shadow: 0 2px 8px 0 rgb(8 15 52 / 6%);
+
 
         &__wrapper {
           position: relative;
@@ -1807,6 +1823,12 @@
             min-height: 132px;
             max-height: 132px;
             min-width: 100%;
+          }
+
+          select {
+            option {
+              color: $gray-text;
+            }
           }
         }
 
