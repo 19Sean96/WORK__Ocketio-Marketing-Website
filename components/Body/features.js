@@ -22,6 +22,10 @@ import {
   BsListUl,
   BsGear,
   BsPhone,
+  BsCloud,
+  BsHddStack,
+  BsWindow,
+  BsClock,
 } from "react-icons/bs";
 import { useAppContext } from "../../Context";
 import {
@@ -193,13 +197,7 @@ const FineTunedControlSection = (props) => {
             duration={1.2}
             className="text-block text-block-1"
           >
-            <BsKey
-              style={{
-                width: "auto",
-                height: 35,
-                marginBottom: "9px",
-              }}
-            />
+            <BsKey />
             <h6 className="h6 capitalize">Multiple Authentication Options</h6>
             <p className="p-small">
               Use your existing auth provider to streamline access and enforce
@@ -213,13 +211,7 @@ const FineTunedControlSection = (props) => {
             delay={300}
             className="text-block text-block-2"
           >
-            <BsListUl
-              style={{
-                width: "auto",
-                height: 35,
-                marginBottom: "9px",
-              }}
-            />
+            <BsListUl />
             <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
             <p className="p-small">
               A detailed event log ensures you can keep tabs on network activity
@@ -233,13 +225,7 @@ const FineTunedControlSection = (props) => {
             delay={600}
             className="text-block text-block-3"
           >
-            <BsPhone
-              style={{
-                width: "auto",
-                height: 35,
-                marginBottom: "9px",
-              }}
-            />
+            <BsPhone />
             <h6 className="h6 capitalize">Detailed Device Info</h6>
             <p className="p-small">
               See all registered devices in one place and monitor connection
@@ -253,13 +239,7 @@ const FineTunedControlSection = (props) => {
             delay={900}
             className="text-block text-block-4"
           >
-            <BsGear
-              style={{
-                width: "auto",
-                height: 35,
-                marginBottom: "9px",
-              }}
-            />
+            <BsGear />
             <h6 className="h6 capitalize">configure DNS</h6>
             <p className="p-small">
               Manage core settings and configuration from a streamlined online
@@ -275,13 +255,13 @@ const FineTunedControlSection = (props) => {
 const ThirdPartyAuthentication = (props) => {
   return (
     <ContentWrapper>
-      <ScrollAnimation
-        animateOnce={true}
-        animateIn="animate__fadeInUp"
-        duration={0.88}
-        className="all-columns section__with-grid"
-      >
-        <section className="section__with-grid all-columns" id="thirdPartyAuth">
+      <section className="section__with-grid all-columns" id="thirdPartyAuth">
+        <ScrollAnimation
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={0.88}
+          className="all-columns section__with-grid"
+        >
           <ScrollAnimation
             animateIn="animate__fadeInDown"
             animateOnce={true}
@@ -297,8 +277,8 @@ const ThirdPartyAuthentication = (props) => {
             <Auth0Logo />
             <GSuiteLogo />
           </div>
-        </section>
-      </ScrollAnimation>
+        </ScrollAnimation>
+      </section>
     </ContentWrapper>
   );
 };
@@ -327,33 +307,36 @@ const OptimizedExperienceSection = (props) => {
           </p>
         </ScrollAnimation>
         <div className="section--body">
-          <div className="text-blocks text-blocks-1">
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-              duration={1.2}
-              className="text-block"
-            >
-              <h6 className="h6 capitalize">Cloud-based admin console</h6>
-              <p className="p-small">
-                Manage core configuration and device permissions from a clean
-                web user interface
-              </p>
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-              duration={1}
-              delay={300}
-              className="text-block"
-            >
-              <h6 className="h6 capitalize">Minimal on-prem footprint</h6>
-              <p className="p-small">
-                Skip extra hardware and third-party applications for easier
-                training and tighter compliance
-              </p>
-            </ScrollAnimation>
-          </div>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+            duration={1.2}
+            className="text-block text-block_1"
+          >
+            <BsCloud />
+            <h6 className="h6 capitalize">
+              Cloud-based admin <br />
+              console
+            </h6>
+            <p className="p-small">
+              Manage core configuration and device permissions from a clean web
+              user interface
+            </p>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+            duration={1}
+            delay={300}
+            className="text-block text-block_2"
+          >
+            <BsHddStack />
+            <h6 className="h6 capitalize">Minimal on-prem footprint</h6>
+            <p className="p-small">
+              Skip extra hardware and third-party applications for easier
+              training and tighter compliance
+            </p>
+          </ScrollAnimation>
           <ScrollAnimation
             animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
@@ -366,34 +349,37 @@ const OptimizedExperienceSection = (props) => {
               alt="Screenshot illustrating the optimized experience you get when using WireWise"
             />
           </ScrollAnimation>
-          <div className="text-blocks text-blocks-2">
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-              duration={0.8}
-              delay={600}
-              className="text-block"
-            >
-              <h6 className="h6 capitalize">Streamlined setup wizard</h6>
-              <p className="p-small">
-                Get started in just minutes with a guided setup process that
-                ensures nothing is missed
-              </p>
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-              duration={0.6}
-              delay={900}
-              className="text-block"
-            >
-              <h6 className="h6 capitalize">Always On Connection</h6>
-              <p className="p-small">
-                An uninterrupted conntection guarantees that your team members
-                connect seamlessly every time
-              </p>
-            </ScrollAnimation>
-          </div>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+            duration={0.8}
+            delay={600}
+            className="text-block text-block_3"
+          >
+            <BsWindow />
+            <h6 className="h6 capitalize">
+              Streamlined setup <br />
+              wizard
+            </h6>
+            <p className="p-small">
+              Get started in just minutes with a guided setup process that
+              ensures nothing is missed
+            </p>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+            duration={0.6}
+            delay={900}
+            className="text-block text-block_4"
+          >
+            <BsClock />
+            <h6 className="h6 capitalize">Always On Connection</h6>
+            <p className="p-small">
+              An uninterrupted conntection guarantees that your team members
+              connect seamlessly every time
+            </p>
+          </ScrollAnimation>
         </div>
       </section>
     </ContentWrapper>
@@ -408,23 +394,19 @@ const StyledTab = styled.li`
   opacity: ${(props) => (props.active ? 1 : 0.165)};
   position: relative;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 1px rgba(37, 41, 58, 0.06),
+      0 2px 2px rgba(37, 41, 58, 0.06), 0 4px 4px rgba(37, 41, 58, 0.06),
+      0 8px 8px rgba(37, 41, 58, 0.06), 0 16px 16px rgba(37, 41, 58, 0.06);
 
-
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      top: 0; left: 0;
-      box-shadow: 
-      0 1px 1px rgba(37,41,58,.06), 
-      0 2px 2px rgba(37,41,58,.06), 
-      0 4px 4px rgba(37,41,58,.06), 
-      0 8px 8px rgba(37,41,58,.06),
-      0 16px 16px rgba(37,41,58,.06);
-
-      opacity: ${props => props.active ? 1 : 0}
-    }
+    opacity: ${(props) => (props.active ? 1 : 0)};
+  }
 
   @media (max-width: 875px) {
     opacity: ${(props) => (props.active ? 1 : 0)};
