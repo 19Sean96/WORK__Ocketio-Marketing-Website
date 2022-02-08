@@ -11,6 +11,7 @@ import {
   BsLifePreserver,
   BsNewspaper,
 } from "react-icons/bs";
+import { useEffect } from "react";
 
 const animateOnce = true;
 
@@ -25,7 +26,9 @@ const ContactPortal = (props) => {
   const onSubmit = (data) => console.log(data);
 
   const watchAllInputs = watch();
-
+  useEffect(() => {
+    console.log(watchAllInputs)
+  }, [watchAllInputs])
   return (
     <ContentWrapper>
       <section
@@ -38,8 +41,13 @@ const ContactPortal = (props) => {
           duration={0.9}
           className="section--heading"
         >
-          <h2 className="h2 capitalize">contact us</h2>
-          <p className="p-small">
+          <h2 className="h2 capitalize" style={{
+            color: '#f6f6f6'
+          }}>contact us</h2>
+          <p className="p-small" style={{
+            color: '#f6f6f6',
+            opacity: .6
+          }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in
             gravida sem enim sed.
           </p>
@@ -211,6 +219,24 @@ const ContactPortal = (props) => {
               animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={400}
+              duration={.6}
+              className={`section--form--input__wrapper full ${
+                watchAllInputs?.contactType?.length > 0 ? "has-value" : ""
+              }`}
+            >
+              <select name="contactType" id="contactType" className="section--form--input" {...register('contactType', { required: false })}>
+                  <option value="" selected></option>
+                  <option className="capitalize" value="I'd like to learn more about the platform.">I'd like to learn more about the platform.</option>
+                  <option className="capitalize" value="I need help/support">I need help/support</option>
+                  <option className="capitalize" value="Media/Press Questions">Media/Press Questions</option>
+                  <option className="capitalize" value="Other (please describe)">Other (please describe)</option>
+              </select>
+              <label htmlFor="contactType" className="section--form--input__label j-dsiplay _400">How can we help?</label>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn="animate__fadeInDown"
+              delay={400}
               duration={0.6}
               className={`section--form--input__wrapper full ${
                 watchAllInputs?.message?.length > 0 ? "has-value" : ""
@@ -225,7 +251,7 @@ const ContactPortal = (props) => {
                 htmlFor="message"
                 className="section--form--input__label j-display _400"
               >
-                How can we help?
+                Tell us more 
               </label>
             </ScrollAnimation>
             <ScrollAnimation
