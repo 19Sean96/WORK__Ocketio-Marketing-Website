@@ -3,17 +3,12 @@ import Link from "next/link";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
-// import worldMap from "../../public/images/world-map.png";
-import worldMap from "../../public/images/Wirewise_Website_Homepage-Map.svg";
 
-import GraphicSecure from "../../public/images/secure.png";
-import GraphicStreamlined from "../../public/images/streamlined.png";
-import GraphicEfficient from "../../public/images/efficient.png";
-import GraphicCostEffective from "../../public/images/cost-effective.png";
+import GraphicSecure from "../../public/images/homepage/body/secure.png";
+import GraphicStreamlined from "../../public/images/homepage/body/streamlined.png";
+import GraphicEfficient from "../../public/images/homepage/body/efficient.png";
+import GraphicCostEffective from "../../public/images/homepage/body/cost-effective.png";
 import MapImg from "../SVG/MapImg";
-import Card1 from "../../public/images/individual.png";
-import Card2 from "../../public/images/small-business.png";
-import Card3 from "../../public/images/mid-sized-company.png";
 
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
