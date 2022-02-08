@@ -1184,7 +1184,7 @@
       grid-column: 1/13;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 25px;
       position: relative;
       .tabs {
@@ -1251,38 +1251,34 @@
       }
 
       .display {
-        // max-width: 720px;
-        // min-width: 475px;
-        // max-height: 720px;
-        min-height: 635px;
-        // max-width: 45%;
         flex-grow: 1;
-        height: 27vw;
-        overflow: hidden;
-        display: grid;
-        grid-template-areas: "overlay";
+        align-self: stretch;
         .slideshow {
           position: relative;
           width: 100%;
-          grid-area: overlay;
           height: 100%;
-          & > span,
-          & > div {
-            grid-area: overlay;
-            height: 100%;
-
-            & > span,
-            & > div {
-              height: 100% !important;
+          display: flex;
+          justify-content: center;
+          align-items: stretch;
+          height: 100%;
+          &--item {
+            transition: 0.35s ease-in-out all;
+            max-height: 100%;
+            &__wrapper {
+              position: absolute;
+              top: 50%; left: 50%;
+              width: 100%;
+              height: min-content;
+              max-height: 100%;
+              transform: translate(-50%,-50%);
+              display: flex;
+              justify-content: center;
+              align-items: safe center;
             }
           }
 
-          &--item {
-            position: absolute;
-            transition: 0.35s ease-in-out all;
-            height: 100%;
-            object-fit: contain;
-            object-position: right;
+          @media (min-width: 2160px) {
+            height: 915px;
           }
 
           @media (max-width: 875px) {
@@ -1336,12 +1332,13 @@
 
       @media (max-width: 875px) {
         justify-content: center;
+        align-items: center;
         position: relative;
         flex-direction: column-reverse;
         .tabs {
           position: relative;
           min-height: 170px;
-          margin-top: 44px;
+          margin-top: -15px;
 
           &__wrapper {
             width: calc((100vw / 12) * 8);
@@ -1367,6 +1364,7 @@
         }
 
         .display {
+          margin-inline: auto;
           width: 75vw;
           height: 75vw;
           min-height: 290px;

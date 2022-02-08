@@ -6,14 +6,11 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 import HoverInfoBox from "../util/HoverInfoBox";
-import howItWorksDiagram from "../../public/images/_WW_Website_Features-Diagram.png";
 import FeatureDiagram from "../SVG/FeatureDiagram";
-import optimizeExperienceImage from "../../public/images/features-body_optimize-experience.png";
-import Step1 from "../../public/images/features/setup_steps/step_1-register.svg";
-import Step2 from "../../public/images/step-2.png";
-import Step3 from "../../public/images/step-3.png";
-import Step4 from "../../public/images/step-4.png";
-import Step5 from "../../public/images/step-5.png";
+import optimizeExperienceImage from "../../public/images/temp/features-body_optimize-experience.png";
+
+import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "./../SVG/FeatureSlides";
+
 import { useSwipeable } from "react-swipeable";
 import {
   BsArrowRight,
@@ -526,52 +523,22 @@ const SetupSection = (props) => {
             duration={0.88}
             className="image__wrapper display"
           >
-            <div className="slideshow" {...swipeHandlers}>
-              <StyledSlideshowItem
-                className="slideshow--item"
-                src={Step1}
-                alt="step 1"
-                id="step1"
-                layout="fill"
-                active={activeTab === 0}
-                previous={previousTab === 0}
-              />
-              <StyledSlideshowItem
-                className="slideshow--item"
-                src={Step2}
-                alt="step 2"
-                id="step2"
-                layout="fill"
-                active={activeTab === 1}
-                previous={previousTab === 1}
-              />
-              <StyledSlideshowItem
-                className="slideshow--item"
-                src={Step3}
-                alt="step 3"
-                id="step3"
-                layout="fill"
-                active={activeTab === 2}
-                previous={previousTab === 2}
-              />
-              <StyledSlideshowItem
-                className="slideshow--item"
-                src={Step4}
-                alt="step 4"
-                id="step4"
-                layout="fill"
-                active={activeTab === 3}
-                previous={previousTab === 3}
-              />
-              <StyledSlideshowItem
-                className="slideshow--item"
-                src={Step5}
-                alt="step 5"
-                id="step5"
-                layout="fill"
-                active={activeTab === 4}
-                previous={previousTab === 4}
-              />
+            <div className="slideshow">
+              <div className="slideshow--item__wrapper">
+                <Slide1 active={activeTab === 0} previous={previousTab === 0} />
+              </div>
+              <div className="slideshow--item__wrapper">
+                <Slide2 active={activeTab === 1} previous={previousTab === 1} />
+              </div>
+              <div className="slideshow--item__wrapper">
+                <Slide3 active={activeTab === 2} previous={previousTab === 2} />
+              </div>
+              <div className="slideshow--item__wrapper">
+                <Slide4 active={activeTab === 3} previous={previousTab === 3} />
+              </div>
+              <div className="slideshow--item__wrapper">
+                <Slide5 active={activeTab === 4} previous={previousTab === 4} />
+              </div>
             </div>
           </ScrollAnimation>
         </article>
