@@ -9,9 +9,9 @@ import {
 } from "../components/Body/homepage";
 import EmailIntakeBanner from "../components/util/EmailIntakeBanner";
 import axios from "axios";
-
 import { useAppContext } from "../Context";
 import BlogLayout from "../components/BlogLayout";
+
 
 export default function Home({ blog_posts }) {
   const { scrollOffset, handleMouseMove } = useAppContext();
