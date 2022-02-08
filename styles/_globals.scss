@@ -34,8 +34,15 @@ input:-webkit-autofill {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  padding-left: 5vw;
-  padding-right: 5vw;
+
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media (max-width: 580px) {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
 }
 
 .hero_wrapper {
@@ -43,8 +50,15 @@ input:-webkit-autofill {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
+
+
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media (max-width: 580px) {
+    padding-left: .5vw;
+    padding-right: .5vw;  
+  }
 }
 
 .full-width_wrapper {
