@@ -46,7 +46,7 @@ export default function Contact() {
   return (
     <StyledMain className="main" id="main">
       <ContactPortal />
-      <MoreContact />
+      {/* <MoreContact /> */}
       <ContactFAQ />
     </StyledMain>
   );
