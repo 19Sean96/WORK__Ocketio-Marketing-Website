@@ -227,6 +227,7 @@ const ContactPortal = (props) => {
               <select name="contactType" id="contactType" className="section--form--input" {...register('contactType', { required: false })}>
                   <option value="" selected></option>
                   <option className="capitalize" value="I'd like to learn more about the platform.">I'd like to learn more about the platform.</option>
+                  <option className="capitalize" value="Feature request.">Feature request.</option>
                   <option className="capitalize" value="I need help/support">I need help/support</option>
                   <option className="capitalize" value="Media/Press Questions">Media/Press Questions</option>
                   <option className="capitalize" value="Other (please describe)">Other (please describe)</option>
