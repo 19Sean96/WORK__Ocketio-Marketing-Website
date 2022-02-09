@@ -115,7 +115,7 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen, darkMode }) {
   useEffect(() => {
     if (!isMobile) {
       updateNavStyle({
-        transform: "translate(0)",
+        transform: "translate(-50%, -50%)",
         opacity: 1,
       });
     } else if (isMobile) {

@@ -5,6 +5,8 @@
   justify-content: space-between;
   max-width: 1444px;
   margin: auto;
+  position: relative;
+
   @media (min-width: 2160px) {
     max-width: 1880px;
   }
@@ -19,7 +21,8 @@
     margin-left: 10px;
 
     a {
-      display: block;
+      display: flex;
+      align-items: center;
     }
 
     svg {
@@ -62,6 +65,10 @@
   }
 
   &--nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
     &--list {
       display: flex;
       align-items: flex-start;
