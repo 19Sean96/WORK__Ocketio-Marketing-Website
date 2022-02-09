@@ -1,9 +1,11 @@
 const MapImg = (props) => {
   return (
     <svg viewBox="0 0 1215 663" fill="none" id="worldMap">
-      <g id="Wirewise_Website_Homepage-Map" clipPath="url(#clip0_4_77)">
+      <g id="Wirewise_Website_Homepage-Map">
         <g id="map" style={{
-          opacity: .22
+          opacity: .22,
+          transformOrigin: 'center center',
+          transform: 'scale(1.19)'
         }}>
           <g id="Group 512">
             <g id="textcompare 1_09_46 PM 1">
@@ -645,11 +647,6 @@ const MapImg = (props) => {
           </g>
         </g>
       </g>
-      <defs>
-        <clipPath id="clip0_4_77">
-          <rect width="1214.9" height="663" fill="white" />
-        </clipPath>
-      </defs>
     </svg>
   );
 };
