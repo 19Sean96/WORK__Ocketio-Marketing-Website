@@ -10,6 +10,8 @@ export default function Features() {
 
   return (
     <main className="main" id="main" onMouseMove={e => handleMouseMove(e)}>
+              <span id="vertLineCenter"></span>
+
       <Hero mouseCoord={mouseCoord} offset={scrollOffset}/>
       <ArchitectureSection mouseCoord={mouseCoord}/>
       <FineTunedControlSection />
