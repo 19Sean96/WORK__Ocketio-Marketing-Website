@@ -51,9 +51,9 @@ const BlogItem = ({
               <span className="blog--time-to-read">{readStats.text}</span>
             </p>
             <h5 className="h5 blog--title">{title}</h5>
-            <caption className="p-small blog--body s">
+            <span className="p-small blog--body s">
               {ReactHtmlParser(body)}
-            </caption>
+            </span>
           </div>
           <div className="blog__bot">
             <p className="p-small blog--cta">
