@@ -1,6 +1,5 @@
 
 const HomepageBG = (props) => {
-  console.log('')
   return (
     <svg viewBox="0 0 1920 321" fill="none" id="bgWaves">
       <path
