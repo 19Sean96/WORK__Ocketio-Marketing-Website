@@ -26,7 +26,9 @@
     }
 
     svg {
-
+      max-width: 225px;
+      min-width: 175px;
+      width: 10vw;
         path {
             transition: .2s all .2s ease-in-out;
         }
