@@ -83,8 +83,8 @@ const StyledSub3 = styled(Image)`
 `;
 
 const StyledMain = styled(Image)`
-
-  transform: scale(1)
+  transform-origin: top;
+  transform: scale(.9)
     ${(props) =>
       ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
 
@@ -113,8 +113,9 @@ const StyledImageGroup = styled.div`
       & > span {
 
         &::after {
-          top: 50.5%; left: 20%;
-          transform: scale(1)
+          top: 45%; left: 20%;
+          transform-origin: top;
+          transform: scale(.9)
           ${(props) =>
             ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
 
