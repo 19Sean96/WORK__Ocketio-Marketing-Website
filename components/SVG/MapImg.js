@@ -417,7 +417,9 @@ const MapImg = (props) => {
             <path
               id="circle-4_2"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.1"
               d="M610.609 218C655.068 218 691.109 181.959 691.109 137.5C691.109 93.0411 655.068 57 610.609 57C566.15 57 530.109 93.0411 530.109 137.5C530.109 181.959 566.15 218 610.609 218Z"
               fill="#F15A24"
@@ -425,7 +427,9 @@ const MapImg = (props) => {
             <path
               id="circle-3_2"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.2"
               d="M611 203.28C647.136 203.28 676.43 173.986 676.43 137.85C676.43 101.714 647.136 72.4199 611 72.4199C574.864 72.4199 545.57 101.714 545.57 137.85C545.57 173.986 574.864 203.28 611 203.28Z"
               fill="#F15A24"
@@ -433,7 +437,9 @@ const MapImg = (props) => {
             <path
               id="circle-2_2"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.3"
               d="M610.38 186C637.596 186 659.66 163.937 659.66 136.72C659.66 109.503 637.596 87.4399 610.38 87.4399C583.163 87.4399 561.1 109.503 561.1 136.72C561.1 163.937 583.163 186 610.38 186Z"
               fill="#F15A24"
@@ -441,7 +447,9 @@ const MapImg = (props) => {
             <path
               id="circle-1_2"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               d="M610.289 170.96C629.055 170.96 644.269 155.747 644.269 136.98C644.269 118.213 629.055 103 610.289 103C591.522 103 576.309 118.213 576.309 136.98C576.309 155.747 591.522 170.96 610.289 170.96Z"
               fill="#F15A24"
             />
@@ -469,7 +477,9 @@ const MapImg = (props) => {
             <path
               id="circle-4_3"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.1"
               d="M1022.4 375.68C1066.86 375.68 1102.9 339.639 1102.9 295.18C1102.9 250.721 1066.86 214.68 1022.4 214.68C977.94 214.68 941.898 250.721 941.898 295.18C941.898 339.639 977.94 375.68 1022.4 375.68Z"
               fill="#F15A24"
@@ -477,7 +487,9 @@ const MapImg = (props) => {
             <path
               id="circle-3_3"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.2"
               d="M1022.78 360.96C1058.92 360.96 1088.21 331.666 1088.21 295.53C1088.21 259.394 1058.92 230.1 1022.78 230.1C986.644 230.1 957.35 259.394 957.35 295.53C957.35 331.666 986.644 360.96 1022.78 360.96Z"
               fill="#F15A24"
@@ -485,7 +497,9 @@ const MapImg = (props) => {
             <path
               id="circle-2_3"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.3"
               d="M1022.16 343.68C1049.38 343.68 1071.44 321.617 1071.44 294.4C1071.44 267.184 1049.38 245.12 1022.16 245.12C994.942 245.12 972.879 267.184 972.879 294.4C972.879 321.617 994.942 343.68 1022.16 343.68Z"
               fill="#F15A24"
@@ -493,7 +507,9 @@ const MapImg = (props) => {
             <path
               id="circle-1_3"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               d="M1022.08 328.64C1040.85 328.64 1056.06 313.427 1056.06 294.66C1056.06 275.894 1040.85 260.68 1022.08 260.68C1003.31 260.68 988.1 275.894 988.1 294.66C988.1 313.427 1003.31 328.64 1022.08 328.64Z"
               fill="#F15A24"
             />
@@ -521,7 +537,9 @@ const MapImg = (props) => {
             <path
               id="circle-4_4"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.1"
               d="M1134.4 621.68C1178.86 621.68 1214.9 585.639 1214.9 541.18C1214.9 496.721 1178.86 460.68 1134.4 460.68C1089.94 460.68 1053.9 496.721 1053.9 541.18C1053.9 585.639 1089.94 621.68 1134.4 621.68Z"
               fill="#F15A24"
@@ -529,7 +547,9 @@ const MapImg = (props) => {
             <path
               id="circle-3_4"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.2"
               d="M1134.78 606.96C1170.92 606.96 1200.21 577.666 1200.21 541.53C1200.21 505.394 1170.92 476.1 1134.78 476.1C1098.64 476.1 1069.35 505.394 1069.35 541.53C1069.35 577.666 1098.64 606.96 1134.78 606.96Z"
               fill="#F15A24"
@@ -537,7 +557,9 @@ const MapImg = (props) => {
             <path
               id="circle-2_4"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.3"
               d="M1134.16 589.68C1161.38 589.68 1183.44 567.617 1183.44 540.4C1183.44 513.184 1161.38 491.12 1134.16 491.12C1106.94 491.12 1084.88 513.184 1084.88 540.4C1084.88 567.617 1106.94 589.68 1134.16 589.68Z"
               fill="#F15A24"
@@ -545,7 +567,9 @@ const MapImg = (props) => {
             <path
               id="circle-1_4"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               d="M1134.08 574.64C1152.85 574.64 1168.06 559.427 1168.06 540.66C1168.06 521.894 1152.85 506.68 1134.08 506.68C1115.31 506.68 1100.1 521.894 1100.1 540.66C1100.1 559.427 1115.31 574.64 1134.08 574.64Z"
               fill="#F15A24"
             />
@@ -574,7 +598,9 @@ const MapImg = (props) => {
             <path
               id="circle-4_5"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.1"
               d="M635.17 619.03C679.629 619.03 715.67 582.989 715.67 538.53C715.67 494.071 679.629 458.03 635.17 458.03C590.711 458.03 554.67 494.071 554.67 538.53C554.67 582.989 590.711 619.03 635.17 619.03Z"
               fill="#F15A24"
@@ -582,7 +608,9 @@ const MapImg = (props) => {
             <path
               id="circle-3_5"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.2"
               d="M635.549 604.31C671.685 604.31 700.979 575.016 700.979 538.88C700.979 502.744 671.685 473.45 635.549 473.45C599.413 473.45 570.119 502.744 570.119 538.88C570.119 575.016 599.413 604.31 635.549 604.31Z"
               fill="#F15A24"
@@ -590,7 +618,9 @@ const MapImg = (props) => {
             <path
               id="circle-2_5"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               opacity="0.3"
               d="M634.928 587.03C662.145 587.03 684.208 564.967 684.208 537.75C684.208 510.534 662.145 488.47 634.928 488.47C607.712 488.47 585.648 510.534 585.648 537.75C585.648 564.967 607.712 587.03 634.928 587.03Z"
               fill="#F15A24"
@@ -598,7 +628,9 @@ const MapImg = (props) => {
             <path
               id="circle-1_5"
               className="circle"
-              transformOrigin='center'
+              style={{
+                transformOrigin: 'center'
+              }}
               d="M634.849 571.99C653.616 571.99 668.829 556.776 668.829 538.01C668.829 519.243 653.616 504.03 634.849 504.03C616.082 504.03 600.869 519.243 600.869 538.01C600.869 556.776 616.082 571.99 634.849 571.99Z"
               fill="#F15A24"
             />
