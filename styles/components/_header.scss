@@ -167,11 +167,18 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: 30px;
+      gap: 21px;
+
+      .pipe {
+        width: 1px;
+        background: $black;
+        align-self: stretch;
+        margin: 10px 0;
+      }
 
       #login {
-        color: $primary-orange;
-        font-size: 18px;
+        color: $black;
+        font-size: 16px;
         text-decoration: none;
         position: relative;
         padding: 5px 2px;
@@ -180,9 +187,9 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 100%;
+          width: 0%;
           height: 1px;
-          background: $primary-orange;
+          background: $black;
         }
       }
 
