@@ -7,6 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
 import { useAppContext } from "../../Context";
+import HomepageBG from "../SVG/HomepageBG";
 
 const animateOnce = true;
 
@@ -143,6 +144,9 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
           </article>
         </section>
       </ContentWrapper>
+      <div id="featuresHeroBG">
+        <HomepageBG/>
+      </div>
     </ScrollAnimation>
   );
 };

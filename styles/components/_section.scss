@@ -101,7 +101,8 @@
 }
 
 #firstBannerHomepage {
-  margin-top: 85px;
+  padding-top: 15px;
+  margin-top: 0;
   column-gap: 15px;
   row-gap: 0;
   position: relative;
@@ -164,7 +165,7 @@
     position: relative;
     transform-origin: 0% 50%;
     max-width: 100%;
-
+    overflow: visible;
     #end-points {
       .end-point {
         animation: pulseInOut 3s ease-in-out infinite both alternate;
@@ -319,7 +320,7 @@
     }
     p {
       text-align: center;
-      font-size: .85em;
+      font-size: 15px;
     }
     &__wrapper {
       gap: 38px;
@@ -834,6 +835,10 @@
 
   .text-block {
     padding: 56px 20px;
+
+    p {
+      font-size: 15px;
+    }
 
     &-1 {
       grid-row: 5/6;

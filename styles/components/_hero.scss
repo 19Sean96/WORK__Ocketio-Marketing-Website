@@ -15,6 +15,8 @@
     background-color: #25293a;
     clip-path: polygon(0% 0%, 100% 19vw, 100% 100%, 0% 100%);
     margin-bottom: -150px;
+
+    display: none;
   }
 
   @media (max-width: 855px) {
@@ -82,6 +84,8 @@
       }
     }
   }
+
+
 
   .image-group {
     grid-column: 2/12;
@@ -222,10 +226,50 @@
   }
 }
 
+#homepageHeroBG {
+  position: absolute;
+  bottom: 0;
+  width: 110vw;
+  height: 55%;
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%);
+
+  #bgWaves {
+    width: 100%; 
+    height: auto;
+    position: relative;
+    transform: translateY(35px);
+  }
+
+  .trailing {
+    background-color: #25293a;
+    height: 100%;
+  }
+}
+
+#featuresHeroBG {
+  position: absolute;
+  bottom: 0;
+  width: 110vw;
+  min-width: 1675px;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -330px);
+
+  #bgWaves {
+    width: 100%;
+    height: auto;
+    transform-origin: bottom;
+    transform: scale(-100%)
+  }
+}
+
 #features-hero {
   grid-column: 1/13;
   align-content: space-between;
   margin-top: 80px;
+  padding-bottom: 55px;
   &-message {
     grid-column: 1/7;
     align-self: center;
@@ -272,14 +316,13 @@
   }
 
   #supportedOS {
-    grid-column: 1/13;
+    grid-column: 3/11;
     grid-row: 3/4;
     padding: 0 2vw;
   }
 
   .banner {
     position: relative;
-    transform: translateY(50%);
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
@@ -304,12 +347,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      background-color: #f5f5f5;
+      background-color: transparent;
       border-radius: 6px;
       padding: 34px 0 16px;
-      box-shadow: 0 1px 2px rgba($black, 0.06), 0 2px 4px rgba($black, 0.06),
-      0 4px 8px rgba($black, 0.06), 0 8px 16px rgba($black, 0.06),
-      0 16px 32px rgba($black, 0.06), 0 16px 32px rgba($black, 0.06);
 
       .h6 {
         position: relative;
@@ -317,6 +357,8 @@
         text-align: center;
         font-weight: 400;
         font-size: 14px;
+        color: $white;
+
         .last-word {
           position: relative;
 
@@ -341,11 +383,17 @@
         height: 45px !important;
         min-width: 0 !important;
         min-height: 0 !important;
+        fill: $white;
+        color: $white;
         &__wrapper {
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 9px;
+        }
+
+        &--text {
+          color: $white;
         }
       }
 
@@ -380,7 +428,7 @@
       bottom: 20px;
       transform: translateX(-50%);
       text-decoration: underline;
-      color: $off-black;
+      color: $off-white;
       font-weight: 700;
     }
   }

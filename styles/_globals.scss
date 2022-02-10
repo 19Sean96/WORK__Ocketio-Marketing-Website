@@ -50,8 +50,7 @@ input:-webkit-autofill {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-
-
+  position: relative;
   padding-left: 25px;
   padding-right: 25px;
 
