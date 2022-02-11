@@ -10,6 +10,11 @@ import GraphicEfficient from "../../public/images/homepage/body/efficient.png";
 import GraphicCostEffective from "../../public/images/homepage/body/cost-effective.png";
 import MapImg from "../SVG/MapImg";
 
+import SecureSVG from '../../public/images/svg/Homepage/Secure.svg'
+import StreamlinedSVG from '../../public/images/svg/Homepage/Streamlined.svg'
+import EfficientSVG from '../../public/images/svg/Homepage/Efficient.svg'
+import CostEffectiveSVG from '../../public/images/svg/Homepage/Cost-Effective.svg'
+
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
 
@@ -183,7 +188,7 @@ const WhatSection = (props) => {
       par: `Wirewise builds on industry-leading encryption methods for reliably protecting remote connections to your network resources. Your data also remains completely private and it never touches our servers.`,
 
       image: {
-        src: GraphicSecure,
+        src: SecureSVG,
         id: "graphicSecure",
         alt: "Illustration which visualizes the security that comes with Wirewise VPN technology.",
       },
@@ -200,7 +205,7 @@ const WhatSection = (props) => {
       par: `No more manual configuration headaches. Set up your network in minutes through our helpful wizard and roll out quickly to your team with unobtrusive, always-on access to internal resources. Once up and running, manage the network and devices easily from a single web-based tool.`,
 
       image: {
-        src: GraphicStreamlined,
+        src: StreamlinedSVG,
         id: "graphicStreamlined",
         alt: "Illustration which visualizes the peace of mind that comes with Wirewise VPN technology.",
       },
@@ -217,7 +222,7 @@ const WhatSection = (props) => {
       par: `There are no appliances or extensive infrastructure to maintain, which reduces overhead for providing access to networks in multiple locations. The extremely lean codebase also maximizes network performance and minimizes battery drain for distributed devices.`,
 
       image: {
-        src: GraphicEfficient,
+        src: EfficientSVG,
         id: "graphicEfficient",
         alt: "Illustration which visualizes how efficient the Wirewise VPN technology is",
       },
@@ -234,7 +239,7 @@ const WhatSection = (props) => {
       par: `Reliable security shouldn't break the bank. A straightforward pricing structure makes it easy to try the product and affordable to get your people and their devices safely connected, no matter how many there are.`,
 
       image: {
-        src: GraphicCostEffective,
+        src: CostEffectiveSVG,
         id: "graphicCostEffective",
         alt: "Illustration which visualizes the security that comes with Wirewise VPN technology.",
       },
@@ -376,7 +381,7 @@ function WhatSectionItem({
           alt={alt}
           id={imgID}
           className="section--body--item__image image"
-          placeholder="blur"
+          // placeholder="blur"
           // layout="responsive"
         />
       </ScrollAnimation>
