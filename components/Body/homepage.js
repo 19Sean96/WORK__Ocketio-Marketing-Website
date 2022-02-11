@@ -4,16 +4,12 @@ import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../ContentWrapper";
 
-import GraphicSecure from "../../public/images/homepage/body/secure.png";
-import GraphicStreamlined from "../../public/images/homepage/body/streamlined.png";
-import GraphicEfficient from "../../public/images/homepage/body/efficient.png";
-import GraphicCostEffective from "../../public/images/homepage/body/cost-effective.png";
 import MapImg from "../SVG/MapImg";
 
-import SecureSVG from '../../public/images/svg/Homepage/Secure.svg'
-import StreamlinedSVG from '../../public/images/svg/Homepage/Streamlined.svg'
-import EfficientSVG from '../../public/images/svg/Homepage/Efficient.svg'
-import CostEffectiveSVG from '../../public/images/svg/Homepage/Cost-Effective.svg'
+import SecureSVG from '../../public/images/homepage/body/Secure.svg'
+import StreamlinedSVG from '../../public/images/homepage/body/Streamlined.svg'
+import EfficientSVG from '../../public/images/homepage/body/Efficient.svg'
+import CostEffectiveSVG from '../../public/images/homepage/body/Cost-Effective.svg'
 
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
