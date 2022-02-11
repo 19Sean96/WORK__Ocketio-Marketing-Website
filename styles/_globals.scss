@@ -63,6 +63,7 @@ input:-webkit-autofill {
 
 .full-width_wrapper {
   max-width: 100vw;
+  position: relative;
 }
 
 .navy-bg {
@@ -162,7 +163,7 @@ input:-webkit-autofill {
   pointer-events: none;
   width: 3px;
   height: 100vh;
-  // background-color: lime;
+  background-color: lime;
   top: 0;
   left: 50%;
   transform: translateX(-50%);

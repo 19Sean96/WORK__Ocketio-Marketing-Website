@@ -251,17 +251,17 @@
 #featuresHeroBG {
   position: absolute;
   bottom: 0;
-  width: 110vw;
-  min-width: 1675px;
+  width: 100vw;
   left: 50%;
   z-index: -1;
-  transform: translate(-50%, -330px);
+  transform: translate(-50%, 76%);
+  transform-origin: bottom;
 
   #bgWaves {
     width: 100%;
     height: auto;
-    transform-origin: bottom;
-    transform: scale(-100%)
+    min-width: 1675px;
+
   }
 }
 

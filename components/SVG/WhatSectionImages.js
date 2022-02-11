@@ -1,34 +1,34 @@
-const SecureSVG = props => {
+// const SecureSVG = props => {
 
-    return (
+//     return (
 
-    )
-}
+//     )
+// }
 
-const StreamlinedSVG = props => {
+// const StreamlinedSVG = props => {
 
-    return (
+//     return (
 
-    )
-}
+//     )
+// }
 
-const EfficientSVG = props => {
+// const EfficientSVG = props => {
 
-    return (
+//     return (
 
-    )
-}
+//     )
+// }
 
-const CostEffectiveSVG = props => {
+// const CostEffectiveSVG = props => {
 
-    return (
+//     return (
 
-    )
-}
+//     )
+// }
 
-return {
-    SecureSVG,
-    StreamlinedSVG,
-    EfficientSVG,
-    CostEffectiveSVG
-}
+// return {
+//     SecureSVG,
+//     StreamlinedSVG,
+//     EfficientSVG,
+//     CostEffectiveSVG
+// }
