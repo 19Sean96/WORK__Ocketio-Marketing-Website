@@ -3,7 +3,7 @@ const FeatureDiagram = (props) => {
     <svg
       viewBox="0 0 1437.242 640.183"
       style={{
-        transform: "translateX(-3.2%)"
+        transform: "translateX(-2.325%)"
       }}
     >
       <g
