@@ -31,6 +31,11 @@ import {
   GSuiteLogo,
   OktaLogo,
 } from "../SVG/ThirdPartyLogos";
+
+import Image_FineTunedControl from '../../public/images/features/body/_WW_Website_Graphic_Features-Control.svg'
+
+import Image_OptimizedExperience from '../../public/images/features/body/_WW_Website_Graphic_Features-Experience.svg'
+
 const animateOnce = true;
 
 const ArchitectureSection = (props) => {
@@ -182,7 +187,7 @@ const FineTunedControlSection = (props) => {
           className="img-block"
         >
           <Image
-            src={optimizeExperienceImage}
+            src={Image_FineTunedControl}
             id="optimizeExperienceImage"
             alt="Screenshot illustrating the optimized experience you get when using WireWise"
           />
@@ -341,7 +346,7 @@ const OptimizedExperienceSection = (props) => {
             className="image__wrapper"
           >
             <Image
-              src={optimizeExperienceImage}
+              src={Image_OptimizedExperience}
               id="optimizeExperienceImage"
               alt="Screenshot illustrating the optimized experience you get when using WireWise"
             />
@@ -430,13 +435,14 @@ const SetupSection = (props) => {
       par: "Select your plan and create your account.",
     },
     {
-      title: "Configure security settings",
-      par: "Manage security settings with just a couple clicks",
-    },
-    {
       title: "Set up devices",
       par: "Quickly add new users and devices in seconds",
     },
+    {
+      title: "Configure security settings",
+      par: "Manage security settings with just a couple clicks",
+    },
+
   ];
 
   const swipeHandlers = useSwipeable({
