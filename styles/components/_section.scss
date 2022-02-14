@@ -202,8 +202,6 @@
   }
 
   @media (max-width: 960px) {
-    margin-top: 5vw;
-
     .banner {
       &--title {
         grid-column: 1/6;
@@ -224,7 +222,6 @@
   }
 
   @media (max-width: 675px) {
-    margin-top: 6vw;
 
     .banner {
       &--title {
@@ -242,10 +239,6 @@
         padding-top: 44px;
       }
     }
-  }
-
-  @media (max-width: 500px) {
-    margin-top: 2vw;
   }
 }
 
