@@ -1,18 +1,17 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect } from "react";
-import ContentWrapper from "../ContentWrapper";
-import featuresHeroImageMain from "../../public/images/temp/features-hero_main.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
 import { useAppContext } from "../../Context";
-import {FeatureHeroBG} from "../SVG/WavyBG";
+import { FeatureHeroBG } from "../SVG/WavyBG";
+
+import { HeroLeft, HeroRight } from "../SVG/FeatureHeroImages";
 
 const animateOnce = true;
 
 const HeroFeatures = ({ mouseCoord, offset }) => {
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
   useEffect(() => {
     console.log(mouseCoord);
   }, [mouseCoord]);
@@ -24,7 +23,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       animateIn="animate__fadeInDown"
       className="full-width_wrapper navy-bg"
     >
-      <ContentWrapper>
+      <div className="hero_wrapper">
         <section className="section section__with-grid" id="features-hero">
           <div id="features-hero-message">
             <ScrollAnimation
@@ -33,7 +32,8 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               duration={0.975}
             >
               <h2 className="h2">
-                All of the essentials,<br /> none of the complexity.
+                All of the essentials,
+                <br /> none of the complexity.
               </h2>
             </ScrollAnimation>
             <ScrollAnimation
@@ -43,7 +43,8 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               delay={160}
             >
               <p className="p-small">
-                Make your WireGuard® installation the best it can be
+                Wirewise gets devices connected to a network in short order and
+                instantly levels up your WireGuard® implementation.
               </p>
             </ScrollAnimation>
 
@@ -68,13 +69,13 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             delay={450}
             className="image-group"
           >
-            <Image
-              id="featuresHeroImageMain"
+            <HeroLeft
+              id="featuresHeroImageLeft"
               className="image-group__image"
-              layout="responsive"
-              src={featuresHeroImageMain}
-              alt="This is a dashboard showing stats representing the features of the app"
-              priority
+            />
+            <HeroRight
+              id="featuresHeroImageRight"
+              className="image-group__image"
             />
           </ScrollAnimation>
           <article id="supportedOS" className="banner f f-justify-between">
@@ -143,9 +144,9 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             </ScrollAnimation>
           </article>
         </section>
-      </ContentWrapper>
+      </div>
       <div id="featuresHeroBG">
-        <FeatureHeroBG/>
+        <FeatureHeroBG />
       </div>
     </ScrollAnimation>
   );

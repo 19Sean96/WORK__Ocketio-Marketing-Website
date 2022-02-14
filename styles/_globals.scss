@@ -55,6 +55,9 @@ input:-webkit-autofill {
   padding-left: 25px;
   padding-right: 25px;
 
+  @media (max-width: 1920px) {
+    max-width: 1380px;
+  }
   @media (max-width: 580px) {
     padding-left: .5vw;
     padding-right: .5vw;  
