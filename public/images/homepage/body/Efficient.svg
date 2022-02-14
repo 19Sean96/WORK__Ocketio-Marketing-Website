@@ -1,109 +1,254 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1256.4" height="867.83" viewBox="0 0 1256.4 867.83">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1231.63" height="867.83" viewBox="0 0 1231.63 867.83">
   <defs>
-    <filter id="Rectangle_158" x="138.89" y="277.43" width="612.51" height="548.82" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_158" x="114.121" y="277.43" width="612.51" height="548.82" filterUnits="userSpaceOnUse">
       <feOffset dy="8" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="19" result="blur"/>
       <feFlood flood-opacity="0.078"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Ellipse_67" x="536.9" y="679.13" width="188.7" height="188.7" filterUnits="userSpaceOnUse">
+    <filter id="Ellipse_67" x="512.13" y="679.13" width="188.7" height="188.7" filterUnits="userSpaceOnUse">
       <feOffset dy="7" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="16" result="blur-2"/>
       <feFlood flood-opacity="0.102"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_161" x="84.26" y="493.25" width="392.24" height="305.79" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_161" x="59.49" y="493.25" width="392.24" height="305.79" filterUnits="userSpaceOnUse">
       <feOffset dy="19" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="9.5" result="blur-3"/>
       <feFlood flood-opacity="0.051"/>
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_163" x="133.44" y="0" width="363.06" height="330.25" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_163" x="108.67" y="0" width="363.06" height="330.25" filterUnits="userSpaceOnUse">
       <feOffset dy="-7" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="14.5" result="blur-4"/>
       <feFlood flood-opacity="0.102"/>
       <feComposite operator="in" in2="blur-4"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_166" x="730.07" y="533.13" width="490" height="302" filterUnits="userSpaceOnUse">
-      <feOffset dy="15" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="17" result="blur-5"/>
-      <feFlood flood-opacity="0.051"/>
+    <filter id="Ellipse_68" x="0" y="215.1" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-5"/>
+      <feFlood flood-opacity="0.078"/>
       <feComposite operator="in" in2="blur-5"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Ellipse_84" x="1046.58" y="337.29" width="209.82" height="209.82" filterUnits="userSpaceOnUse">
-      <feOffset dy="9" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="9.5" result="blur-6"/>
-      <feFlood flood-opacity="0.102"/>
+    <filter id="Ellipse_69" x="27.771" y="215.1" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-6"/>
+      <feFlood flood-opacity="0.078"/>
       <feComposite operator="in" in2="blur-6"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_169" x="799" y="45.75" width="328" height="396" filterUnits="userSpaceOnUse">
-      <feOffset dy="-9" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="9" result="blur-7"/>
-      <feFlood flood-opacity="0.051"/>
+    <filter id="Ellipse_70" x="55.551" y="214.75" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-7"/>
+      <feFlood flood-opacity="0.078"/>
       <feComposite operator="in" in2="blur-7"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_171" x="423" y="265.75" width="382" height="372.36" filterUnits="userSpaceOnUse">
-      <feOffset dy="24" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="19" result="blur-8"/>
-      <feFlood flood-opacity="0.122"/>
+    <filter id="Ellipse_71" x="83.33" y="214.75" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-8"/>
+      <feFlood flood-opacity="0.078"/>
       <feComposite operator="in" in2="blur-8"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="Ellipse_72" x="0" y="243.05" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-9"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_73" x="27.771" y="243.05" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-10"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_74" x="55.551" y="242.7" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-11"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_75" x="83.33" y="242.7" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-12"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_76" x="0" y="270.74" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-13"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-13"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_77" x="27.771" y="270.74" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-14"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-14"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_78" x="55.551" y="270.39" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-15"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-15"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_79" x="83.33" y="270.39" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-16"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-16"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_80" x="0" y="298.69" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-17"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-17"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_81" x="27.771" y="298.69" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-18"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-18"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_82" x="55.551" y="298.34" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-19"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-19"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_83" x="83.33" y="298.34" width="91.44" height="91.44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-20"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-20"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_166" x="705.3" y="533.13" width="490" height="302" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="17" result="blur-21"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur-21"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_84" x="1021.811" y="337.29" width="209.82" height="209.82" filterUnits="userSpaceOnUse">
+      <feOffset dy="9" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9.5" result="blur-22"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-22"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_169" x="774.23" y="45.75" width="328" height="396" filterUnits="userSpaceOnUse">
+      <feOffset dy="-9" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur-23"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur-23"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_171" x="398.23" y="265.75" width="382" height="372.36" filterUnits="userSpaceOnUse">
+      <feOffset dy="24" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="19" result="blur-24"/>
+      <feFlood flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur-24"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
-  <g id="Efficient" transform="translate(0 -10.25)">
+  <g id="Efficient" transform="translate(-24.77 -10.25)">
     <g id="Layer_1" data-name="Layer 1">
       <rect id="Rectangle_156" data-name="Rectangle 156" width="623" height="544.14" rx="20" transform="translate(517 120.43)" fill="#f15a24"/>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Rectangle_158)">
-        <rect id="Rectangle_158-2" data-name="Rectangle 158" width="498.51" height="434.82" rx="20" transform="translate(195.89 326.43)" fill="#eaf1f8"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Rectangle_158)">
+        <rect id="Rectangle_158-2" data-name="Rectangle 158" width="498.51" height="434.82" rx="20" transform="translate(171.12 326.43)" fill="#eaf1f8"/>
       </g>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Ellipse_67)">
-        <circle id="Ellipse_67-2" data-name="Ellipse 67" cx="46.35" cy="46.35" r="46.35" transform="translate(584.9 720.13)" fill="#3399fe"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_67)">
+        <circle id="Ellipse_67-2" data-name="Ellipse 67" cx="46.35" cy="46.35" r="46.35" transform="translate(560.13 720.13)" fill="#3399fe"/>
       </g>
       <path id="Path_60" data-name="Path 60" d="M608.08,675.81V561.51s-3.65-21.19,37.73-21.19H817.4" transform="translate(-327 -94)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" stroke-dasharray="12 16"/>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Rectangle_161)">
-        <rect id="Rectangle_161-2" data-name="Rectangle 161" width="335.24" height="248.79" rx="20" transform="translate(112.76 502.75)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Rectangle_161)">
+        <rect id="Rectangle_161-2" data-name="Rectangle 161" width="335.24" height="248.79" rx="20" transform="translate(87.99 502.75)" fill="#fff"/>
       </g>
       <path id="Path_61" data-name="Path 61" d="M780,281.05H891.36S912,278.7,912,305.38V416" transform="translate(-327 -94)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" stroke-dasharray="12 16"/>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Rectangle_163)">
-        <rect id="Rectangle_163-2" data-name="Rectangle 163" width="276.06" height="243.25" rx="20" transform="translate(176.94 50.5)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Rectangle_163)">
+        <rect id="Rectangle_163-2" data-name="Rectangle 163" width="276.06" height="243.25" rx="20" transform="translate(152.17 50.5)" fill="#fff"/>
       </g>
-      <image id="Rectangle_164" data-name="Rectangle 164" width="224" height="224" transform="translate(0 206)" opacity="0.08" xlink:href="data:image/png;base64,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"/>
-      <circle id="Ellipse_68" data-name="Ellipse 68" cx="9.72" cy="9.72" r="9.72" transform="translate(60.77 261.35)" fill="#3399fe"/>
-      <circle id="Ellipse_69" data-name="Ellipse 69" cx="9.72" cy="9.72" r="9.72" transform="translate(88.54 261.35)" fill="#3399fe"/>
-      <circle id="Ellipse_70" data-name="Ellipse 70" cx="9.72" cy="9.72" r="9.72" transform="translate(116.32 261)" fill="#3399fe"/>
-      <circle id="Ellipse_71" data-name="Ellipse 71" cx="9.72" cy="9.72" r="9.72" transform="translate(144.1 261)" fill="#3399fe"/>
-      <circle id="Ellipse_72" data-name="Ellipse 72" cx="9.72" cy="9.72" r="9.72" transform="translate(60.77 289.3)" fill="#3399fe"/>
-      <circle id="Ellipse_73" data-name="Ellipse 73" cx="9.72" cy="9.72" r="9.72" transform="translate(88.54 289.3)" fill="#3399fe"/>
-      <circle id="Ellipse_74" data-name="Ellipse 74" cx="9.72" cy="9.72" r="9.72" transform="translate(116.32 288.95)" fill="#3399fe"/>
-      <circle id="Ellipse_75" data-name="Ellipse 75" cx="9.72" cy="9.72" r="9.72" transform="translate(144.1 288.95)" fill="#3399fe"/>
-      <circle id="Ellipse_76" data-name="Ellipse 76" cx="9.72" cy="9.72" r="9.72" transform="translate(60.77 316.99)" fill="#3399fe"/>
-      <circle id="Ellipse_77" data-name="Ellipse 77" cx="9.72" cy="9.72" r="9.72" transform="translate(88.54 316.99)" fill="#3399fe"/>
-      <circle id="Ellipse_78" data-name="Ellipse 78" cx="9.72" cy="9.72" r="9.72" transform="translate(116.32 316.64)" fill="#3399fe"/>
-      <circle id="Ellipse_79" data-name="Ellipse 79" cx="9.72" cy="9.72" r="9.72" transform="translate(144.1 316.64)" fill="#3399fe"/>
-      <circle id="Ellipse_80" data-name="Ellipse 80" cx="9.72" cy="9.72" r="9.72" transform="translate(60.77 344.94)" fill="#3399fe"/>
-      <circle id="Ellipse_81" data-name="Ellipse 81" cx="9.72" cy="9.72" r="9.72" transform="translate(88.54 344.94)" fill="#3399fe"/>
-      <circle id="Ellipse_82" data-name="Ellipse 82" cx="9.72" cy="9.72" r="9.72" transform="translate(116.32 344.59)" fill="#3399fe"/>
-      <circle id="Ellipse_83" data-name="Ellipse 83" cx="9.72" cy="9.72" r="9.72" transform="translate(144.1 344.59)" fill="#3399fe"/>
+      <g id="Group_6" data-name="Group 6">
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_68)">
+          <circle id="Ellipse_68-2" data-name="Ellipse 68" cx="9.72" cy="9.72" r="9.72" transform="translate(36 251.1)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_69)">
+          <circle id="Ellipse_69-2" data-name="Ellipse 69" cx="9.72" cy="9.72" r="9.72" transform="translate(63.77 251.1)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_70)">
+          <circle id="Ellipse_70-2" data-name="Ellipse 70" cx="9.72" cy="9.72" r="9.72" transform="translate(91.55 250.75)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_71)">
+          <circle id="Ellipse_71-2" data-name="Ellipse 71" cx="9.72" cy="9.72" r="9.72" transform="translate(119.33 250.75)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_72)">
+          <circle id="Ellipse_72-2" data-name="Ellipse 72" cx="9.72" cy="9.72" r="9.72" transform="translate(36 279.05)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_73)">
+          <circle id="Ellipse_73-2" data-name="Ellipse 73" cx="9.72" cy="9.72" r="9.72" transform="translate(63.77 279.05)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_74)">
+          <circle id="Ellipse_74-2" data-name="Ellipse 74" cx="9.72" cy="9.72" r="9.72" transform="translate(91.55 278.7)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_75)">
+          <circle id="Ellipse_75-2" data-name="Ellipse 75" cx="9.72" cy="9.72" r="9.72" transform="translate(119.33 278.7)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_76)">
+          <circle id="Ellipse_76-2" data-name="Ellipse 76" cx="9.72" cy="9.72" r="9.72" transform="translate(36 306.74)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_77)">
+          <circle id="Ellipse_77-2" data-name="Ellipse 77" cx="9.72" cy="9.72" r="9.72" transform="translate(63.77 306.74)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_78)">
+          <circle id="Ellipse_78-2" data-name="Ellipse 78" cx="9.72" cy="9.72" r="9.72" transform="translate(91.55 306.39)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_79)">
+          <circle id="Ellipse_79-2" data-name="Ellipse 79" cx="9.72" cy="9.72" r="9.72" transform="translate(119.33 306.39)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_80)">
+          <circle id="Ellipse_80-2" data-name="Ellipse 80" cx="9.72" cy="9.72" r="9.72" transform="translate(36 334.69)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_81)">
+          <circle id="Ellipse_81-2" data-name="Ellipse 81" cx="9.72" cy="9.72" r="9.72" transform="translate(63.77 334.69)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_82)">
+          <circle id="Ellipse_82-2" data-name="Ellipse 82" cx="9.72" cy="9.72" r="9.72" transform="translate(91.55 334.34)" fill="#3399fe"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_83)">
+          <circle id="Ellipse_83-2" data-name="Ellipse 83" cx="9.72" cy="9.72" r="9.72" transform="translate(119.33 334.34)" fill="#3399fe"/>
+        </g>
+      </g>
       <path id="Path_62" data-name="Path 62" d="M1108,784H967.42s-26.06,2-26.06-21.3V666" transform="translate(-327 -94)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" stroke-dasharray="12 16"/>
       <path id="Path_63" data-name="Path 63" d="M976.07,436V344.07S973,327,1007.36,327H1149.7" transform="translate(-327 -94)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" stroke-dasharray="12 16"/>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Rectangle_166)">
-        <rect id="Rectangle_166-2" data-name="Rectangle 166" width="388" height="200" rx="20" transform="translate(781.07 569.13)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Rectangle_166)">
+        <rect id="Rectangle_166-2" data-name="Rectangle 166" width="388" height="200" rx="20" transform="translate(756.3 569.13)" fill="#fff"/>
       </g>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Ellipse_84)">
-        <circle id="Ellipse_84-2" data-name="Ellipse 84" cx="76.41" cy="76.41" r="76.41" transform="translate(1075.08 356.79)" fill="#252939"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Ellipse_84)">
+        <circle id="Ellipse_84-2" data-name="Ellipse 84" cx="76.41" cy="76.41" r="76.41" transform="translate(1050.31 356.79)" fill="#252939"/>
       </g>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Rectangle_169)">
-        <rect id="Rectangle_169-2" data-name="Rectangle 169" width="274" height="342" rx="20" transform="translate(826 81.75)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Rectangle_169)">
+        <rect id="Rectangle_169-2" data-name="Rectangle 169" width="274" height="342" rx="20" transform="translate(801.23 81.75)" fill="#fff"/>
       </g>
-      <g transform="matrix(1, 0, 0, 1, 0, 10.25)" filter="url(#Rectangle_171)">
-        <rect id="Rectangle_171-2" data-name="Rectangle 171" width="268" height="258.36" rx="20" transform="translate(480 298.75)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, 24.77, 10.25)" filter="url(#Rectangle_171)">
+        <rect id="Rectangle_171-2" data-name="Rectangle 171" width="268" height="258.36" rx="20" transform="translate(455.23 298.75)" fill="#fff"/>
       </g>
       <path id="Path_64" data-name="Path 64" d="M1387.29,834.14c20.77,0,37.61-16.46,37.61-36.76s-16.84-36.77-37.61-36.77c-1.15,0-2.27.06-3.39.16a15.636,15.636,0,0,0,1.35-6.37,16.29,16.29,0,0,0-16.47-16.1,16.727,16.727,0,0,0-8.127,2.108,48.14,48.14,0,0,0-44.593-29.328c-26.59,0-48.14,21.06-48.14,47v.79h-1.54c-21.52,0-39,17-39,38.09s17.45,38.25,39,38.09ZM1350.2,791.3" transform="translate(-327 -94)" fill="#252939"/>
       <path id="Path_65" data-name="Path 65" d="M1326.69,836.14c20.77,0,37.61-16.46,37.61-36.76s-16.84-36.77-37.61-36.77c-1.14,0-2.27.06-3.39.16a15.638,15.638,0,0,0,1.35-6.37,16.28,16.28,0,0,0-16.46-16.1,16.74,16.74,0,0,0-8.14,2.11,48.14,48.14,0,0,0-44.59-29.33c-26.59,0-48.14,21.06-48.14,47v.79h-1.54c-21.52,0-39,17-39,38.09s17.45,38.25,39,38.09ZM1289.6,793.3" transform="translate(-327 -94)" fill="#eaf1f8"/>
