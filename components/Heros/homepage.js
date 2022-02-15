@@ -9,7 +9,7 @@ import heroImageSub1 from "../../public/images/homepage/hero/hero_sub-1.png";
 import heroImageSub2 from "../../public/images/homepage/hero/hero_sub-2.png";
 import heroImageSub3 from "../../public/images/homepage/hero/hero_sub-3.png";
 
-import {WavyBG} from "../SVG/WavyBG";
+import { WavyBG } from "../SVG/WavyBG";
 
 import { useAppContext } from "../../Context";
 const animateOnce = true;
@@ -260,8 +260,17 @@ const HeroHome = ({ offset }) => {
         </StyledImageGroup>
       </section>
       <div id="homepageHeroBG">
-        <WavyBG />
-        <div className="trailing"></div>
+        <ScrollAnimation
+          animateIn="animate__slideInUp"
+          animateOnce={animateOnce}
+          duration={0.75}
+          style={{
+            height: '100%'
+          }}
+        >
+          <WavyBG />
+          <div className="trailing"></div>
+        </ScrollAnimation>
       </div>
     </div>
   );

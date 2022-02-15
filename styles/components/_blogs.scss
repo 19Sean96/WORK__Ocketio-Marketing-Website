@@ -4,7 +4,7 @@
       &--heading {
         grid-row: 1/2;
         position: relative;
-
+        text-align: center;
 
       }
       &--body {
@@ -48,24 +48,24 @@
 
             &--title {
               font-weight: 500;
-              font-size: 26px;
+              font-size: 22px;
               line-height: 1.3em;
               overflow: hidden;
               text-overflow: ellipsis;
               display: -webkit-box;
               max-height: 4em;
-              -webkit-line-clamp: 3; /* number of lines to show */
+              -webkit-line-clamp: 2; /* number of lines to show */
               -webkit-box-orient: vertical;
             }
 
             &--info {
               color: #139bbf;
               font-weight: 500;
-              font-size: 16px;
+              font-size: 15px;
             }
 
             &--body {
-              font-size: 20px;
+              font-size: 17px;
               overflow: hidden;
               text-overflow: ellipsis;
               display: -webkit-box;
@@ -89,6 +89,7 @@
               margin-top: 16px;
               justify-content: flex-start;
               align-items: center;
+              font-size: 16px;
               span {
                 display: inline-block;
                 padding-bottom: 2px;

@@ -6,10 +6,10 @@ import ContentWrapper from "../ContentWrapper";
 
 import MapImg from "../SVG/MapImg";
 
-import SecureSVG from '../../public/images/homepage/body/Secure.svg'
-import StreamlinedSVG from '../../public/images/homepage/body/Streamlined.svg'
-import EfficientSVG from '../../public/images/homepage/body/Efficient.svg'
-import CostEffectiveSVG from '../../public/images/homepage/body/Cost-Effective.svg'
+import SecureSVG from "../../public/images/homepage/body/Secure.svg";
+import StreamlinedSVG from "../../public/images/homepage/body/Streamlined.svg";
+import EfficientSVG from "../../public/images/homepage/body/Efficient.svg";
+import CostEffectiveSVG from "../../public/images/homepage/body/Cost-Effective.svg";
 
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
@@ -80,34 +80,30 @@ const WhoSection = (props) => {
           animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
           duration={0.44}
           offset={-186}
-          // animateOnce={true}
           className="section--heading"
         >
-          {/* <div className="section--heading"> */}
           <h3 className="h3">Who is it for?</h3>
           <p className="p-small">
             Wirewise adds useful features to a cutting-edge VPN protocol in a
             way that makes it an excellent option whether you’re a small shop or
             a growing enterprise
           </p>
-          {/* </div> */}
         </ScrollAnimation>
         <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
           <ScrollAnimation
             animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
             duration={0.7}
-            // animateOnce={true}
             className="card"
           >
             <BsPerson
               style={{
                 width: "auto",
                 height: "55px",
-                minWidth: '70px',
-                position: 'relative',
-                transform: 'scale(1.15)',
-                transformOrigin: '50% 0%'
+                minWidth: "70px",
+                position: "relative",
+                transform: "scale(1.15)",
+                transformOrigin: "50% 0%",
               }}
             />
             <div className="card--text">
@@ -117,6 +113,9 @@ const WhoSection = (props) => {
                 improve your gaming experience.
               </p>
             </div>
+            <Link href="/pricing">
+              <a className="btn btn--filled">Get Started</a>
+            </Link>
           </ScrollAnimation>
           <ScrollAnimation
             animateOnce={animateOnce}
@@ -126,13 +125,11 @@ const WhoSection = (props) => {
             className="card"
             delay={100}
           >
-            {" "}
             <BsShop
               style={{
                 width: "auto",
                 height: "55px",
-                minWidth: '70px'
-
+                minWidth: "70px",
               }}
             />
             <div className="card--text">
@@ -142,7 +139,9 @@ const WhoSection = (props) => {
                 without unnecessary complexity.
               </p>
             </div>
-
+            <Link href="/pricing">
+              <a className="btn btn--filled">Get Started</a>
+            </Link>
           </ScrollAnimation>
           <ScrollAnimation
             animateOnce={animateOnce}
@@ -157,8 +156,7 @@ const WhoSection = (props) => {
               style={{
                 width: "auto",
                 height: "55px",
-                minWidth: '70px'
-
+                minWidth: "70px",
               }}
             />
             <div className="card--text">
@@ -167,7 +165,10 @@ const WhoSection = (props) => {
                 Manage network controls in a way that scales alongside a growing
                 business effort.
               </p>
-            </div>
+            </div>{" "}
+            <Link href="/pricing">
+              <a className="btn btn--filled">Get Started</a>
+            </Link>
           </ScrollAnimation>
         </article>
       </section>

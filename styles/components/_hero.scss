@@ -3,35 +3,6 @@
   grid-column: 1/13;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200vw;
-    transform: translateX(-50%);
-    max-height: 950px;
-    height: 60vw;
-    background-color: #25293a;
-    clip-path: polygon(0% 0%, 100% 19vw, 100% 100%, 0% 100%);
-    margin-bottom: -150px;
-
-    display: none;
-  }
-
-  @media (max-width: 855px) {
-    &::before {
-      height: 88vw;
-    }
-  }
-
-  @media (max-width: 575px) {
-    &::before {
-      height: 120vw;
-      max-height: none;
-      min-height: 525px;
-    }
-  }
 
   &-message {
     display: flex;
@@ -78,6 +49,7 @@
       }
     }
     @media (max-width: 575px) {
+      align-items: stretch;
       h1 {
         margin-top: -65px;
         margin-bottom: 8px;
@@ -240,6 +212,8 @@
     height: auto;
     position: relative;
     transform: translateY(35px);
+    min-width: 1675px;
+
   }
 
   .trailing {
@@ -324,7 +298,7 @@
   #supportedOS {
     grid-column: 3/11;
     grid-row: 3/4;
-    padding: 0 2vw;
+    padding: 0 20px;
   }
 
   .banner {
