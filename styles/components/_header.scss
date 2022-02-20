@@ -3,12 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1444px;
+  max-width: 1344px;
   margin: auto;
   position: relative;
 
   @media (min-width: 1920px) {
-    max-width: 1880px;
+    max-width: 1780px;
   }
 
   &--logo {
@@ -48,7 +48,7 @@
       transform: translateX(-50%);
       z-index: 500;
       width: 101vw;
-      padding: 25px 0;
+      padding: 45px 0 20px;
       transition: .275s ease-out all
     }
 
