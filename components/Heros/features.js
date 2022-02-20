@@ -23,7 +23,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       animateIn="animate__fadeInDown"
       className="full-width_wrapper navy-bg"
     >
-      <div className="hero_wrapper">
+      <div className="hero_wrapper hero_wrapper-features">
         <section className="section section__with-grid" id="features-hero">
           <div id="features-hero-message">
             <ScrollAnimation
@@ -96,6 +96,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
                 managed <span className="last-word">devices</span>
               </h6>
             </ScrollAnimation>
+            {/* <span className="divider"></span> */}
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
@@ -126,6 +127,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
                 supervised <span className="last-word">devices</span>
               </h6>
             </ScrollAnimation>
+            {/* <span className="divider"></span> */}
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInUp"

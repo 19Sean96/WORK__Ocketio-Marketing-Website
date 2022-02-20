@@ -97,7 +97,7 @@ const StyledSub3 = styled(Image)`
 
 const StyledMain = styled(Image)`
   transform-origin: top;
-  transform: scale(0.9)
+  transform: scale(1)
     ${(props) => ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
 
   @media (max-width: 1200px) {
@@ -122,7 +122,7 @@ const StyledImageGroup = styled.div`
           top: 45%;
           left: 20%;
           transform-origin: top;
-          transform: scale(0.9)
+          transform: scale(1)
             ${(props) =>
               ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
 
@@ -180,8 +180,7 @@ const HeroHome = ({ offset }) => {
             delay={250}
           >
             <p className="p-large">
-              A cloud-centric software solutions that provides secure, remote
-              access to networks you manage, whether on-prem or in the cloud.
+            A cloud-centric software solution that provides secure, remote access to networks you manage, whether on-prem or in the cloud.
             </p>
           </ScrollAnimation>
           <ScrollAnimation

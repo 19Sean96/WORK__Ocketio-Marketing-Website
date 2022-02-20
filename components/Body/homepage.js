@@ -165,7 +165,7 @@ const WhoSection = (props) => {
                 Manage network controls in a way that scales alongside a growing
                 business effort.
               </p>
-            </div>{" "}
+            </div>
             <Link href="/pricing">
               <a className="btn btn--filled">Get Started</a>
             </Link>

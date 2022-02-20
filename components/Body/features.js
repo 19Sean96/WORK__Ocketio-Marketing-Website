@@ -91,12 +91,6 @@ const ArchitectureSection = (props) => {
           delay={450}
           className="image_wrapper"
         >
-          {/* <Image
-            src={howItWorksDiagram}
-            id="howItWorksDiagram"
-            alt="Diagram explaining how WireWise works"
-            layout="responsive"
-          /> */}
           <FeatureDiagram />
         </ScrollAnimation>
         <ScrollAnimation
@@ -123,7 +117,7 @@ const ArchitectureSection = (props) => {
           delay={175}
           className="text-block text-block-2"
         >
-          <h5 className="h5 capitalize">small business teams</h5>
+          <h5 className="h5 capitalize">Efficient Network Control</h5>
           <p className="p-small">
             For a tunnel to be established, the network gateway and its devices
             need to know each other’s private encryption keys. Wirewise
@@ -317,7 +311,7 @@ const OptimizedExperienceSection = (props) => {
           >
             <BsCloud />
             <h6 className="h6 capitalize">
-              Cloud-based admin <br />
+              Cloud-based admin
               console
             </h6>
             <p className="p-small">
@@ -404,8 +398,8 @@ const StyledTab = styled.li`
     top: 0;
     left: 0;
     box-shadow: 0 1px 1px rgba(37, 41, 58, 0.06),
-      0 2px 2px rgba(37, 41, 58, 0.06), 0 4px 4px rgba(37, 41, 58, 0.06),
-      0 8px 8px rgba(37, 41, 58, 0.06), 0 16px 16px rgba(37, 41, 58, 0.06);
+      0 2px 2px rgba(37, 41, 58, 0.05), 0 4px 4px rgba(37, 41, 58, 0.04),
+      0 8px 8px rgba(37, 41, 58, 0.03), 0 16px 16px rgba(37, 41, 58, 0.04);
 
     opacity: ${(props) => (props.active ? 1 : 0)};
   }
