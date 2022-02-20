@@ -4,6 +4,28 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../../components/ContentWrapper";
 import FAQList from "../../components/util/FAQ";
 import EmailIntakeInput from "../../components/util/EmailIntakeInput";
+import { PricingHeroBG } from "../../components/SVG/WavyBG";
+import styled from 'styled-components'
+
+const StyledMain = styled.main`
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: calc(45vw - 140px);
+    left: 0;
+    background-color: #252939;
+    width: 100vw;
+    height: calc(100% - 45vw + 140px);
+  }
+
+  @media (max-width: 1500px) {
+    &::before {
+      top: 550px;
+    }
+  }
+`
 
 const animateOnce = true;
 export default function Pricing() {
@@ -30,7 +52,8 @@ export default function Pricing() {
     },
   ];
   return (
-    <main className="main" id="main">
+    <StyledMain className="main" id="main">
+      <PricingHeroBG />
       <ContentWrapper>
         <section className="section__with-grid all-columns" id="pricing">
           <ScrollAnimation
@@ -150,6 +173,7 @@ export default function Pricing() {
           </div>
         </section>
       </ContentWrapper>
-    </main>
+
+    </StyledMain>
   );
 }
