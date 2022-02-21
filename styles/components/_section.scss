@@ -504,6 +504,37 @@
             grid-column: 7/13;
             grid-row: 1/3;
             align-self: center;
+
+            span {
+              overflow: visible !important;
+            }
+
+            #graphicSecure {
+              transform: translateX(-13%);
+            }
+
+            #graphicStreamlined {
+              transform: translateX(8%);
+            }
+
+            #graphicEfficient {
+              transform: translateX(-8%);
+            }
+
+            #graphicCostEffective {
+              transform: translateX(7%);
+            }
+
+
+            @media (max-width: 960px) {
+
+              #graphicSecure,
+              #graphicStreamlined,
+              #graphicEfficient,
+              #graphicCostEffective {
+                transform: translateX(0);
+              }
+            }
           }
         }
 
