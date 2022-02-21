@@ -1313,6 +1313,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      flex-wrap: wrap;
       gap: 25px;
       position: relative;
       .tabs {
@@ -1442,6 +1443,18 @@
         }
       }
 
+      .cta-group {
+        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+        position: relative;
+        transform: translateX(-28px);
+
+        @media (max-width: 2160px) {
+          margin-top: 100px;
+        }
+      }
+
       @media (max-width: 1150px) {
         .tabs {
           &__wrapper {
@@ -1478,6 +1491,7 @@
           position: relative;
           min-height: 170px;
           margin-top: -15px;
+          order: 3;
 
           &__wrapper {
             width: calc((100vw / 12) * 8);
@@ -1510,6 +1524,7 @@
           min-width: 290px;
           max-width: none;
           max-height: none;
+          order: 2;
         }
 
         .slides-number-group {
@@ -1520,6 +1535,12 @@
           top: 0;
           left: 50%;
           transform: translate(-50%, 60vw);
+        }
+
+        .cta-group {
+          order: -1;
+          margin-top: 30px;
+          transform: translateX(0);
         }
       }
 

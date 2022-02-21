@@ -11,7 +11,7 @@ import EmailIntakeBanner from "../components/util/EmailIntakeBanner";
 import axios from "axios";
 import { useAppContext } from "../Context";
 import BlogLayout from "../components/BlogLayout";
-
+import { NextSeo } from "next-seo";
 
 export default function Home({ blog_posts }) {
   const { scrollOffset, handleMouseMove } = useAppContext();
@@ -21,49 +21,27 @@ export default function Home({ blog_posts }) {
   console.log(router);
   return (
     <>
-      <Head>
-        {/* HTML META TAGS */}
-        <title>
-          Wirewise - We couldn't find the right VPN. So we built it.
-        </title>
-        <meta
-          name="description"
-          content="A cloud-centric software solutions that provides secure, remote access to networks you manage, whether on-prem or in the cloud."
-        />
-
-        {/* FACEBOOK META TAGS */}
-        <meta
-          property="og:title"
-          content="Wirewise - We couldn't find the right VPN. So we built it."
-        />
-        <meta
-          property="og:description"
-          content="A cloud-centric software solutions that provides secure, remote access to networks you manage, whether on-prem or in the cloud."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wirewise.vercel.app" />
-        <meta
-          property="og:image"
-          content={`${DIRECTUS_CMS_URL}/assets/6172e5f8-2b3e-4ed2-b21f-dde9710c0a4c.webp`}
-        />
-
-        {/* TWITTER META TAGS */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="wirewise.vercel.app" />
-        <meta property="twitter:url" content="https://wirewise.vercel.app/" />
-        <meta
-          name="twitter:title"
-          content="Wirewise - We couldn't find the right VPN. So we built it."
-        />
-        <meta
-          name="twitter:description"
-          content="A cloud-centric software solutions that provides secure, remote access to networks you manage, whether on-prem or in the cloud."
-        />
-        <meta
-          name="twitter:image"
-          content="http://143.198.146.26/assets/6172e5f8-2b3e-4ed2-b21f-dde9710c0a4c.webp"
-        />
-      </Head>
+      <NextSeo 
+        title="We Built The VPN We Wanted | Wirewise"
+        description="Wirewise is a streamlined VPN that facilitates remote access to networks you manage. Set up across devices and add users in minutes."
+        openGraph={{
+          url: 'https://wirewise.vercel.app',
+          title: 'We Built The VPN We Wanted | Wirewise',
+          description: 'Wirewise is a streamlined VPN that facilitates remote access to networks you manage. Set up across devices and add users in minutes.',
+          images: [
+            {
+              url: `${DIRECTUS_CMS_URL}/assets/6172e5f8-2b3e-4ed2-b21f-dde9710c0a4c.webp`,
+              width: 800,
+              height: 600,
+              alt: 'Preview of the Wirewise Admin Panel - where you can manage devices and administer Tenant management'
+            }            
+          ]
+        }}
+        twitter={{
+          cardType: 'summary_large_image'
+        }}
+      />
+ 
       <main className="main" id="main" onMouseMove={(e) => handleMouseMove(e)}>
         <span id="vertLineCenter"></span>
         <Hero offset={scrollOffset} />

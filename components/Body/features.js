@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from 'next/link'
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -541,6 +541,38 @@ const SetupSection = (props) => {
               </div>
             </div>
           </ScrollAnimation>
+          <div className="cta-group">
+            <Link href="/pricing">
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                animateIn="animate__fadeInUp"
+                duration={0.675}
+                className="cta"
+              >
+                <button
+                  className="btn btn--filled j-text _400 capitalize"
+                  aria-label="Get started with our beta program by creating a network"
+                >
+                  create a network
+                </button>
+              </ScrollAnimation>
+            </Link>
+            <Link href="/features">
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                animateIn="animate__fadeInUp"
+                duration={0.675}
+                className="cta"
+              >
+                <button
+                  className="cta btn btn--bordered j-text _400 capitalize"
+                  aria-label="Get additional information about Wirewise"
+                >
+                  learn more
+                </button>
+              </ScrollAnimation>
+            </Link>
+          </div>
         </article>
       </section>
     </ContentWrapper>
