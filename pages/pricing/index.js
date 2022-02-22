@@ -5,12 +5,12 @@ import ContentWrapper from "../../components/ContentWrapper";
 import FAQList from "../../components/util/FAQ";
 import EmailIntakeInput from "../../components/util/EmailIntakeInput";
 import { PricingHeroBG } from "../../components/SVG/WavyBG";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledMain = styled.main`
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     top: calc(45vw - 140px);
@@ -25,7 +25,7 @@ const StyledMain = styled.main`
       top: 550px;
     }
   }
-`
+`;
 
 const animateOnce = true;
 export default function Pricing() {
@@ -52,128 +52,152 @@ export default function Pricing() {
     },
   ];
   return (
-    <StyledMain className="main" id="main">
-      <PricingHeroBG />
-      <ContentWrapper>
-        <section className="section__with-grid all-columns" id="pricing">
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn="animate__fadeInLeft"
-            duration={0.9}
-            className="section--heading"
-          >
-            <h2 className="h2">Pricing</h2>
-            <p className="p-small">
-              Try the beta completely free, and sign up to be notified when the
-              paid version launches
-            </p>
-          </ScrollAnimation>
-          <div className="section--form__wrapper">
-            <EmailIntakeInput />
-          </div>
-          <div className="section--body">
+    <>
+      <NextSeo
+        title="Pricing Tiers | Wirewise"
+        description="Download and test the Wirewise beta for free. Stay tuned for simple, cost-effective pricing options launching soon."
+        openGraph={{
+          url: "https://wirewise.vercel.app/pricing",
+          title: "Pricing Tiers | Wirewise",
+          description:
+            "Download and test the Wirewise beta for free. Stay tuned for simple, cost-effective pricing options launching soon.",
+          images: [
+            {
+              url: `${DIRECTUS_CMS_URL}/assets/6172e5f8-2b3e-4ed2-b21f-dde9710c0a4c.webp`,
+              width: 800,
+              height: 600,
+              alt: "Preview of the Wirewise Admin Panel - where you can manage devices and administer Tenant management",
+            },
+          ],
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
+      />
+      <StyledMain className="main" id="main">
+        <PricingHeroBG />
+        <ContentWrapper>
+          <section className="section__with-grid all-columns" id="pricing">
             <ScrollAnimation
               animateOnce={animateOnce}
-              duration={0.7}
-              delay={400}
               animateIn="animate__fadeInLeft"
-              className="section--body--item"
-              id="priceFree"
-            >
-              <h6 className="price--type capitalize h6">free</h6>
-              <h4 className="h4 price--num">$ 0.00 USD</h4>
-              <p className="p-small price--rate">monthly per device</p>
-              <Link href="#">
-                <button className="price--cta btn btn--filled capitalize">
-                  get started
-                </button>
-              </Link>
-              <p className="p-small price--message">
-                Register up to three devices and create a single network, with
-                access to all the platform’s features.
-              </p>
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateOnce={animateOnce}
               duration={0.9}
-              delay={200}
-              animateIn="animate__fadeInLeft"
-              className="section--body--item blurred"
-              id="priceMonthly"
+              className="section--heading"
             >
-              <h6 className="price--type capitalize h6">monthly</h6>
-              <h4 className="h4 price--num">$ XX.XX USD</h4>
-              <p className="p-small price--rate">monthly per user</p>
-              <Link href="#">
-                <button className="price--cta btn btn--filled capitalize">
-                  get started
-                </button>
-              </Link>
-              <p className="p-small price--message">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                semper sceleris.
+              <h2 className="h2">Pricing</h2>
+              <p className="p-small">
+                Try the beta completely free, and sign up to be notified when
+                the paid version launches
               </p>
             </ScrollAnimation>
+            <div className="section--form__wrapper">
+              <EmailIntakeInput />
+            </div>
+            <div className="section--body">
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                duration={0.7}
+                delay={400}
+                animateIn="animate__fadeInLeft"
+                className="section--body--item"
+                id="priceFree"
+              >
+                <h6 className="price--type capitalize h6">free</h6>
+                <h4 className="h4 price--num">$ 0.00 USD</h4>
+                <p className="p-small price--rate">monthly per device</p>
+                <Link href="#">
+                  <button className="price--cta btn btn--filled capitalize">
+                    get started
+                  </button>
+                </Link>
+                <p className="p-small price--message">
+                  Register up to three devices and create a single network, with
+                  access to all the platform’s features.
+                </p>
+              </ScrollAnimation>
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                duration={0.9}
+                delay={200}
+                animateIn="animate__fadeInLeft"
+                className="section--body--item blurred"
+                id="priceMonthly"
+              >
+                <h6 className="price--type capitalize h6">monthly</h6>
+                <h4 className="h4 price--num">$ XX.XX USD</h4>
+                <p className="p-small price--rate">monthly per user</p>
+                <Link href="#">
+                  <button className="price--cta btn btn--filled capitalize">
+                    get started
+                  </button>
+                </Link>
+                <p className="p-small price--message">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  semper sceleris.
+                </p>
+              </ScrollAnimation>
+              <ScrollAnimation
+                animateOnce={animateOnce}
+                duration={1.1}
+                delay={0}
+                animateIn="animate__fadeInLeft"
+                className="section--body--item blurred"
+                id="priceAnnual"
+              >
+                <h6 className="price--type capitalize h6">annual</h6>
+                <h4 className="h4 price--num">$ XX.XX USD</h4>
+                <p className="p-small price--rate">monthly per user</p>
+                <Link href="#">
+                  <button className="price--cta btn btn--filled capitalize">
+                    get started
+                  </button>
+                </Link>
+                <p className="p-small price--message">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  semper sceleris.
+                </p>
+              </ScrollAnimation>
+
+              <caption id="comingSoonBanner">
+                <p className="p-large j-display _500">
+                  Paid tiers coming soon.
+                </p>
+              </caption>
+            </div>
             <ScrollAnimation
               animateOnce={animateOnce}
-              duration={1.1}
-              delay={0}
-              animateIn="animate__fadeInLeft"
-              className="section--body--item blurred"
-              id="priceAnnual"
+              duration={0.75}
+              delay={700}
+              animateIn="animate__fadeInUp"
+              className="section--footer"
             >
-              <h6 className="price--type capitalize h6">annual</h6>
-              <h4 className="h4 price--num">$ XX.XX USD</h4>
-              <p className="p-small price--rate">monthly per user</p>
-              <Link href="#">
-                <button className="price--cta btn btn--filled capitalize">
-                  get started
-                </button>
-              </Link>
-              <p className="p-small price--message">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                semper sceleris.
+              <h6 className="h6">Interested in a custom plan?</h6>
+              <p className="p-small">
+                <Link href="/contact">
+                  <a>Contact us</a>
+                </Link>
+                <span> for information on enterprise pricing.</span>
               </p>
             </ScrollAnimation>
+          </section>
+        </ContentWrapper>
 
-            <caption id="comingSoonBanner">
-              <p className="p-large j-display _500">Paid tiers coming soon.</p>
-            </caption>
-          </div>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            duration={0.75}
-            delay={700}
-            animateIn="animate__fadeInUp"
-            className="section--footer"
-          >
-            <h6 className="h6">Interested in a custom plan?</h6>
-            <p className="p-small">
-              <Link href="/contact">
-                <a>Contact us</a>
-              </Link>
-              <span> for information on enterprise pricing.</span>
-            </p>
-          </ScrollAnimation>
-        </section>
-      </ContentWrapper>
-
-      <ContentWrapper>
-        <section className="section__with-grid all-columns" id="pricingFAQ">
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn="animate__fadeIn"
-            duration={0.9}
-            className="section--heading"
-          >
-            <h4 className="h4 capitalize">frequently asked questions</h4>
-          </ScrollAnimation>
-          <div className="section--body">
-            <FAQList list={faqs} />
-          </div>
-        </section>
-      </ContentWrapper>
-
-    </StyledMain>
+        <ContentWrapper>
+          <section className="section__with-grid all-columns" id="pricingFAQ">
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn="animate__fadeIn"
+              duration={0.9}
+              className="section--heading"
+            >
+              <h4 className="h4 capitalize">frequently asked questions</h4>
+            </ScrollAnimation>
+            <div className="section--body">
+              <FAQList list={faqs} />
+            </div>
+          </section>
+        </ContentWrapper>
+      </StyledMain>
+    </>
   );
 }
