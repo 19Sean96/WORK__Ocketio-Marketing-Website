@@ -6,6 +6,7 @@ import FAQList from "../../components/util/FAQ";
 import EmailIntakeInput from "../../components/util/EmailIntakeInput";
 import { PricingHeroBG } from "../../components/SVG/WavyBG";
 import styled from "styled-components";
+import { NextSeo } from "next-seo";
 
 const StyledMain = styled.main`
   position: relative;

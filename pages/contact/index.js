@@ -5,6 +5,7 @@ import {
 } from "../../components/Body/contact";
 import styled from "styled-components";
 import { ContactHeroBG } from "../../components/SVG/WavyBG";
+import { NextSeo } from "next-seo";
 
 const StyledMain = styled.main`
   position: relative;
