@@ -24,6 +24,8 @@ const StyledMain = styled.main`
 `;
 
 export default function Contact() {
+  const { DIRECTUS_CMS_URL } = process.env;
+
   return (
     <>
       <NextSeo

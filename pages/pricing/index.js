@@ -30,6 +30,8 @@ const StyledMain = styled.main`
 
 const animateOnce = true;
 export default function Pricing() {
+  const { DIRECTUS_CMS_URL } = process.env;
+
   const faqs = [
     {
       question: "Does Wirewise offer free trials?",
