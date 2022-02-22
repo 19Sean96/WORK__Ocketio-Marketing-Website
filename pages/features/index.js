@@ -7,6 +7,7 @@ import {
   SetupSection,
 } from "../../components/Body/features";
 import { useAppContext } from "../../Context";
+import { NextSeo } from "next-seo";
 
 export default function Features() {
   const {
