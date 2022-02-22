@@ -31,7 +31,7 @@ export default function Features() {
             "All of the essentials, none of the complexity. Get brand new capabilities on top of the WireGuard framework that just make life easier.",
           images: [
             {
-              url: `${DIRECTUS_CMS_URL}/assets/9f74d9d9-5bf6-464c-8a7e-6ead6bebf1e7.svg`,
+              url: `${DIRECTUS_CMS_URL}/assets/dca92e08-54bc-491d-9646-1b4a98aa5153.png`,
               width: 800,
               height: 600,
               alt: "Diagram of how Wirewise functions. From enabled devices to cloud services to admin",
