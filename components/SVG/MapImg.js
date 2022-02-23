@@ -4,8 +4,6 @@ const MapImg = (props) => {
       <g id="Wirewise_Website_Homepage-Map">
         <g id="map" style={{
           opacity: .22,
-          transformOrigin: 'center center',
-          transform: 'scale(1.19)'
         }}>
           <g id="Group 512">
             <g id="textcompare 1_09_46 PM 1">

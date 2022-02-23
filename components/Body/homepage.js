@@ -13,17 +13,19 @@ import CostEffectiveSVG from "../../public/images/homepage/body/Cost-Effective.s
 
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
+import { HomepageWaveTop, HomepageWaveBot } from "../SVG/WavyBG";
 
 const animateOnce = true;
 
 const FirstBanner = (props) => {
   const { isMobile } = useAppContext();
   return (
-    <ContentWrapper>
+    <ContentWrapper width="1222px">
       <section
         className="section section__with-grid all-columns"
         id="firstBannerHomepage"
       >
+        <HomepageWaveTop />
         <ScrollAnimation
           animateOnce={animateOnce}
           animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
@@ -50,6 +52,9 @@ const FirstBanner = (props) => {
             have the right features. So now we're developing the VPN we wish
             we'd been able to find.
           </p>
+          <Link href="/features">
+            <a className="btn btn--filled">Explore the Features</a>
+          </Link>
         </ScrollAnimation>
         <ScrollAnimation
           animateOnce={animateOnce}
@@ -61,6 +66,7 @@ const FirstBanner = (props) => {
         >
           <MapImg />
         </ScrollAnimation>
+        <HomepageWaveBot />
       </section>
     </ContentWrapper>
   );
