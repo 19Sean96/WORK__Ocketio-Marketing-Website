@@ -72,116 +72,6 @@ const FirstBanner = (props) => {
   );
 };
 
-const WhoSection = (props) => {
-  const { isMobile } = useAppContext();
-
-  return (
-    <ContentWrapper>
-      <section
-        className="section section__with-grid all-columns"
-        id="sectionWhoHomepage"
-      >
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-          duration={0.44}
-          offset={-186}
-          className="section--heading"
-        >
-          <h3 className="h3">Who is it for?</h3>
-          <p className="p-small">
-            Wirewise adds useful features to a cutting-edge VPN protocol in a
-            way that makes it an excellent option whether you’re a small shop or
-            a growing enterprise
-          </p>
-        </ScrollAnimation>
-        <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn="animate__fadeInUp"
-            duration={0.7}
-            className="card"
-          >
-            <BsPerson
-              style={{
-                width: "auto",
-                height: "55px",
-                minWidth: "70px",
-                position: "relative",
-                transform: "scale(1.15)",
-                transformOrigin: "50% 0%",
-              }}
-            />
-            <div className="card--text">
-              <h4 className="h6 capitalize">individual users</h4>
-              <p className="p-small">
-                Share access to personal projects, test development work, or
-                improve your gaming experience.
-              </p>
-            </div>
-            <Link href="/pricing">
-              <a className="btn btn--filled">Get Started</a>
-            </Link>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn="animate__fadeInUp"
-            duration={0.7}
-            // animateOnce={true}
-            className="card"
-            delay={100}
-          >
-            <BsShop
-              style={{
-                width: "auto",
-                height: "55px",
-                minWidth: "70px",
-              }}
-            />
-            <div className="card--text">
-              <h4 className="h6 capitalize">small business teams</h4>
-              <p className="p-small">
-                Grant a handful of remote employees access to internal resources
-                without unnecessary complexity.
-              </p>
-            </div>
-            <Link href="/pricing">
-              <a className="btn btn--filled">Get Started</a>
-            </Link>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn="animate__fadeInUp"
-            duration={0.7}
-            // animateOnce={true}
-            className="card"
-            delay={200}
-          >
-            {" "}
-            <BsBuilding
-              style={{
-                width: "auto",
-                height: "55px",
-                minWidth: "70px",
-              }}
-            />
-            <div className="card--text">
-              <h4 className="h6 capitalize">mid-sized companies</h4>
-              <p className="p-small">
-                Manage network controls in a way that scales alongside a growing
-                business effort.
-              </p>
-            </div>
-            <Link href="/pricing">
-              <a className="btn btn--filled">Get Started</a>
-            </Link>
-          </ScrollAnimation>
-        </article>
-      </section>
-    </ContentWrapper>
-  );
-};
-
 const WhatSection = (props) => {
   const { isMobile } = useAppContext();
 
@@ -257,7 +147,7 @@ const WhatSection = (props) => {
   ];
 
   return (
-    <ContentWrapper>
+    <ContentWrapper width="1200px">
       <section
         className="section section__with-grid all-columns"
         id="sectionWhatHomepage"
@@ -391,5 +281,121 @@ function WhatSectionItem({
     </article>
   );
 }
+
+const WhoSection = (props) => {
+  const { isMobile } = useAppContext();
+
+  return (
+    <ContentWrapper width="1080px">
+      <section
+        className="section section__with-grid all-columns"
+        id="sectionWhoHomepage"
+      >
+        <HomepageWaveTop />
+
+        <ScrollAnimation
+          animateOnce={animateOnce}
+          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+          duration={0.44}
+          offset={-186}
+          className="section--heading"
+        >
+          <h2 className="h2">Who is it for?</h2>
+          <p className="p-small">
+            Wirewise adds useful features to a cutting-edge VPN protocol in a
+            way that makes it an excellent option whether you’re a small shop or
+            a growing enterprise
+          </p>
+        </ScrollAnimation>
+        <article className="card__wrapper f f-align-stretch f-justify-stretch f-no-wrap all-columns">
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.7}
+            className="card"
+          >
+            <BsPerson
+              style={{
+                width: "auto",
+                height: "55px",
+                minWidth: "70px",
+                position: "relative",
+                transform: "scale(1.15)",
+                transformOrigin: "50% 0%",
+              }}
+            />
+            <div className="card--text">
+              <h4 className="h6 capitalize">individual users</h4>
+              <p className="p-small">
+                Share access to personal projects, test development work, or
+                improve your gaming experience.
+              </p>
+            </div>
+            <Link href="/pricing">
+              <a className="btn btn--filled">Get Started</a>
+            </Link>
+          </ScrollAnimation>
+          <div className="divider"></div>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.7}
+            // animateOnce={true}
+            className="card"
+            delay={100}
+          >
+            <BsShop
+              style={{
+                width: "auto",
+                height: "55px",
+                minWidth: "70px",
+              }}
+            />
+            <div className="card--text">
+              <h4 className="h6 capitalize">small business teams</h4>
+              <p className="p-small">
+                Grant a handful of remote employees access to internal resources
+                without unnecessary complexity.
+              </p>
+            </div>
+            <Link href="/pricing">
+              <a className="btn btn--filled">Get Started</a>
+            </Link>
+          </ScrollAnimation>
+          <div className="divider"></div>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.7}
+            // animateOnce={true}
+            className="card"
+            delay={200}
+          >
+            {" "}
+            <BsBuilding
+              style={{
+                width: "auto",
+                height: "55px",
+                minWidth: "70px",
+              }}
+            />
+            <div className="card--text">
+              <h4 className="h6 capitalize">mid-sized companies</h4>
+              <p className="p-small">
+                Manage network controls in a way that scales alongside a growing
+                business effort.
+              </p>
+            </div>
+            <Link href="/pricing">
+              <a className="btn btn--filled">Get Started</a>
+            </Link>
+          </ScrollAnimation>
+        </article>
+
+        <HomepageWaveBot />
+      </section>
+    </ContentWrapper>
+  );
+};
 
 export { FirstBanner, WhoSection, WhatSection };

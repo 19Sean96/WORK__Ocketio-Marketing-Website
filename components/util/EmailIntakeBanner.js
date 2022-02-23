@@ -23,6 +23,9 @@ const EmailIntakeBanner = (props) => {
         animateOnce={true}
         duration={0.623}
         className="section__with-grid all-columns"
+        style={{
+          justifyItems: 'center'
+        }}
       >
         <section
           className="section section__with-grid all-columns"

@@ -46,10 +46,10 @@ export default function Home({ blog_posts }) {
         <span id="vertLineCenter"></span>
         <Hero offset={scrollOffset} />
         <FirstBanner />
-        <WhoSection />
         <WhatSection />
-        <EmailIntakeBanner />
+        <WhoSection />
         <BlogLayout blogPosts={blog_posts} />
+        <EmailIntakeBanner />
       </main>
     </>
   );

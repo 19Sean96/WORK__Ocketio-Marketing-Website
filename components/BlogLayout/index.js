@@ -21,7 +21,7 @@ const BlogLayout = ({ blogPosts }) => {
           className="section--heading"
           animateOnce={animateOnce}
         >
-          <h2 className="h2">News and Updates</h2>
+          <h2 className="h2">News & Updates</h2>
         </ScrollAnimation>
         <div className="section--body">
           <div className="blogs">

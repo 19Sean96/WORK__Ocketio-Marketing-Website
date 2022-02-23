@@ -60,7 +60,7 @@ input, textarea, label, select, select option {
 
 h1, .h1 { @include heading(54px, 500, 119.5%, .0175em) }
 
-h2, .h2 { @include heading(45px, 500, 127.5%, .035em) }
+h2, .h2 { @include heading(40px, 500, 127.5%, .035em) }
 
 h3, .h3 { @include heading(41px, 500, 120%, .025em) }
 
@@ -106,7 +106,6 @@ h6, .h6 { @include heading(23px, 500, 145%, .025) }
 }
 
 @media (max-width: 1920px) {
-    h2, .h2 { @include heading(40px, 500, 127.5%, .035em) }
     h3, .h3 { @include heading(38px, 500, 127.5%, .035em)}
     h4, .h4 { @include heading(32px, 500, 145%, .025em) }
     h6, .h6 { @include heading(20px, 500, 145%, .025) }
