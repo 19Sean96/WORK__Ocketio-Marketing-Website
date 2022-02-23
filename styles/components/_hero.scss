@@ -1,35 +1,32 @@
 #landing-hero {
-  margin-top: 100px;
+  margin-top: 46px;
   grid-column: 1/13;
   position: relative;
-
+  align-items: flex-start;
 
   &-message {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
 
-    grid-column: 3/11;
+    grid-column: 1/6;
     grid-row: 1/2;
-
+    margin-top:8%;
     position: relative;
     z-index: 30;
 
     h1 {
-      text-align: center;
+      text-align: left;
       margin-bottom: 25px;
-      margin-top: -20px;
     }
     p {
-      text-align: center;
+      text-align: left;
+      color: #5C5F6B;
+      margin-right: 10%;
+
     }
 
-    @media (max-width: 1920px) {
-      .p-large {
-        width: 75%;
-      }
-    }
     @media (max-width: 1460px) {
       .p-large {
         width: 95%;
@@ -60,15 +57,17 @@
 
 
   .image-group {
-    grid-column: 2/12;
-    grid-row: 2/3;
-    height: 950px;
-    margin-top: 98px;
-    margin-bottom: -150px;
+    grid-column: 6/13;
+    grid-row: 1/2;
+    height: 750px;
+    margin-top: 0;
     position: relative;
-    padding: 0 200px;
     display: grid;
     grid-template-areas: "overlay";
+    margin-left: 50px;
+    width: 100%;
+    margin-bottom: -64px;
+    overflow: visible;
 
     & > span,
     & > div {
@@ -78,21 +77,26 @@
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both;
       animation-name: fadeInDownShort;
+      overflow: visible;
 
       &:first-child {
         animation-delay: 0.45s;
         animation-name: fadeInUpShort;
         animation-duration: 0.9s;
         z-index: 5;
+        overflow: visible;
 
         position: relative;
 
         & > span {
           position: relative;
-
+          overflow: visible;
           &::after {
-            @include set-height-to-image-height('../public/images/homepage/hero/hero_main-fg.svg', 85%);
-  
+            @include set-height-to-image-height('../public/images/homepage/hero/hero-fg.svg', 85%);
+            width: 90%;
+            top: 48%;
+            left: 17%;
+            overflow: visible;
             position: absolute;
             content: ' ';
             z-index: 10;
@@ -138,33 +142,8 @@
         0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
         0 8px 16px rgba(0, 0, 0, 0.11);
 
-    }
+      box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.15);
 
-    #heroImageSub1 {
-      box-shadow: 0 1px 2px rgba($black, 0.06), 0 2px 4px rgba($black, 0.06),
-        0 4px 8px rgba($black, 0.06), 0 8px 16px rgba($black, 0.06),
-        0 16px 32px rgba($black, 0.06), 0 32px 64px rgba($black, 0.06);
-
-    }
-
-    #heroImageSub2 {
-      box-shadow: 0 1px 2px rgba($black, 0.06), 0 2px 4px rgba($black, 0.06),
-        0 4px 8px rgba($black, 0.06), 0 8px 16px rgba($black, 0.06),
-        0 16px 32px rgba($black, 0.06), 0 32px 64px rgba($black, 0.06);
-
-    }
-
-    #heroImageSub3 {
-      box-shadow: none;
-
-    }
-
-    @media (max-width: 2160px) {
-      height: 800px;
-    }
-
-    @media (max-width: 1920px) {
-      height: 670px;
     }
 
     @media (max-width: 1370px) {

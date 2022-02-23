@@ -5,95 +5,10 @@ import styled, { keyframes } from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import heroImageMain from "../../public/images/homepage/hero/hero_main-bg.png";
-import heroImageSub1 from "../../public/images/homepage/hero/hero_sub-1.png";
-import heroImageSub2 from "../../public/images/homepage/hero/hero_sub-2.png";
-import heroImageSub3 from "../../public/images/homepage/hero/hero_sub-3.png";
 
-import { WavyBG } from "../SVG/WavyBG";
 
 import { useAppContext } from "../../Context";
 const animateOnce = true;
-
-const StyledSub1 = styled(Image)`
-  transform-origin: 0 100%;
-  transform: scale(0.45)
-    ${(props) => `translate(-65%, calc(-40% - ${props.offset / 7}px))`};
-
-  @media (max-width: 1200px) {
-    transform: scale(0.45)
-      ${(props) =>
-        `translate(-65%, calc(-40% - ${
-          props.offset / 10 + 15 + -0.4 * 15
-        }px))`};
-  }
-  @media (max-width: 850px) {
-    transform: scale(0.465)
-      ${(props) =>
-        `translate(-65.5%, calc(-35% - ${
-          props.offset / 10 + 15 + -0.4 * 12
-        }px))`};
-  }
-  @media (max-width: 575px) {
-    transform: scale(0.575)
-      ${(props) =>
-        `translate(-55%, calc(0% - ${props.offset / 15 + 15 + -0.4 * 10}px))`};
-  }
-`;
-
-const StyledSub2 = styled(Image)`
-  transform-origin: 100% 0;
-  transform: scale(0.52)
-    ${(props) =>
-      `translate(60%, calc(-15% - ${props.offset / 3 + 50 + -0.4 * 50}px))`};
-
-  @media (max-width: 1200px) {
-    transform: scale(0.46)
-      ${(props) =>
-        `translate(60%, calc(-10% - ${
-          props.offset / 6 + 100 + -0.4 * 150
-        }px))`};
-  }
-
-  @media (max-width: 850px) {
-    transform: scale(0.54)
-      ${(props) =>
-        `translate(60%, calc( -10% - ${
-          props.offset / 9 + 150 + -0.4 * 150
-        }px))`};
-  }
-  @media (max-width: 575px) {
-    transform: scale(0.7)
-      ${(props) =>
-        `translate(60%, calc( -45% - ${
-          props.offset / 12 + 50 + -0.4 * 150
-        }px))`};
-  }
-`;
-
-const StyledSub3 = styled(Image)`
-  transform-origin: 0 100%;
-  transform: scale(0.85)
-    ${(props) =>
-      `translate(-15vw, calc(1vw - ${props.offset / -7 + 5 + -0.4 * 2}px))`};
-
-  @media (max-width: 1200px) {
-    transform: scale(0.8)
-      ${(props) =>
-        `translate(-12vw, calc(3vw - ${props.offset / -12 + 5 + -0.4 * 2}px))`};
-  }
-  @media (max-width: 850px) {
-    transform: scale(0.6)
-      ${(props) =>
-        `translate(-19vw, calc(4vw - ${props.offset / -16 + 5 + -0.4 * 2}px))`};
-  }
-  @media (max-width: 575px) {
-    transform: scale(0.4)
-      ${(props) =>
-        `translate(-22vw, calc(-62.5vw - ${
-          props.offset / -16 + 5 + -0.4 * 2
-        }px))`};
-  }
-`;
 
 const StyledMain = styled(Image)`
   transform-origin: top;
@@ -119,8 +34,7 @@ const StyledImageGroup = styled.div`
     &:first-child {
       & > span {
         &::after {
-          top: 45%;
-          left: 20%;
+
           transform-origin: top;
           transform: scale(1)
             ${(props) =>
@@ -170,7 +84,7 @@ const HeroHome = ({ offset }) => {
             delay={50}
           >
             <h1 className="h1">
-              We couldn't find the right VPN. <br /> So we built it.
+              We needed a VPN. <br /> So we built it.
             </h1>
           </ScrollAnimation>
           <ScrollAnimation
@@ -180,7 +94,8 @@ const HeroHome = ({ offset }) => {
             delay={250}
           >
             <p className="p-large">
-            A cloud-centric software solution that provides secure, remote access to networks you manage, whether on-prem or in the cloud.
+              A cloud-centric software solution that provides secure, remote
+              access to networks you manage, whether on-prem or in the cloud.
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -200,7 +115,7 @@ const HeroHome = ({ offset }) => {
               </Link>
               <Link href="/features">
                 <button
-                  className="cta btn btn--bordered j-text _400 capitalize"
+                  className="cta btn btn--bordered j-text _500 capitalize"
                   aria-label="Get additional information about Wirewise"
                 >
                   learn more
@@ -226,51 +141,8 @@ const HeroHome = ({ offset }) => {
             placeholder="blur"
             priority
           />
-          <StyledSub1
-            id="heroImageSub1"
-            className={`animate__animated image-group__image`}
-            layout="responsive"
-            src={heroImageSub1}
-            alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={isSafari ? 0 : offset}
-            placeholder="blur"
-            priority
-          />
-          <StyledSub2
-            id="heroImageSub2"
-            className={`animate__animated image-group__image`}
-            layout="responsive"
-            src={heroImageSub2}
-            alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={isSafari ? 0 : offset}
-            placeholder="blur"
-            priority
-          />
-          <StyledSub3
-            id="heroImageSub3"
-            className={`animate__animated image-group__image`}
-            layout="fixed"
-            width={232}
-            src={heroImageSub3}
-            alt="this is the dashboard page. It shows user information, status and company performance statistics."
-            offset={isSafari ? 0 : offset}
-            priority
-          />
         </StyledImageGroup>
       </section>
-      <div id="homepageHeroBG">
-        <ScrollAnimation
-          animateIn="animate__slideInUp"
-          animateOnce={animateOnce}
-          duration={0.75}
-          style={{
-            height: '100%'
-          }}
-        >
-          <WavyBG />
-          <div className="trailing"></div>
-        </ScrollAnimation>
-      </div>
     </div>
   );
 };
