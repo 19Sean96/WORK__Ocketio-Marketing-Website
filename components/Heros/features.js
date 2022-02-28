@@ -23,7 +23,9 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       animateIn="animate__fadeInDown"
       className="full-width_wrapper navy-bg"
     >
-      <div className="hero_wrapper hero_wrapper-features">
+      <div className="hero_wrapper hero_wrapper-features" style={{
+        maxWidth: '1300px'
+      }}>
         <section className="section section__with-grid" id="features-hero">
           <div id="features-hero-message">
             <ScrollAnimation
