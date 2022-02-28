@@ -77,7 +77,7 @@ const WhatSection = (props) => {
 
   const whatSectionContent = [
     {
-      title: `it's secure.`,
+      title: `It's secure.`,
       par: `Wirewise builds on industry-leading encryption methods for reliably protecting remote connections to your network resources. Your data also remains completely private and it never touches our servers.`,
 
       image: {
@@ -94,7 +94,7 @@ const WhatSection = (props) => {
       reversed: true,
     },
     {
-      title: `it's streamlined.`,
+      title: `It's streamlined.`,
       par: `No more manual configuration headaches. Set up your network in minutes through our helpful wizard and roll out quickly to your team with unobtrusive, always-on access to internal resources. Once up and running, manage the network and devices easily from a single web-based tool.`,
 
       image: {
@@ -111,7 +111,7 @@ const WhatSection = (props) => {
       reversed: false,
     },
     {
-      title: `it's efficient.`,
+      title: `It's efficient.`,
       par: `There are no appliances or extensive infrastructure to maintain, which reduces overhead for providing access to networks in multiple locations. The extremely lean codebase also maximizes network performance and minimizes battery drain for distributed devices.`,
 
       image: {
@@ -128,7 +128,7 @@ const WhatSection = (props) => {
       reversed: true,
     },
     {
-      title: `it's cost-effective.`,
+      title: `It's cost-effective.`,
       par: `Reliable security shouldn't break the bank. A straightforward pricing structure makes it easy to try the product and affordable to get your people and their devices safely connected, no matter how many there are.`,
 
       image: {
@@ -229,14 +229,14 @@ function WhatSectionItem({
   isMobile,
 }) {
   return (
-    <article className={`section--body--item${reversed ? " reversed" : ""}`}>
+    <article className={`section--body--item${reversed ? " reversed" : ""}`} id={`${imgID}__wrapper`}>
       <ScrollAnimation
         animateOnce={animateOnce}
         animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
         className="text-block"
         duration={0.6}
       >
-        <h4 className="h4 capitalize">{title}</h4>
+        <h4 className="h4">{title}</h4>
         <p className="p-small">{par}</p>
       </ScrollAnimation>
       <ul className="checklist">

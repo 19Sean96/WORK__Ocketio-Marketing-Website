@@ -19,6 +19,7 @@ const StyledMain = styled(Image)`
     transform: scale(1)
       ${(props) => ` translate(0, calc(0px - ${props.offset / -45 + -0.4}px))`};
   }
+
   @media (max-width: 850px) {
     transform: scale(1.05)
       ${(props) => ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};

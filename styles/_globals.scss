@@ -53,15 +53,7 @@ input:-webkit-autofill {
   padding-right: 25px;
 
   &-features {
-    max-width: 1472px;
-  }
-
-
-  @media (max-width: 1920px) {
-
-    &-features {
-      max-width: 1280px;
-    }
+    max-width: 1280px;
   }
 
   @media (max-width: 580px) {
