@@ -62,7 +62,7 @@ const BlogItem = ({
             </p>
             <div className="blog--img__wrapper">
               <Image
-                src={`http://143.198.146.26/assets/${imgId}`}
+                src={`https://cms.wirewise-dev.com/assets/${imgId}`}
                 layout="fill"
                 className="blog--img"
                 objectFit="cover"

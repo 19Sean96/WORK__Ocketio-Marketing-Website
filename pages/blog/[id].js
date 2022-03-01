@@ -70,7 +70,7 @@ const Blog = ({ blog_posts }) => {
               className="blog--img__wrapper"
             >
               <Image
-                src={`http://143.198.146.26/assets/${blog.post_img}`}
+                src={`https://cms.wirewise-dev.com/assets/${blog.post_img}`}
                 layout="fill"
                 className="blog--img"
                 objectFit="cover"
