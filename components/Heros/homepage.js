@@ -17,7 +17,7 @@ const StyledMain = styled(Image)`
 
   @media (max-width: 1200px) {
     transform: scale(1)
-      ${(props) => ` translate(0, calc(0px - ${props.offset / -45 + -0.4}px))`};
+      ${(props) => ` translate(0, calc(0px - ${props.offset / -45 + -31}px))`};
   }
 
   @media (max-width: 850px) {
@@ -47,7 +47,7 @@ const StyledImageGroup = styled.div`
 
             transform: scale(1)
               ${(props) =>
-                ` translate(0, calc(0px - ${props.offset / -35 + -0.4}px))`};
+                ` translate(0, calc(0px - ${props.offset / -35 + -35}px))`};
           }
           @media (max-width: 850px) {
             top: 53%;
@@ -55,7 +55,7 @@ const StyledImageGroup = styled.div`
 
             transform: scale(1.05)
               ${(props) =>
-                ` translate(0, calc(-12% - ${props.offset / -60 - 35}px))`};
+                ` translate(0, calc(-12% - ${props.offset / -60 - 46}px))`};
           }
           @media (max-width: 575px) {
             top: 63.5%;
@@ -63,7 +63,7 @@ const StyledImageGroup = styled.div`
 
             transform: scale(1.25)
               ${(props) =>
-                ` translate(0, calc(-12% - ${props.offset / -60 - 35}px))`};
+                ` translate(0, calc(-6vw - ${props.offset / -60 - 63}px))`};
           }
         }
       }
