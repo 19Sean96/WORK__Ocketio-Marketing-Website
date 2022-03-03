@@ -18,7 +18,6 @@ export default function Home({ blog_posts }) {
   const { DIRECTUS_CMS_URL } = process.env;
 
   const router = useRouter();
-  console.log(router);
   return (
     <>
       <NextSeo 
@@ -57,7 +56,6 @@ export default function Home({ blog_posts }) {
 
 export async function getStaticProps() {
   const { DIRECTUS_CMS_ACCESS_KEY, DIRECTUS_CMS_URL } = process.env;
-  console.log(DIRECTUS_CMS_ACCESS_KEY, DIRECTUS_CMS_URL);
 
   const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts`;
   let response, error;
@@ -81,7 +79,6 @@ export async function getStaticProps() {
   } finally {
     if (!error) {
       const blog_posts = response.data.data;
-      console.log(blog_posts);
 
       return {
         props: {
