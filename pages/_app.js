@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import "../styles/main.scss";
 import 'animate.css'
 
+import OSTest from "../components/testing/OS.test";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -34,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <AppWrapper>
-        
+        <OSTest />
         <Header />
         <Component {...pageProps} />
         <Footer />
