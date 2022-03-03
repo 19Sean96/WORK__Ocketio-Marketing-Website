@@ -1,23 +1,28 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import { GTM_ID, pageview } from "../lib/gtm";
+import { GTM_ID, pageview, datalayerloaded } from "../lib/gtm";
 import { AppWrapper } from "../Context";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/main.scss";
 import 'animate.css'
-
+import TagManager from "react-gtm-module";
 import OSTest from "../components/testing/OS.test";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
+
   useEffect(() => {
-    router.events.on("routeChangeComplete", pageview);
-    return () => {
-      router.events.off("routeChangeComplete", pageview);
-    };
-  }, [router.events]);
+    TagManager.initialize({ gtmId: GTM_ID})
+  }, [])
+
+  // useEffect(() => {
+  //   router.events.on("routeChangeComplete", pageview);
+  //   return () => {
+  //     router.events.off("routeChangeComplete", pageview);
+  //   };
+  // }, [router.events]);
 
   return (
     <>
