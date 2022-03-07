@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import "../styles/main.scss";
 import 'animate.css'
 import TagManager from "react-gtm-module";
-import OSTest from "../components/testing/OS.test";
+// import OSTest from "../components/testing/OS.test";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <AppWrapper>
-        <OSTest />
+        {/* <OSTest /> */}
         <Header />
         <Component {...pageProps} />
         <Footer />
