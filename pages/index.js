@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Hero } from "../components/Heros/homepage";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import {
   FirstBanner,
@@ -12,7 +11,7 @@ import axios from "axios";
 import { useAppContext } from "../Context";
 import BlogLayout from "../components/BlogLayout";
 import { NextSeo } from "next-seo";
-
+import DownloadWidget from "../components/Body/DownloadWidget";
 export default function Home({ blog_posts }) {
   const { scrollOffset, handleMouseMove } = useAppContext();
   const { DIRECTUS_CMS_URL } = process.env;
@@ -49,6 +48,7 @@ export default function Home({ blog_posts }) {
         <WhoSection />
         <BlogLayout blogPosts={blog_posts} />
         <EmailIntakeBanner />
+        <DownloadWidget />
       </main>
     </>
   );

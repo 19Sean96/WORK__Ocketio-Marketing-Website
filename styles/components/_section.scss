@@ -319,7 +319,7 @@
               text-align: left;
               font-size: 18px;
               font-weight: 500;
-              letter-spacing: .05em;
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -335,7 +335,7 @@
             }
 
             #graphicSecure {
-              transform: translate(-14%, 9%) scale(.98);
+              transform: translate(-14%, 9%) scale(0.98);
             }
 
             #graphicStreamlined {
@@ -343,11 +343,11 @@
             }
 
             #graphicEfficient {
-              transform: translate(-14%, 5%) scale(.97);
+              transform: translate(-14%, 5%) scale(0.97);
             }
 
             #graphicCostEffective {
-              transform: translateX(15%) scale(.95);
+              transform: translateX(15%) scale(0.95);
             }
 
             @media (max-width: 960px) {
@@ -526,7 +526,6 @@
     min-width: 1400px;
   }
 
-  
   #waveBot {
     position: absolute;
     bottom: 0;
@@ -560,7 +559,6 @@
       p {
         color: #d1d1d1;
         font-size: 16px;
-
       }
     }
   }
@@ -604,7 +602,7 @@
     p {
       text-align: center;
       font-size: 14px;
-      color: #CCCCCC;
+      color: #cccccc;
     }
 
     svg {
@@ -622,7 +620,6 @@
     &__wrapper {
       gap: 4px;
       justify-content: space-between;
-
 
       .divider {
         width: 1px;
@@ -645,7 +642,6 @@
     }
   }
   @media (max-width: 960px) {
-
     .card {
       flex-direction: row;
       width: 80%;
@@ -2400,5 +2396,99 @@
         grid-column: 1/13;
       }
     }
+  }
+}
+
+#downloadWidget {
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 200px;
+  .section {
+
+    &--heading,
+    &--body {
+      grid-column: 1/6;
+      position: relative;
+    }
+    &--heading {
+      color: $white;
+      z-index: 10;
+      align-items: flex-start;
+
+      * {
+        margin-inline: 0;
+        text-align: left;
+        width: 100%;
+      }
+
+      p {
+        width: 80%;
+      }
+    }
+
+    &--body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      z-index: 100;
+      padding: 45px 0;
+      a {
+        margin-inline: 0;
+      }
+
+      .download-alt {
+        color: $primary-orange;
+        font-weight: 500;
+        margin-top: 14px;
+      }
+
+      &__see-all {
+        margin-top: 60px;
+        .btn--bordered {
+          background-color: transparent;
+          margin-top: 14px;
+        }
+        .p-large {
+          color: #d1d1d1;
+        }
+      }
+    }
+
+    &--inner {
+      z-index: 1;
+      padding: 0 2.5vw;
+      max-width: 1800px;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200vw;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+        height: 101%;
+        background-color: #25293a;
+      }
+    
+    }
+
+  }
+
+  #waveBot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 110vw;
+    transform: translateY(27.5%);
+  }
+
+  #waveTop {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
   }
 }
