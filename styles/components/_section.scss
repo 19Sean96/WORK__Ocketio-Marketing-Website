@@ -308,10 +308,6 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            .check {
-              width: 24px;
-              height: 24px;
-            }
 
             h6 {
               font-weight: 400;
@@ -408,6 +404,10 @@
       }
       @media (max-width: 960px) {
         gap: 40px;
+
+        #graphicEfficient__wrapper {
+          margin-top: 0;
+        }
 
         &--item {
           .text-block {
@@ -508,6 +508,20 @@
         }
       }
     }
+
+    &--heading {
+
+      @media (max-width: 1050px) {
+        margin-bottom: 108px;
+      }
+    }
+  }
+
+  @media (max-width: 1525px) {
+    margin-top: 200px;
+  }
+  @media (max-width: 1050px) {
+    margin-top: 175px;
   }
 }
 

@@ -252,8 +252,8 @@ function WhatSectionItem({
             >
               <BsCheckCircle
                 style={{
-                  width: "22px",
-                  height: "22px",
+                  minWidth: "22px",
+                  minHeight: "22px",
                   fill: "#1688F2",
                 }}
               />
