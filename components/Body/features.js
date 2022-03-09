@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -32,9 +32,9 @@ import {
   OktaLogo,
 } from "../SVG/ThirdPartyLogos";
 
-import Image_FineTunedControl from '../../public/images/features/body/_WW_Website_Graphic_Features-Control.svg'
+import Image_FineTunedControl from "../../public/images/features/body/_WW_Website_Graphic_Features-Control.svg";
 
-import Image_OptimizedExperience from '../../public/images/features/body/_WW_Website_Graphic_Features-Experience.svg'
+import Image_OptimizedExperience from "../../public/images/features/body/_WW_Website_Graphic_Features-Experience.svg";
 
 const animateOnce = true;
 
@@ -93,59 +93,61 @@ const ArchitectureSection = (props) => {
         >
           <FeatureDiagram />
         </ScrollAnimation>
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn="animate__fadeInUp"
-          duration={0.95}
-          className="text-block text-block-1"
-        >
-          <h5 className="h5 capitalize">industry-leading encryption</h5>
-          <p className="p-small">
-            Wirewise uses the WireGuard encryption framework, a new industry
-            standard for securing tunneled traffic. With its state of the art
-            cryptography and a code base just 1% the size of technologies
-            leveraging OpenVPN, you can rest easy that Wirewise is secure and
-            auditable against attacks. Its highly performant protocol also
-            enables roaming across networks and instant connections, minimizing
-            the need for user interaction.
-          </p>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn="animate__fadeInUp"
-          duration={0.8}
-          delay={175}
-          className="text-block text-block-2"
-        >
-          <h5 className="h5 capitalize">Efficient Network Control</h5>
-          <p className="p-small">
-            For a tunnel to be established, the network gateway and its devices
-            need to know each other’s private encryption keys. Wirewise
-            efficiently manages the distribution and updating of authorized keys
-            on gateways and end user devices so access can be revoked as quickly
-            as it is granted. Automatic controls based on defined settings and
-            conditions, such as last authenticated date, will instantly
-            quarantine inactive devices.
-          </p>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn="animate__fadeInUp"
-          duration={0.65}
-          delay={325}
-          className="text-block text-block-3"
-        >
-          <h5 className="h5 capitalize">extensible client support</h5>
-          <p className="p-small">
-            Do you have other devices besides Windows machines that need to
-            access your network? Good news, we're working diligently to provide
-            support for additional platforms. In the meantime, we’ve got you
-            covered since Wirewise allows authenticated users to generate and
-            download a config file that can be uploaded into a WireGuard client.
-            This enables you to quickly and conditionally enable or disable
-            access to your network for these clients.
-          </p>
-        </ScrollAnimation>
+        <div className="text-blocks">
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.95}
+            className="text-block text-block-1"
+          >
+            <h6 className="h6 capitalize">industry-leading encryption</h6>
+            <p className="p-small">
+              Wirewise uses the WireGuard encryption framework, a new industry
+              standard for securing tunneled traffic. With its state of the art
+              cryptography and a code base just 1% the size of technologies
+              leveraging OpenVPN, you can rest easy that Wirewise is secure and
+              auditable against attacks. Its highly performant protocol also
+              enables roaming across networks and instant connections,
+              minimizing the need for user interaction.
+            </p>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.8}
+            delay={175}
+            className="text-block text-block-2"
+          >
+            <h6 className="h6 capitalize">Efficient Network Control</h6>
+            <p className="p-small">
+              For a tunnel to be established, the network gateway and its
+              devices need to know each other’s private encryption keys.
+              Wirewise efficiently manages the distribution and updating of
+              authorized keys on gateways and end user devices so access can be
+              revoked as quickly as it is granted. Automatic controls based on
+              defined settings and conditions, such as last authenticated date,
+              will instantly quarantine inactive devices.
+            </p>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.65}
+            delay={325}
+            className="text-block text-block-3"
+          >
+            <h6 className="h6 capitalize">extensible client support</h6>
+            <p className="p-small">
+              Do you have other devices besides Windows machines that need to
+              access your network? Good news, we're working diligently to
+              provide support for additional platforms. In the meantime, we’ve
+              got you covered since Wirewise allows authenticated users to
+              generate and download a config file that can be uploaded into a
+              WireGuard client. This enables you to quickly and conditionally
+              enable or disable access to your network for these clients.
+            </p>
+          </ScrollAnimation>
+        </div>
       </section>
     </ContentWrapper>
   );
@@ -174,74 +176,77 @@ const FineTunedControlSection = (props) => {
             core configuration.
           </p>
         </ScrollAnimation>
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn="animate__fadeInUp"
-          duration={0.88}
-          className="img-block"
-        >
-          <Image
-            src={Image_FineTunedControl}
-            id="optimizeExperienceImage"
-            alt="Screenshot illustrating the optimized experience you get when using WireWise"
-          />
-        </ScrollAnimation>
-        <div className="text-blocks">
+        <div className="section--body">
           <ScrollAnimation
             animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={1.2}
-            className="text-block text-block-1"
+            animateIn="animate__fadeInUp"
+            duration={0.88}
+            className="img-block"
           >
-            <BsKey />
-            <h6 className="h6 capitalize">Multiple Authentication Options</h6>
-            <p className="p-small">
-              Use your existing auth provider to streamline access and enforce
-              access requirements
-            </p>
+            <Image
+              src={Image_FineTunedControl}
+              id="optimizeExperienceImage"
+              alt="Screenshot illustrating the optimized experience you get when using WireWise"
+              layout="responsive"
+            />
           </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={1}
-            delay={300}
-            className="text-block text-block-2"
-          >
-            <BsListUl />
-            <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
-            <p className="p-small">
-              A detailed event log ensures you can keep tabs on network activity
-              and issues
-            </p>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={0.8}
-            delay={600}
-            className="text-block text-block-3"
-          >
-            <BsPhone />
-            <h6 className="h6 capitalize">Detailed Device Info</h6>
-            <p className="p-small">
-              See all registered devices in one place and monitor connection
-              status, authentication schedules, and more
-            </p>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={0.6}
-            delay={900}
-            className="text-block text-block-4"
-          >
-            <BsGear />
-            <h6 className="h6 capitalize">configure DNS</h6>
-            <p className="p-small">
-              Manage core settings and configuration from a streamlined online
-              interface
-            </p>
-          </ScrollAnimation>
+          <div className="text-blocks">
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={1.2}
+              className="text-block text-block-1"
+            >
+              <BsKey />
+              <h6 className="h6 capitalize">Multiple Authentication Options</h6>
+              <p className="p-small">
+                Use your existing auth provider to streamline access and enforce
+                access requirements
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={1}
+              delay={300}
+              className="text-block text-block-2"
+            >
+              <BsListUl />
+              <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
+              <p className="p-small">
+                A detailed event log ensures you can keep tabs on network
+                activity and issues
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={0.8}
+              delay={600}
+              className="text-block text-block-3"
+            >
+              <BsPhone />
+              <h6 className="h6 capitalize">Detailed Device Info</h6>
+              <p className="p-small">
+                See all registered devices in one place and monitor connection
+                status, authentication schedules, and more
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={0.6}
+              delay={900}
+              className="text-block text-block-4"
+            >
+              <BsGear />
+              <h6 className="h6 capitalize">configure DNS</h6>
+              <p className="p-small">
+                Manage core settings and configuration from a streamlined online
+                interface
+              </p>
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
     </ContentWrapper>
@@ -303,36 +308,35 @@ const OptimizedExperienceSection = (props) => {
           </p>
         </ScrollAnimation>
         <div className="section--body">
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={1.2}
-            className="text-block text-block_1"
-          >
-            <BsCloud />
-            <h6 className="h6 capitalize">
-              Cloud-based admin
-              console
-            </h6>
-            <p className="p-small">
-              Manage core configuration and device permissions from a clean web
-              user interface
-            </p>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={1}
-            delay={300}
-            className="text-block text-block_2"
-          >
-            <BsHddStack />
-            <h6 className="h6 capitalize">Minimal on-prem footprint</h6>
-            <p className="p-small">
-              Skip extra hardware and third-party applications for easier
-              training and tighter compliance
-            </p>
-          </ScrollAnimation>
+          <div className="text-blocks">
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={1.2}
+              className="text-block text-block_1"
+            >
+              <BsCloud />
+              <h6 className="h6 capitalize">Cloud-based admin console</h6>
+              <p className="p-small">
+                Manage core configuration and device permissions from a clean
+                web user interface
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={1}
+              delay={300}
+              className="text-block text-block_2"
+            >
+              <BsHddStack />
+              <h6 className="h6 capitalize">Minimal on-prem footprint</h6>
+              <p className="p-small">
+                Skip extra hardware and third-party applications for easier
+                training and tighter compliance
+              </p>
+            </ScrollAnimation>
+          </div>
           <ScrollAnimation
             animateOnce={animateOnce}
             animateIn="animate__fadeInUp"
@@ -345,37 +349,36 @@ const OptimizedExperienceSection = (props) => {
               alt="Screenshot illustrating the optimized experience you get when using WireWise"
             />
           </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={0.8}
-            delay={600}
-            className="text-block text-block_3"
-          >
-            <BsWindow />
-            <h6 className="h6 capitalize">
-              Streamlined setup <br />
-              wizard
-            </h6>
-            <p className="p-small">
-              Get started in just minutes with a guided setup process that
-              ensures nothing is missed
-            </p>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateOnce={animateOnce}
-            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-            duration={0.6}
-            delay={900}
-            className="text-block text-block_4"
-          >
-            <BsClock />
-            <h6 className="h6 capitalize">Always On Connection</h6>
-            <p className="p-small">
-              An uninterrupted conntection guarantees that your team members
-              connect seamlessly every time
-            </p>
-          </ScrollAnimation>
+          <div className="text-blocks">
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={0.8}
+              delay={600}
+              className="text-block text-block_3"
+            >
+              <BsWindow />
+              <h6 className="h6 capitalize">Streamlined setup wizard</h6>
+              <p className="p-small">
+                Get started in just minutes with a guided setup process that
+                ensures nothing is missed
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+              duration={0.6}
+              delay={900}
+              className="text-block text-block_4"
+            >
+              <BsClock />
+              <h6 className="h6 capitalize">Always On Connection</h6>
+              <p className="p-small">
+                An uninterrupted conntection guarantees that your team members
+                connect seamlessly every time
+              </p>
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
     </ContentWrapper>
@@ -436,7 +439,6 @@ const SetupSection = (props) => {
       title: "Configure security settings",
       par: "Manage security settings with just a couple clicks",
     },
-
   ];
 
   const swipeHandlers = useSwipeable({
