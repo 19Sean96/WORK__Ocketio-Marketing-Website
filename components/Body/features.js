@@ -308,7 +308,7 @@ const OptimizedExperienceSection = (props) => {
           </p>
         </ScrollAnimation>
         <div className="section--body">
-          <div className="text-blocks">
+          <div className="text-blocks text-blocks_1">
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
@@ -349,7 +349,7 @@ const OptimizedExperienceSection = (props) => {
               alt="Screenshot illustrating the optimized experience you get when using WireWise"
             />
           </ScrollAnimation>
-          <div className="text-blocks">
+          <div className="text-blocks text-blocks_2">
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
