@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Link from 'next/link'
 import {
-  HomepageWaveTop as WaveTop,
+  DownloadWidgetWaveTop as WaveTop,
   DownloadWidgetWaveBot as WaveBot,
 } from "../SVG/WavyBG";
+import DownloadWidgetIllustration from "../SVG/DownloadWidgetIllustration";
+import ContentWrapper from "../ContentWrapper";
 import platform from "platform-detect";
 const DownloadWidget = (props) => {
   const [operatingSystem, setOperatingSystem] = useState();
@@ -55,6 +57,8 @@ const DownloadWidget = (props) => {
   return (
     <section className="section section__with-flex" id="downloadWidget">
       <WaveTop />
+      <div id="circleLeftTop"></div>
+      <ContentWrapper>
       <div className="section--inner main_wrapper">
         <div className="section--heading">
           <h2 className="h2">
@@ -80,7 +84,11 @@ const DownloadWidget = (props) => {
                 </Link>
             </div>
         </div>
+        <div className="img-wrapper">
+          <DownloadWidgetIllustration />
+        </div>
       </div>
+      </ContentWrapper>
       <WaveBot />
     </section>
   );
