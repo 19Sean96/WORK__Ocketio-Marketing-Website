@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 
 export default function Downloads() {
 
-    const { THIS_URL } = process.env
+    const THIS_URL = process.env.THIS_URL
 
     return (
         <>

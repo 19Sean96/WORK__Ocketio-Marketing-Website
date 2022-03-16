@@ -14,7 +14,8 @@ import { NextSeo } from "next-seo";
 import DownloadWidget from "../components/Body/DownloadWidget";
 export default function Home({ blog_posts }) {
   const { scrollOffset, handleMouseMove } = useAppContext();
-  const { DIRECTUS_CMS_URL, THIS_URL } = process.env;
+  const DIRECTUS_CMS_URL= process.env.DIRECTUS_CMS_URL;
+  const THIS_URL = process.env.THIS_URL;
 
   const router = useRouter();
   return (
@@ -55,7 +56,8 @@ export default function Home({ blog_posts }) {
 }
 
 export async function getStaticProps() {
-  const { DIRECTUS_CMS_ACCESS_KEY, DIRECTUS_CMS_URL } = process.env;
+  const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY;
+  const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL;
 
   const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts`;
   let response, error;

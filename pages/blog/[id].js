@@ -89,7 +89,9 @@ const Blog = ({ blog_posts }) => {
 export default Blog;
 
 export async function getStaticPaths() {
-  const { DIRECTUS_CMS_ACCESS_KEY, DIRECTUS_CMS_URL } = process.env;
+  const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL
+  const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY
+  const THIS_URL = process.env.THIS_URL
   const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts?access_token=${DIRECTUS_CMS_ACCESS_KEY}`;
 
   const result = await axios({
@@ -105,7 +107,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps() {
-  const { DIRECTUS_CMS_ACCESS_KEY, DIRECTUS_CMS_URL } = process.env;
+  const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY;
+  const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL
   const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts`;
 
   let response, error;

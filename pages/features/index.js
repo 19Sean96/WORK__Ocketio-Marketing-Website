@@ -17,7 +17,8 @@ export default function Features() {
     isMobile,
     handleMouseMove,
   } = useAppContext();
-  const { DIRECTUS_CMS_URL, THIS_URL } = process.env;
+  const DIRECTUS_CMS_URL= process.env.DIRECTUS_CMS_URL;
+  const THIS_URL = process.env.THIS_URL;
 
   return (
     <>
