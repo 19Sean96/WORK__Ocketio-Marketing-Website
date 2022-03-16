@@ -23,9 +23,12 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
       animateIn="animate__fadeInDown"
       className="full-width_wrapper navy-bg"
     >
-      <div className="hero_wrapper hero_wrapper-features" style={{
-        maxWidth: '1300px'
-      }}>
+      <div
+        className="hero_wrapper hero_wrapper-features"
+        style={{
+          maxWidth: "1300px",
+        }}
+      >
         <section className="section section__with-grid" id="features-hero">
           <div id="features-hero-message">
             <ScrollAnimation
@@ -65,21 +68,24 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             </ScrollAnimation>
           </div>
           <ScrollAnimation
+            className="image-group_wrapper"
             animateOnce={animateOnce}
             animateIn="animate__fadeInDown"
             duration={0.6}
             delay={450}
-            className="image-group"
           >
-            <HeroLeft
-              id="featuresHeroImageLeft"
-              className="image-group__image"
-            />
-            <HeroRight
-              id="featuresHeroImageRight"
-              className="image-group__image"
-            />
+            <div className="image-group">
+              <HeroLeft
+                id="featuresHeroImageLeft"
+                className="image-group__image"
+              />
+              <HeroRight
+                id="featuresHeroImageRight"
+                className="image-group__image"
+              />
+            </div>
           </ScrollAnimation>
+
           <article id="supportedOS" className="banner f f-justify-between">
             <h6 className="h6 banner--heading">Available for</h6>
             <ScrollAnimation
