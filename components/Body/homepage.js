@@ -21,53 +21,57 @@ const FirstBanner = (props) => {
   const { isMobile } = useAppContext();
   return (
     <ContentWrapper width="1222px">
-      <section
-        className="section section__with-grid all-columns"
-        id="firstBannerHomepage"
-      >
-        <HomepageWaveTop />
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-          duration={0.54}
-          className="banner--title"
-          offset={-100}
+      <ScrollAnimation className="all-columns" animateOnce={animateOnce} animateIn="animate__fadeInUp" duration={.95}>
+        <section
+          className="section section__with-grid all-columns"
+          id="firstBannerHomepage"
         >
-          <h5 className="h5">
-            Designed for easy, secure remote access management. <br />
-            It’s that simple.
-          </h5>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn="animate__fadeInUp"
-          duration={0.68}
-          className="banner--paragraph"
-          offset={-100}
-        >
-          <p className="p-small">
-            A couple years ago we started searching for a capable WireGuard® VPN
-            that could easily support a growing distributed team. But the
-            available solutions were too clunky, too expensive, or just didn't
-            have the right features. So now we're developing the VPN we wish
-            we'd been able to find.
-          </p>
-          <Link href="/features">
-            <a className="btn btn--filled">Explore the Features</a>
-          </Link>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateOnce={animateOnce}
-          animateIn="animate__fadeIn"
-          duration={0.6}
-          delay={350}
-          className="image_wrapper banner--image"
-          offset={-100}
-        >
-          <MapImg />
-        </ScrollAnimation>
-        <HomepageWaveBot />
-      </section>
+          <HomepageWaveTop />
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
+            duration={0.54}
+            delay={550}
+            className="banner--title"
+            offset={-100}
+          >
+            <h5 className="h5">
+              Designed for easy, secure remote access management. <br />
+              It’s that simple.
+            </h5>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeInUp"
+            duration={0.68}
+            delay={570}
+            className="banner--paragraph"
+            offset={-100}
+          >
+            <p className="p-small">
+              A couple years ago we started searching for a capable WireGuard®
+              VPN that could easily support a growing distributed team. But the
+              available solutions were too clunky, too expensive, or just didn't
+              have the right features. So now we're developing the VPN we wish
+              we'd been able to find.
+            </p>
+            <Link href="/features">
+              <a className="btn btn--filled">Explore the Features</a>
+            </Link>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce={animateOnce}
+            animateIn="animate__fadeIn"
+            duration={0.6}
+            delay={750}
+            className="image_wrapper banner--image"
+            offset={-100}
+          >
+            <MapImg />
+          </ScrollAnimation>
+          <HomepageWaveBot />
+        </section>
+      </ScrollAnimation>
     </ContentWrapper>
   );
 };
@@ -229,7 +233,10 @@ function WhatSectionItem({
   isMobile,
 }) {
   return (
-    <article className={`section--body--item${reversed ? " reversed" : ""}`} id={`${imgID}__wrapper`}>
+    <article
+      className={`section--body--item${reversed ? " reversed" : ""}`}
+      id={`${imgID}__wrapper`}
+    >
       <ScrollAnimation
         animateOnce={animateOnce}
         animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
