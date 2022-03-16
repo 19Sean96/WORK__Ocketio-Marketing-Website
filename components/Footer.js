@@ -36,19 +36,14 @@ const Footer = () => {
           </Link>
         </div>
         <nav className="footer--nav">
-          <ul className="footer--nav__left">
+          <ul className="footer--nav--list">
             <li
               className="j-text p-small _700 bold"
               style={{
                 color: router.pathname === "/pricing" ? "#fff" : "auto",
               }}
             >
-              Pages
-            </li>
-            <li className="p-small">
-              <Link href="/">
-                <a>Home</a>
-              </Link>
+              Product
             </li>
             <li className="p-small">
               <Link href="/features">
@@ -56,8 +51,33 @@ const Footer = () => {
               </Link>
             </li>
             <li className="p-small">
+              <Link href="/">
+                <a>Walkthrough</a>
+              </Link>
+            </li>
+            <li className="p-small">
+              <Link href="/downloads">
+                <a>Downloads</a>
+              </Link>
+            </li>
+            <li className="p-small">
               <Link href="/pricing">
                 <a>Pricing</a>
+              </Link>
+            </li>
+          </ul>
+          <ul className="footer--nav--list">
+            <li
+              className="j-text p-small _700 bold"
+              style={{
+                color: router.pathname === "/pricing" ? "#fff" : "auto",
+              }}
+            >
+              Company
+            </li>
+            <li className="p-small">
+              <Link href="/">
+                <a>Home</a>
               </Link>
             </li>
             <li className="p-small">
@@ -65,8 +85,18 @@ const Footer = () => {
                 <a>Contact</a>
               </Link>
             </li>
+            <li className="p-small">
+              <Link href="/">
+                <a>Newsletter</a>
+              </Link>
+            </li>
+            <li className="p-small">
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+            </li>
           </ul>
-          <ul className="footer--nav__left">
+          <ul className="footer--nav--list">
             <li
               className="j-text p-small _700 bold"
               style={{
@@ -78,6 +108,11 @@ const Footer = () => {
             <li className="p-small">
               <Link href="/privacy">
                 <a>Privacy</a>
+              </Link>
+            </li>
+            <li className="p-small">
+              <Link href="/terms">
+                <a>Terms</a>
               </Link>
             </li>
           </ul>

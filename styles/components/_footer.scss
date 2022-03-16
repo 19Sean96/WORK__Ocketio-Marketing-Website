@@ -13,6 +13,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 40px;
   }
 
   &--bot {
@@ -24,7 +27,8 @@
 
   &--nav {
     display: flex;
-    gap: 70px;
+    gap: 50px;
+    flex-wrap: wrap;
 
     li {
       list-style: none;
