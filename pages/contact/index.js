@@ -24,7 +24,7 @@ const StyledMain = styled.main`
 `;
 
 export default function Contact() {
-  const { DIRECTUS_CMS_URL } = process.env;
+  const { DIRECTUS_CMS_URL, THIS_URL } = process.env;
 
   return (
     <>
@@ -32,7 +32,7 @@ export default function Contact() {
         title="Get in Touch | Wirewise"
         description="We would love to hear from you! Contact us here with any questions or feature requests."
         openGraph={{
-          url: "https://wirewise.vercel.app/pricing",
+          url: `${THIS_URL}/pricing`,
           title: "Get in Touch | Wirewise",
           description:
             "We would love to hear from you! Contact us here with any questions or feature requests.",

@@ -14,7 +14,7 @@ import { NextSeo } from "next-seo";
 import DownloadWidget from "../components/Body/DownloadWidget";
 export default function Home({ blog_posts }) {
   const { scrollOffset, handleMouseMove } = useAppContext();
-  const { DIRECTUS_CMS_URL } = process.env;
+  const { DIRECTUS_CMS_URL, THIS_URL } = process.env;
 
   const router = useRouter();
   return (
@@ -23,7 +23,7 @@ export default function Home({ blog_posts }) {
         title="We Built The VPN We Wanted | Wirewise"
         description="Wirewise is a streamlined VPN that facilitates remote access to networks you manage. Set up across devices and add users in minutes."
         openGraph={{
-          url: 'https://wirewise.vercel.app',
+          url: THIS_URL,
           title: 'We Built The VPN We Wanted | Wirewise',
           description: 'Wirewise is a streamlined VPN that facilitates remote access to networks you manage. Set up across devices and add users in minutes.',
           images: [

@@ -17,7 +17,7 @@ export default function Features() {
     isMobile,
     handleMouseMove,
   } = useAppContext();
-  const { DIRECTUS_CMS_URL } = process.env;
+  const { DIRECTUS_CMS_URL, THIS_URL } = process.env;
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Features() {
         title="Explore The Features | Wirewise"
         description="All of the essentials, none of the complexity. Get brand new capabilities on top of the WireGuard framework that just make life easier."
         openGraph={{
-          url: "https://wirewise.vercel.app/features",
+          url: `${THIS_URL}/features`,
           title: "Explore The Features | Wirewise",
           description:
             "All of the essentials, none of the complexity. Get brand new capabilities on top of the WireGuard framework that just make life easier.",

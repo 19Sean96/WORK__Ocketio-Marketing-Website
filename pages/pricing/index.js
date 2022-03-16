@@ -30,7 +30,7 @@ const StyledMain = styled.main`
 
 const animateOnce = true;
 export default function Pricing() {
-  const { DIRECTUS_CMS_URL } = process.env;
+  const { DIRECTUS_CMS_URL, THIS_URL } = process.env;
 
   const faqs = [
     {
@@ -60,7 +60,7 @@ export default function Pricing() {
         title="Pricing Tiers | Wirewise"
         description="Download and test the Wirewise beta for free. Stay tuned for simple, cost-effective pricing options launching soon."
         openGraph={{
-          url: "https://wirewise.vercel.app/pricing",
+          url: `${THIS_URL}/pricing`,
           title: "Pricing Tiers | Wirewise",
           description:
             "Download and test the Wirewise beta for free. Stay tuned for simple, cost-effective pricing options launching soon.",
