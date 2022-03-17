@@ -6,7 +6,7 @@ import {
 import styled from "styled-components";
 import { ContactHeroBG } from "../../components/SVG/WavyBG";
 import { NextSeo } from "next-seo";
-
+import ScrollAnimation from 'react-animate-on-scroll';
 const StyledMain = styled.main`
   position: relative;
 
@@ -22,11 +22,12 @@ const StyledMain = styled.main`
     transform: translateY(-50%);
   }
 `;
+const animateOnce = true;
 
 export default function Contact() {
   const DIRECTUS_CMS_URL= process.env.DIRECTUS_CMS_URL;
   const THIS_URL = process.env.THIS_URL;
-  
+
   return (
     <>
       <NextSeo
@@ -50,12 +51,18 @@ export default function Contact() {
           cardType: "summary_large_image",
         }}
       />
+      <ScrollAnimation
+        animateOnce={animateOnce}
+        animateIn="animate__fadeInDown"
+        duration={0.66}
+      >
       <StyledMain className="main" id="main">
         <ContactHeroBG />
         <ContactPortal />
-        {/* <MoreContact /> */}
         <ContactFAQ />
       </StyledMain>
+
+      </ScrollAnimation>
     </>
   );
 }
