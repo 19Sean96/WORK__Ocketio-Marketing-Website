@@ -164,7 +164,7 @@ function Nav({ isMobile, menuOpen, toggleMenuOpen, darkMode }) {
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
-          <Link href="/">
+          <Link href="/blog">
             <a className={darkMode ? 'darkmode' : ''}>blog</a>
           </Link>
         </li>
