@@ -40,7 +40,7 @@ const Footer = () => {
             <li
               className="j-text p-small _700 bold"
               style={{
-                color: router.pathname === "/pricing" ? "#fff" : "auto",
+                color: router.pathname === "/pricing" ? "#fff" : "#5C5F6B",
               }}
             >
               Product
@@ -70,7 +70,7 @@ const Footer = () => {
             <li
               className="j-text p-small _700 bold"
               style={{
-                color: router.pathname === "/pricing" ? "#fff" : "auto",
+                color: router.pathname === "/pricing" ? "#fff" : "#5C5F6B",
               }}
             >
               Company
@@ -100,7 +100,7 @@ const Footer = () => {
             <li
               className="j-text p-small _700 bold"
               style={{
-                color: router.pathname === "/pricing" ? "#fff" : "auto",
+                color: router.pathname === "/pricing" ? "#fff" : "#5C5F6B",
               }}
             >
               Legal
@@ -122,7 +122,7 @@ const Footer = () => {
         <div
           className="j-display footer--copyright"
           style={{
-            color: router.pathname === "/pricing" ? "#fff" : "auto",
+            color: router.pathname === "/pricing" ? "#fff" : "#5C5F6B",
           }}
         >
           © {currentYear} Unwired Revolution
@@ -137,7 +137,7 @@ const Footer = () => {
               style={{
                 height: "25px",
                 width: "auto",
-                fill: router.pathname === "/pricing" ? "#fff" : "#b8bac3",
+                fill: router.pathname === "/pricing" ? "#fff" : "#5C5F6B",
 
               }}
             />
