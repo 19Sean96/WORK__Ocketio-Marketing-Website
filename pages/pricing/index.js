@@ -6,8 +6,7 @@ import FAQList from "../../components/util/FAQ";
 import EmailIntakeInput from "../../components/util/EmailIntakeInput";
 import { PricingHeroBG } from "../../components/SVG/WavyBG";
 import styled from "styled-components";
-import { NextSeo } from "next-seo";
-
+import Head from '../../components/Pages.Head/Pricing'
 const StyledMain = styled.main`
   position: relative;
   &::before {
@@ -30,8 +29,6 @@ const StyledMain = styled.main`
 
 const animateOnce = true;
 export default function Pricing() {
-  const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL;
-  const THIS_URL = process.env.THIS_URL;
 
   const faqs = [
     {
@@ -57,27 +54,7 @@ export default function Pricing() {
   ];
   return (
     <>
-      <NextSeo
-        title="Pricing Tiers | Wirewise"
-        description="Download and test the Wirewise beta for free. Stay tuned for simple, cost-effective pricing options launching soon."
-        openGraph={{
-          url: `${THIS_URL}/pricing`,
-          title: "Pricing Tiers | Wirewise",
-          description:
-            "Download and test the Wirewise beta for free. Stay tuned for simple, cost-effective pricing options launching soon.",
-          images: [
-            {
-              url: `${DIRECTUS_CMS_URL}/assets/6172e5f8-2b3e-4ed2-b21f-dde9710c0a4c.webp`,
-              width: 800,
-              height: 600,
-              alt: "Preview of the Wirewise Admin Panel - where you can manage devices and administer Tenant management",
-            },
-          ],
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-        }}
-      />
+      <Head />
       <ScrollAnimation
         animateOnce={animateOnce}
         animateIn="animate__fadeInUp"
@@ -86,7 +63,7 @@ export default function Pricing() {
         <StyledMain className="main" id="main">
           <PricingHeroBG />
           <ContentWrapper>
-            <section className="section__with-grid all-columns" id="pricing">
+            <section className="section__with-grid all-columns section__with-max-width_95vw" id="pricing">
               <ScrollAnimation
                 animateOnce={animateOnce}
                 animateIn="animate__fadeInLeft"

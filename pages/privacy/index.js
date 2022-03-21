@@ -1,6 +1,6 @@
-
 import ContentWrapper from "../../components/ContentWrapper";
-export default function Pricing() {
+import Head from "../../components/Pages.Head/Privacy";
+export default function Privacy() {
   const paragraphs = [
     {
       title: `General Privacy Policy Introduction`,
@@ -72,25 +72,30 @@ export default function Pricing() {
     },
   ];
   return (
-    <main className="main" id="main">
-      <ContentWrapper>
-        <section className="section all-columns section__with-grid" id="privacyPolicy">
-          <div className="section--heading">
-            <h2 className="h2 capitalize">Privacy Policy</h2>
-            <p className="p-small">Effective Date: January 1, 2022</p>
-
-          </div>
-          <div className="section--body">
-            <h4 className="h4 capitalize">introduction</h4>
-            {paragraphs.map((par) => (
-              <article className="section--body__item">
-                <h6 className="h6">{par.title}</h6>
-                <p className="p-small">{par.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      </ContentWrapper>
-    </main>
+    <>
+      <Head />
+      <main className="main" id="main">
+        <ContentWrapper>
+          <section
+            className="section all-columns section__with-grid"
+            id="privacyPolicy"
+          >
+            <div className="section--heading">
+              <h2 className="h2 capitalize">Privacy Policy</h2>
+              <p className="p-small">Effective Date: January 1, 2022</p>
+            </div>
+            <div className="section--body">
+              <h4 className="h4 capitalize">introduction</h4>
+              {paragraphs.map((par) => (
+                <article className="section--body__item">
+                  <h6 className="h6">{par.title}</h6>
+                  <p className="p-small">{par.body}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </ContentWrapper>
+      </main>
+    </>
   );
 }

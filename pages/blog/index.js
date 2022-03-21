@@ -1,10 +1,14 @@
 import BlogLayout from "../../components/BlogLayout";
 import axios from 'axios'
+import Head from '../../components/Pages.Head/Blog'
 export default function Blog({ blog_posts }) {
   return (
+    <>
+    <Head />
     <main className="main" id="main">
       <BlogLayout blogPosts={blog_posts} />
     </main>
+    </>
   );
 }
 

@@ -1,47 +1,24 @@
-import { useState, useEffect } from "react";
+import axios from "axios";
+import Head from '../components/Pages.Head/Homepage'
 import { Hero } from "../components/Heros/homepage";
-import { useRouter } from "next/router";
 import {
   FirstBanner,
   WhoSection,
   WhatSection,
 } from "../components/Body/homepage";
 import EmailIntakeBanner from "../components/util/EmailIntakeBanner";
-import axios from "axios";
-import { useAppContext } from "../Context";
 import BlogLayout from "../components/BlogLayout";
-import { NextSeo } from "next-seo";
 import DownloadWidget from "../components/Body/DownloadWidget";
-export default function Home({ blog_posts }) {
-  const { scrollOffset, handleMouseMove } = useAppContext();
-  const DIRECTUS_CMS_URL= process.env.DIRECTUS_CMS_URL;
-  const THIS_URL = process.env.THIS_URL;
+import { useAppContext } from "../Context";
 
-  const router = useRouter();
+export default function Home({ blog_posts }) {
+  const { scrollOffset } = useAppContext();
+
   return (
     <>
-      <NextSeo 
-        title="We Built The VPN We Wanted | Wirewise"
-        description="Wirewise is a streamlined VPN that facilitates remote access to networks you manage. Set up across devices and add users in minutes."
-        openGraph={{
-          url: THIS_URL,
-          title: 'We Built The VPN We Wanted | Wirewise',
-          description: 'Wirewise is a streamlined VPN that facilitates remote access to networks you manage. Set up across devices and add users in minutes.',
-          images: [
-            {
-              url: `${DIRECTUS_CMS_URL}/assets/6172e5f8-2b3e-4ed2-b21f-dde9710c0a4c.webp`,
-              width: 800,
-              height: 600,
-              alt: 'Preview of the Wirewise Admin Panel - where you can manage devices and administer Tenant management'
-            }            
-          ]
-        }}
-        twitter={{
-          cardType: 'summary_large_image'
-        }}
-      />
+      <Head />
  
-      <main className="main" id="main" onMouseMove={(e) => handleMouseMove(e)}>
+      <main className="main" id="main">
         <span id="vertLineCenter"></span>
         <Hero offset={scrollOffset} />
         <FirstBanner />

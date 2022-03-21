@@ -7,47 +7,19 @@ import {
   SetupSection,
 } from "../../components/Body/features";
 import { useAppContext } from "../../Context";
-import { NextSeo } from "next-seo";
+import Head from "../../components/Pages.Head/Features";
 
 export default function Features() {
-  const {
-    mouseCoord,
-    mousePositionPixels,
-    scrollOffset,
-    isMobile,
-    handleMouseMove,
-  } = useAppContext();
-  const DIRECTUS_CMS_URL= process.env.DIRECTUS_CMS_URL;
-  const THIS_URL = process.env.THIS_URL;
+  const { scrollOffset } = useAppContext();
 
   return (
     <>
-      <NextSeo
-        title="Explore The Features | Wirewise"
-        description="All of the essentials, none of the complexity. Get brand new capabilities on top of the WireGuard framework that just make life easier."
-        openGraph={{
-          url: `${THIS_URL}/features`,
-          title: "Explore The Features | Wirewise",
-          description:
-            "All of the essentials, none of the complexity. Get brand new capabilities on top of the WireGuard framework that just make life easier.",
-          images: [
-            {
-              url: `${DIRECTUS_CMS_URL}/assets/dca92e08-54bc-491d-9646-1b4a98aa5153.png`,
-              width: 800,
-              height: 600,
-              alt: "Diagram of how Wirewise functions. From enabled devices to cloud services to admin",
-            },
-          ],
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-        }}
-      />
-      <main className="main" id="main" onMouseMove={(e) => handleMouseMove(e)}>
+      <Head />
+      <main className="main" id="main">
         <span id="vertLineCenter"></span>
 
-        <Hero mouseCoord={mouseCoord} offset={scrollOffset} />
-        <ArchitectureSection mouseCoord={mouseCoord} />
+        <Hero offset={scrollOffset} />
+        <ArchitectureSection />
         <FineTunedControlSection />
         <ThirdPartyAuthentication />
         <OptimizedExperienceSection />

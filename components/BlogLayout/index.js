@@ -10,7 +10,7 @@ const BlogLayout = ({ blogPosts }) => {
   return (
     <ContentWrapper>
       <section
-        className="section section__with-grid all-columns section--blog-list"
+        className="section section__with-grid all-columns section--blog-list section__with-max-width_95vw"
         id="blogPosts"
       >
         <ScrollAnimation
