@@ -626,8 +626,10 @@
 
   @media (max-width: 580px) {
     .card {
-      width: 95%;
-
+      width: 100%;
+      min-width: 0px;
+      padding-left: 0;
+      padding-right: 0;
       &:nth-child(odd),
       &:nth-child(even) {
         flex-direction: column;
@@ -640,6 +642,10 @@
             }
           }
         }
+      }
+
+      .btn {
+        min-width: 0px;
       }
 
       h5 {
