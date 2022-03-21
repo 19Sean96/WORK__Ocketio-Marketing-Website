@@ -4,12 +4,10 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import ScrollAnimation from "react-animate-on-scroll";
-import ContentWrapper from "../ContentWrapper";
-import HoverInfoBox from "../util/HoverInfoBox";
-import FeatureDiagram from "../SVG/FeatureDiagram";
-import optimizeExperienceImage from "../../public/images/temp/features-body_optimize-experience.png";
+import ContentWrapper from "../Site.Globals/ContentWrapper";
+import FeatureDiagram from "../Site.Graphics/FeatureDiagram";
 
-import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "./../SVG/FeatureSlides";
+import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "../Site.Graphics/FeatureSlides";
 
 import { useSwipeable } from "react-swipeable";
 import {
@@ -30,7 +28,7 @@ import {
   Auth0Logo,
   GSuiteLogo,
   OktaLogo,
-} from "../SVG/ThirdPartyLogos";
+} from "../Site.Graphics/ThirdPartyLogos";
 
 import Image_FineTunedControl from "../../public/images/features/body/_WW_Website_Graphic_Features-Control.svg";
 
@@ -384,10 +382,6 @@ const OptimizedExperienceSection = (props) => {
     </ContentWrapper>
   );
 };
-
-const StyledSlideshowItem = styled(Image)`
-  opacity: ${(props) => (props.active ? "1" : "0")};
-`;
 
 const StyledTab = styled.li`
   opacity: ${(props) => (props.active ? 1 : 0.165)};

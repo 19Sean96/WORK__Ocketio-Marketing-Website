@@ -3,8 +3,8 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import { GTM_ID, pageview, datalayerloaded } from "../lib/gtm";
 import { AppWrapper } from "../Context";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/Site.Globals/Header";
+import Footer from "../components/Site.Globals/Footer";
 import "../styles/main.scss";
 import 'animate.css'
 import TagManager from "react-gtm-module";

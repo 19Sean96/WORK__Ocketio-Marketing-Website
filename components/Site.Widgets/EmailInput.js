@@ -1,7 +1,7 @@
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 
-const EmailIntakeInput = (props) => {
+const EmailIntakeInput = () => {
   const {
     register,
     handleSubmit,

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import readingTime from "reading-time";
 import ReactHtmlParser from "react-html-parser";
-import ContentWrapper from "../../components/ContentWrapper";
+import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const animateOnce = true;

@@ -4,9 +4,9 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
 import { useAppContext } from "../../Context";
-import { FeatureHeroBG } from "../SVG/WavyBG";
+import Background from "../Site.Graphics/Waves/FeaturesHero";
 
-import { HeroLeft, HeroRight } from "../SVG/FeatureHeroImages";
+import { HeroLeft, HeroRight } from "../Site.Graphics/FeatureHeroImages";
 
 const animateOnce = true;
 
@@ -156,7 +156,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
         </section>
       </div>
       <div id="featuresHeroBG">
-        <FeatureHeroBG />
+        <Background />
       </div>
     </ScrollAnimation>
   );

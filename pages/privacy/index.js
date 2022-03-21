@@ -1,4 +1,4 @@
-import ContentWrapper from "../../components/ContentWrapper";
+import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
 import Head from "../../components/Pages.Head/Privacy";
 export default function Privacy() {
   const paragraphs = [

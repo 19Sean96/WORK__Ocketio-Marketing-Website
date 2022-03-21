@@ -5,10 +5,10 @@ import {
   FirstBanner,
   WhoSection,
   WhatSection,
-} from "../components/Body/homepage";
-import EmailIntakeBanner from "../components/util/EmailIntakeBanner";
+} from "../components/Pages.Body/Homepage";
+import EmailIntake from "../components/Site.Widgets/EmailIntake";
 import BlogLayout from "../components/BlogLayout";
-import DownloadWidget from "../components/Body/DownloadWidget";
+import DownloadWidget from "../components/Site.Widgets/DownloadClient";
 import { useAppContext } from "../Context";
 
 export default function Home({ blog_posts }) {
@@ -25,7 +25,7 @@ export default function Home({ blog_posts }) {
         <WhatSection />
         <WhoSection />
         <BlogLayout blogPosts={blog_posts} />
-        <EmailIntakeBanner />
+        <EmailIntake />
         <DownloadWidget />
       </main>
     </>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Logo from "./SVG/logo";
+import Logo from './Logo'
 import styled from "styled-components";
 import { BsLinkedin } from "react-icons/bs";
 

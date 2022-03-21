@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ScrollAnimation from "react-animate-on-scroll";
-import ContentWrapper from "../ContentWrapper";
+import ContentWrapper from "../Site.Globals/ContentWrapper";
 
-import MapImg from "../SVG/MapImg";
+import MapImg from "../Site.Graphics/HomepageMap";
 
 import SecureSVG from "../../public/images/homepage/body/Secure.svg";
 import StreamlinedSVG from "../../public/images/homepage/body/Streamlined.svg";
@@ -13,7 +13,7 @@ import CostEffectiveSVG from "../../public/images/homepage/body/Cost-Effective.s
 
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
-import { HomepageWaveTop, HomepageWaveBot } from "../SVG/WavyBG";
+import { WaveTop, WaveBot } from "../Site.Graphics/Waves/HomepageHero";
 
 const animateOnce = true;
 
@@ -21,12 +21,17 @@ const FirstBanner = (props) => {
   const { isMobile } = useAppContext();
   return (
     <ContentWrapper width="1222px">
-      <ScrollAnimation className="all-columns" animateOnce={animateOnce} animateIn="animate__fadeInUp" duration={.95}>
+      <ScrollAnimation
+        className="all-columns"
+        animateOnce={animateOnce}
+        animateIn="animate__fadeInUp"
+        duration={0.95}
+      >
         <section
           className="section section__with-grid all-columns"
           id="firstBannerHomepage"
         >
-          <HomepageWaveTop />
+          <WaveTop />
           <ScrollAnimation
             animateOnce={animateOnce}
             animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
@@ -69,7 +74,7 @@ const FirstBanner = (props) => {
           >
             <MapImg />
           </ScrollAnimation>
-          <HomepageWaveBot />
+          <WaveBot />
         </section>
       </ScrollAnimation>
     </ContentWrapper>
@@ -298,7 +303,7 @@ const WhoSection = (props) => {
         className="section section__with-grid all-columns"
         id="sectionWhoHomepage"
       >
-        <HomepageWaveTop />
+        <WaveTop />
 
         <ScrollAnimation
           animateOnce={animateOnce}
@@ -399,7 +404,7 @@ const WhoSection = (props) => {
           </ScrollAnimation>
         </article>
 
-        <HomepageWaveBot />
+        <WaveBot />
       </section>
     </ContentWrapper>
   );

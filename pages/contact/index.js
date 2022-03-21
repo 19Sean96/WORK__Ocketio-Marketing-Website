@@ -2,9 +2,9 @@ import {
   ContactPortal,
   MoreContact,
   ContactFAQ,
-} from "../../components/Body/contact";
+} from "../../components/Pages.Body/Contact";
 import styled from "styled-components";
-import { ContactHeroBG } from "../../components/SVG/WavyBG";
+import Background from "../../components/Site.Graphics/Waves/ContactHero";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Head from '../../components/Pages.Head/Contact'
 const StyledMain = styled.main`
@@ -35,7 +35,7 @@ export default function Contact() {
         duration={0.66}
       >
       <StyledMain className="main" id="main">
-        <ContactHeroBG />
+        <Background />
         <ContactPortal />
         <ContactFAQ />
       </StyledMain>

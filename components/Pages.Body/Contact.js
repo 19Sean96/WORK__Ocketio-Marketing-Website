@@ -1,7 +1,7 @@
 import { useForm, Controller } from "react-hook-form";
 import NumberFormat from "react-number-format";
-import ContentWrapper from "../ContentWrapper";
-import FAQList from "../util/FAQ";
+import ContentWrapper from "../Site.Globals/ContentWrapper";
+import FAQList from "../Site.Widgets/FAQList";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import {

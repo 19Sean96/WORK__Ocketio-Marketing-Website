@@ -1,4 +1,4 @@
-import ContentWrapper from "../ContentWrapper";
+import ContentWrapper from "../Site.Globals/ContentWrapper";
 import BlogItem from "./Item";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "../../Context";

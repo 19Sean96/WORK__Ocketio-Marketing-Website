@@ -23,7 +23,6 @@ const FAQListItem = ({ question, answer, index }) => {
   const [isOpen, toggleOpen] = useState(false);
 
   const ref = useRef();
-  //   console.log(ref.current.clientHeight);
   return (
     <div
       className="faq--list--item"

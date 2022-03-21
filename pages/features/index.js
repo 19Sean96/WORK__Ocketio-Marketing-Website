@@ -5,7 +5,7 @@ import {
   ThirdPartyAuthentication,
   OptimizedExperienceSection,
   SetupSection,
-} from "../../components/Body/features";
+} from "../../components/Pages.Body/Features";
 import { useAppContext } from "../../Context";
 import Head from "../../components/Pages.Head/Features";
 

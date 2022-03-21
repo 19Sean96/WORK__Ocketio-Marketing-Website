@@ -1,10 +1,9 @@
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
-
-import ContentWrapper from "../../components/ContentWrapper";
-import FAQList from "../../components/util/FAQ";
-import EmailIntakeInput from "../../components/util/EmailIntakeInput";
-import { PricingHeroBG } from "../../components/SVG/WavyBG";
+import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
+import FAQList from "../../components/Site.Widgets/FAQList";
+import EmailIntakeInput from "../../components/Site.Widgets/EmailInput";
+import Background from "../../components/Site.Graphics/Waves/PricingHero";
 import styled from "styled-components";
 import Head from '../../components/Pages.Head/Pricing'
 const StyledMain = styled.main`
@@ -61,7 +60,7 @@ export default function Pricing() {
         duration={0.66}
       >
         <StyledMain className="main" id="main">
-          <PricingHeroBG />
+          <Background />
           <ContentWrapper>
             <section className="section__with-grid all-columns section__with-max-width_95vw" id="pricing">
               <ScrollAnimation

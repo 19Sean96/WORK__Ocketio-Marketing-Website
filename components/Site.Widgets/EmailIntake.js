@@ -1,10 +1,9 @@
-import { useEffect } from "react";
-import { useForm, Controller } from "react-hook-form";
-import ContentWrapper from "../ContentWrapper";
+import { useForm } from "react-hook-form";
+import ContentWrapper from "../Site.Globals/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import EmailIntakeInput from "./EmailIntakeInput";
-const EmailIntakeBanner = (props) => {
+import EmailInput from "./EmailInput";
+const EmailIntake = () => {
   const {
     register,
     handleSubmit,
@@ -61,7 +60,7 @@ const EmailIntakeBanner = (props) => {
             delay={488}
             className="section--form__wrapper"
           >
-            <EmailIntakeInput />
+            <EmailInput />
           </ScrollAnimation>
         </section>
       </ScrollAnimation>
@@ -69,4 +68,4 @@ const EmailIntakeBanner = (props) => {
   );
 };
 
-export default EmailIntakeBanner;
+export default EmailIntake;
