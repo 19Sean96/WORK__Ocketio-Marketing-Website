@@ -1,0 +1,82 @@
+
+
+#allDownloads {
+    .section {
+        &--body {
+            grid-row: 2/3;
+            grid-column: 2/12;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    .group {
+        &--heading {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            h4 {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            p {
+                text-align: right;
+                margin-right: 0;
+                color: $off-black;
+                font-weight: 600;
+            }
+        }
+        &--body {
+            background-color: #E7EAEE;
+            padding: 62px 84px 66px;
+            table {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(min-content, 1fr)) minmax(min-content, .5fr);
+                grid-template-rows: auto;
+                align-items: flex-end;
+                row-gap: 38px;
+                column-gap: 12px;
+                tr {
+                    display: contents;
+                }
+
+                .heading {
+                    td {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                }
+
+                .body {
+                    .btn {
+                        padding: 6px 30px;
+                        margin-bottom: -5px;
+                    }
+
+                    td {
+                        margin-bottom: 5px;
+                    }
+                    .guide-link {
+                        color: $off-black;
+                        text-decoration: none;
+                        position: relative;
+                        display: inline-block;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -0;
+                            transform: translateY(3px);
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $off-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
