@@ -1,12 +1,12 @@
 import ContentWrapper from "../Site.Globals/ContentWrapper";
 import Link from "next/link";
+import { clientDownloadLinks } from "../../lib/downloadLinks";
 const AllDownloads = (props) => {
   const downloadOptions = {
     managedDevices: [
       {
         OS: "Windows",
         versions: "7,10,11",
-        downloadLink: "#",
         setupGuide: "#",
       },
     ],
@@ -14,25 +14,21 @@ const AllDownloads = (props) => {
       {
         OS: "MacOS",
         versions: "7,10,11",
-        downloadLink: "#",
         setupGuide: "#",
       },
       {
         OS: "iOS",
         versions: "7,10,11",
-        downloadLink: "#",
         setupGuide: "#",
       },
       {
         OS: "Android",
         versions: "7,10,11",
-        downloadLink: "#",
         setupGuide: "#",
       },
       {
         OS: "Linux",
         versions: "7,10,11",
-        downloadLink: "#",
         setupGuide: "#",
       },
     ],
@@ -69,7 +65,7 @@ const AllDownloads = (props) => {
                     <td className="j-text">{opt.OS}</td>
                     <td className="j-text">{opt.versions}</td>
                     <td className="j-text">
-                      <a href={opt.downloadLink} className="btn btn--filled">
+                      <a target="_blank" href={clientDownloadLinks[opt.OS.toLowerCase()]} className="btn btn--filled">
                         Download
                       </a>
                     </td>
@@ -101,7 +97,7 @@ const AllDownloads = (props) => {
                     <td className="j-text">{opt.OS}</td>
                     <td className="j-text">{opt.versions}</td>
                     <td className="j-text">
-                      <a href={opt.downloadLink} className="btn btn--filled">
+                      <a target="_blank" href={clientDownloadLinks[opt.OS.toLowerCase()]} className="btn btn--filled">
                         Download
                       </a>
                     </td>
