@@ -20,7 +20,6 @@ export function AppWrapper({ children }) {
 
   useEffect(() => {
     handleResize();
-
     function handleScroll() {
       setScrollOffset(window.pageYOffset);
     }
