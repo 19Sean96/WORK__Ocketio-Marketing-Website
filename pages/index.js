@@ -8,7 +8,6 @@ import {
 } from "../components/Pages.Body/Homepage";
 import EmailIntake from "../components/Site.Widgets/EmailIntake";
 import BlogLayout from "../components/BlogLayout";
-import DownloadWidget from "../components/Site.Widgets/DownloadClient";
 import { useAppContext } from "../Context";
 
 export default function Home({ blog_posts }) {
@@ -26,7 +25,6 @@ export default function Home({ blog_posts }) {
         <WhoSection />
         <BlogLayout blogPosts={blog_posts} />
         <EmailIntake />
-        <DownloadWidget />
       </main>
     </>
   );
