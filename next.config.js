@@ -1,7 +1,7 @@
 const securityHeaders = [
     {
         key: 'Content-Security-Policy',
-        value: "default-src 'self' 'unsafe-eval' 'unsafe-inline' wirewise.io *.wirewise.io https://cms.wirewise-dev.com cms.wirewise-dev.com; img-src data: 'self' *; style-src 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' https://*.googletagmanager.com"
+        value: "default-src 'self' 'unsafe-eval' 'unsafe-inline' wirewise.io *.wirewise-dev.com *.wirewise.io https://cms.wirewise-dev.com cms.wirewise-dev.com; img-src data: 'self' *; style-src 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' https://*.googletagmanager.com"
     }
 ]
 
@@ -17,4 +17,7 @@ module.exports = {
     images: {
         domains: ['cms.wirewise-dev.com']
     },
+    env: {
+        MANAGED_DEVICE_DOWNLOAD_URL: process.env.MANAGED_DEVICE_DOWNLOAD_URL
+    }
 }
