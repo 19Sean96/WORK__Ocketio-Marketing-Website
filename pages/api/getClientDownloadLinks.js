@@ -8,6 +8,7 @@ async function getManagedDeviceDownloadLinks() {
 
 async function assembleLinks(osList, supervisedLinks) {
   const managedDevices = await getManagedDeviceDownloadLinks();
+  console.log(managedDevices.windows.x64)
   let arr = []
   osList.map((os) => {
     if (managedDevices[os]) {
@@ -17,9 +18,11 @@ async function assembleLinks(osList, supervisedLinks) {
           Object.keys(managedDevices[os])[0]
         }/${managedDevices[os].x64.latest.name}`,
         type: "managed",
+        version: managedDevices[os].x64.latest.version,
+        size: managedDevices[os].x64.latest.size
       });
     } else {
-      arr.push({
+      arr.push({ 
         os,
         link: supervisedLinks[os],
         type: "supervised",

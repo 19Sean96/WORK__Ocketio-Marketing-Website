@@ -1,7 +1,12 @@
-import ContentWrapper from "../Site.Globals/ContentWrapper";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { clientDownloadLinks } from "../../lib/downloadLinks";
+
+import ContentWrapper from "../Site.Globals/ContentWrapper";
+import { humanFileSize, getObjInArrayByProperty } from "../../lib/functions";
+
 const AllDownloads = (props) => {
+  const [allDownloadLinks, setAllDownloadLinks] = useState(null);
+
   const downloadOptions = {
     managedDevices: [
       {
@@ -34,6 +39,14 @@ const AllDownloads = (props) => {
     ],
   };
 
+  useEffect(async () => {
+    const downloadLinks = await (
+      await fetch("/api/getClientDownloadLinks")
+    ).json();
+
+    setAllDownloadLinks(downloadLinks);
+  }, []);
+
   return (
     <ContentWrapper>
       <section className="section__with-grid all-columns" id="allDownloads">
@@ -60,22 +73,32 @@ const AllDownloads = (props) => {
                   <td className="j-text">Download Link</td>
                   <td className="j-text">Set up Guide</td>
                 </tr>
-                {downloadOptions.managedDevices.map((opt) => (
-                  <tr className="body">
-                    <td className="j-text">{opt.OS}</td>
-                    <td className="j-text">{opt.versions}</td>
-                    <td className="j-text">
-                      <a target="_blank" href={clientDownloadLinks[opt.OS.toLowerCase()]} className="btn btn--filled">
-                        Download
-                      </a>
-                    </td>
-                    <td className="j-text">
-                      <Link href={opt.setupGuide}>
-                        <a className="guide-link">See Guide</a>
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
+                  {allDownloadLinks && downloadOptions.managedDevices.map((opt) => (
+                    <tr className="body">
+                      <td className="j-text">{opt.OS}</td>
+                      <td className="j-text">{opt.versions}</td>
+                      <td className="j-text">
+                        <a
+                          target="_blank"
+                          href={
+                            getObjInArrayByProperty(
+                              allDownloadLinks,
+                              opt.OS.toLowerCase(),
+                              "os"
+                            ).link
+                          }
+                          className="btn btn--filled"
+                        >
+                          Download
+                        </a>
+                      </td>
+                      <td className="j-text">
+                        <Link href={opt.setupGuide}>
+                          <a className="guide-link">See Guide</a>
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
               </table>
             </div>
           </article>
@@ -91,23 +114,33 @@ const AllDownloads = (props) => {
                   <td className="j-text">Supported Versions</td>
                   <td className="j-text">Download Link</td>
                   <td className="j-text">Set up Guide</td>
-                </tr>
-                {downloadOptions.supervisedDevices.map((opt) => (
-                  <tr className="body">
-                    <td className="j-text">{opt.OS}</td>
-                    <td className="j-text">{opt.versions}</td>
-                    <td className="j-text">
-                      <a target="_blank" href={clientDownloadLinks[opt.OS.toLowerCase()]} className="btn btn--filled">
-                        Download
-                      </a>
-                    </td>
-                    <td className="j-text">
-                      <Link href={opt.setupGuide}>
-                        <a className="guide-link">See Guide</a>
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
+                </tr>{" "}
+                  {allDownloadLinks && downloadOptions.supervisedDevices.map((opt) => (
+                    <tr className="body">
+                      <td className="j-text">{opt.OS}</td>
+                      <td className="j-text">{opt.versions}</td>
+                      <td className="j-text">
+                        <a
+                          target="_blank"
+                          href={
+                            getObjInArrayByProperty(
+                              allDownloadLinks,
+                              opt.OS.toLowerCase(),
+                              "os"
+                            ).link
+                          }
+                          className="btn btn--filled"
+                        >
+                          Download
+                        </a>
+                      </td>
+                      <td className="j-text">
+                        <Link href={opt.setupGuide}>
+                          <a className="guide-link">See Guide</a>
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
               </table>
             </div>
           </article>

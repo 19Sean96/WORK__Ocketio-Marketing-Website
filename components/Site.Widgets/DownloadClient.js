@@ -4,11 +4,13 @@ import platform from "platform-detect";
 import { WaveTop, WaveBot } from "../Site.Graphics/Waves/DownloadWidget";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
 import DownloadWidgetIllustration from "../Site.Graphics/DownloadWidgetIllustration";
-import { clientDownloadLinks } from "../../lib/downloadLinks";
+
+import { humanFileSize, getObjInArrayByProperty } from "../../lib/functions";
 const DownloadClient = (props) => {
   const [operatingSystem, setOperatingSystem] = useState();
   const [primaryInput, setPrimaryInput] = useState(null);
   const [mainDownloadLink, setMainDownloadLink] = useState("#");
+  const [allDownloadLinks, setAllDownloadLinks] = useState([])
   const {
     android,
     linux,
@@ -46,17 +48,20 @@ const DownloadClient = (props) => {
   }, []);
 
   useEffect(async () => {
-    const downloadLinks = await (
-      await fetch("/api/getClientDownloadLinks")
-    ).json();
+    if (operatingSystem) {
+      const downloadLinks = await (
+        await fetch("/api/getClientDownloadLinks")
+      ).json();
 
-    setMainDownloadLink(
-      downloadLinks[
-        downloadLinks
-          .map((obj) => obj.os)
-          .indexOf(operatingSystem.toLowerCase())
-      ].link
-    );
+      const currentOS = getObjInArrayByProperty(
+        downloadLinks,
+        operatingSystem.toLowerCase(),
+        'os'
+      )
+      setMainDownloadLink(currentOS);
+
+      setAllDownloadLinks(downloadLinks)
+    }
   }, [operatingSystem]);
 
   return (
@@ -79,27 +84,23 @@ const DownloadClient = (props) => {
           <div className="section--body">
             <a
               target="_blank"
-              href={mainDownloadLink}
+              href={mainDownloadLink.link}
               className="btn btn--filled"
             >
-              Download - {operatingSystem}
+              Download - {operatingSystem} ({humanFileSize(mainDownloadLink.size)})
             </a>
             {operatingSystem === "Android" ? (
               ""
-            ) : operatingSystem === "Linux" ? (
-              <a href={"#"} className="download-alt p-small">
-                Prefer terminal? Click Here
-              </a>
             ) : operatingSystem === "iOS" ? (
               <a
-                href={clientDownloadLinks["macos"]}
+                href={getObjInArrayByProperty(allDownloadLinks, 'macos', 'os')}
                 className="download-alt p-small"
               >
                 Tap here for macOS
               </a>
             ) : operatingSystem === "macOS" ? (
               <a
-                href={clientDownloadLinks["ios"]}
+                href={getObjInArrayByProperty(allDownloadLinks, 'ios', 'os')}
                 className="download-alt p-small"
               >
                 Click here for iOS
@@ -113,7 +114,7 @@ const DownloadClient = (props) => {
             )}
             <div className="section--body__see-all">
               <p className="p-large">
-                Need Wirewise Client on a different OS?{" "}
+                Need Wirewise Client on a different OS?
               </p>
               <Link href="/downloads#allDownloads">
                 <a className="btn btn--bordered">See All Download Options</a>
