@@ -1,9 +1,9 @@
 import axios from "axios";
-import BlogLayout from "../../components/BlogLayout";
+import BlogLayout from '../../../components/BlogLayout'
 export default function Walkthrough({ posts = null, error = false }) {
   return (
     <main className="main" id="main">
-      <BlogLayout blogPosts={posts} />
+      <BlogLayout blogPosts={posts} categorySlug={'/walkthrough'}/>
     </main>
   );
 }
