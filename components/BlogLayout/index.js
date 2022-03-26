@@ -4,7 +4,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "../../Context";
 
 const animateOnce = true
-const BlogLayout = ({ blogPosts }) => {
+const BlogLayout = ({ blogPosts, categorySlug }) => {
   const { isMobile } = useAppContext()
 
   return (
@@ -15,7 +15,6 @@ const BlogLayout = ({ blogPosts }) => {
       >
         <ScrollAnimation
           animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-          duration={0.625}
           duration={0.44}
           offset={-186}
           className="section--heading"
@@ -40,6 +39,7 @@ const BlogLayout = ({ blogPosts }) => {
                 imgId={blog.post_img}
                 index={i}
                 isMobile={isMobile}
+                categorySlug={categorySlug}
               />
             ))}
           </div>

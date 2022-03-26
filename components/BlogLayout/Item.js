@@ -17,6 +17,7 @@ const BlogItem = ({
   imgId,
   index,
   isMobile,
+  categorySlug
 }) => {
   const readStats = readingTime(body);
   const formatDate = (date) =>
@@ -32,7 +33,7 @@ const BlogItem = ({
   return (
     <Link
       href={{
-        pathname: "/blog/[id]",
+        pathname: `/blog${categorySlug ? categorySlug : ''}/[id]`,
         query: {
           id,
         },
