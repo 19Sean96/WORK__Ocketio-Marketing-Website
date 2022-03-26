@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="p-small">
-              <Link href="/">
+              <Link href="/blog/walkthrough">
                 <a>Walkthrough</a>
               </Link>
             </li>
