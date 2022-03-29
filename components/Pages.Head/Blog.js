@@ -6,7 +6,7 @@ const Head = () => {
 
   return (
     <NextSeo
-    title="GBlog | Wirewise"
+    title="Blog | Wirewise"
     description="Be sure to check in for version updates, product walkthroughs and more."
     openGraph={{
       url: `${THIS_URL}/pricing`,

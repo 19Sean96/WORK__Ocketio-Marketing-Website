@@ -16,7 +16,7 @@ export async function getStaticProps() {
   const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY;
   const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL;
 
-  const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts`;
+  const blogURI = `${DIRECTUS_CMS_URL}/items/all_posts`;
   let response, error;
   try {
     response = await axios({
@@ -27,6 +27,7 @@ export async function getStaticProps() {
       json: true,
     });
 
+    console.log(response.data)
     response.status && console.log("STATUS CODE: ", response.status);
   } catch (err) {
     console.log(
