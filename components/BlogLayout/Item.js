@@ -17,7 +17,8 @@ const BlogItem = ({
   imgId,
   index,
   isMobile,
-  categorySlug
+  category,
+  slug
 }) => {
   const readStats = readingTime(body);
   const formatDate = (date) =>
@@ -32,12 +33,8 @@ const BlogItem = ({
     );
   return (
     <Link
-      href={{
-        pathname: `/blog${categorySlug ? categorySlug : ''}/[id]`,
-        query: {
-          id,
-        },
-      }}
+      href='/blog/[...slug]'
+      as={`/blog/${category}/${slug}`}
     >
       <article className="blog">
         <ScrollAnimation

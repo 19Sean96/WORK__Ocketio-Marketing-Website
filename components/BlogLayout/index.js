@@ -13,15 +13,6 @@ const BlogLayout = ({ blogPosts, categorySlug }) => {
         className="section section__with-grid all-columns section--blog-list section__with-max-width_95vw"
         id="blogPosts"
       >
-        <ScrollAnimation
-          animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-          duration={0.44}
-          offset={-186}
-          className="section--heading"
-          animateOnce={animateOnce}
-        >
-          <h2 className="h2">News & Updates</h2>
-        </ScrollAnimation>
         <div className="section--body">
           <div className="blogs">
             {blogPosts.map((blog, i) => (
@@ -39,7 +30,8 @@ const BlogLayout = ({ blogPosts, categorySlug }) => {
                 imgId={blog.post_img}
                 index={i}
                 isMobile={isMobile}
-                categorySlug={categorySlug}
+                category={blog.main_category}
+                slug={blog.url_slug}
               />
             ))}
           </div>
