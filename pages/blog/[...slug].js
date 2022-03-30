@@ -5,13 +5,14 @@ import readingTime from "reading-time";
 import ReactHtmlParser from "react-html-parser";
 import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
-
+import Compass from "../../components/Site.Blog/Compass";
 const animateOnce = true;
 
 const Blog = ({ blog_posts }) => {
   const router = useRouter();
-  const id = parseInt(router.query.id);
-  const blog = blog_posts[blog_posts.findIndex((n) => n.id == id)];
+  console.log(router.query.slug)
+  const blog = blog_posts[blog_posts.findIndex((n) => n.url_slug == router.query.slug[1])];
+  console.log(blog);
   const formatDate = (date) =>
     new Date(date).toLocaleDateString(
       {},
@@ -28,6 +29,7 @@ const Blog = ({ blog_posts }) => {
     <>
       <ContentWrapper>
         <section className="section all-columns" id="blogPage">
+          <Compass pageName={blog.post_title}/>
           <ScrollAnimation
             animateOnce={animateOnce}
             duration={0.6}
@@ -92,15 +94,20 @@ export async function getStaticPaths() {
   const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL
   const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY
   const THIS_URL = process.env.THIS_URL
-  const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts?access_token=${DIRECTUS_CMS_ACCESS_KEY}`;
+  const blogURI = `${DIRECTUS_CMS_URL}/items/all_posts?access_token=${DIRECTUS_CMS_ACCESS_KEY}`;
 
   const result = await axios({
     url: blogURI,
     json: true,
   });
-
+  result.data.data.map(i => {
+    i.post_body = ''
+    console.log(i.id)
+    console.log(i.url_slug)
+    console.log(i.main_category)
+  })
   const paths = result.data.data.map((post) => ({
-    params: { id: `${post.id}` },
+    params: {slug: [ post.main_category, post.url_slug ]},
   }));
 
   return { paths, fallback: false };
@@ -109,7 +116,7 @@ export async function getStaticPaths() {
 export async function getStaticProps() {
   const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY;
   const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL
-  const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts`;
+  const blogURI = `${DIRECTUS_CMS_URL}/items/all_posts`;
 
   let response, error;
   try {
