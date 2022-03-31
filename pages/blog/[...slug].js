@@ -100,12 +100,7 @@ export async function getStaticPaths() {
     url: blogURI,
     json: true,
   });
-  result.data.data.map(i => {
-    i.post_body = ''
-    console.log(i.id)
-    console.log(i.url_slug)
-    console.log(i.main_category)
-  })
+
   const paths = result.data.data.map((post) => ({
     params: {slug: [ post.main_category, post.url_slug ]},
   }));
