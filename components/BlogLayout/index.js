@@ -1,10 +1,9 @@
 import ContentWrapper from "../Site.Globals/ContentWrapper";
 import BlogItem from "./Item";
-import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "../../Context";
-
 const animateOnce = true
-const BlogLayout = ({ blogPosts, categorySlug }) => {
+
+const BlogLayout = ({ blogPosts }) => {
   const { isMobile } = useAppContext()
 
   return (
@@ -32,6 +31,7 @@ const BlogLayout = ({ blogPosts, categorySlug }) => {
                 isMobile={isMobile}
                 category={blog.main_category}
                 slug={blog.url_slug}
+
               />
             ))}
           </div>
