@@ -7,11 +7,37 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "../../Context";
 import Compass from "../../components/Site.Blog/Compass";
 import { useRouter } from "next/router";
+import Filter from "../../components/Site.Blog/Filter";
+import { useState, useEffect } from 'react'
+
 const animateOnce = true;
 export default function Blog({ blog_posts }) {
+  const [ filteredBlogList, setFilteredBlogList ] = useState([...blog_posts])
+  const [ activeCategory, setActiveCategory ] = useState('all')
   const { isMobile } = useAppContext();
   const router = useRouter();
-  console.log(router);
+
+  console.log(filteredBlogList)
+  useEffect(() => {
+    const blogs = [...blog_posts]
+
+    if (activeCategory === 'all') { setFilteredBlogList(blogs) }
+    else if (activeCategory === 'tutorials') { setFilteredBlogList(blogs.filter(blog => blog.all_categories.includes('tutorial')))}
+    else if (activeCategory === 'latest') { setFilteredBlogList(blogs.filter(blog => {
+      const now = new Date()
+      const blogDate = new Date(blog?.date_updated ? blog.date_updated : blog.date_created)
+      console.log('NOW: ', now);
+      console.log('BLOG DATE: ', blogDate, 'OLD: ', blog.date_updated)
+
+      const diff = ( ( ( now.getTime() - blogDate.getTime() ) / 1000 ) / 60 ) / 60
+      console.log(diff)
+      return diff < 6
+    }))}
+    else if (activeCategory === 'news') { setFilteredBlogList(blogs.filter(blog => blog.all_categories.includes('news')))}
+    else if (activeCategory === 'product-updates') {{ setFilteredBlogList(blogs.filter(blog => blog.all_categories.includes('product')))}}
+
+  }, [activeCategory])
+
   return (
     <>
       <Head />
@@ -44,20 +70,13 @@ export default function Blog({ blog_posts }) {
             id="blogRootContent"
             className="section section__with-grid all-columns section__with-max-width_95vw"
           >
-            <div className="filter-row">
-              <ul className="nav-filter">
-                <li className="nav-filter__item">Tutorials</li>
-                <li className="nav-filter__item">Latest</li>
-                <li className="nav-filter__item">News</li>
-                <li className="nav-filter__item">Product Updates</li>
-              </ul>
-              <aside className="search-filter">
-                <p>live search box goes here</p>
-              </aside>
-            </div>
+            <Filter 
+              activeCategory={activeCategory}
+              setActiveCategory={setActiveCategory}
+            />
           </section>
         </ContentWrapper>
-        <BlogLayout blogPosts={blog_posts} />
+        <BlogLayout blogPosts={filteredBlogList} />
       </main>
     </>
   );
