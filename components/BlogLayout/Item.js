@@ -3,9 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsArrowRightCircle } from "react-icons/bs";
 import readingTime from "reading-time";
-import ScrollAnimation from "react-animate-on-scroll";
-
-const animateOnce = true;
+import { useState, useEffect } from 'react'
 
 const BlogItem = ({
   author,
@@ -18,8 +16,12 @@ const BlogItem = ({
   index,
   isMobile,
   category,
-  slug
+  slug,
+
 }) => {
+   
+
+
   const readStats = readingTime(body);
   const formatDate = (date) =>
     new Date(date).toLocaleDateString(
@@ -31,16 +33,16 @@ const BlogItem = ({
         year: "numeric",
       }
     );
+
   return (
     <Link
       href='/blog/[...slug]'
       as={`/blog/${category}/${slug}`}
     >
-      <article className="blog">
-        <ScrollAnimation
-          animateIn="animate__fadeInUp"
-          duration={0.6}
-          animateOnce={animateOnce}
+      <article 
+        className="blog"
+      >
+        <div
           className="blog__inner"
         >
           <div className="blog__top">
@@ -64,11 +66,10 @@ const BlogItem = ({
                 layout="fill"
                 className="blog--img"
                 objectFit="cover"
-                // placeholder="blur"
               />
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
       </article>
     </Link>
   );
