@@ -31,6 +31,7 @@ const BlogLayout = ({ blogPosts }) => {
                 isMobile={isMobile}
                 category={blog.main_category}
                 slug={blog.url_slug}
+                tileWidth={blog.force_tile_width}
 
               />
             ))}

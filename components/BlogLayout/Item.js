@@ -17,6 +17,7 @@ const BlogItem = ({
   isMobile,
   category,
   slug,
+  tileWidth
 
 }) => {
    
@@ -40,7 +41,7 @@ const BlogItem = ({
       as={`/blog/${category}/${slug}`}
     >
       <article 
-        className="blog"
+        className={`blog blog_w-${tileWidth}`}
       >
         <div
           className="blog__inner"
