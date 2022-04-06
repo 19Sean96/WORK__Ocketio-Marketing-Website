@@ -63,15 +63,17 @@
               }
   
               &--title {
-                font-weight: 500;
                 font-size: 22px;
-                line-height: 1.3em;
+                font-weight: 500;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
-                max-height: 4em;
-                -webkit-line-clamp: 2; /* number of lines to show */
+                line-height: 1.3em;
+                max-height: 1.3em;
+                -webkit-line-clamp: 1; /* number of lines to show */
                 -webkit-box-orient: vertical;
+                transition: max-height 25s ease-out 0.05s;
+
               }
   
               &--info {
@@ -91,6 +93,10 @@
                 -webkit-box-orient: vertical;
                 transition: max-height 25s ease-out 0.05s;
                 text-align: left;
+
+                h1,h2,h3,h4,h5,h6 {
+                  display: none;
+                }
   
                 * {
                   font-size: 1em;
