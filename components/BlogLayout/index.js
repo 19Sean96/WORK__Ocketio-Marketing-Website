@@ -3,7 +3,7 @@ import BlogItem from "./Item";
 import { useAppContext } from "../../Context";
 const animateOnce = true
 
-const BlogLayout = ({ blogPosts }) => {
+const BlogLayout = ({ blogPosts, searchTerm = '' }) => {
   const { isMobile } = useAppContext()
 
   return (
@@ -14,7 +14,7 @@ const BlogLayout = ({ blogPosts }) => {
       >
         <div className="section--body">
           <div className="blogs">
-            {blogPosts.map((blog, i) => (
+            {blogPosts.map((blog, i) => blog.post_title.toLowerCase().includes(searchTerm.toLowerCase()) && (
               <BlogItem
                 author={blog.post_author}
                 dateWritten={
