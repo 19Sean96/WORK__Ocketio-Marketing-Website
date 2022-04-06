@@ -30,4 +30,35 @@ const WaveBot = () => {
   );
 };
 
-export { WaveBot };
+const WaveAlt = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      id="blogWave"
+      viewBox="0 0 1945.061 360"
+    >
+      <g id="blog-wave" transform="translate(13 47)">
+        <path
+          id="Path_28179"
+          data-name="Path 28179"
+          d="M-13-47H1932.06V313s-313.19-49.9-740.44-62.094S-13,313-13,313Z"
+          fill="#27c1bc"
+        />
+        <path
+          id="Path_28180"
+          data-name="Path 28180"
+          d="M-13-47H1932.06V313S1254.91,211.357,885.681,238.339-13,313-13,313Z"
+          fill="#139bbf"
+        />
+        <path
+          id="Path_28181"
+          data-name="Path 28181"
+          d="M-13-47H1932.06V313s-591.46-87.967-972.532-87.967S-13,313-13,313Z"
+          fill="#252939"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export { WaveBot, WaveAlt };
