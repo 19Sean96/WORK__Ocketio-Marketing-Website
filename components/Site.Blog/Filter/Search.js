@@ -1,10 +1,19 @@
-const FilterSearch = props => {
+import { BsSearch } from 'react-icons/bs'
 
-    return (
-        <aside className="search-filter">
-            <p>live search box goes hhere (v2)</p>
-        </aside>
-    )
-}
+const FilterSearch = ({ searchTerm, handleSearchUpdate }) => {
+  return (
+    <aside className="search-filter">
+      <input
+        type="text"
+        className="search-filter--input"
+        id="blogSearch"
+        placeholder="Search"
+        value={searchTerm}
+        onChange={handleSearchUpdate}
+      />
+      <BsSearch id="search-icon"/>
+    </aside>
+  );
+};
 
-export default FilterSearch
+export default FilterSearch;
