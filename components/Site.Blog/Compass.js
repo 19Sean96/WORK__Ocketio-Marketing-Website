@@ -1,10 +1,15 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { BsHouseDoor, BsChevronRight } from "react-icons/bs";
-
+import { useState, useEffect } from 'react'
 const Compass = ({ pageName = null }) => {
   const router = useRouter();
-  console.log(router);
+  const [ isPost, setIsPost ] = useState()
+
+  useEffect(() => {
+    if (router.query?.category) setIsPost(false)
+    else if (router.query?.slug) setIsPost(true)
+  }, [router])
   return (
     <aside className="blogNav" id="blogNav">
       <p className="p-small">
@@ -20,8 +25,16 @@ const Compass = ({ pageName = null }) => {
         {router?.query?.slug?.length > 0 && (
           <>
             <BsChevronRight />
-            <Link href={`/${router.query.slug[0]}`}>
+            <Link href={`/blog/${router.query.slug[0]}`}>
               <a className="link capitalize">{router.query.slug[0]}</a>
+            </Link>
+          </>
+        )}
+        {router?.query?.category && (
+          <>
+            <BsChevronRight />
+            <Link href={router.asPath}>
+              <a href="" className="link capitalize">{router.query.category}</a>
             </Link>
           </>
         )}
