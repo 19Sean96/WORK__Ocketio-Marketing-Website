@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsArrowRightCircle } from "react-icons/bs";
 import readingTime from "reading-time";
-import { useState, useEffect } from 'react'
 
 const BlogItem = ({
   author,
@@ -17,7 +16,8 @@ const BlogItem = ({
   isMobile,
   category,
   slug,
-  tileWidth
+  tileWidth,
+  preserveAspectRatio
 
 }) => {
    
@@ -41,7 +41,7 @@ const BlogItem = ({
       as={`/blog/${category}/${slug}`}
     >
       <article 
-        className={`blog blog_w-${tileWidth}`}
+        className={`blog blog_w-${tileWidth} ${preserveAspectRatio ? 'preserve-aspect-ratio' : ''}`}
       >
         <div
           className="blog__inner"
@@ -61,7 +61,7 @@ const BlogItem = ({
               <span>Read More</span>{" "}
               <BsArrowRightCircle className="icon" width={25} height={25} />
             </p>
-            <div className="blog--img__wrapper">
+            <div className={`blog--img__wrapper`}>
               <Image
                 src={`https://cms.wirewise-dev.com/assets/${imgId}`}
                 layout="fill"

@@ -10,7 +10,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "../../Context";
 import Compass from "../../components/Site.Blog/Compass";
 import { useRouter } from "next/router";
-import Filter from "../../components/Site.Blog/Filter";
+import {Filter} from "../../components/Site.Blog/Filter";
 import { useState, useEffect } from "react";
 
 const animateOnce = true;

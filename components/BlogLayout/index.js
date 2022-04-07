@@ -21,7 +21,6 @@ const BlogLayout = ({ blogPosts, searchTerm = '' }) => {
                   !blog.post_date ? blog.date_created : blog.post_date
                 }
                 dateUpdated={blog.date_updated}
-                timeToRead={"7 min"}
                 title={blog.post_title}
                 body={blog.post_body}
                 key={i}
@@ -32,7 +31,7 @@ const BlogLayout = ({ blogPosts, searchTerm = '' }) => {
                 category={blog.main_category}
                 slug={blog.url_slug}
                 tileWidth={blog.force_tile_width}
-
+                preserveAspectRatio={blog.preserve_aspect_ratio}
               />
             ))}
           </div>

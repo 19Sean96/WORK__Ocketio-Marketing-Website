@@ -14,7 +14,7 @@
           .blogs {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: stretch;
             gap: 28px;
             flex-wrap: wrap;
             row-gap: 56px;
@@ -127,11 +127,39 @@
               &--img {
                 &__wrapper {
                   width: 100%;
-                  aspect-ratio: 1920 / 1080;                  
                   position: relative;
+                  min-height: 300px;
+                  height: 100%;
+                  flex-grow: 1;
                   border-radius: 12px;
                   margin-top: 30px;
                   overflow: hidden;
+                }
+              }
+
+              &__bot {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .p-small {
+                  margin-left: 0;
+                }
+              }
+
+              &.preserve-aspect-ratio {
+                .blog--img {
+          
+                  &__wrapper {
+                    aspect-ratio: 16/9;
+                    min-height: unset;
+                    height: unset;
+                  }
+                }
+
+                .blog__bot {
+                  display: initial;
                 }
               }
             }
