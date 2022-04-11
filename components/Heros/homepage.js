@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import heroImageMain from "../../public/images/homepage/hero/hero_main-bg.png";

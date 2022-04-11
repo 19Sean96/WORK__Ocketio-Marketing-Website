@@ -1,20 +1,27 @@
 import Link from "next/link";
-import { useEffect } from "react";
+import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
-import { useAppContext } from "../../Context";
 import Background from "../Site.Graphics/Waves/FeaturesHero";
 
 import { HeroLeft, HeroRight } from "../Site.Graphics/FeatureHeroImages";
 
+
+import { useAppContext } from "../../Context";
 const animateOnce = true;
+
+
+const StyledHeroLeft = styled(HeroLeft)`
+  color: green;
+`
+
+const StyledHeroRight = styled(HeroRight)`
+  color: red;
+`
 
 const HeroFeatures = ({ mouseCoord, offset }) => {
   const { isMobile } = useAppContext();
-  useEffect(() => {
-    console.log(mouseCoord);
-  }, [mouseCoord]);
 
   return (
     <ScrollAnimation
@@ -75,7 +82,7 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
             delay={450}
           >
             <div className="image-group">
-              <HeroLeft
+              <StyledHeroLeft
                 id="featuresHeroImageLeft"
                 className="image-group__image"
               />
