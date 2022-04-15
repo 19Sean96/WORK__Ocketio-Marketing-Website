@@ -14,14 +14,19 @@ const animateOnce = true;
 
 const StyledHeroLeft = styled(HeroLeft)`
   color: green;
+  transform: scale(1)
+    ${props => ` translate(9%, calc(0px - ${props.offset / -10 + -1}px))`}
+
 `
 
 const StyledHeroRight = styled(HeroRight)`
   color: red;
+  transform: scale(1)
+  ${props => ` translate(${-(props.offset / -25)}px, calc(0px - ${props.offset / -15 + -1}px))`}
 `
 
-const HeroFeatures = ({ mouseCoord, offset }) => {
-  const { isMobile } = useAppContext();
+const HeroFeatures = ({ offset }) => {
+  const { isMobile, isSafari } = useAppContext();
 
   return (
     <ScrollAnimation
@@ -85,10 +90,12 @@ const HeroFeatures = ({ mouseCoord, offset }) => {
               <StyledHeroLeft
                 id="featuresHeroImageLeft"
                 className="image-group__image"
+                offset={isSafari ? 0 : offset}
               />
-              <HeroRight
+              <StyledHeroRight
                 id="featuresHeroImageRight"
                 className="image-group__image"
+                offset={isSafari ? 0 : offset}
               />
             </div>
           </ScrollAnimation>

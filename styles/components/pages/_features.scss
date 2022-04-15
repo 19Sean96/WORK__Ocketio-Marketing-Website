@@ -544,10 +544,14 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        justify-self: stretch;
         flex-wrap: wrap;
         gap: 25px;
         position: relative;
+        width: 100%;
         max-width: 95vw;
+        margin: 0 auto;
+
         .tabs {
           display: flex;
           flex-direction: row;
@@ -566,6 +570,7 @@
             justify-content: flex-start;
             gap: 8px;
             border: #ddd 1px solid;
+            // background-color: white;
             border-radius: 4px;
             padding: 22px 19px 22px 9px;
             cursor: pointer;
@@ -617,24 +622,25 @@
           align-self: stretch;
           padding: 0 10px;
           margin-top: 0;
+
           .slideshow {
             position: relative;
             width: 100%;
             height: 130%;
             display: flex;
             justify-content: center;
-            align-items: stretch;
+            align-items: flex-start;
             &--item {
               transition: 0.35s ease-in-out all;
               max-height: 100%;
               &__wrapper {
                 position: absolute;
-                top: 50%;
+                top: 0%;
                 left: 50%;
                 width: 100%;
                 height: min-content;
                 max-height: 100%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, 0%);
                 display: flex;
                 justify-content: center;
                 align-items: safe center;
@@ -645,7 +651,7 @@
               height: 114%;
             }
             @media (max-width: 875px) {
-              height: 86%;
+              height: 100%;
               &--item {
                 position: relative;
                 object-position: center;
@@ -675,12 +681,19 @@
         }
   
         .cta-group {
-          justify-content: center;
+          justify-content: flex-start;
           flex-grow: 1;
           width: 100%;
           position: relative;
-          transform: translateX(-28px);
-          margin-top: 100px;
+          transform: translateX(0);
+          margin-top: 95px;
+          margin-left: 1.25%;
+        }
+
+        @media (max-width: 1450px) {
+          .cta-group {
+            margin-top: 65px;
+          }
         }
   
         @media (max-width: 1150px) {
@@ -693,14 +706,19 @@
         @media (max-width: 1080px) {
           .tabs {
             &__wrapper {
-              width: 40%;
+              width: 32%;
             }
+          }
+          .cta-group {
+            justify-content: center;
+            margin-top: 5px;
+
           }
         }
         @media (max-width: 1000px) {
           .tabs {
             &__wrapper {
-              width: 45%;
+              width: 37%;
             }
           }
   
@@ -714,16 +732,15 @@
           justify-content: center;
           align-items: center;
           position: relative;
-          flex-direction: column-reverse;
+          flex-direction: column;
           .tabs {
             position: relative;
-            min-height: 170px;
-            margin-top: -15px;
-            order: 3;
-  
+            // margin-top: -140px;
+            z-index: 5;
             &__wrapper {
               width: calc((100vw / 12) * 8);
               min-width: 280px;
+              order: 1;
             }
             .tab {
               position: absolute;
@@ -746,13 +763,14 @@
   
           .display {
             margin-inline: auto;
+            margin-top: 85px;
             width: 75vw;
-            height: 75vw;
             min-height: 290px;
             min-width: 290px;
             max-width: none;
             max-height: none;
             order: 2;
+            aspect-ratio: 337/288;
           }
   
           .slides-number-group {
@@ -762,13 +780,14 @@
             z-index: 100;
             top: 0;
             left: 50%;
-            transform: translate(-50%, 56vw);
+            transform: translate(-50%, 15vw);
           }
   
           .cta-group {
-            order: -1;
-            margin-top: 30px;
+            order: 3;
+            margin-top: 10px;
             transform: translateX(0);
+            margin-left: 0;
           }
         }
   
