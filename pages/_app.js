@@ -13,16 +13,21 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
 
-  useEffect(() => {
-    TagManager.initialize({ gtmId: GTM_ID})
-  }, [])
-
   // useEffect(() => {
-  //   router.events.on("routeChangeComplete", pageview);
-  //   return () => {
-  //     router.events.off("routeChangeComplete", pageview);
-  //   };
-  // }, [router.events]);
+  //   TagManager.initialize({ 
+  //     gtmId: GTM_ID,
+  //     dataLayer: {
+
+  //     }
+  //   })
+  // }, [])
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", pageview);
+    return () => {
+      router.events.off("routeChangeComplete", pageview);
+    };
+  }, [router.events]);
 
   return (
     <>
