@@ -3,7 +3,7 @@ import NumberFormat from "react-number-format";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
 import FAQList from "../Site.Widgets/FAQList";
 import ScrollAnimation from "react-animate-on-scroll";
-
+import Link from 'next/link'
 import {
   BsTelephone,
   BsEnvelope,
@@ -23,12 +23,24 @@ const ContactPortal = (props) => {
     control,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const result = await fetch('/api/sendFormEntry', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+
+    const res = await result.json()
+    console.log('RESULTING: ', res)
+  }
 
   const watchAllInputs = watch();
   useEffect(() => {
-    console.log(watchAllInputs)
-  }, [watchAllInputs])
+    console.log(watchAllInputs);
+  }, [watchAllInputs]);
   return (
     <ContentWrapper>
       <section
@@ -41,13 +53,21 @@ const ContactPortal = (props) => {
           duration={0.9}
           className="section--heading"
         >
-          <h2 className="h2 capitalize" style={{
-            color: '#f6f6f6'
-          }}>contact us</h2>
-          <p className="p-small" style={{
-            color: '#f6f6f6',
-            opacity: .6
-          }}>
+          <h2
+            className="h2 capitalize"
+            style={{
+              color: "#f6f6f6",
+            }}
+          >
+            contact us
+          </h2>
+          <p
+            className="p-small"
+            style={{
+              color: "#f6f6f6",
+              opacity: 0.6,
+            }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in
             gravida sem enim sed.
           </p>
@@ -219,20 +239,43 @@ const ContactPortal = (props) => {
               animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
               delay={400}
-              duration={.6}
+              duration={0.6}
               className={`section--form--input__wrapper full ${
                 watchAllInputs?.contactType?.length > 0 ? "has-value" : ""
               }`}
             >
-              <select name="contactType" id="contactType" className="section--form--input" {...register('contactType', { required: false })}>
-                  <option value="" selected></option>
-                  <option className="capitalize" value="I'd like to learn more about the platform.">I'd like to learn more about the platform.</option>
-                  <option className="capitalize" value="Feature request.">Feature request.</option>
-                  <option className="capitalize" value="I need help/support">I need help/support</option>
-                  <option className="capitalize" value="Media/Press Questions">Media/Press Questions</option>
-                  <option className="capitalize" value="Other (please describe)">Other (please describe)</option>
+              <select
+                name="contactType"
+                id="contactType"
+                className="section--form--input"
+                {...register("contactType", { required: false })}
+              >
+                <option value="" selected></option>
+                <option
+                  className="capitalize"
+                  value="I'd like to learn more about the platform."
+                >
+                  I'd like to learn more about the platform.
+                </option>
+                <option className="capitalize" value="Feature request.">
+                  Feature request.
+                </option>
+                <option className="capitalize" value="I need help/support">
+                  I need help/support
+                </option>
+                <option className="capitalize" value="Media/Press Questions">
+                  Media/Press Questions
+                </option>
+                <option className="capitalize" value="Other (please describe)">
+                  Other (please describe)
+                </option>
               </select>
-              <label htmlFor="contactType" className="section--form--input__label j-dsiplay _400">How can we help?</label>
+              <label
+                htmlFor="contactType"
+                className="section--form--input__label j-dsiplay _400"
+              >
+                How can we help?
+              </label>
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -252,8 +295,26 @@ const ContactPortal = (props) => {
                 htmlFor="message"
                 className="section--form--input__label j-display _400"
               >
-                Tell us more 
+                Tell us more
               </label>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateOnce={animateOnce}
+              animateIn="animate__fadeInDown"
+              delay={400}
+              duration={0.6}
+              className={`optInWrapper section--form--input__wrapper full`}
+            >
+              <label htmlFor="newsletterOptIn" className="section--form--input__label j-display _400">
+                <input
+                  type="checkbox"
+                  name="newsletterOptIn"
+                  id="newsletterOptIn"
+                  {...register("newsletterOptIn", { required: false })}
+                />
+                <span> Sign up for our newsletter</span>
+              </label>
+              <span className="disclaimer">See our <Link href="/privacy">Privacy Policy.</Link></span>
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
