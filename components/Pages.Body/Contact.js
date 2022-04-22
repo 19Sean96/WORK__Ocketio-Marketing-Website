@@ -253,20 +253,20 @@ const ContactPortal = (props) => {
                 <option value="" selected></option>
                 <option
                   className="capitalize"
-                  value="I'd like to learn more about the platform."
+                  value="sales-op"
                 >
                   I'd like to learn more about the platform.
                 </option>
-                <option className="capitalize" value="Feature request.">
+                <option className="capitalize" value="feature-request">
                   Feature request.
                 </option>
-                <option className="capitalize" value="I need help/support">
+                <option className="capitalize" value="needs-help">
                   I need help/support
                 </option>
-                <option className="capitalize" value="Media/Press Questions">
+                <option className="capitalize" value="media/press">
                   Media/Press Questions
                 </option>
-                <option className="capitalize" value="Other (please describe)">
+                <option className="capitalize" value="misc.">
                   Other (please describe)
                 </option>
               </select>
