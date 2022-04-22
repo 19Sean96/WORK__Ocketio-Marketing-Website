@@ -161,7 +161,7 @@ export default function Pricing() {
                   <Link href="/contact">
                     <a>Contact us</a>
                   </Link>
-                  <span> for information on enterprise pricing.</span>
+                  <span> for information.</span>
                 </p>
               </ScrollAnimation>
             </section>
