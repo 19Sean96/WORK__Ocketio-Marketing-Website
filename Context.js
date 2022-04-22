@@ -15,6 +15,9 @@ export function AppWrapper({ children }) {
 
   // Simple boolean hook which tracks whether the browser is Safari based or not
   const [isSafari, setIsSafari] = useState(null)
+
+  const [windowInnerHeight, setWindowInnerHeight] = useState()
+  const [windowScrollY, setWindowScrollY] = useState()
   
   const handleMouseMove = ( { clientX, clientY} ) => setMousePositionPixels([clientX, clientY])
 
@@ -22,6 +25,8 @@ export function AppWrapper({ children }) {
     handleResize();
     function handleScroll() {
       setScrollOffset(window.pageYOffset);
+      setWindowInnerHeight(window.innerHeight)
+      setWindowScrollY(window.scrollY)
     }
 
     function handleResize() {
@@ -32,6 +37,9 @@ export function AppWrapper({ children }) {
         setMobile(false);
         console.log("DESKTOP");
       }
+      setWindowInnerHeight(window.innerHeight)
+      setWindowScrollY(window.scrollY)
+
     }
 
     let safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -54,7 +62,9 @@ export function AppWrapper({ children }) {
         scrollOffset,
         isMobile,
         handleMouseMove,
-        isSafari
+        isSafari,
+        windowInnerHeight,
+        windowScrollY
       }}
     >
       {children}
