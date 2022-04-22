@@ -12,7 +12,6 @@ const Blog = ({ blog_posts }) => {
   const router = useRouter();
   console.log(router.query.slug)
   const blog = blog_posts[blog_posts.findIndex((n) => n.url_slug == router.query.slug[1])];
-  console.log(blog);
   const formatDate = (date) =>
     new Date(date).toLocaleDateString(
       {},
