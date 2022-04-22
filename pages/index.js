@@ -23,7 +23,7 @@ export default function Home({ blog_posts }) {
         <FirstBanner />
         <WhatSection />
         <WhoSection />
-        <BlogLayout blogPosts={blog_posts} />
+        {/* <BlogLayout blogPosts={blog_posts} /> */}
         <EmailIntake />
       </main>
     </>
