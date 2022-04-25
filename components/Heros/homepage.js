@@ -4,15 +4,43 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import heroImageMain from "../../public/images/homepage/hero/hero_main-bg.png";
-
+import HeroBG from "../Site.Graphics/HomepageHero";
 
 import { useAppContext } from "../../Context";
 const animateOnce = true;
 
-const StyledMain = styled(Image)`
+const StyledMain = styled.div`
   transform-origin: top;
   transform: scale(1)
     ${(props) => ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
+
+  &::after {
+    transform-origin: top;
+    transform: scale(1)
+      ${(props) => ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
+
+    @media (max-width: 1200px) {
+      top: 50.95%;
+      left: 20%;
+
+      transform: scale(1)
+        ${(props) => ` translate(0, calc(0px - ${props.offset / -35 + -35}px))`};
+    }
+    @media (max-width: 850px) {
+      top: 53%;
+      left: 20%;
+
+      transform: scale(1.05)
+        ${(props) => ` translate(0, calc(-12% - ${props.offset / -60 - 46}px))`};
+    }
+    @media (max-width: 575px) {
+      top: 63.5%;
+      left: 20%;
+
+      transform: scale(1.25)
+        ${(props) => ` translate(0, calc(-6vw - ${props.offset / -60 - 63}px))`};
+    }
+  }
 
   @media (max-width: 1200px) {
     transform: scale(1)
@@ -26,47 +54,6 @@ const StyledMain = styled(Image)`
   @media (max-width: 575px) {
     transform: scale(1.25)
       ${(props) => ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
-  }
-`;
-
-const StyledImageGroup = styled.div`
-  & > span {
-    &:first-child {
-      & > span {
-        &::after {
-
-          transform-origin: top;
-          transform: scale(1)
-            ${(props) =>
-              ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
-
-          @media (max-width: 1200px) {
-            top: 50.95%;
-            left: 20%;
-
-            transform: scale(1)
-              ${(props) =>
-                ` translate(0, calc(0px - ${props.offset / -35 + -35}px))`};
-          }
-          @media (max-width: 850px) {
-            top: 53%;
-            left: 20%;
-
-            transform: scale(1.05)
-              ${(props) =>
-                ` translate(0, calc(-12% - ${props.offset / -60 - 46}px))`};
-          }
-          @media (max-width: 575px) {
-            top: 63.5%;
-            left: 20%;
-
-            transform: scale(1.25)
-              ${(props) =>
-                ` translate(0, calc(-6vw - ${props.offset / -60 - 63}px))`};
-          }
-        }
-      }
-    }
   }
 `;
 
@@ -125,23 +112,20 @@ const HeroHome = ({ offset }) => {
           </ScrollAnimation>
         </div>
 
-        <StyledImageGroup
-          className="image-group"
-          offset={isSafari ? 0 : offset}
-        >
+        <div className="image-group" offset={isSafari ? 0 : offset}>
           <StyledMain
-            id="heroImageMain"
-            className={`animate__animated image-group__image${
-              offset === 0 ? " heroImageMain" : ""
-            }`}
-            layout="responsive"
-            src={heroImageMain}
-            alt="this is the dashboard page. It shows user information, status and company performance statistics."
+            className="image-group__image__wrapper"
+            id="heroImageMain__wrapper"
             offset={isSafari ? 0 : offset}
-            placeholder="blur"
-            priority
-          />
-        </StyledImageGroup>
+          >
+            <HeroBG
+              id="heroImageMain"
+              className={`animate__animated image-group__image${
+                offset === 0 ? " heroImageMain" : ""
+              }`}
+            />
+          </StyledMain>
+        </div>
       </section>
     </div>
   );

@@ -12,7 +12,7 @@
 
     grid-column: 1/6;
     grid-row: 1/2;
-    margin-top:8%;
+    margin-top: 8%;
     position: relative;
     z-index: 30;
 
@@ -22,9 +22,8 @@
     }
     p {
       text-align: left;
-      color: #5C5F6B;
+      color: #5c5f6b;
       margin-right: 10%;
-
     }
 
     @media (max-width: 1460px) {
@@ -41,7 +40,8 @@
       grid-column: 3/11;
       align-items: center;
       margin-top: 0;
-      h1,p {
+      h1,
+      p {
         text-align: center;
       }
     }
@@ -59,8 +59,6 @@
     }
   }
 
-
-
   .image-group {
     grid-column: 6/13;
     grid-row: 1/2;
@@ -74,63 +72,63 @@
     margin-bottom: -64px;
     overflow: visible;
 
-    & > span,
-    & > div {
+    #heroImageMain {
       grid-area: overlay;
       max-width: 100%;
       overflow: visible !important;
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both;
       animation-name: fadeInDownShort;
-      overflow: visible;
+      animation-delay: 0.45s;
+      animation-duration: 0.9s;
+      z-index: 5;
+      position: relative;
 
-      &:first-child {
-        animation-delay: 0.45s;
-        animation-name: fadeInUpShort;
-        animation-duration: 0.9s;
-        z-index: 5;
-        overflow: visible;
+      &__wrapper {
         position: relative;
-
-        & > span {
-          position: relative;
+        height: min-content;
+        &::after {
+          @include set-height-to-image-height(
+            "../public/images/homepage/hero/hero-fg.svg",
+            85%
+          );
+          opacity: 0;
+          animation-name: fadeIn;
+          animation-duration: 1.25s;
+          animation-delay: .65s;
+          animation-fill-mode: both;
+          width: 90%;
+          top: 48%;
+          left: 17%;
           overflow: visible;
-          &::after {
-            @include set-height-to-image-height('../public/images/homepage/hero/hero-fg.svg', 85%);
-            width: 90%;
-            top: 48%;
-            left: 17%;
-            overflow: visible;
-            position: absolute;
-            content: ' ';
-            z-index: 10;
-            transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
-          }
+          position: absolute;
+          content: " ";
+          z-index: 10;
+          transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
         }
-
-
       }
 
-      &:nth-child(2) {
-        animation-name: fadeInLeftShort;
-        animation-delay: 0s;
-        animation-duration: 0.88s;
-        z-index: 10;
-      }
+    }
 
-      &:nth-child(3) {
-        animation-name: fadeInDownShort;
-        animation-delay: 0.3s;
-        animation-duration: 0.88s;
-        z-index: 10;
-      }
+    &:nth-child(2) {
+      animation-name: fadeInLeftShort;
+      animation-delay: 0s;
+      animation-duration: 0.88s;
+      z-index: 10;
+    }
 
-      &:last-child {
-        animation-name: fadeInDownShort;
-        animation-delay: 0.15s;
-        animation-duration: 0.88s;
-        z-index: 5;
-      }
+    &:nth-child(3) {
+      animation-name: fadeInDownShort;
+      animation-delay: 0.3s;
+      animation-duration: 0.88s;
+      z-index: 10;
+    }
+
+    &:last-child {
+      animation-name: fadeInDownShort;
+      animation-delay: 0.15s;
+      animation-duration: 0.88s;
+      z-index: 5;
     }
 
     &__image {
@@ -147,7 +145,6 @@
         0 8px 16px rgba(0, 0, 0, 0.11);
 
       box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.15);
-
     }
 
     @media (max-width: 1370px) {
@@ -206,12 +203,11 @@
   transform: translateX(-50%);
 
   #bgWaves {
-    width: 100%; 
+    width: 100%;
     height: auto;
     position: relative;
     transform: translateY(35px);
     min-width: 1675px;
-
   }
 
   .trailing {
@@ -237,7 +233,6 @@
     width: 100%;
     height: auto;
     min-width: 1675px;
-
   }
 }
 
@@ -289,7 +284,6 @@
       margin-top: 0 !important;
       bottom: 0;
       transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
-
     }
 
     #featuresHeroImageLeft {
@@ -302,8 +296,6 @@
       right: 0;
       width: 66%;
       position: absolute;
-
-  
     }
   }
 
@@ -319,7 +311,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    margin-top:  86px;
+    margin-top: 86px;
     margin-bottom: 22px;
     height: 100%;
 
@@ -347,7 +339,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      gap: 20px; 
+      gap: 20px;
       background-color: transparent;
       border-radius: 0;
       padding: 34px 0 16px;
@@ -419,7 +411,7 @@
 
         &::before,
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
@@ -429,7 +421,7 @@
         }
 
         &::before {
-          left: 0; 
+          left: 0;
         }
 
         &::after {
@@ -513,11 +505,9 @@
     &-message {
       grid-column: 1/6;
     }
-
   }
 
   @media (max-width: 875px) {
-
     &-message {
       p {
         padding-right: 0;
@@ -600,7 +590,6 @@
     }
 
     .image-group {
-
       margin-top: 45px;
       margin-bottom: 50px;
 
