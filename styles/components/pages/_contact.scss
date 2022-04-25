@@ -2,14 +2,14 @@
 
 #contactBG {
   position: absolute;
-  top: 0;
+  top: 25px;
   z-index: -1;
-  transform: translateY(300px);
+  transform: translateY(0px);
   min-width: 1200px;
 }
 
 #contactPortal {
-  margin-top: 100px;
+  margin-top: 25px;
   align-items: flex-start;
   // border-bottom: 1px solid #e9eaf0;
   grid-template-rows: min-content 1fr;

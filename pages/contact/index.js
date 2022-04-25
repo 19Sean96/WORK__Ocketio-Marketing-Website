@@ -18,7 +18,7 @@ const StyledMain = styled.main`
     left: 0;
     background-color: #252939;
     width: 100vw;
-    height: 700px;
+    height: 295px;
     transform: translateY(-50%);
   }
 `;
