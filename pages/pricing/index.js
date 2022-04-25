@@ -12,7 +12,7 @@ const StyledMain = styled.main`
     content: "";
     position: absolute;
     z-index: -1;
-    top: calc(45vw - 140px);
+    top: calc(45vw - 230px);
     left: 0;
     background-color: #252939;
     width: 100vw;
@@ -21,7 +21,7 @@ const StyledMain = styled.main`
 
   @media (max-width: 1500px) {
     &::before {
-      top: 550px;
+      top: 460px;
     }
   }
 `;
@@ -96,8 +96,7 @@ export default function Pricing() {
                     </button>
                   </Link>
                   <p className="p-small price--message">
-                    Register up to three devices and create a single network,
-                    with access to all the platform’s features.
+                  Register up to three devices and create a single network, with access to all Wirewise features. Upgrade any time.
                   </p>
                 </ScrollAnimation>
                 <ScrollAnimation
