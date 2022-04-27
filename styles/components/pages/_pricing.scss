@@ -12,11 +12,24 @@
     @media (min-width: 2160px) {
       transform: translateY(-6.5vw);
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: #252939;
+      width: 100vw;
+      height: 20px;
+    }
   }
   
   #pricing {
     padding-top: 37px;
     padding-bottom: 0px;
+    position: relative;
+
   
     .section {
       &--heading {
@@ -386,6 +399,24 @@
   
   #pricingFAQ {
     margin-top: 74px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: #252939;
+      width: 100vw;
+      height: 110%;
+      z-index: -1;
+
+
+      @media screen and (max-width: 2159px) {
+        height: 90%;
+      }
+    }
+
     .section {
       &--heading {
         margin-bottom: 34px;

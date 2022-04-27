@@ -12,16 +12,23 @@ const StyledMain = styled.main`
     content: "";
     position: absolute;
     z-index: -1;
-    top: calc(45vw - 230px);
+    top: calc(45vw - 271px);
     left: 0;
     background-color: #252939;
     width: 100vw;
     height: calc(100% - 45vw + 140px);
   }
 
+  @media (max-width: 2159px) {
+
+    &::before {
+      top: calc(48vw - 240px);
+    }
+  }
+
   @media (max-width: 1500px) {
     &::before {
-      top: 460px;
+      top: 480px;
     }
   }
 `;
