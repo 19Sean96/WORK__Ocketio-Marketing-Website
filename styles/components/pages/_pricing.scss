@@ -415,6 +415,16 @@
       @media screen and (max-width: 2159px) {
         height: 90%;
       }
+
+      @media screen and (min-width: 3069px) {
+        transform: translate(-50%, 9vw);
+      }
+      @media screen and (min-width: 3380px) {
+        transform: translate(-50%, 12vw);
+      }
+      @media screen and (min-width: 3900px) {
+        transform: translate(-50%, 14vw);
+      }
     }
 
     .section {
