@@ -88,7 +88,7 @@ export default function Pricing() {
                   id="priceFree"
                 >
                   <h6 className="price--type capitalize h6">free</h6>
-                  <h4 className="h4 price--num">$ 0.00 USD</h4>
+                  <h4 className="h4 price--num">$0.00 USD</h4>
                   <p className="p-small price--rate">monthly per device</p>
                   <Link href="#">
                     <button className="price--cta btn btn--filled capitalize">
@@ -108,16 +108,20 @@ export default function Pricing() {
                   id="priceMonthly"
                 >
                   <h6 className="price--type capitalize h6">monthly</h6>
-                  <h4 className="h4 price--num">$ XX.XX USD</h4>
-                  <p className="p-small price--rate">monthly per user</p>
+                  <h4 className="h4 price--num">$3.00 USD</h4>
+                  <p className="p-small price--rate">monthly per device</p>
                   <Link href="#">
                     <button className="price--cta btn btn--filled capitalize">
                       get started
                     </button>
                   </Link>
                   <p className="p-small price--message">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    semper sceleris.
+                  Add devices and networks to your heart’s content.
+                  <ul>
+                    <li>Three devices free forever</li>
+                    <li>1Second great features</li>
+                    <li>Feature #3</li>
+                  </ul>
                   </p>
                 </ScrollAnimation>
                 <ScrollAnimation
@@ -129,16 +133,20 @@ export default function Pricing() {
                   id="priceAnnual"
                 >
                   <h6 className="price--type capitalize h6">annual</h6>
-                  <h4 className="h4 price--num">$ XX.XX USD</h4>
-                  <p className="p-small price--rate">monthly per user</p>
+                  <h4 className="h4 price--num">$2.00 USD</h4>
+                  <p className="p-small price--rate">monthly per device</p>
                   <Link href="#">
                     <button className="price--cta btn btn--filled capitalize">
                       get started
                     </button>
                   </Link>
                   <p className="p-small price--message">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    semper sceleris.
+                  The same great features with savings for an annual license                  
+                  <ul>
+                    <li>Three devices free forever</li>
+                    <li>1Second great features</li>
+                    <li>Feature #3</li>
+                  </ul>
                   </p>
                 </ScrollAnimation>
 

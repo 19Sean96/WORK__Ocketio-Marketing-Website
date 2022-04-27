@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     z-index: -10;
-    transform: translateY(-140px);
+    transform: translateY(-92px);
     width: 100vw;
     min-width: 1500px;
   
@@ -15,15 +15,17 @@
   }
   
   #pricing {
-    padding-top: 60px;
-    padding-bottom: 80px;
-    border-bottom: 1px solid #e9eaf0;
+    padding-top: 37px;
+    padding-bottom: 0px;
   
     .section {
       &--heading {
         margin-bottom: 24px;
         h2 {
-          margin-bottom: 25px;
+          margin-bottom: 7px;
+        }
+        p {
+          font-size: 16px;
         }
       }
   
@@ -31,13 +33,13 @@
         width: 100%;
         position: relative;
         flex-grow: 1;
-        max-width: 720px;
+        max-width: 597px;
   
         &--input {
-          height: 76px;
+          height: 61px;
           padding: 8px 160px 8px 20px;
           border-radius: 6px;
-          border: 1px solid #e9eaf0;
+          border: 1px solid #dcdcdc;
           box-shadow: 0 2px 8px rgba(20, 25, 43, 0.06);
           width: 100%;
           &__wrapper {
@@ -46,9 +48,11 @@
   
           &__label {
             position: absolute;
-            top: 38px;
+            top: 30px;
             left: 15px;
-            transform: translate(0, -50%);
+            transform: translate(0, -50%) scale(1);
+            opacity: 1;
+            transform-origin: left center;
             color: $off-black;
             pointer-events: none;
             background-color: rgba(255, 255, 255, 0);
@@ -57,17 +61,14 @@
           }
   
           &:focus ~ label {
-            transform: translate(0, -76px);
-            // background-color: #252939;
-            // color: #e9eaf0;
+            transform: translate(0, -130%) scale(.8);
           }
         }
   
         .has-value {
           label {
-            transform: translate(0, -76px);
-            // background-color: #252939;
-            // color: #e9eaf0;
+            transform: translate(0, -130%) scale(.6);
+            opacity: .75;
           }
         }
   
@@ -77,7 +78,7 @@
           top: 50%;
           transform: translateY(-50%);
           font-size: 15px;
-          padding: 16px 28px;
+          padding: 10px 28px;
         }
         &__wrapper {
           grid-row: 2/3;
@@ -87,7 +88,7 @@
           align-items: center;
           column-gap: 47px;
           row-gap: 40px;
-          margin-bottom: 75px;
+          margin-bottom: 65px;
           margin-top: 5px;
         }
   
@@ -131,32 +132,49 @@
         grid-row: 3/4;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 26px;
+        column-gap: 31px;
         row-gap: 16px;
   
         &--item {
           background-color: #f5f5f5;
-          padding: 32px 32px 48px;
-          border-radius: 6px;
-          max-width: 440px;
+          padding: 32px 32px 46px;
+          border-radius: 10px;
+          max-width: 392px;
           justify-self: center;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   
           .price {
             &--type {
               color: #888b94;
-              margin-bottom: 16px;
-              font-weight: 400;
+              margin-bottom: -1px;
+              font-weight: 500;
+              font-size: 22px;
             }
             &--rate {
               color: $off-black;
+              font-size: 14px;
+              margin-top: -2px;
             }
             &--cta {
               width: 100%;
-              margin-top: 20px;
-              margin-bottom: 34px;
+              margin-top: 17px;
+              margin-bottom: 27px;            
+              padding: 16px 38px 13px;
+              font-size: 18px;
+              letter-spacing: 1px;
             }
             &--message {
               margin-bottom: 24px;
+              line-height: 140%;
+              color: #6B6B6B;
+
+              ul {
+                padding-left: 20px;
+                padding-top: 20px;
+              }
+            }
+            &--num {
+              font-size: 36px;
             }
           }
   
@@ -186,15 +204,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 52px;
+        margin-top: 33px;
   
         .h6 {
           font-weight: 500;
-          margin-bottom: 0px;
+          margin-bottom: -2px;
           color: $white;
+          font-size: 20px;
         }
         p {
           text-align: center;
+          color: #d1d1d1;
           a {
             color: $primary-orange;
             text-decoration: none;
@@ -365,10 +385,10 @@
   }
   
   #pricingFAQ {
-    margin-top: 80px;
+    margin-top: 74px;
     .section {
       &--heading {
-        margin-bottom: 46px;
+        margin-bottom: 34px;
         h4 {
           margin-bottom: 0px;
           text-align: center;

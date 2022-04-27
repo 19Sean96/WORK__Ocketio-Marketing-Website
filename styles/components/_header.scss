@@ -3,16 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1425px;
+  max-width: 1390px;
   margin: auto;
   position: relative;
 
   &--logo {
     position: relative;
     z-index: 200;
-    max-width: 225px;
-    min-width: 175px;
-    width: 10vw;
+    width: 179px;
     cursor: pointer;
     margin-left: 0px;
 
@@ -44,7 +42,7 @@
       transform: translateX(-50%);
       z-index: 500;
       width: 100vw;
-      padding: 40px 0 20px;
+      padding: 39px 0 20px;
       transition: .275s ease-out all
     }
 
@@ -71,7 +69,7 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 30px
+      gap: 47px
     }
 
     &--item {
@@ -84,7 +82,7 @@
       transition: 0.1s ease-in-out;
       box-shadow: rgba($off-black, 0) 0 11px 13px -10px;
       overflow: hidden;
-      padding: 16px 0;
+      padding: 9px 0 16px;
 
       a {
         color: $off-black;
@@ -176,7 +174,7 @@
         width: 1px;
         background: $black;
         align-self: stretch;
-        margin: 10px 0;
+        margin: 6px 11px 6px 0;
       }
 
       #login {
