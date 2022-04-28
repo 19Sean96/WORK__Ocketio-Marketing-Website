@@ -3,8 +3,8 @@
 #contactBG {
   position: absolute;
   top: 25px;
-  z-index: -1;
-  transform: translateY(0px);
+  z-index: -2;
+  transform: translateY(-110px);
   min-width: 1200px;
 }
 
@@ -19,7 +19,8 @@
       grid-row: 1/2;
       grid-column: 2/12;
       align-items: flex-start;
-      padding-bottom: 56px;
+      padding-bottom: 27px;
+      padding-top: 46px;
       margin-bottom: 0;
       // border-bottom: 1px solid #e9eaf0;
 
@@ -31,7 +32,13 @@
       }
 
       h2 {
-        margin-bottom: 25px;
+        margin-bottom: 5px;
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #D1D1D1;
       }
     }
 
@@ -80,30 +87,39 @@
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 24px;
+      column-gap: 24px;
+      row-gap: 16px;
 
       &__wrapper {
         grid-row: 2/3;
         grid-column: 3/11;
         // margin-top: 56px;
-        padding: 57px 40px 54px;
+        padding: 55px 45px 50px 65px;
         border: 1px solid #e9eaf0;
         background: #fff;
         border-radius: 6px;
         box-shadow: 0 3px 10px 0 rgb(8 15 52 / 4%);
+        max-width: 839px;
+        justify-self: center;
       }
 
       #submit {
         margin: 0;
+        font-size: 18px;
+        letter-spacing: .025em;
+        width: 45%;
+        min-width: 200px;
+        max-width: 400px;
+        padding: 10px 38px;
       }
 
       &--input {
         width: 100%;
-        height: 65px;
-        padding: 8px 16px;
+        height: 51px;
+        padding: 12px 16px 4px 21px;
         border: 1px solid #e9eaf0;
         border-radius: 6px;
-        box-shadow: 0 2px 8px 0 rgb(8 15 52 / 6%);
+        box-shadow: 0 3px 15px 0 rgb(8 15 52 / 10%);
         background-color: #fff;
 
         &__wrapper {
@@ -111,20 +127,22 @@
           display: flex;
           justify-content: stretch;
           &.half {
-            width: calc(50% - 12px);
+            width: calc(50% - 24px);
           }
           &.full {
-            width: 100%;
+            width: calc(100% - 24px);
           }
 
           textarea {
-            height: 132px;
-            min-height: 132px;
-            max-height: 132px;
+            height: 166px;
+            min-height: 166px;
+            max-height: 166px;
             min-width: 100%;
           }
 
           select {
+            // max-width: 583px;
+            appearance: none;
             option {
               color: $gray-text;
             }
@@ -133,19 +151,19 @@
 
         &__label {
           position: absolute;
-          top: 32px;
-          left: 16px;
-          transform: translate(0, -50%);
-          color: $gray-text;
+          top: 25px;
+          left: 21px;
+          transform: translate(0, -50%) scale(1);
+          transform-origin: left center;
+          color: #666;
           pointer-events: none;
-          // display: none;
           background-color: white;
           transition: 0.25s ease-in-out all;
           padding: 0 8px;
         }
 
         &:focus ~ label {
-          transform: translate(0, calc(-50% - 32px));
+          transform: translate(0, calc(-50% - 15px)) scale(.8);
         }
       }
 
@@ -226,7 +244,7 @@
 
       .has-value {
         label {
-          transform: translate(0, calc(-50% - 32px));
+          transform: translate(0, calc(-50% - 15px)) scale(.8);
         }
       }
     }

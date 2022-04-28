@@ -10,6 +10,7 @@ import {
   BsBriefcase,
   BsLifePreserver,
   BsNewspaper,
+  BsCaretDownFill
 } from "react-icons/bs";
 import { useEffect } from "react";
 
@@ -63,10 +64,6 @@ const ContactPortal = (props) => {
           </h2>
           <p
             className="p-small"
-            style={{
-              color: "#f6f6f6",
-              opacity: 0.6,
-            }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in
             gravida sem enim sed.
@@ -243,6 +240,9 @@ const ContactPortal = (props) => {
               className={`section--form--input__wrapper full ${
                 watchAllInputs?.contactType?.length > 0 ? "has-value" : ""
               }`}
+              style={{
+                maxWidth: '583px'
+              }}
             >
               <select
                 name="contactType"
@@ -276,6 +276,18 @@ const ContactPortal = (props) => {
               >
                 How can we help?
               </label>
+              <BsCaretDownFill 
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  right: '40px',
+                  transform: 'translate(0, -50%) scaleX(1.225)',
+                  transformOrigin: 'right center',
+                  fill: '#5C5F6B',
+                  height: '18px',
+                  width: 'auto'
+                }}
+              />
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -326,7 +338,7 @@ const ContactPortal = (props) => {
               <input
                 id="submit"
                 type="submit"
-                value="contact us"
+                value="submit"
                 className="btn btn--filled capitalize"
               />
             </ScrollAnimation>
