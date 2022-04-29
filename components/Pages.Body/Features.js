@@ -384,7 +384,7 @@ const OptimizedExperienceSection = (props) => {
 };
 
 const StyledTab = styled.li`
-  opacity: ${(props) => (props.active ? 1 : 0.165)};
+  opacity: ${(props) => (props.active ? 1 : 0.65)};
   position: relative;
 
   &::before {
@@ -397,6 +397,8 @@ const StyledTab = styled.li`
     box-shadow: 0 1px 1px rgba(37, 41, 58, 0.06),
       0 2px 2px rgba(37, 41, 58, 0.05), 0 4px 4px rgba(37, 41, 58, 0.04),
       0 8px 8px rgba(37, 41, 58, 0.03), 0 16px 16px rgba(37, 41, 58, 0.04);
+
+    box-shadow: 0px 4px 4px #EBF1F8;
 
     opacity: ${(props) => (props.active ? 1 : 0)};
   }
@@ -415,11 +417,11 @@ const SetupSection = (props) => {
   const tabs = [
     {
       title: "Register",
-      par: "Select your plan and create your account",
+      par: "Sign up and create a workspace",
     },
     {
-      title: "Add a network",
-      par: "Go through our setup wizard in minutes",
+      title: "Create a network",
+      par: "Set up a network and install your gateway",
     },
     {
       title: "Install your gateway",
@@ -427,11 +429,11 @@ const SetupSection = (props) => {
     },
     {
       title: "Set up devices",
-      par: "Quickly add new users and devices in seconds",
+      par: "Add users quickly from the web app",
     },
     {
       title: "Configure security settings",
-      par: "Manage security settings with just a couple clicks",
+      par: "Fine-tune core controls at every level",
     },
   ];
 
@@ -458,9 +460,7 @@ const SetupSection = (props) => {
         >
           <h3 className="h3 capitalize">straightforward setup</h3>
           <p className="p-small">
-            Forget all the manual configuration historically required for
-            WireGuard configuration. Instead get up and running in minutes with
-            a delightfully simple setup process and accessible admin panel.
+          Forget all the manual configuration historically required for traditional WireGuard® configuration. Instead get up and running in minutes with a delightfully simple setup process and accessible admin panel.
           </p>
         </ScrollAnimation>
         <article className="section--body">
@@ -546,10 +546,10 @@ const SetupSection = (props) => {
                 className="cta"
               >
                 <button
-                  className="btn btn--filled j-text _400 capitalize"
+                  className="cta btn btn--filled j-text _500"
                   aria-label="Get started with our beta program by creating a network"
                 >
-                  create a network
+                  Create a Network
                 </button>
               </ScrollAnimation>
             </Link>
@@ -561,7 +561,7 @@ const SetupSection = (props) => {
                 className="cta"
               >
                 <button
-                  className="cta btn btn--bordered j-text _400 capitalize"
+                  className="cta btn btn--bordered j-text _500 capitalize"
                   aria-label="Get additional information about Wirewise"
                 >
                   learn more

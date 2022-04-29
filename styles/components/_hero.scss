@@ -83,6 +83,7 @@
       animation-duration: 0.9s;
       z-index: 5;
       position: relative;
+      transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
 
       &__wrapper {
         position: relative;
@@ -245,25 +246,34 @@
     grid-row: 1/2;
     align-self: flex-end;
     margin-right: 3.5vw;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     > *,
     > * > * {
       color: $off-white;
     }
 
     h2 {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
+      font-size: 46px;
     }
 
     p {
-      opacity: 0.6;
       font-size: 18px;
       font-weight: 300;
       padding-right: 20px;
+      color: #C4C4C4;
+      letter-spacing: .025em;
+      line-height: 153%;
     }
 
     .cta-group {
-      margin-top: 35px;
+      margin-top: 37px;
+
+      .cta {
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: .035em;
+      }
     }
   }
 
@@ -288,13 +298,13 @@
 
     #featuresHeroImageLeft {
       left: 0;
-      width: 50%;
+      width: 49.5%;
       position: relative;
     }
 
     #featuresHeroImageRight {
       right: 0;
-      width: 66%;
+      width: 67%;
       position: absolute;
     }
   }
