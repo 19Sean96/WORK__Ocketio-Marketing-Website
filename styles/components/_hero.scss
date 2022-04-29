@@ -88,6 +88,8 @@
       &__wrapper {
         position: relative;
         height: min-content;
+        transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
+
         &::after {
           @include set-height-to-image-height(
             "../public/images/homepage/hero/hero-fg.svg",

@@ -10,6 +10,8 @@ import { useAppContext } from "../../Context";
 const animateOnce = true;
 
 const StyledMain = styled.div`
+
+  
   transform-origin: top;
   transform: scale(1)
     ${(props) => ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
@@ -120,7 +122,7 @@ const HeroHome = ({ offset }) => {
           >
             <HeroBG
               id="heroImageMain"
-              className={`animate__animated image-group__image${
+              className={`image-group__image${
                 offset === 0 ? " heroImageMain" : ""
               }`}
             />
