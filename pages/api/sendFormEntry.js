@@ -153,13 +153,13 @@
  
 // /*** FORM SUBMISSION PROCESS - NOTES ***/
 // /*
-//     - Standard contact form at '/contact' - add the following:
-//         * email_address
-//         * status ( SUBSCRIBED | PENDING )
-//             * FNAME
-//             * LNAME
-//             * EMAIL
-//             * PHONE
+// //     - Standard contact form at '/contact' - add the following:
+// //         * email_address
+// //         * status ( SUBSCRIBED | PENDING )
+// //             * FNAME
+// //             * LNAME
+// //             * EMAIL
+// //             * PHONE
 
 
-// */
+// // */
