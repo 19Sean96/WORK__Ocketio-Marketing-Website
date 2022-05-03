@@ -25,7 +25,7 @@ const ContactPortal = (props) => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    const result = await fetch('/api/sendFormEntry', {
+    const result = await fetch('/api/sendinblue', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -253,20 +253,20 @@ const ContactPortal = (props) => {
                 <option value="" selected></option>
                 <option
                   className="capitalize"
-                  value="sales-op"
+                  value="learn more"
                 >
                   I'd like to learn more about the platform.
                 </option>
-                <option className="capitalize" value="feature-request">
+                <option className="capitalize" value="feature requested">
                   Feature request.
                 </option>
-                <option className="capitalize" value="needs-help">
+                <option className="capitalize" value="needs help/support">
                   I need help/support
                 </option>
                 <option className="capitalize" value="media/press">
                   Media/Press Questions
                 </option>
-                <option className="capitalize" value="misc.">
+                <option className="capitalize" value="general">
                   Other (please describe)
                 </option>
               </select>
