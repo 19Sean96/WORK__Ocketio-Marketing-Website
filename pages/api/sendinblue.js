@@ -1,4 +1,5 @@
-const SibApiV3Sdk = require('sib-api-v3-sdk')
+// const SibApiV3Sdk = require('sib-api-v3-sdk')
+import SibApiV3Sdk from 'sib-api-v3-sdk'
 const defaultClient = SibApiV3Sdk.ApiClient.instance
 const k = process.env.SIB_KEY
 const apiKey = defaultClient.authentications['api-key']
