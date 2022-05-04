@@ -21,14 +21,16 @@ module.exports = {
   env: {
     MANAGED_DEVICE_DOWNLOAD_URL: process.env.MANAGED_DEVICE_DOWNLOAD_URL,
   },
-  rules: [
-    {
-      parser: {
-        amd: false,
+  webpack: {
+    rules: [
+      {
+        parser: {
+          amd: false,
+        },
       },
+    ],
+    resolve: {
+      preferRelative: true,
     },
-  ],
-  resolve: {
-    preferRelative: true
-  }
+  },
 };
