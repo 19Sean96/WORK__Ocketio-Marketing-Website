@@ -1,20 +1,20 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GTM_ID } from '../lib/gtm'
-import { ServerStyleSheet } from 'styled-components'
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { GTM_ID } from "../lib/gtm";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
             sheet.collectStyles(<App {...props} />),
-        })
+        });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -23,17 +23,29 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
-      sheet.seal()
+      sheet.seal();
     }
   }
-  
+
   render() {
     return (
       <Html lang="en">
         <Head>
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: process.env.rawGtmScriptFromFile,
+            }}
+          ></script>
           <link rel="shortcut icon" href="/wirewise-favicon.ico" />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: process.env.rawSibScriptFromFile,
+            }}
+          ></script>
         </Head>
         <body>
           <noscript>
@@ -41,13 +53,13 @@ export default class MyDocument extends Document {
               src={`https://www.googletagmanager.com/ns.html?id=GTM-MZ2NRBZ`}
               height="0"
               width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
+              style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
           <Main />
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

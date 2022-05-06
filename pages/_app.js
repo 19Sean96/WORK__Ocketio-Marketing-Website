@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Google Tag Manager - Global base code */}
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
           })(window,document,'script','dataLayer','GTM-MZ2NRBZ');
           `,
         }}
-      />
+      /> */}
       <AppWrapper>
         {/* <OSTest /> */}
         <Header />
