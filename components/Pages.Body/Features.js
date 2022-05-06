@@ -7,7 +7,13 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
 import FeatureDiagram from "../Site.Graphics/FeatureDiagram";
 
-import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "../Site.Graphics/FeatureSlides";
+import {
+  Slide1,
+  Slide2,
+  Slide3,
+  Slide4,
+  Slide5,
+} from "../Site.Graphics/FeatureSlides";
 
 import { useSwipeable } from "react-swipeable";
 import {
@@ -398,7 +404,7 @@ const StyledTab = styled.li`
       0 2px 2px rgba(37, 41, 58, 0.05), 0 4px 4px rgba(37, 41, 58, 0.04),
       0 8px 8px rgba(37, 41, 58, 0.03), 0 16px 16px rgba(37, 41, 58, 0.04);
 
-    box-shadow: 0px 4px 4px #EBF1F8;
+    box-shadow: 0px 4px 4px #ebf1f8;
 
     opacity: ${(props) => (props.active ? 1 : 0)};
   }
@@ -460,7 +466,10 @@ const SetupSection = (props) => {
         >
           <h3 className="h3 capitalize">straightforward setup</h3>
           <p className="p-small">
-          Forget all the manual configuration historically required for traditional WireGuard® configuration. Instead get up and running in minutes with a delightfully simple setup process and accessible admin panel.
+            Forget all the manual configuration historically required for
+            traditional WireGuard® configuration. Instead get up and running in
+            minutes with a delightfully simple setup process and accessible
+            admin panel.
           </p>
         </ScrollAnimation>
         <article className="section--body">
