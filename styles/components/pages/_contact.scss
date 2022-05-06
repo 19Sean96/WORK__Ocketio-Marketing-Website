@@ -5,7 +5,7 @@
   top: 25px;
   z-index: -2;
   transform: translateY(-110px);
-  min-width: 1200px;
+  min-width: 1850px;
 }
 
 #contactPortal {
@@ -251,12 +251,6 @@
     }
 
     @media (max-width: 1200px) {
-      &--heading {
-        h2 {
-          margin-bottom: 21px;
-        }
-      }
-
       &--info {
         grid-column: 1/5;
       }
@@ -315,6 +309,7 @@
         &__wrapper {
           grid-column: 2/12;
           grid-row: 2/3;
+          padding: 35px 27px 30px 27px;
         }
 
         &--input {
