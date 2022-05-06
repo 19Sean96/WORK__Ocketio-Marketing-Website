@@ -618,6 +618,7 @@
               text-align: center;
               color: #fff;
               position: relative;
+              z-index: 10;
               margin: 0;
               &::before {
                 content: "";
