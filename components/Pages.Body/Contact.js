@@ -25,7 +25,7 @@ const ContactPortal = (props) => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    const result = await fetch('/api/sendinblue', {
+    const result = await fetch('/api/sibVanillaApi', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

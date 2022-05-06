@@ -25,7 +25,6 @@
     "react-swipeable": "^6.2.0",
     "reading-time": "^1.5.0",
     "sass": "^1.44.0",
-    "sib-api-v3-sdk": "^8.3.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
