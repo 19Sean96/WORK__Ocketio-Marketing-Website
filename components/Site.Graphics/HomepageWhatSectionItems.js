@@ -50,7 +50,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="-8" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="31" result="blur" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -64,7 +64,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="3" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="39.5" result="blur-2" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-2" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -78,7 +78,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="12" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="21.5" result="blur-3" />
-          <feFlood flood-opacity="0.149" />
+          <feFlood floodOpacity="0.149" />
           <feComposite operator="in" in2="blur-3" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -92,7 +92,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-4" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-4" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -106,7 +106,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-5" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-5" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -120,7 +120,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-6" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-6" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -134,7 +134,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-7" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-7" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -148,7 +148,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-8" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-8" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -162,7 +162,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-9" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-9" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -176,7 +176,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-10" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-10" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -190,7 +190,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-11" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-11" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -204,7 +204,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-12" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-12" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -218,7 +218,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-13" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-13" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -232,7 +232,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-14" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-14" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -246,7 +246,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-15" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-15" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -260,7 +260,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-16" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-16" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -274,7 +274,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-17" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-17" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -288,7 +288,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-18" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-18" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -302,7 +302,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-19" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-19" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -316,7 +316,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dx="11" dy="3" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-20" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-20" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -330,7 +330,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="6" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="15.5" result="blur-21" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-21" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -344,7 +344,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="22" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="20" result="blur-22" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-22" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -358,7 +358,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="6" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="15.5" result="blur-23" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-23" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -372,7 +372,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="6" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="15.5" result="blur-24" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-24" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -386,7 +386,7 @@ const SecureSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="6" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="15.5" result="blur-25" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-25" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -441,10 +441,10 @@ const SecureSVG = ({ alt, id, className }) => {
           transform="translate(-310 -80)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_73"
@@ -453,10 +453,10 @@ const SecureSVG = ({ alt, id, className }) => {
           transform="translate(-310 -80)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g id="circles">
           <g
@@ -691,10 +691,10 @@ const SecureSVG = ({ alt, id, className }) => {
           transform="translate(-310 -80)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_75"
@@ -703,10 +703,10 @@ const SecureSVG = ({ alt, id, className }) => {
           transform="translate(-310 -80)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g
           transform="matrix(1, 0, 0, 1, -13.86, 25.35)"
@@ -899,8 +899,8 @@ const SecureSVG = ({ alt, id, className }) => {
             transform="translate(-310 -80)"
             fill="#3399fe"
             stroke="#e6e6e6"
-            stroke-miterlimit="10"
-            stroke-width="2"
+            strokeMiterlimit="10"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_120"
@@ -1130,7 +1130,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="3" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="26" result="blur" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1144,7 +1144,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="13" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="11" result="blur-2" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-2" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1158,7 +1158,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-3" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-3" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1172,7 +1172,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-4" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-4" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1186,7 +1186,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-5" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-5" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1200,7 +1200,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-6" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-6" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1214,7 +1214,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-7" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-7" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1228,7 +1228,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-8" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-8" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1242,7 +1242,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-9" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-9" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1256,7 +1256,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-10" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-10" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1270,7 +1270,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-11" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-11" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1284,7 +1284,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-12" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-12" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1298,7 +1298,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-13" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-13" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1312,7 +1312,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-14" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-14" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1326,7 +1326,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-15" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-15" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1340,7 +1340,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-16" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-16" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1354,7 +1354,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-17" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-17" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1368,7 +1368,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-18" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-18" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1382,7 +1382,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dx="35" dy="3" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="35" result="blur-19" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-19" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1396,7 +1396,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dx="7" dy="13" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="11" result="blur-20" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-20" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1410,7 +1410,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="14" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="42.5" result="blur-21" />
-          <feFlood flood-opacity="0.059" />
+          <feFlood floodOpacity="0.059" />
           <feComposite operator="in" in2="blur-21" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1424,7 +1424,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="13" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="19.5" result="blur-22" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-22" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1438,7 +1438,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="22" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="23.5" result="blur-23" />
-          <feFlood flood-opacity="0.122" />
+          <feFlood floodOpacity="0.122" />
           <feComposite operator="in" in2="blur-23" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1452,7 +1452,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="13" result="blur-24" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-24" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1466,7 +1466,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="5" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="22.5" result="blur-25" />
-          <feFlood flood-opacity="0.059" />
+          <feFlood floodOpacity="0.059" />
           <feComposite operator="in" in2="blur-25" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1480,7 +1480,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="49.5" result="blur-26" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-26" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -1521,10 +1521,10 @@ const StreamlinedSVG = ({ alt, id, className }) => {
           transform="translate(-341 -74)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_87"
@@ -1533,10 +1533,10 @@ const StreamlinedSVG = ({ alt, id, className }) => {
           transform="translate(-341 -74)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g id="circles">
           <g
@@ -1799,10 +1799,10 @@ const StreamlinedSVG = ({ alt, id, className }) => {
           transform="translate(-341 -74)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_89"
@@ -1811,10 +1811,10 @@ const StreamlinedSVG = ({ alt, id, className }) => {
           transform="translate(-341 -74)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <StyledCloud
           offset={scrollOffset}
@@ -1918,8 +1918,8 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             transform="translate(-341 -74)"
             fill="#252939"
             stroke="#fff"
-            stroke-miterlimit="10"
-            stroke-width="2"
+            strokeMiterlimit="10"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_147"
@@ -1980,9 +1980,9 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             transform="translate(279.5 133.99)"
             fill="none"
             stroke="#fff"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
-            stroke-width="1"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
+            strokeWidth="1"
           />
           <rect
             id="Rectangle_263"
@@ -2036,9 +2036,9 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             transform="translate(813.98 668.75)"
             fill="none"
             stroke="#139bbf"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="6"
           />
           <rect
             id="Rectangle_275"
@@ -2058,9 +2058,9 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             transform="translate(813.98 677.47)"
             fill="none"
             stroke="#27c1bc"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="6"
           />
           <rect
             id="Rectangle_277"
@@ -2080,9 +2080,9 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             transform="translate(813.96 660)"
             fill="none"
             stroke="#27c1bc"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="6"
           />
           <circle
             id="Ellipse_149"
@@ -2303,7 +2303,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="8" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="19" result="blur" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2317,7 +2317,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="7" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="16" result="blur-2" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-2" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2331,7 +2331,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-3" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-3" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2345,7 +2345,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-4" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-4" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2359,7 +2359,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-5" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-5" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2373,7 +2373,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-6" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-6" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2387,7 +2387,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-7" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-7" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2401,7 +2401,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-8" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-8" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2415,7 +2415,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-9" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-9" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2429,7 +2429,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-10" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-10" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2443,7 +2443,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-11" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-11" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2457,7 +2457,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-12" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-12" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2471,7 +2471,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-13" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-13" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2485,7 +2485,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-14" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-14" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2499,7 +2499,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-15" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-15" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2513,7 +2513,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-16" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-16" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2527,7 +2527,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-17" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-17" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2541,7 +2541,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="12" result="blur-18" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-18" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2555,7 +2555,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="9" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="9.5" result="blur-19" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-19" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2569,7 +2569,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="15" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="17" result="blur-20" />
-          <feFlood flood-opacity="0.051" />
+          <feFlood floodOpacity="0.051" />
           <feComposite operator="in" in2="blur-20" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2583,7 +2583,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="-7" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="14.5" result="blur-21" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-21" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2597,7 +2597,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="24" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="19" result="blur-22" />
-          <feFlood flood-opacity="0.122" />
+          <feFlood floodOpacity="0.122" />
           <feComposite operator="in" in2="blur-22" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2611,7 +2611,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="-9" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="9" result="blur-23" />
-          <feFlood flood-opacity="0.051" />
+          <feFlood floodOpacity="0.051" />
           <feComposite operator="in" in2="blur-23" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2625,7 +2625,7 @@ const EfficientSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="19" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="9.5" result="blur-24" />
-          <feFlood flood-opacity="0.051" />
+          <feFlood floodOpacity="0.051" />
           <feComposite operator="in" in2="blur-24" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -2675,10 +2675,10 @@ const EfficientSVG = ({ alt, id, className }) => {
           transform="translate(-327 -94)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_61"
@@ -2687,10 +2687,10 @@ const EfficientSVG = ({ alt, id, className }) => {
           transform="translate(-327 -94)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g id="circles">
           <g
@@ -2925,10 +2925,10 @@ const EfficientSVG = ({ alt, id, className }) => {
           transform="translate(-327 -94)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_63"
@@ -2937,10 +2937,10 @@ const EfficientSVG = ({ alt, id, className }) => {
           transform="translate(-327 -94)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g
           transform="matrix(1, 0, 0, 1, 24.77, 10.25)"
@@ -3010,8 +3010,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(224.79 148.99)"
             fill="#252939"
             stroke="#252939"
-            stroke-miterlimit="10"
-            stroke-width="1"
+            strokeMiterlimit="10"
+            strokeWidth="1"
           />
           <rect
             id="Rectangle_172"
@@ -3031,8 +3031,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(315.27 191.66)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_174"
@@ -3052,8 +3052,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(267.47 138.74)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_176"
@@ -3073,8 +3073,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(269.18 237.05)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_178"
@@ -3094,8 +3094,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(216.25 191.66)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_180"
@@ -3115,8 +3115,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(298.087 165.049) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_182"
@@ -3136,8 +3136,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(226.512 235.239) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_184"
@@ -3157,8 +3157,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(226.513 162.128) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_186"
@@ -3178,8 +3178,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(296.512 232.121) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_86"
@@ -3199,8 +3199,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(325.83 111.62)"
             fill="#252939"
             stroke="#252939"
-            stroke-miterlimit="10"
-            stroke-width="1"
+            strokeMiterlimit="10"
+            strokeWidth="1"
           />
           <rect
             id="Rectangle_188"
@@ -3220,8 +3220,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(387.95 152.371) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_190"
@@ -3241,8 +3241,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(357.189 118.401) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_192"
@@ -3262,8 +3262,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(353.815 186.489) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_194"
@@ -3283,8 +3283,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(319.777 147.751) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_196"
@@ -3304,8 +3304,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(377.975 123.857) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_198"
@@ -3325,8 +3325,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(325.425 168.848) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_200"
@@ -3346,8 +3346,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(328.84 118.503) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_202"
@@ -3367,8 +3367,8 @@ const EfficientSVG = ({ alt, id, className }) => {
             transform="translate(373.755 169.96) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_88"
@@ -3592,8 +3592,8 @@ const EfficientSVG = ({ alt, id, className }) => {
                 transform="translate(186.06 566.68)"
                 fill="none"
                 stroke="#252939"
-                stroke-miterlimit="10"
-                stroke-width="10"
+                strokeMiterlimit="10"
+                strokeWidth="10"
               />
               <rect
                 id="Rectangle_209"
@@ -3684,7 +3684,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="9" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="19.5" result="blur" />
-          <feFlood flood-opacity="0.149" />
+          <feFlood floodOpacity="0.149" />
           <feComposite operator="in" in2="blur" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3698,7 +3698,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset dx="24" dy="4" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="15.5" result="blur-2" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-2" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3712,7 +3712,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="3" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="14" result="blur-3" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-3" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3726,7 +3726,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-4" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-4" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3740,7 +3740,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-5" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-5" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3754,7 +3754,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-6" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-6" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3768,7 +3768,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-7" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-7" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3782,7 +3782,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-8" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-8" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3796,7 +3796,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-9" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-9" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3810,7 +3810,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-10" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-10" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3824,7 +3824,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-11" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-11" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3838,7 +3838,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-12" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-12" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3852,7 +3852,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-13" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-13" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3866,7 +3866,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-14" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-14" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3880,7 +3880,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-15" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-15" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3894,7 +3894,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-16" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-16" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3908,7 +3908,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-17" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-17" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3922,7 +3922,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-18" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-18" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3936,7 +3936,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="10.5" result="blur-19" />
-          <feFlood flood-opacity="0.078" />
+          <feFlood floodOpacity="0.078" />
           <feComposite operator="in" in2="blur-19" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3950,7 +3950,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset dx="6" dy="2" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="17.5" result="blur-20" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-20" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3964,7 +3964,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="19" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="23" result="blur-21" />
-          <feFlood flood-opacity="0.122" />
+          <feFlood floodOpacity="0.122" />
           <feComposite operator="in" in2="blur-21" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3978,7 +3978,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset input="SourceAlpha" />
           <feGaussianBlur stdDeviation="24.5" result="blur-22" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-22" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -3992,7 +3992,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
         >
           <feOffset dy="3" input="SourceAlpha" />
           <feGaussianBlur stdDeviation="14.5" result="blur-23" />
-          <feFlood flood-opacity="0.102" />
+          <feFlood floodOpacity="0.102" />
           <feComposite operator="in" in2="blur-23" />
           <feComposite in="SourceGraphic" />
         </filter>
@@ -4044,10 +4044,10 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
           transform="translate(-358 -101)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_51"
@@ -4056,10 +4056,10 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
           transform="translate(-358 -101)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g id="circles">
           <g
@@ -4294,10 +4294,10 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
           transform="translate(-358 -101)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <path
           id="Path_53"
@@ -4306,10 +4306,10 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
           transform="translate(-358 -101)"
           fill="none"
           stroke="#ccc"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          stroke-dasharray="12 16"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="5"
+          strokeDasharray="12 16"
         />
         <g
           transform="matrix(1, 0, 0, 1, 28.96, -13.42)"
@@ -4408,8 +4408,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
                 transform="translate(497 473)"
                 fill="none"
                 stroke="#e6e6e6"
-                stroke-miterlimit="10"
-                stroke-width="1"
+                strokeMiterlimit="10"
+                strokeWidth="1"
               />
             </g>
             <g id="Group_13" data-name="Group 13">
@@ -4431,8 +4431,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
                 transform="translate(513.24 473)"
                 fill="none"
                 stroke="#e6e6e6"
-                stroke-miterlimit="10"
-                stroke-width="1"
+                strokeMiterlimit="10"
+                strokeWidth="1"
               />
             </g>
             <g id="Group_12" data-name="Group 12">
@@ -4454,8 +4454,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
                 transform="translate(529.49 473)"
                 fill="none"
                 stroke="#e6e6e6"
-                stroke-miterlimit="10"
-                stroke-width="1"
+                strokeMiterlimit="10"
+                strokeWidth="1"
               />
             </g>
             <g id="Group_11" data-name="Group 11">
@@ -4477,8 +4477,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
                 transform="translate(545.73 473)"
                 fill="none"
                 stroke="#e6e6e6"
-                stroke-miterlimit="10"
-                stroke-width="1"
+                strokeMiterlimit="10"
+                strokeWidth="1"
               />
             </g>
             <g id="Group_10" data-name="Group 10">
@@ -4500,8 +4500,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
                 transform="translate(561.98 473)"
                 fill="none"
                 stroke="#e6e6e6"
-                stroke-miterlimit="10"
-                stroke-width="1"
+                strokeMiterlimit="10"
+                strokeWidth="1"
               />
             </g>
             <g id="Group_9" data-name="Group 9">
@@ -4523,8 +4523,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
                 transform="translate(578.22 473)"
                 fill="none"
                 stroke="#e6e6e6"
-                stroke-miterlimit="10"
-                stroke-width="1"
+                strokeMiterlimit="10"
+                strokeWidth="1"
               />
             </g>
           </g>
@@ -4548,10 +4548,10 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(165 540)"
             fill="none"
             stroke="#252939"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
-            stroke-width="6"
-            stroke-dasharray="8 18"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
+            strokeWidth="6"
+            strokeDasharray="8 18"
           />
           <rect
             id="Rectangle_120"
@@ -4571,9 +4571,9 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
               transform="translate(263.93 591.39)"
               fill="none"
               stroke="#f15a24"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-              stroke-width="6"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="6"
             />
             <line
               id="Line_70"
@@ -4583,9 +4583,9 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
               transform="translate(291.9 589.15)"
               fill="none"
               stroke="#f15a24"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-              stroke-width="5"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="5"
             />
             <line
               id="Line_71"
@@ -4595,9 +4595,9 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
               transform="translate(278.82 588)"
               fill="none"
               stroke="#f15a24"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-              stroke-width="5"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="5"
             />
           </g>
         </StyledDatabase>
@@ -4655,8 +4655,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(-358 -101)"
             fill="#252939"
             stroke="#fff"
-            stroke-miterlimit="10"
-            stroke-width="2"
+            strokeMiterlimit="10"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_62"
@@ -4692,8 +4692,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(850.31 610.8)"
             fill="#252939"
             stroke="#252939"
-            stroke-miterlimit="10"
-            stroke-width="1"
+            strokeMiterlimit="10"
+            strokeWidth="1"
           />
           <rect
             id="Rectangle_123"
@@ -4713,8 +4713,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(945.79 655.84)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_125"
@@ -4734,8 +4734,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(895.34 599.99)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_127"
@@ -4755,8 +4755,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(897.15 703.73)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_129"
@@ -4776,8 +4776,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(841.3 655.84)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_131"
@@ -4797,8 +4797,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(927.652 627.766) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_133"
@@ -4818,8 +4818,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(852.131 701.825) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_135"
@@ -4839,8 +4839,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(852.133 624.663) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_137"
@@ -4860,8 +4860,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(925.997 698.532) rotate(-45)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_64"
@@ -4881,8 +4881,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(956.92 571.38)"
             fill="#252939"
             stroke="#252939"
-            stroke-miterlimit="10"
-            stroke-width="1"
+            strokeMiterlimit="10"
+            strokeWidth="1"
           />
           <rect
             id="Rectangle_139"
@@ -4902,8 +4902,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(1022.504 614.4) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_141"
@@ -4923,8 +4923,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(990.045 578.558) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_143"
@@ -4944,8 +4944,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(991.311 649.04) rotate(-85.996)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2.005"
+            strokeLinejoin="round"
+            strokeWidth="2.005"
           />
           <rect
             id="Rectangle_145"
@@ -4965,8 +4965,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(950.566 609.525) rotate(-86.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_147"
@@ -4986,8 +4986,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(1011.947 584.311) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_149"
@@ -5007,8 +5007,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(956.493 631.788) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_151"
@@ -5028,8 +5028,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(960.09 578.669) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle_153"
@@ -5049,8 +5049,8 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             transform="translate(1007.505 632.966) rotate(-41.12)"
             fill="none"
             stroke="#252939"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_66"
