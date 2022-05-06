@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
@@ -20,17 +22,7 @@ module.exports = {
   },
   env: {
     MANAGED_DEVICE_DOWNLOAD_URL: process.env.MANAGED_DEVICE_DOWNLOAD_URL,
+    rawGtmScriptFromFile: fs.readFileSync('./lib/preLoadAnalyticScripts/gtm.js').toString(),
+    rawSibScriptFromFile: fs.readFileSync('./lib/preLoadAnalyticScripts/sib.js').toString()
   },
-  webpack: {
-    rules: [
-      {
-        parser: {
-          amd: false,
-        },
-      },
-    ],
-    resolve: {
-      preferRelative: true,
-    },
-  },
-};
+ };
