@@ -82,44 +82,44 @@ export default async function handler(req, res) {
     'GET ALL CONTACT LISTS'
   )
 
-  if (allListsResponse.status === 200) {
-      let { lists } = allListsResponse.data
+  // if (allListsResponse.status === 200) {
+  //     let { lists } = allListsResponse.data
     
-      lists = lists.map(list => ({
-          name: list.name.toLowerCase(),
-          id: list.id,
-          folder: list.folderId
-      }))
-      const subscribedListItem = lists.filter(list => list.name === 'subscribed')[0]
-      const listDestination = lists.filter(list => list.name === contactType)
-      if (newsletterOptIn) {
-          listDestination.push(subscribedListItem)
-      }
-      contactParams.listIds = listDestination.map(list => list.id)
-  } else {
-      contactParams.listIds = [8]
-  }
+  //     lists = lists.map(list => ({
+  //         name: list.name.toLowerCase(),
+  //         id: list.id,
+  //         folder: list.folderId
+  //     }))
+  //     const subscribedListItem = lists.filter(list => list.name === 'subscribed')[0]
+  //     const listDestination = lists.filter(list => list.name === contactType)
+  //     if (newsletterOptIn) {
+  //         listDestination.push(subscribedListItem)
+  //     }
+  //     contactParams.listIds = listDestination.map(list => list.id)
+  // } else {
+  //     contactParams.listIds = [8]
+  // }
 
-  const addContactResponse = await callHandler(
-    contactParams,
-    sibURL + "/contacts",
-    "POST",
-    'ADD CONTACT'
-  );
-  console.log('ADD CONTACT RESPONSE: ', addContactResponse);
+  // const addContactResponse = await callHandler(
+  //   contactParams,
+  //   sibURL + "/contacts",
+  //   "POST",
+  //   'ADD CONTACT'
+  // );
+  // console.log('ADD CONTACT RESPONSE: ', addContactResponse);
 
-  const sendEmailResponse = await callHandler(
-    sendEmailParams,
-    sibURL + "/smtp/email",
-    "POST",
-    'SEND TRANSACTIONAL EMAIL'
-  );
-  console.log("SEND EMAIL RESPONSE: ", sendEmailResponse);
+  // const sendEmailResponse = await callHandler(
+  //   sendEmailParams,
+  //   sibURL + "/smtp/email",
+  //   "POST",
+  //   'SEND TRANSACTIONAL EMAIL'
+  // );
+  // console.log("SEND EMAIL RESPONSE: ", sendEmailResponse);
   
   res.json({ 
       allListsResponse,
-      addContactResponse,
-      sendEmailResponse
+      // addContactResponse,
+      // sendEmailResponse
   });
 }
 
