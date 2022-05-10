@@ -65,6 +65,13 @@ export default function Blog({ blog_posts }) {
     }
   }, [activeCategory]);
 
+  useEffect(() => {
+    sendinblue.page('blog[main]', {
+      'ma_title': 'Main Blog Page',
+      'ma_path': '/blog'
+    })
+  }, [])
+
   return (
     <>
       <Head />
