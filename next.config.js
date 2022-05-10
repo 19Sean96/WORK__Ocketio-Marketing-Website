@@ -23,6 +23,11 @@ module.exports = {
   env: {
     MANAGED_DEVICE_DOWNLOAD_URL: process.env.MANAGED_DEVICE_DOWNLOAD_URL,
     rawGtmScriptFromFile: fs.readFileSync('./lib/preLoadAnalyticScripts/gtm.js').toString(),
-    rawSibScriptFromFile: fs.readFileSync('./lib/preLoadAnalyticScripts/sib.js').toString()
+    rawSibScriptFromFile: fs.readFileSync('./lib/preLoadAnalyticScripts/sib.js').toString(),
+    SIB_KEY: process.env.SIB_KEY,
+    NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID,
+    THIS_URL: process.env.THIS_URL,
+    DIRECTUS_CMS_URL: process.env.DIRECTUS_CMS_URL,
+    DIRECTUS_CMS_ACCESS_KEY: process.env.DIRECTUS_CMS_ACCESS_KEY
   },
  };
