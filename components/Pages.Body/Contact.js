@@ -25,6 +25,8 @@ const ContactPortal = (props) => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
+    let [firstName, lastName] = data.fullName.split(' ');
+    lastName = lastName ? lastName : '';
     const result = await fetch('/api/sibVanillaApi', {
       method: 'POST',
       headers: {
@@ -35,12 +37,22 @@ const ContactPortal = (props) => {
     })
 
     const res = await result.json()
+
+    if (res.addContactResponse.status === 200) {
+      sendinblue.identify(data.emailInput, {
+        'EMAIL': data.emailInput,
+        'FIRSTNAME': firstName,
+        'LASTNAME': lastName,
+        'id': res.addContactResponse.data.id,
+        'emailSent': true
+      })
+    }
     console.log('RESULTING: ', res)
   }
 
   const watchAllInputs = watch();
   useEffect(() => {
-    console.log(watchAllInputs);
+    console.log(sendinblue);
   }, [watchAllInputs]);
   return (
     <ContentWrapper>
