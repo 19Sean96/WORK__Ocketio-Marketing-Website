@@ -17,30 +17,35 @@ const StyledMain = styled.div`
     ${(props) => ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
 
   &::after {
+    top: 48%;
+    left: 17%;
     transform-origin: top;
     transform: scale(1)
       ${(props) => ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
 
     @media (max-width: 1200px) {
-      top: 50.95%;
+      top: 37%;
       left: 20%;
 
       transform: scale(1)
         ${(props) => ` translate(0, calc(0px - ${props.offset / -35 + -35}px))`};
     }
+    @media (max-width: 1020px) {
+      top: 41%;
+    }
     @media (max-width: 850px) {
-      top: 53%;
-      left: 20%;
+      top: 46%;
+      left: 17%;
 
-      transform: scale(1.05)
+      transform: scale(.98)
         ${(props) => ` translate(0, calc(-12% - ${props.offset / -60 - 46}px))`};
     }
     @media (max-width: 575px) {
-      top: 63.5%;
-      left: 20%;
+      top: 37.5%;
+      left: 16%;
 
-      transform: scale(1.25)
-        ${(props) => ` translate(0, calc(-6vw - ${props.offset / -60 - 63}px))`};
+      transform: scale(.95)
+        ${(props) => ` translate(0, -50% + calc(-6vw - ${props.offset / -60 - 63}px))`};
     }
   }
 
