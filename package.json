@@ -3,12 +3,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "tf-next": "tf-next build"
   },
   "dependencies": {
-    "@builder.io/react": "^1.1.47",
-    "@mailchimp/mailchimp_marketing": "^3.0.74",
-    "@mailchimp/mailchimp_transactional": "^1.0.47",
     "animate.css": "^4.1.1",
     "axios": "^0.24.0",
     "next": "latest",
@@ -29,6 +27,8 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.2",
+    "tf-next": "^0.12.2",
     "webpack": "^5.72.0"
-  }
+  },
+  "name": "marketingpage"
 }
