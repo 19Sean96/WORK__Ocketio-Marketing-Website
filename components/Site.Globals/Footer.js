@@ -25,7 +25,7 @@ const Footer = () => {
     <StyledFooter
       className="footer"
       id="footer"
-      background={router.pathname === "/pricing" ? "#252939" : "#fff"}
+      background={router.pathname === "/pricing" ? "#252939" : "transparent"}
     >
       <div className="footer--top">
         <div className="footer--logo">
