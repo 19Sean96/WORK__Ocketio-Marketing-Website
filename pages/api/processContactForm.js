@@ -1,4 +1,5 @@
 import axios from "axios";
+import callHandler from "../../lib/sib/callHandler";
 const k = process.env.SIB_KEY;
 const sibURL = "https://api.sendinblue.com/v3";
 
@@ -19,8 +20,8 @@ export default async function handler(req, res) {
   } = req.body;
   let [firstName, lastName] = fullName.split(" ");
   lastName = lastName ? lastName : "";
-  let phoneNum = "+1" + phone;
-
+  let phoneNum = phone ? "+1" + phone : ''
+  console.log("DID THEY OPT IN??? ", newsletterOptIn)
   const contactParams = {
     email: emailInput,
     attributes: {
@@ -30,6 +31,8 @@ export default async function handler(req, res) {
       FIRSTNAME: firstName,
       LASTNAME: lastName,
     },
+    emailBlacklisted: !newsletterOptIn,
+    smsBlacklisted: !newsletterOptIn
   };
 
   const sendEmailParams = {
@@ -122,35 +125,3 @@ export default async function handler(req, res) {
       sendEmailResponse
   });
 }
-
-async function callHandler(params, url, method, requestType) {
-  let response;
-  const options = {
-    method,
-    url,
-  };
-  if (method === 'POST') {
-      options.data = JSON.stringify(params)
-  }
-  await axios
-    .request(options)
-    .then((res) => {
-      response = {
-          status: 200,
-          data: res.data,
-          requestType
-      }
-    })
-    .catch((err) => {
-      response = err.response;
-      response = {
-          status: err.response.status,
-          statusText: err.response.statusText,
-          code: err.response.data.code,
-          message: err.response.data.message,
-          requestType
-      }
-    });
-  return response;
-}
-

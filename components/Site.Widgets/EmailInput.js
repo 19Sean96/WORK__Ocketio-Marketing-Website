@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-
+import { useEffect } from "react";
 
 const EmailIntakeInput = () => {
   const {
@@ -9,9 +9,28 @@ const EmailIntakeInput = () => {
     control,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async data => {
+    let { email } = data
+
+    const result = await fetch('/api/addSubscriber', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+
+    const res = await result.json()
+    console.log('RESULTING: ', res)
+
+  }
 
   const watchAllInputs = watch();
+
+  useEffect(() => {
+    console.log(watchAllInputs);
+  }, [watchAllInputs]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="section--form">

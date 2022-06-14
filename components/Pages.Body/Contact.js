@@ -27,7 +27,7 @@ const ContactPortal = (props) => {
   const onSubmit = async (data) => {
     let [firstName, lastName] = data.fullName.split(' ');
     lastName = lastName ? lastName : '';
-    const result = await fetch('/api/sibVanillaApi', {
+    const result = await fetch('/api/processContactForm', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -46,13 +46,29 @@ const ContactPortal = (props) => {
         'id': res.addContactResponse.data.id,
         'emailSent': true
       })
+
+      sendinblue.track(
+        'contact_added',
+        {
+          'EMAIL': data.emailInput,
+          'FIRSTNAME': firstName,
+          'LASTNAME': lastName,        
+        },
+        {
+          "id": '1234',
+          "data": {
+            "contact_type": data.contactType,
+            "subscribed": data.newsletterOptIn
+          }
+        }
+      )
     }
     console.log('RESULTING: ', res)
   }
 
   const watchAllInputs = watch();
   useEffect(() => {
-    console.log(sendinblue);
+    console.log(watchAllInputs);
   }, [watchAllInputs]);
   return (
     <ContentWrapper>
@@ -228,7 +244,7 @@ const ContactPortal = (props) => {
                   fieldState: { invalid, isTouched, isDirty, error },
                 }) => (
                   <NumberFormat
-                    required
+                    required={false}
                     format="+1 (###) ###-####"
                     mask="_"
                     onValueChange={(v) => onChange(v.value)}

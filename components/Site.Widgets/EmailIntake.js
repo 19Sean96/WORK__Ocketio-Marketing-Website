@@ -4,16 +4,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import EmailInput from "./EmailInput";
 const EmailIntake = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    control,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
-
-  const watchAllInputs = watch();
 
   return (
     <ContentWrapper>
