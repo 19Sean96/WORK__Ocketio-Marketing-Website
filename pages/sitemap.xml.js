@@ -41,7 +41,7 @@ export const getServerSideProps = async ({ res }) => {
 
   const postsPaths = postsResult.data.data.map((post) => {
     return {
-      path: `${BASE_URL}/${post.main_category}/${post.url_slug}`,
+      path: `${BASE_URL}/blog/${post.main_category}/${post.url_slug}`,
       updated: post.date_updated,
     };
   });
@@ -54,7 +54,7 @@ export const getServerSideProps = async ({ res }) => {
   });
 
   const catsPaths = catsResult.data.data.map(
-    (category) => `${BASE_URL}/${category.id}`
+    (category) => `${BASE_URL}/blog/${category.id}`
   );
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
