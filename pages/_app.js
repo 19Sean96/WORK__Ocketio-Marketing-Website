@@ -12,14 +12,14 @@ import TagManager from "react-gtm-module";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   TagManager.initialize({
-  //     gtmId: GTM_ID,
-  //     dataLayer: {
+  useEffect(() => {
+    // TagManager.initialize({
+    //   gtmId: GTM_ID,
+    //   dataLayer: {
 
-  //     }
-  //   })
-  // }, [])
+    //   }
+    // })
+  }, [])
 
   useEffect(() => {
     router.events.on("routeChangeComplete", pageview);
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Google Tag Manager - Global base code */}
-      {/* <Script
+      <Script
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -39,10 +39,10 @@ function MyApp({ Component, pageProps }) {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-MZ2NRBZ');
+          })(window,document,'script','dataLayer','${process.env.GTM_TESTING}');
           `,
         }}
-      /> */}
+      />
       <AppWrapper>
         {/* <OSTest /> */}
         <Header />

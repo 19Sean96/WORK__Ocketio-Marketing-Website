@@ -48,14 +48,11 @@ export default class MyDocument extends Document {
           ></script>
         </Head>
         <body>
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=GTM-MZ2NRBZ`}
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            />
-          </noscript>
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ2NRBZ" height="0" width="0" style="display: none; visibility: hidden;" />`,
+            }}
+          />
           <Main />
           <NextScript />
         </body>
