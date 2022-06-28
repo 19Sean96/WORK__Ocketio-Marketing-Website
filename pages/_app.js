@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import { GTM_ID, pageview, datalayerloaded } from "../lib/gtm";
+import { GTM_ID, pageview, datalayerloaded, gtmVirtualPageView } from "../lib/gtm";
 import { AppWrapper } from "../Context";
 import Header from "../components/Site.Globals/Header";
 import Footer from "../components/Site.Globals/Footer";
@@ -12,26 +12,25 @@ import TagManager from "react-gtm-module";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  useEffect(() => {
-    // TagManager.initialize({
-    //   gtmId: GTM_ID,
-    //   dataLayer: {
-
-    //   }
-    // })
-  }, [])
+  // useEffect(() => {
+  //   router.events.on("routeChangeComplete", pageview);
+  //   return () => {
+  //     router.events.off("routeChangeComplete", pageview);
+  //   };
+  // }, [router.events]);
 
   useEffect(() => {
-    router.events.on("routeChangeComplete", pageview);
-    return () => {
-      router.events.off("routeChangeComplete", pageview);
-    };
-  }, [router.events]);
+    const mainDataLayer = {
+      pageTypeName: pageProps.page || null,
+      url: router.pathname
+    }
+    gtmVirtualPageView(mainDataLayer)
+  }, [pageProps])
 
   return (
     <>
       {/* Google Tag Manager - Global base code */}
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -42,9 +41,10 @@ function MyApp({ Component, pageProps }) {
           })(window,document,'script','dataLayer','${process.env.GTM_TESTING}');
           `,
         }}
-      />
+      /> */}
+
       <AppWrapper>
-        {/* <OSTest /> */}
+        {/* <OSTest /> */}'{" "}
         <Header />
         <Component {...pageProps} />
         <Footer />
