@@ -33,12 +33,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: process.env.rawGtmScriptFromFile,
-            }}
-          ></script>
           <link rel="shortcut icon" href="/wirewise-favicon.ico" />
           <script
             type="text/javascript"
