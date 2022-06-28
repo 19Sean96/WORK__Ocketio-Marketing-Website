@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import { GTM_ID, pageview, datalayerloaded, gtmVirtualPageView } from "../lib/gtm";
+import {
+  GTM_ID,
+  pageview,
+  datalayerloaded,
+  gtmVirtualPageView,
+} from "../lib/gtm";
 import { AppWrapper } from "../Context";
 import Header from "../components/Site.Globals/Header";
 import Footer from "../components/Site.Globals/Footer";
@@ -20,32 +25,32 @@ function MyApp({ Component, pageProps }) {
   // }, [router.events]);
 
   useEffect(() => {
+    console.log('PAGE PROPS: ', pageProps);
     const mainDataLayer = {
       pageTypeName: pageProps.page || null,
-      url: router.pathname
-    }
-    gtmVirtualPageView(mainDataLayer)
-  }, [pageProps])
+      url: router.pathname,
+    };
+    gtmVirtualPageView(mainDataLayer);
+  }, [pageProps]);
 
   return (
     <>
       {/* Google Tag Manager - Global base code */}
-      {/* <Script
+      <Script
+        id="google-tag-manager"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','${process.env.GTM_TESTING}');
-          `,
-        }}
-      /> */}
+      >
+        {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','${process.env.GTM_TESTING}');
+        `}
+      </Script>
 
       <AppWrapper>
-        {/* <OSTest /> */}'{" "}
-        <Header />
+        {/* <OSTest /> */}' <Header />
         <Component {...pageProps} />
         <Footer />
       </AppWrapper>

@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <Script
+          {/* <Script
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               _html: `
@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
               })(window,document,'script','dataLayer','${process.env.GTM_TESTING}');
             `,
             }}
-          ></Script>
+          ></Script> */}
 
           <link rel="shortcut icon" href="/wirewise-favicon.ico" />
           <script
