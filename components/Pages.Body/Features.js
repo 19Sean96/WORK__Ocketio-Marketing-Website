@@ -481,7 +481,7 @@ const SetupSection = (props) => {
           >
             <ul className="tabs">
               {tabs.map((tab, i) => (
-                <div className="tab--outer">
+                <div className="tab--outer" key={`tab-${i}`}>
                   <StyledTab
                     className={`tab tab-${i + 1}`}
                     key={i}
