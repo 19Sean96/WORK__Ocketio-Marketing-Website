@@ -555,7 +555,7 @@ const SetupSection = (props) => {
                 className="cta"
               >
                 <button
-                  className="cta btn btn--filled j-text _500"
+                  className="cta btn btn--filled j-text _400"
                   aria-label="Get started with our beta program by creating a network"
                 >
                   Create a Network
@@ -570,7 +570,7 @@ const SetupSection = (props) => {
                 className="cta"
               >
                 <button
-                  className="cta btn btn--bordered j-text _500 capitalize"
+                  className="cta btn btn--bordered j-text _400 capitalize"
                   aria-label="Get additional information about Wirewise"
                 >
                   learn more
