@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       <AppWrapper>
-        {/* <OSTest /> */}' <Header />
+        {/* <OSTest /> */} <Header />
         <Component {...pageProps} />
         <Footer />
       </AppWrapper>
