@@ -9,6 +9,7 @@ axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.common["Accept"] = "application/json";
 
 export default async function handler(req, res) {
+
   const {
     fullName,
     companyName,
@@ -18,6 +19,7 @@ export default async function handler(req, res) {
     newsletterOptIn,
     phone,
   } = req.body;
+  
   let [firstName, lastName] = fullName.split(" ");
   lastName = lastName ? lastName : "";
   let phoneNum = phone ? "+1" + phone : ''
