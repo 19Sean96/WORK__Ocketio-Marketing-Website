@@ -99,6 +99,10 @@
         &.darkmode {
           color: $off-white;
         }
+
+        &.active {
+          color: #1688F2;
+        }
       }
       &:hover,
       &:active,
@@ -137,7 +141,7 @@
           color: $off-white;
           a {
             text-align: center;
-            color: $off-white !important;
+            color: $off-white;
           }
 
           &::before,&::after {
