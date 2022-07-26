@@ -51,16 +51,6 @@ const Footer = () => {
               </Link>
             </li>
             <li className="p-small">
-              <Link href="/blog/walkthrough">
-                <a>Walkthrough</a>
-              </Link>
-            </li>
-            <li className="p-small">
-              <Link href="/downloads">
-                <a>Downloads</a>
-              </Link>
-            </li>
-            <li className="p-small">
               <Link href="/pricing">
                 <a>Pricing</a>
               </Link>
@@ -83,11 +73,6 @@ const Footer = () => {
             <li className="p-small">
               <Link href="/contact">
                 <a>Contact</a>
-              </Link>
-            </li>
-            <li className="p-small">
-              <Link href="/">
-                <a>Newsletter</a>
               </Link>
             </li>
             <li className="p-small">
