@@ -6,11 +6,6 @@ import ContentWrapper from "../Site.Globals/ContentWrapper";
 
 import MapImg from "../Site.Graphics/HomepageMap";
 
-// import SecureSVG from "../../public/images/homepage/body/Secure.svg";
-// import StreamlinedSVG from "../../public/images/homepage/body/Streamlined.svg";
-// import EfficientSVG from "../../public/images/homepage/body/Efficient.svg";
-// import CostEffectiveSVG from "../../public/images/homepage/body/Cost-Effective.svg";
-
 import { BsCheckCircle, BsPerson, BsShop, BsBuilding } from "react-icons/bs";
 import { useAppContext } from "../../Context";
 import { WaveTop, WaveBot } from "../Site.Graphics/Waves/HomepageHero";
@@ -19,8 +14,8 @@ import {
   SecureSVG,
   StreamlinedSVG,
   EfficientSVG,
-  CostEffectiveSVG
-} from '../Site.Graphics/HomepageWhatSectionItems'
+  CostEffectiveSVG,
+} from "../Site.Graphics/HomepageWhatSectionItems";
 
 const animateOnce = true;
 
@@ -28,12 +23,7 @@ const FirstBanner = (props) => {
   const { isMobile } = useAppContext();
   return (
     <ContentWrapper width="1222px">
-      <ScrollAnimation
-        className="all-columns"
-        animateOnce={animateOnce}
-        animateIn="animate__fadeInUp"
-        duration={0.95}
-      >
+      <div className="all-columns">
         <section
           className="section section__with-grid all-columns"
           id="firstBannerHomepage"
@@ -83,7 +73,7 @@ const FirstBanner = (props) => {
           </ScrollAnimation>
           <WaveBot />
         </section>
-      </ScrollAnimation>
+      </div>
     </ContentWrapper>
   );
 };
@@ -91,12 +81,7 @@ const FirstBanner = (props) => {
 const WhatSection = (props) => {
   const { isMobile } = useAppContext();
 
-  const images = [
-    SecureSVG,
-    StreamlinedSVG,
-    EfficientSVG,
-    CostEffectiveSVG
-  ]
+  const images = [SecureSVG, StreamlinedSVG, EfficientSVG, CostEffectiveSVG];
 
   const whatSectionContent = [
     {
@@ -251,7 +236,7 @@ function WhatSectionItem({
   par,
   list,
   isMobile,
-  Svg
+  Svg,
 }) {
   return (
     <article
@@ -297,10 +282,10 @@ function WhatSectionItem({
         className="image__wrapper"
         delay={150}
       >
-        <Svg 
+        <Svg
           alt={alt}
           id={imgID}
-          className='section--body--item__image image'
+          className="section--body--item__image image"
         />
         {/* <Image
           src={img}

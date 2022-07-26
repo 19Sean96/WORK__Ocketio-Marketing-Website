@@ -57,13 +57,13 @@ const HeroFeatures = ({ offset }) => {
   const { isMobile, isSafari } = useAppContext();
 
   return (
-    <ScrollAnimation
-      animateOnce={animateOnce}
-      duration={0.3}
-      animateIn="animate__fadeInDown"
+    <div
       className="full-width_wrapper navy-bg"
     >
-      <div
+      <ScrollAnimation
+        animateOnce={animateOnce}
+        duration={0.3}
+        animateIn="animate__fadeInDown"
         className="hero_wrapper hero_wrapper-features"
         style={{
           maxWidth: "1300px",
@@ -174,7 +174,7 @@ const HeroFeatures = ({ offset }) => {
                 </div>
               </div>
               <h6 className="h6 capitalize">
-                supervised <span className="last-word">devices</span>
+                monitored <span className="last-word">devices</span>
               </h6>
             </ScrollAnimation>
             {/* <span className="divider"></span> */}
@@ -196,11 +196,11 @@ const HeroFeatures = ({ offset }) => {
             </ScrollAnimation>
           </article>
         </section>
-      </div>
+      </ScrollAnimation>
       <div id="featuresHeroBG">
         <Background />
       </div>
-    </ScrollAnimation>
+    </div>
   );
 };
 

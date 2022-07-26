@@ -3,7 +3,6 @@ import Image from "next/image";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import heroImageMain from "../../public/images/homepage/hero/hero_main-bg.png";
 import HeroBG from "../Site.Graphics/HomepageHero";
 
 import { useAppContext } from "../../Context";
