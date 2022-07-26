@@ -215,6 +215,10 @@
     min-width: 2160px;
     margin-top: -200px;
     transform: translateX(-50%);
+
+    @media screen and (max-width: 575px) {
+      margin-top: -250px;
+    }
   }
 
   .main_wrapper {
@@ -225,9 +229,9 @@
   #heading {
     .section {
       position: relative;
+      margin-top: 0 !important;
       &--heading {
-        grid-column: 3/11;
-        padding-top: 265px;
+        padding-top: 160px;
         padding-bottom: 0;
         margin-bottom: 10px;
         h2 {
@@ -236,7 +240,10 @@
 
         p {
           color: $navy-dark;
-          width: 60%;
+        }
+
+        @media screen and (max-width: 575px) {
+          padding-top: 110px;
         }
       }
     }
@@ -244,6 +251,8 @@
 
   &Content {
     width: 100%;
+    margin-top: 0 !important;
+
   }
   .filter-row {
     display: flex;
@@ -252,7 +261,7 @@
     grid-column: 1/13;
     flex-direction: column;
     gap: 35px;
-    row-gap: 150px;
+    row-gap: 22px;
     flex-wrap: wrap;
   }
   .nav-filter {
@@ -263,8 +272,11 @@
     padding: 35px;
     list-style: none;
     justify-content: space-around;
+    align-items: center;
     flex-grow: 2;
     width: 100%;
+    overflow-x: scroll;
+
     &__item {
       text-align: center;
       margin-inline: initial;
@@ -281,7 +293,8 @@
 
       .filter-toggle {
         position: relative;
-        padding: 5px 15px;
+        padding: 5px 5px;
+        margin: 0 10px;
 
         &::before {
           content: "";
@@ -298,6 +311,18 @@
             width: 100%;
             background-color: $primary-orange;
           }
+        }
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      justify-content: flex-start;
+      padding: 25px 20px;
+
+      &__item {
+
+        .filter-toggle {
+          text-align: left;
         }
       }
     }
@@ -318,6 +343,10 @@
       width: 100%;
       height: 100%;
       padding: 25px 35px;
+
+      @media screen and (max-width: 575px) {
+        padding: 15px 30px;
+      }
     }
 
     #search-icon {
@@ -359,7 +388,7 @@
       gap: 30px;
     }
     #blogPosts {
-      margin-top: 111px;
+      margin-top: 80px;
     }
     @media screen and (min-width: 2160px) {
       #heading {
