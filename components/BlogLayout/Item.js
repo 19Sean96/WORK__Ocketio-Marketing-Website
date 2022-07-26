@@ -5,24 +5,14 @@ import { BsArrowRightCircle } from "react-icons/bs";
 import readingTime from "reading-time";
 
 const BlogItem = ({
-  author,
   dateWritten,
   dateUpdated,
   title,
   body,
-  id,
   imgId,
-  index,
-  isMobile,
   category,
   slug,
-  tileWidth,
-  preserveAspectRatio
-
 }) => {
-   
-
-
   const readStats = readingTime(body);
   const formatDate = (date) =>
     new Date(date).toLocaleDateString(
@@ -36,16 +26,9 @@ const BlogItem = ({
     );
 
   return (
-    <Link
-      href='/blog/[...slug]'
-      as={`/blog/${category}/${slug}`}
-    >
-      <article 
-        className={`blog blog_w-${tileWidth} ${preserveAspectRatio ? 'preserve-aspect-ratio' : ''}`}
-      >
-        <div
-          className="blog__inner"
-        >
+    <Link href="/blog/[...slug]" as={`/blog/${category}/${slug}`}>
+      <article className="blog">
+        <div className="blog__inner">
           <div className="blog__top">
             <p className="p-small blog--info">
               <span className="blog--date">{formatDate(dateWritten)} - </span>
@@ -58,7 +41,7 @@ const BlogItem = ({
           </div>
           <div className="blog__bot">
             <p className="p-small blog--cta">
-              <span>Read More</span>{" "}
+              <span>Read More</span>
               <BsArrowRightCircle className="icon" width={25} height={25} />
             </p>
             <div className={`blog--img__wrapper`}>
