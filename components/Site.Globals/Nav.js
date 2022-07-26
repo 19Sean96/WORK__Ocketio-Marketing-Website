@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 function Nav({ isMobile, menuOpen, darkMode }) {
   const [navStyle, updateNavStyle] = useState();
   const router = useRouter();
+  console.log(router);
   useEffect(() => {
     if (!isMobile) {
       updateNavStyle({
@@ -20,7 +21,7 @@ function Nav({ isMobile, menuOpen, darkMode }) {
       } else {
         updateNavStyle({
           transform: "translate(75%, -50%)",
-          opacity: 0
+          opacity: 0,
         });
       }
     }
@@ -34,22 +35,46 @@ function Nav({ isMobile, menuOpen, darkMode }) {
       <ul className="header--nav--list">
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/features">
-            <a className={darkMode ? 'darkmode' : ''}>features</a>
+            <a
+              className={`${darkMode ? "darkmode" : ""} ${
+                router.pathname.includes("features") ? "active" : ""
+              }`}
+            >
+              features
+            </a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/pricing">
-            <a className={darkMode ? 'darkmode' : ''}>pricing</a>
+            <a
+              className={`${darkMode ? "darkmode" : ""} ${
+                router.pathname.includes("pricing") ? "active" : ""
+              }`}
+            >
+              pricing
+            </a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/contact">
-            <a className={darkMode ? 'darkmode' : ''}>contact</a>
+            <a
+              className={`${darkMode ? "darkmode" : ""} ${
+                router.pathname.includes("contact") ? "active" : ""
+              }`}
+            >
+              contact
+            </a>
           </Link>
         </li>
         <li className="j-text _400 header--nav--item capitalize">
           <Link href="/blog">
-            <a className={darkMode ? 'darkmode' : ''}>blog</a>
+            <a
+              className={`${darkMode ? "darkmode" : ""} ${
+                router.pathname.includes("blog") ? "active" : ""
+              }`}
+            >
+              blog
+            </a>
           </Link>
         </li>
         {/* <li className="j-text header--nav--item">blog</li> */}
