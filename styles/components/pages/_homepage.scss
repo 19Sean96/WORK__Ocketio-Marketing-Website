@@ -722,6 +722,8 @@
       &__wrapper {
         flex-grow: 1;
         align-self: stretch;
+        display: flex;
+        align-items: center;
       }
       &--input {
         height: 76px;
