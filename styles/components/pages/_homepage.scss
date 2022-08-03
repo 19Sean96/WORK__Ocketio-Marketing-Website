@@ -399,7 +399,8 @@
 
         .cta-group {
           align-items: center;
-
+          margin-top: 0px;
+          margin-bottom: -80px;
           .cta {
             width: 85vw;
 
@@ -407,6 +408,12 @@
               width: 100%;
             }
           }
+        }
+      }
+      @media (max-width: 400px) {
+        .cta-group {
+          margin-top: -5px;
+          margin-bottom: -100px;
         }
       }
     }
@@ -489,7 +496,7 @@
     padding-top: 72px;
   }
   @media (max-width: 550px) {
-    padding-top: 58px;
+    padding-top: 15px;
   }
 
   .card {
@@ -734,7 +741,7 @@
       }
       &--input {
         height: 76px;
-        padding: 8px 160px 8px 20px;
+        padding: 8px 160px 2px 20px;
         border-radius: 6px;
         border: 1px solid #e9eaf0;
         box-shadow: 0 2px 8px rgba(20, 25, 43, 0.06);
@@ -816,10 +823,14 @@
     }
   }
 
-  @media (max-width: 480px) {
-    padding: 52px 24px;
+  @media (max-width: 575px) {
+    padding: 38px 24px;
 
     .section {
+      &--heading {
+        gap: 2px;
+      }
+
       &--form {
         display: flex;
         flex-direction: column;
@@ -829,6 +840,7 @@
 
         &--input {
           height: 63px;
+          padding: 8px 20px 2px 20px;
 
           &__label {
             top: 31px;
