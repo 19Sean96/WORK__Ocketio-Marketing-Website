@@ -14,6 +14,8 @@ import {
 } from "react-icons/bs";
 import { useEffect } from "react";
 
+import { useAppContext } from "../../Context";
+
 const animateOnce = true;
 
 const ContactPortal = (props) => {
@@ -65,6 +67,8 @@ const ContactPortal = (props) => {
     }
     console.log('RESULTING: ', res)
   }
+
+  const { isMobile } = useAppContext()
 
   const watchAllInputs = watch();
   useEffect(() => {
@@ -169,6 +173,7 @@ const ContactPortal = (props) => {
               className={`section--form--input__wrapper half ${
                 watchAllInputs?.fullName?.length > 0 ? "has-value" : ""
               }`}
+              offset={isMobile ? -1500 : 0}
             >
               <input
                 required
@@ -192,6 +197,7 @@ const ContactPortal = (props) => {
               className={`section--form--input__wrapper half ${
                 watchAllInputs?.companyName?.length > 0 ? "has-value" : ""
               }`}
+              offset={isMobile ? -1500 : 0}
             >
               <input
                 className="section--form--input"
@@ -213,6 +219,7 @@ const ContactPortal = (props) => {
               className={`section--form--input__wrapper half ${
                 watchAllInputs?.emailInput?.length > 0 ? "has-value" : ""
               }`}
+              offset={isMobile ? -1500 : 0}
             >
               <input
                 required
@@ -235,6 +242,7 @@ const ContactPortal = (props) => {
               className={`section--form--input__wrapper half ${
                 watchAllInputs?.phone?.length > 0 ? "has-value" : ""
               }`}
+              offset={isMobile ? -1500 : 0}
             >
               <Controller
                 name="phone"
@@ -265,12 +273,13 @@ const ContactPortal = (props) => {
               animateIn="animate__fadeInDown"
               delay={400}
               duration={0.6}
-              className={`section--form--input__wrapper full ${
+              className={`with-caret section--form--input__wrapper full ${
                 watchAllInputs?.contactType?.length > 0 ? "has-value" : ""
               }`}
               style={{
                 maxWidth: '583px'
               }}
+              offset={isMobile ? -1500 : 0}
             >
               <select
                 name="contactType"
@@ -305,16 +314,7 @@ const ContactPortal = (props) => {
                 How can we help?
               </label>
               <BsCaretDownFill 
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  right: '40px',
-                  transform: 'translate(0, -50%) scaleX(1.225)',
-                  transformOrigin: 'right center',
-                  fill: '#5C5F6B',
-                  height: '18px',
-                  width: 'auto'
-                }}
+                className="section--form--input__caret"
               />
             </ScrollAnimation>
             <ScrollAnimation
@@ -325,6 +325,7 @@ const ContactPortal = (props) => {
               className={`section--form--input__wrapper full ${
                 watchAllInputs?.message?.length > 0 ? "has-value" : ""
               }`}
+              offset={isMobile ? -1500 : 0}
             >
               <textarea
                 {...register("message", { required: false })}
@@ -341,9 +342,10 @@ const ContactPortal = (props) => {
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
-              delay={400}
+              delay={isMobile ? 0 : 400}
               duration={0.6}
               className={`optInWrapper section--form--input__wrapper full`}
+              offset={isMobile ? -1500 : 0}
             >
               <label htmlFor="newsletterOptIn" className="section--form--input__label j-display _400">
                 <input
@@ -359,9 +361,10 @@ const ContactPortal = (props) => {
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
-              delay={600}
+              delay={isMobile ? 0 : 600}
               duration={0.8}
               className="section--form--input__wrapper full"
+              offset={isMobile ? -1500 : 0}
             >
               <input
                 id="submit"
