@@ -62,7 +62,10 @@ h1, .h1 { @include heading(54px, 500, 119.5%, .0175em) }
 
 h2, .h2 { @include heading(44px, 500, 127.5%, .035em) }
 
-h3, .h3 { @include heading(44px, 500, 120%, .025em) }
+h3, .h3 { 
+    @include heading(42px, 500, 120%, .025em);
+    letter-spacing: 0; 
+}
 
 h4, .h4 { @include heading(34px, 500, 145%, .025em) }
 
