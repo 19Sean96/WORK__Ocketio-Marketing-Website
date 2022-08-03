@@ -219,6 +219,10 @@
     @media screen and (max-width: 575px) {
       margin-top: -250px;
     }
+
+    @media screen and (min-width: 2160px) {
+      transform: translateX(-50%) translateY(-2.5vw)
+    }
   }
 
   .main_wrapper {
