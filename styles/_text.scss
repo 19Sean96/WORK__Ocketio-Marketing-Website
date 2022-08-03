@@ -125,6 +125,15 @@ h6, .h6 { @include heading(23px, 500, 145%, .025em) }
 
 }
 
+@media (max-width: 575px) {
+    .p-large {
+        font-size: 16px;
+    }
+    .p-small {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 530px) {
     h1, .h1 { @include heading(32px, 500, 127.5%, .0025em) }
     h2, .h2 { @include heading(29px, 500, 127.5%, .035em) }
