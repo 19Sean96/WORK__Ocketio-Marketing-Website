@@ -3,14 +3,14 @@ import NumberFormat from "react-number-format";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
 import FAQList from "../Site.Widgets/FAQList";
 import ScrollAnimation from "react-animate-on-scroll";
-import Link from 'next/link'
+import Link from "next/link";
 import {
   BsTelephone,
   BsEnvelope,
   BsBriefcase,
   BsLifePreserver,
   BsNewspaper,
-  BsCaretDownFill
+  BsCaretDownFill,
 } from "react-icons/bs";
 import { useEffect } from "react";
 
@@ -27,48 +27,48 @@ const ContactPortal = (props) => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    let [firstName, lastName] = data.fullName.split(' ');
-    lastName = lastName ? lastName : '';
-    const result = await fetch('/api/processContactForm', {
-      method: 'POST',
+    let [firstName, lastName] = data.fullName.split(" ");
+    lastName = lastName ? lastName : "";
+    const result = await fetch("/api/processContactForm", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
-    })
+      body: JSON.stringify(data),
+    });
 
-    const res = await result.json()
+    const res = await result.json();
 
     if (res.addContactResponse.status === 200) {
       sendinblue.identify(data.emailInput, {
-        'EMAIL': data.emailInput,
-        'FIRSTNAME': firstName,
-        'LASTNAME': lastName,
-        'id': res.addContactResponse.data.id,
-        'emailSent': true
-      })
+        EMAIL: data.emailInput,
+        FIRSTNAME: firstName,
+        LASTNAME: lastName,
+        id: res.addContactResponse.data.id,
+        emailSent: true,
+      });
 
       sendinblue.track(
-        'contact_added',
+        "contact_added",
         {
-          'EMAIL': data.emailInput,
-          'FIRSTNAME': firstName,
-          'LASTNAME': lastName,        
+          EMAIL: data.emailInput,
+          FIRSTNAME: firstName,
+          LASTNAME: lastName,
         },
         {
-          "id": '1234',
-          "data": {
-            "contact_type": data.contactType,
-            "subscribed": data.newsletterOptIn
-          }
+          id: "1234",
+          data: {
+            contact_type: data.contactType,
+            subscribed: data.newsletterOptIn,
+          },
         }
-      )
+      );
     }
-    console.log('RESULTING: ', res)
-  }
+    console.log("RESULTING: ", res);
+  };
 
-  const { isMobile } = useAppContext()
+  const { isMobile } = useAppContext();
 
   const watchAllInputs = watch();
   useEffect(() => {
@@ -94,11 +94,9 @@ const ContactPortal = (props) => {
           >
             contact us
           </h2>
-          <p
-            className="p-small"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in
-            gravida sem enim sed.
+          <p className="p-small">
+            We're always here to help. Fill out this form and we'll get back to
+            you right away.
           </p>
         </ScrollAnimation>
         <div className="section--info">
@@ -277,7 +275,7 @@ const ContactPortal = (props) => {
                 watchAllInputs?.contactType?.length > 0 ? "has-value" : ""
               }`}
               style={{
-                maxWidth: '583px'
+                maxWidth: "583px",
               }}
               offset={isMobile ? -1500 : 0}
             >
@@ -288,20 +286,17 @@ const ContactPortal = (props) => {
                 {...register("contactType", { required: false })}
               >
                 <option value="" selected></option>
-                <option
-                  className="capitalize"
-                  value="learn more"
-                >
-                  I'd like to learn more about the platform.
+                <option className="capitalize" value="learn more">
+                  I'd like to learn more about the solution
                 </option>
                 <option className="capitalize" value="feature requested">
-                  Feature request.
-                </option>
-                <option className="capitalize" value="needs help/support">
                   I need help/support
                 </option>
+                <option className="capitalize" value="needs help/support">
+                  I have a feature request
+                </option>
                 <option className="capitalize" value="media/press">
-                  Media/Press Questions
+                  I have a media/press question
                 </option>
                 <option className="capitalize" value="general">
                   Other (please describe)
@@ -313,9 +308,7 @@ const ContactPortal = (props) => {
               >
                 How can we help?
               </label>
-              <BsCaretDownFill 
-                className="section--form--input__caret"
-              />
+              <BsCaretDownFill className="section--form--input__caret" />
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -347,7 +340,10 @@ const ContactPortal = (props) => {
               className={`optInWrapper section--form--input__wrapper full`}
               offset={isMobile ? -1500 : 0}
             >
-              <label htmlFor="newsletterOptIn" className="section--form--input__label j-display _400">
+              <label
+                htmlFor="newsletterOptIn"
+                className="section--form--input__label j-display _400"
+              >
                 <input
                   type="checkbox"
                   name="newsletterOptIn"
@@ -356,7 +352,9 @@ const ContactPortal = (props) => {
                 />
                 <span> Sign up for our newsletter</span>
               </label>
-              <span className="disclaimer">See our <Link href="/privacy">Privacy Policy.</Link></span>
+              <span className="disclaimer">
+                See our <Link href="/privacy">Privacy Policy.</Link>
+              </span>
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -563,11 +561,6 @@ const ContactFAQ = (props) => {
           className="section--heading"
         >
           <h4 className="h4 capitalize">frequently asked questions</h4>
-          <p className="p-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
-            felis, et id aliquam ac tincidunt. Sapien vel tellus mattis
-            hendrerit orci. Ut etiam nullam.
-          </p>
         </ScrollAnimation>
         <div className="section--body">
           <FAQList list={faqs} />
