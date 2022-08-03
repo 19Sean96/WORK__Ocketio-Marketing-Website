@@ -132,14 +132,21 @@
   }
 
   @media (max-width: 675px) {
+
+    .h5 {
+      margin-bottom: 13px;
+    }
+    
     .banner {
       &--title {
         grid-column: 2/12;
         grid-row: 1/2;
+        padding-left: 0;
       }
       &--paragraph {
         grid-column: 2/12;
         grid-row: 2/3;
+        padding-left: 0;
       }
       &--image {
         grid-row: 3/4;

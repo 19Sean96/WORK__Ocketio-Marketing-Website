@@ -52,6 +52,7 @@
     }
     @media (max-width: 575px) {
       align-items: stretch;
+      grid-column: 2/12;
       h1 {
         margin-top: -65px;
         margin-bottom: 8px;
