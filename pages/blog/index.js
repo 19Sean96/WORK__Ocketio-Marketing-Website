@@ -92,8 +92,7 @@ export default function Blog({ blog_posts }) {
               >
                 <h2 className="h2">Blog</h2>
                 <p className="p-large">
-                  Check out our set up guides, keep up with the latest WireWise
-                  news and more
+                Check out our setup guides, keep up with the latest WireWise news, and more!
                 </p>
               </ScrollAnimation>
             </section>

@@ -38,8 +38,7 @@ const EmailIntake = () => {
               className="section--heading--title"
             >
               <p className="p-small">
-                Follow along as we test, tweak, and improve the platform to make
-                sure you never miss a beat.
+              Follow along as we release updates and add features to make sure you never miss a beat.
               </p>
             </ScrollAnimation>
           </div>

@@ -170,8 +170,7 @@ const WhatSection = (props) => {
         >
           <h3 className="h3">What makes it great?</h3>
           <p className="p-large">
-            Wirewise is built with a set of core attributes that just might make
-            it the best solution for your real-world network security needs.
+          Wirewise’s core attributes are designed to meet your real-world security needs.
           </p>
         </ScrollAnimation>
         <div className="section--body">

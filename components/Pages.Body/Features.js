@@ -124,13 +124,7 @@ const ArchitectureSection = (props) => {
           >
             <h6 className="h6 capitalize">Efficient Network Control</h6>
             <p className="p-small">
-              For a tunnel to be established, the network gateway and its
-              devices need to know each other’s private encryption keys.
-              Wirewise efficiently manages the distribution and updating of
-              authorized keys on gateways and end user devices so access can be
-              revoked as quickly as it is granted. Automatic controls based on
-              defined settings and conditions, such as last authenticated date,
-              will instantly quarantine inactive devices.
+            For a tunnel to be established, the network gateway and its devices need to know each other's private encryption keys. Wirewise efficiently manages the distribution and updating of authorized keys on gateways and end user devices so access can be revoked as quickly as it is granted. Automatic controls based on defined settings and conditions, such as last validated date, will instantly quarantine inactive devices.
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -218,8 +212,7 @@ const FineTunedControlSection = (props) => {
               <BsListUl />
               <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
               <p className="p-small">
-                A detailed event log ensures you can keep tabs on network
-                activity and issues
+              A detailed event log ensures you can keep tabs on system activities and issues
               </p>
             </ScrollAnimation>
             <ScrollAnimation
@@ -244,7 +237,7 @@ const FineTunedControlSection = (props) => {
               className="text-block text-block-4"
             >
               <BsGear />
-              <h6 className="h6 capitalize">configure DNS</h6>
+              <h6 className="h6 capitalize">Configurable DNS</h6>
               <p className="p-small">
                 Manage core settings and configuration from a streamlined online
                 interface
@@ -427,15 +420,15 @@ const SetupSection = (props) => {
     },
     {
       title: "Create a network",
-      par: "Set up a network and install your gateway",
+      par: "Guided network/gateway setup process",
     },
     {
-      title: "Install your gateway",
-      par: "Select your plan and create your account.",
+      title: "Set up user authentication",
+      par: "Configure your third-party auth provider",
     },
     {
       title: "Set up devices",
-      par: "Add users quickly from the web app",
+      par: "Manage users quickly from the cloud",
     },
     {
       title: "Configure security settings",

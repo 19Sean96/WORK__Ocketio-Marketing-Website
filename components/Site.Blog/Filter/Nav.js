@@ -11,18 +11,18 @@ const FilterNav = ({ activeCategory, setActiveCategory }) => {
       </li>
       <li className="nav-filter__item">
         <button
-          className={`filter-toggle ${activeCategory === "tutorials" ? "filter-toggle-active" : ""}`}
-          onClick={(e) => setActiveCategory("tutorials")}
-        >
-          Tutorials
-        </button>
-      </li>
-      <li className="nav-filter__item">
-        <button
           className={`filter-toggle ${activeCategory === "latest" ? "filter-toggle-active" : ""}`}
           onClick={(e) => setActiveCategory("latest")}
         >
           Latest
+        </button>
+      </li>
+      <li className="nav-filter__item">
+        <button
+          className={`filter-toggle ${activeCategory === "tutorials" ? "filter-toggle-active" : ""}`}
+          onClick={(e) => setActiveCategory("tutorials")}
+        >
+          Guides
         </button>
       </li>
       <li className="nav-filter__item">
