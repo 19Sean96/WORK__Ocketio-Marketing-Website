@@ -82,7 +82,7 @@ const ArchitectureSection = (props) => {
           className="section--heading"
         >
           <h3 className="h3 capitalize">Thoughtful architecture</h3>
-          <p className="p-small">
+          <p className="p-large">
             Built from the ground up to facilitate all the complex relationships
             involved in network access management. Here’s what it looks like
             when we pop the hood.
@@ -174,7 +174,7 @@ const FineTunedControlSection = (props) => {
           className="section--heading"
         >
           <h3 className="h3 capitalize">fine-tuned control</h3>
-          <p className="p-small">
+          <p className="p-large">
             No network administrator’s life needs to be harder. Mission-critical
             features allow you to simplify access management while dialing in
             core configuration.
@@ -305,7 +305,7 @@ const OptimizedExperienceSection = (props) => {
           className="section--heading"
         >
           <h3 className="h3 capitalize">optimized experience</h3>
-          <p className="p-small">
+          <p className="p-large">
             A platform as usable as it is capable ensures that administrators
             and users alike can take full advantage of its protection while
             almost forgetting it’s there.
@@ -465,7 +465,7 @@ const SetupSection = (props) => {
           className="section--heading"
         >
           <h3 className="h3 capitalize">straightforward setup</h3>
-          <p className="p-small">
+          <p className="p-large">
             Forget all the manual configuration historically required for
             traditional WireGuard® configuration. Instead get up and running in
             minutes with a delightfully simple setup process and accessible

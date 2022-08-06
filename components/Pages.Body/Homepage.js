@@ -169,7 +169,7 @@ const WhatSection = (props) => {
           className="section--heading"
         >
           <h3 className="h3">What makes it great?</h3>
-          <p className="p-small">
+          <p className="p-large">
             Wirewise is built with a set of core attributes that just might make
             it the best solution for your real-world network security needs.
           </p>
@@ -270,7 +270,7 @@ function WhatSectionItem({
                   fill: "#1688F2",
                 }}
               />
-              <h6 className="p-small _400">{item}</h6>
+              <h6 className="h6 _400">{item}</h6>
             </ScrollAnimation>
           </li>
         ))}
@@ -319,7 +319,7 @@ const WhoSection = (props) => {
           className="section--heading"
         >
           <h2 className="h2">Who is it for?</h2>
-          <p className="p-small">
+          <p className="p-large">
             Wirewise adds useful features to a cutting-edge VPN protocol in a
             way that makes it an excellent option whether you’re a small shop or
             a growing enterprise

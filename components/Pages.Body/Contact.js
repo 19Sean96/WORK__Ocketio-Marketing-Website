@@ -94,7 +94,7 @@ const ContactPortal = (props) => {
           >
             contact us
           </h2>
-          <p className="p-small">
+          <p className="p-large">
             We're always here to help. Fill out this form and we'll get back to
             you right away.
           </p>

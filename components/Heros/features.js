@@ -87,7 +87,7 @@ const HeroFeatures = ({ offset }) => {
               duration={0.95}
               delay={160}
             >
-              <p className="p-small">
+              <p className="p-large">
                 Wirewise gets devices connected to a network in short order and
                 instantly levels up your WireGuard® implementation.
               </p>
@@ -101,7 +101,7 @@ const HeroFeatures = ({ offset }) => {
               delay={500}
             >
               <Link href="/pricing">
-                <button className="cta btn btn--filled j-text _600 capitalize">
+                <button className="cta btn btn--filled j-text _400 capitalize">
                   get started
                 </button>
               </Link>
