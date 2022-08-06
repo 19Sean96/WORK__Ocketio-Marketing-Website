@@ -1,15 +1,14 @@
 
 
 .faq {
-
     &--list {
-
         display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 24px;
         max-width: 92.5vw;
         margin: 0 auto;
+
         &--item {
             cursor: pointer;
             display: flex;
@@ -33,10 +32,21 @@
             }
 
             .body {
-                // height: 0px;
-
                 p {
                     margin-top: 16px;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            &--item {
+                padding: 22px 28px;
+
+                .body {
+                    p {
+                        margin-top: 8px;
+                    }
                 }
             }
         }
