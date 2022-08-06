@@ -91,7 +91,7 @@ export default function Blog({ blog_posts }) {
                 className="section--heading"
               >
                 <h2 className="h2">Blog</h2>
-                <p className="p-small">
+                <p className="p-large">
                   Check out our set up guides, keep up with the latest WireWise
                   news and more
                 </p>
