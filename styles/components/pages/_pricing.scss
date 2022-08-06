@@ -30,16 +30,14 @@
     padding-bottom: 0px;
     position: relative;
 
-  
     .section {
       &--heading {
         margin-bottom: 24px;
+
         h2 {
           margin-bottom: 7px;
         }
-        p {
-          font-size: 16px;
-        }
+
       }
   
       &--form {
@@ -50,7 +48,7 @@
   
         &--input {
           height: 61px;
-          padding: 8px 160px 8px 20px;
+          padding: 8px 160px 2px 20px;
           border-radius: 6px;
           border: 1px solid #dcdcdc;
           box-shadow: 0 2px 8px rgba(20, 25, 43, 0.06);
@@ -64,8 +62,8 @@
             top: 30px;
             left: 15px;
             transform: translate(0, -50%) scale(1);
-            opacity: 1;
             transform-origin: left center;
+            opacity: 1;
             color: $off-black;
             pointer-events: none;
             background-color: rgba(255, 255, 255, 0);
@@ -80,7 +78,7 @@
   
         .has-value {
           label {
-            transform: translate(0, -130%) scale(.6);
+            transform: translate(0, -130%) scale(.8);
             opacity: .75;
           }
         }
@@ -93,16 +91,16 @@
           font-size: 15px;
           padding: 10px 28px;
         }
+
         &__wrapper {
           grid-row: 2/3;
-          grid-column: 2/12;
+          grid-column: 1/13;
           display: flex;
           justify-content: center;
           align-items: center;
           column-gap: 47px;
           row-gap: 40px;
-          margin-bottom: 65px;
-          margin-top: 5px;
+          margin: 5px 3.5vw 65px;
         }
   
         @media (max-width: 480px) {

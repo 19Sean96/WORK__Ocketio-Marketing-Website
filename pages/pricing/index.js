@@ -73,7 +73,7 @@ export default function Pricing() {
               className="section--heading"
             >
               <h2 className="h2">Pricing</h2>
-              <p className="p-small">
+              <p className="p-large">
                 Try the beta completely free, and sign up to be notified when
                 the paid version launches
               </p>
