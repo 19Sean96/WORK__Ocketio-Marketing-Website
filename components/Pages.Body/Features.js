@@ -267,7 +267,10 @@ const ThirdPartyAuthentication = (props) => {
             delay={440}
             className="section--heading"
           >
-            <h6 className="h6">3rd Party Authentication</h6>
+            <h3 className="h3">3rd Party Authentication</h3>
+            <p className="p-large">
+            Support for major auth providers to make logins a breeze
+          </p>
           </ScrollAnimation>
           <div className="section--body">
             <AzureADLogo />
