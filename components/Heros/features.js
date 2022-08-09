@@ -26,7 +26,7 @@ const StyledHeroLeft = styled(HeroLeft)`
     ${props => ` translate(-8%, calc(-25px - ${props.offset / -10 + -1}px))`}
   }
 
-  @media (max-width: 875px) {
+  @media (max-width: 450px) {
     transform: scale(1)
     ${props => ` translate(-50%, calc(-25px - ${props.offset / -10 + -1}px))`}
   }
