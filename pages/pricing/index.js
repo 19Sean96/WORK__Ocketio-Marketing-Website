@@ -33,6 +33,7 @@ const StyledMain = styled.main`
 `;
 
 const animateOnce = true;
+
 export default function Pricing() {
   const faqs = [
     {
@@ -74,8 +75,8 @@ export default function Pricing() {
             >
               <h2 className="h2">Pricing</h2>
               <p className="p-large">
-                Try the beta completely free, and sign up to be notified when
-                the paid version launches
+                We believe in simple, transparent pricing that helps you test
+                and deploy Wirewise with ease at any scale
               </p>
             </ScrollAnimation>
             <ScrollAnimation
@@ -87,83 +88,76 @@ export default function Pricing() {
               <EmailIntakeInput />
             </ScrollAnimation>
             <div className="section--body">
-              <ScrollAnimation
-                animateOnce={animateOnce}
-                duration={0.7}
-                delay={400}
-                animateIn="animate__fadeInLeft"
-                className="section--body--item"
-                id="priceFree"
-              >
-                <h6 className="price--type capitalize h6">free</h6>
-                <h4 className="h4 price--num">$0.00 USD</h4>
-                <p className="p-small price--rate">monthly per device</p>
-                <Link href="#">
-                  <button className="price--cta btn btn--filled capitalize">
-                    get started
-                  </button>
-                </Link>
-                <p className="p-small price--message">
-                  Register up to three devices and create a single network, with
-                  access to all Wirewise features. Upgrade any time.
-                </p>
-              </ScrollAnimation>
-              <ScrollAnimation
-                animateOnce={animateOnce}
-                duration={0.9}
-                delay={200}
-                animateIn="animate__fadeInLeft"
-                className="section--body--item blurred"
-                id="priceMonthly"
-              >
-                <h6 className="price--type capitalize h6">monthly</h6>
-                <h4 className="h4 price--num">$3.00 USD</h4>
-                <p className="p-small price--rate">monthly per device</p>
-                <Link href="#">
-                  <button className="price--cta btn btn--filled capitalize">
-                    get started
-                  </button>
-                </Link>
-                <p className="p-small price--message">
-                  Add devices and networks to your heart’s content.
-                  <ul>
-                    <li>Three devices free forever</li>
-                    <li>1Second great features</li>
-                    <li>Feature #3</li>
-                  </ul>
-                </p>
-              </ScrollAnimation>
-              <ScrollAnimation
-                animateOnce={animateOnce}
-                duration={1.1}
-                delay={0}
-                animateIn="animate__fadeInLeft"
-                className="section--body--item blurred"
-                id="priceAnnual"
-              >
-                <h6 className="price--type capitalize h6">annual</h6>
-                <h4 className="h4 price--num">$2.00 USD</h4>
-                <p className="p-small price--rate">monthly per device</p>
-                <Link href="#">
-                  <button className="price--cta btn btn--filled capitalize">
-                    get started
-                  </button>
-                </Link>
-                <p className="p-small price--message">
-                  The same great features with savings for an annual license
-                  <ul>
-                    <li>Three devices free forever</li>
-                    <li>1Second great features</li>
-                    <li>Feature #3</li>
-                  </ul>
-                </p>
-              </ScrollAnimation>
 
-              <caption id="comingSoonBanner">
-                <p className="p-large j-display _500">
-                  Paid tiers coming soon.
-                </p>
-              </caption>
+              <PriceCard 
+                name="starter"
+                price="Free"
+                message="Take the core capabilities of the Essentials tier for a test drive!"
+                basicFeatures={[
+                  'Up to 2 users',
+                  'Up to 5 devices / user',
+                  'Up to 2 networks',
+                  '1 gateway / network',
+                  '1 identity provider integration'
+                ]}
+                advancedFeaturesHeading="Key Features"
+                advancedFeatures={[
+                  'Basic DNS settings',
+                  'Centralized settings and configuration management',
+                  'Configurable device validation and key rotation',
+                  'Event monitoring for networks, gateways and devices'
+                ]}
+                btnURL='#'
+                btnClass='btn--filled'
+                btnText='get started'
+              />
+
+              <PriceCard
+                name="essentials"
+                price="$4"
+                message="All the essential capabilities for providing secure access to
+                network resources at any scale"
+                basicFeatures={[
+                  'Unlimited users',
+                  'Up to 5 devices / user',
+                  'Up to 2 networks',
+                  'Up to 2 gateways / network',
+                  'Up to 10 resources / network',
+                  '1 identity provider integration'
+                ]}
+                advancedFeaturesHeading="Everything in Starter, plus"
+                advancedFeatures={[
+                  'ACL enforcement of basic access policies'
+                ]}
+                btnURL='#'
+                btnClass='btn--bordered'
+                btnText='start 14-day trial'
+              />
+
+              <PriceCard
+                name="premium"
+                price="$7"
+                message="Advanced features to level up and fine-tune your Wirewise
+                deployment"
+                basicFeatures={[
+                  'Unlimited users',
+                  'Up to 5 devices / user',
+                  'Up to 2 networks',
+                  'Up to 2 gateways / network',
+                  'Up to 50 resources / network',
+                  'Multiple identity provider integrations'
+                ]}
+                advancedFeaturesHeading="Everything in Essentials, plus"
+                advancedFeatures={[
+                  'Advanced DNS settings',
+                  'Device health monitoring',
+                  'Enhanced usage tracking',
+                  'API access'
+                ]}
+                btnURL='#'
+                btnClass='btn--bordered'
+                btnText='start 14-day trial'
+              />
             </div>
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -202,3 +196,61 @@ export default function Pricing() {
     </>
   );
 }
+
+const PriceCard = ({
+  name,
+  price,
+  message,
+  basicFeatures,
+  advancedFeatures,
+  advancedFeaturesHeading,
+  btnURL,
+  btnClass,
+  btnText
+}) => {
+  console.log('FEATURES: ',typeof basicFeatures)
+  return (
+    <ScrollAnimation
+      animateOnce={true}
+      duration={0.7}
+      delay={400}
+      animateIn="animate__fadeInLeft"
+      className={`section--body--item price-card price-card-${name}`}
+    >
+      <div className="price-card--heading">
+        <h3 className="price-card--type capitalize">{name}</h3>
+        <h4 className="price-card--num">{price}</h4>
+        {name !== 'starter' && (
+          <p className="p-small price-card--rate">user / month</p>
+        )}
+      </div>
+
+      <div className="price-card--cta">
+        <Link href={btnURL}>
+          <button className={`btn ${btnClass} capitalize j-display`}>{btnText}</button>
+        </Link>
+      </div>
+
+      <div className="price-card--message">
+        <p>{message}</p>
+      </div>
+
+      <div className="price-card--features__basic">
+        <ul>
+          {basicFeatures.map((feat) => (
+            <li>{feat}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="price-card--features__advanced">
+        <h6>{advancedFeaturesHeading}</h6>
+        <ul>
+          {advancedFeatures.map((feat) => (
+            <li>{feat}</li>
+          ))}
+        </ul>
+      </div>
+    </ScrollAnimation>
+  );
+};
