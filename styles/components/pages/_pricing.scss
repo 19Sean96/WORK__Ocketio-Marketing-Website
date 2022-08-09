@@ -241,18 +241,49 @@
             }
           }
         }
-
-        @media (max-width: 950px) {
-          &--message {
-            min-height: 115px;
-          }
-        }
       }
 
       @media (max-width: 1080px) {
         column-gap: 16px;
-        &--item {
-          padding: 27px 27px 24px;
+        .price-card {
+          padding: 27px 27px 32px;
+
+          &--heading {
+            min-height: 100px;
+  
+            h3 {
+              font-size: 18px;
+            }
+  
+            h4 {
+              font-size: 32px;
+            }
+  
+            p {
+              font-size: 13px;
+            }
+          }
+
+          &--message {
+            p {
+              font-size: 15px;
+            }
+          }
+
+          &--features {
+
+            &__basic,
+            &__advanced {
+
+              h6 {
+                font-size: 15px;
+              }
+              li {
+                font-size: 15px;
+              }
+            }
+
+          }
         }
       }
 
@@ -266,6 +297,10 @@
 
             * {
               min-height: 0;
+            }
+
+            .price-card--heading {
+              margin-bottom: 12px;
             }
           }
           &-essentials {
