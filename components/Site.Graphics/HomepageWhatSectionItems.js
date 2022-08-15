@@ -4,7 +4,7 @@ import { useRef } from "react";
 const StyledCloud = styled.g`
   transform: scale(1)
     ${(props) =>
-      isSafari 
+      !props.isSafari 
       ? `translate(0, calc(${(props.offset - props.distanceY) / -48}px))`
       : `translate(0,0)`
     };
@@ -13,7 +13,7 @@ const StyledCloud = styled.g`
 const StyledLock = styled.g`
   transform: scale(1)
     ${(props) =>
-      isSafari
+      !props.isSafari
       ? `translate(0, calc(${(props.offset - props.distanceY) / 68}px))`
       : `translate(0,0)`
     };
@@ -21,7 +21,7 @@ const StyledLock = styled.g`
 const StyledProfile = styled.g`
   transform: scale(1)
     ${(props) =>
-      isSafari
+      !props.isSafari
       ? `translate(0, calc(${(props.offset - props.distanceY) / -34}px))`
       : `translate(0,0)`
     };
@@ -29,7 +29,7 @@ const StyledProfile = styled.g`
 const StyledLaptop = styled.g`
   transform: scale(1)
     ${(props) =>
-      isSafari 
+      !props.isSafari 
       ? `translate(0, calc(${(props.offset - props.distanceY) / 75}px))`
       : `translate(0,0)`
     };
@@ -38,7 +38,7 @@ const StyledLaptop = styled.g`
 const StyledDatabase = styled.g`
   transform: scale(1)
     ${(props) =>
-      isSafari 
+      !props.isSafari 
       ? `translate(0, calc(${(props.offset - props.distanceY) / -75}px))`
       : `translate(0,0)`
     };
@@ -2300,7 +2300,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
 };
 
 const EfficientSVG = ({ alt, id, className }) => {
-  const { scrollOffset, windowInnerHeight, windowScrollY } = useAppContext();
+  const { scrollOffset, windowInnerHeight, windowScrollY, isSafari } = useAppContext();
   const ref = useRef();
   const distanceY =
     ref?.current?.getBoundingClientRect()?.top +
@@ -3681,7 +3681,7 @@ const EfficientSVG = ({ alt, id, className }) => {
 };
 
 const CostEffectiveSVG = ({ alt, id, className }) => {
-  const { scrollOffset, windowInnerHeight, windowScrollY } = useAppContext();
+  const { scrollOffset, windowInnerHeight, windowScrollY, isSafari } = useAppContext();
   const ref = useRef();
   const distanceY =
     ref?.current?.getBoundingClientRect()?.top +
