@@ -4,33 +4,48 @@ import { useRef } from "react";
 const StyledCloud = styled.g`
   transform: scale(1)
     ${(props) =>
-      `translate(0, calc(${(props.offset - props.distanceY) / -48}px))`};
+      isSafari 
+      ? `translate(0, calc(${(props.offset - props.distanceY) / -48}px))`
+      : `translate(0,0)`
+    };
 `;
 
 const StyledLock = styled.g`
   transform: scale(1)
     ${(props) =>
-      `translate(0, calc(${(props.offset - props.distanceY) / 68}px))`};
+      isSafari
+      ? `translate(0, calc(${(props.offset - props.distanceY) / 68}px))`
+      : `translate(0,0)`
+    };
 `;
 const StyledProfile = styled.g`
   transform: scale(1)
     ${(props) =>
-      `translate(0, calc(${(props.offset - props.distanceY) / -34}px))`};
+      isSafari
+      ? `translate(0, calc(${(props.offset - props.distanceY) / -34}px))`
+      : `translate(0,0)`
+    };
 `;
 const StyledLaptop = styled.g`
   transform: scale(1)
     ${(props) =>
-      `translate(0, calc(${(props.offset - props.distanceY) / 75}px))`};
+      isSafari 
+      ? `translate(0, calc(${(props.offset - props.distanceY) / 75}px))`
+      : `translate(0,0)`
+    };
 `;
 
 const StyledDatabase = styled.g`
   transform: scale(1)
     ${(props) =>
-      `translate(0, calc(${(props.offset - props.distanceY) / -75}px))`};
+      isSafari 
+      ? `translate(0, calc(${(props.offset - props.distanceY) / -75}px))`
+      : `translate(0,0)`
+    };
 `;
 
 const SecureSVG = ({ alt, id, className }) => {
-  const { scrollOffset, windowInnerHeight, windowScrollY } = useAppContext();
+  const { scrollOffset, windowInnerHeight, windowScrollY, isSafari } = useAppContext();
   const ref = useRef();
   const distanceY =
     ref?.current?.getBoundingClientRect()?.top +
@@ -722,7 +737,7 @@ const SecureSVG = ({ alt, id, className }) => {
             fill="#f15a24"
           />
         </g>
-        <StyledCloud id="clouds" offset={scrollOffset} distanceY={distanceY}>
+        <StyledCloud id="clouds" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -13.86, 25.35)"
             filter="url(#Rectangle_225)"
@@ -752,7 +767,7 @@ const SecureSVG = ({ alt, id, className }) => {
             fill="#ebf1f8"
           />
         </StyledCloud>
-        <StyledLock id="lock" offset={scrollOffset} distanceY={distanceY}>
+        <StyledLock id="lock" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -13.86, 25.35)"
             filter="url(#Rectangle_232)"
@@ -796,7 +811,7 @@ const SecureSVG = ({ alt, id, className }) => {
             fill="#fff"
           />
         </StyledLock>
-        <StyledProfile id="profile" offset={scrollOffset} distanceY={distanceY}>
+        <StyledProfile id="profile" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -13.86, 25.35)"
             filter="url(#Rectangle_222)"
@@ -912,7 +927,7 @@ const SecureSVG = ({ alt, id, className }) => {
             fill="#3399fe"
           />
         </StyledProfile>
-        <StyledLaptop id="laptop" offset={scrollOffset} distanceY={distanceY}>
+        <StyledLaptop id="laptop" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -13.86, 25.35)"
             filter="url(#Rectangle_230)"
@@ -971,6 +986,7 @@ const SecureSVG = ({ alt, id, className }) => {
           id="database"
           offset={scrollOffset}
           distanceY={distanceY}
+          isSafari={isSafari}
         >
           <g
             transform="matrix(1, 0, 0, 1, -13.86, 25.35)"
@@ -1110,7 +1126,7 @@ const SecureSVG = ({ alt, id, className }) => {
 };
 
 const StreamlinedSVG = ({ alt, id, className }) => {
-  const { scrollOffset, windowInnerHeight, windowScrollY } = useAppContext();
+  const { scrollOffset, windowInnerHeight, windowScrollY, isSafari } = useAppContext();
   const ref = useRef();
   const distanceY =
     ref?.current?.getBoundingClientRect()?.top +
@@ -1819,6 +1835,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
         <StyledCloud
           offset={scrollOffset}
           distanceY={distanceY}
+          isSafari={isSafari}
           transform="matrix(1, 0, 0, 1, -5.5, -43.4)"
           filter="url(#Rectangle_255)"
         >
@@ -1864,6 +1881,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
           id="profiles"
           offset={scrollOffset}
           distanceY={distanceY}
+          isSafari={isSafari}
         >
           <g
             transform="matrix(1, 0, 0, 1, -5.5, -43.4)"
@@ -1931,7 +1949,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             fill="#252939"
           />
         </StyledProfile>
-        <StyledLaptop id="phone" offset={scrollOffset} distanceY={distanceY}>
+        <StyledLaptop id="phone" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -5.5, -43.4)"
             filter="url(#Rectangle_258)"
@@ -2003,7 +2021,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             fill="#f15a24"
           />
         </StyledLaptop>
-        <StyledLock id="folder" offset={scrollOffset} distanceY={distanceY}>
+        <StyledLock id="folder" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -5.5, -43.4)"
             filter="url(#Rectangle_272)"
@@ -2166,7 +2184,7 @@ const StreamlinedSVG = ({ alt, id, className }) => {
             fill="#ccc"
           />
         </StyledLock>
-        <StyledCloud id="screen" offset={scrollOffset} distanceY={distanceY}>
+        <StyledCloud id="screen" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, -5.5, -43.4)"
             filter="url(#Rectangle_266)"
@@ -2956,7 +2974,7 @@ const EfficientSVG = ({ alt, id, className }) => {
             fill="#252939"
           />
         </g>
-        <StyledCloud offset={scrollOffset} distanceY={distanceY} id="clouds">
+        <StyledCloud offset={scrollOffset} distanceY={distanceY} isSafari={isSafari} id="clouds">
           <g
             transform="matrix(1, 0, 0, 1, 24.77, 10.25)"
             filter="url(#Rectangle_166)"
@@ -2986,7 +3004,7 @@ const EfficientSVG = ({ alt, id, className }) => {
             fill="#eaf1f8"
           />
         </StyledCloud>
-        <StyledLaptop id="gears" offset={scrollOffset} distanceY={distanceY}>
+        <StyledLaptop id="gears" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, 24.77, 10.25)"
             filter="url(#Rectangle_163)"
@@ -3380,7 +3398,7 @@ const EfficientSVG = ({ alt, id, className }) => {
             fill="#fff"
           />
         </StyledLaptop>
-        <StyledDatabase id="database" offset={scrollOffset} distanceY={distanceY}>
+        <StyledDatabase id="database" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, 24.77, 10.25)"
             filter="url(#Rectangle_171)"
@@ -3450,7 +3468,7 @@ const EfficientSVG = ({ alt, id, className }) => {
             fill="#fff"
           />
         </StyledDatabase>
-        <StyledLock offset={scrollOffset} distanceY={distanceY} id="lock">
+        <StyledLock offset={scrollOffset} distanceY={distanceY} isSafari={isSafari} id="lock">
           <g
             transform="matrix(1, 0, 0, 1, 24.77, 10.25)"
             filter="url(#Rectangle_169)"
@@ -3557,7 +3575,7 @@ const EfficientSVG = ({ alt, id, className }) => {
             fill="#27c1bc"
           />
         </StyledLock>
-        <StyledProfile offset={scrollOffset} distanceY={distanceY} id="battery">
+        <StyledProfile offset={scrollOffset} distanceY={distanceY} isSafari={isSafari} id="battery">
           <g
             transform="matrix(1, 0, 0, 1, 24.77, 10.25)"
             filter="url(#Rectangle_161)"
@@ -4325,7 +4343,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             fill="#f15a24"
           />
         </g>
-        <StyledCloud id="clouds" offset={scrollOffset} distanceY={distanceY} >
+        <StyledCloud id="clouds" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <rect
             id="Rectangle_101"
             data-name="Rectangle 101"
@@ -4350,7 +4368,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             fill="#eaf1f8"
           />
         </StyledCloud>
-        <StyledLaptop id="card" offset={scrollOffset} distanceY={distanceY} >
+        <StyledLaptop id="card" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, 28.96, -13.42)"
             filter="url(#Rectangle_104)"
@@ -4529,7 +4547,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             </g>
           </g>
         </StyledLaptop>
-        <StyledDatabase id="arrow-box" offset={scrollOffset} distanceY={distanceY} >
+        <StyledDatabase id="arrow-box" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <rect
             id="Rectangle_96"
             data-name="Rectangle 96"
@@ -4601,7 +4619,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             />
           </g>
         </StyledDatabase>
-        <StyledProfile id="profiles" offset={scrollOffset} distanceY={distanceY} >
+        <StyledProfile id="profiles" offset={scrollOffset} distanceY={distanceY} isSafari={isSafari}>
           <g
             transform="matrix(1, 0, 0, 1, 28.96, -13.42)"
             filter="url(#Rectangle_98)"
@@ -4668,7 +4686,7 @@ const CostEffectiveSVG = ({ alt, id, className }) => {
             fill="#252939"
           />
         </StyledProfile>
-        <StyledLock offset={scrollOffset} distanceY={distanceY} id="gears">
+        <StyledLock offset={scrollOffset} distanceY={distanceY} isSafari={isSafari} id="gears">
           <g
             transform="matrix(1, 0, 0, 1, 28.96, -13.42)"
             filter="url(#Rectangle_122)"
