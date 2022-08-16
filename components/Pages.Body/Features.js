@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import ScrollAnimation from "react-animate-on-scroll";
@@ -17,8 +17,8 @@ import {
 
 import { useSwipeable } from "react-swipeable";
 import {
-  BsArrowRight,
-  BsArrowLeft,
+  BsCaretRightFill,
+  BsCaretLeftFill,
   BsKey,
   BsListUl,
   BsGear,
@@ -124,7 +124,13 @@ const ArchitectureSection = (props) => {
           >
             <h6 className="h6 capitalize">Efficient Network Control</h6>
             <p className="p-small">
-            For a tunnel to be established, the network gateway and its devices need to know each other's private encryption keys. Wirewise efficiently manages the distribution and updating of authorized keys on gateways and end user devices so access can be revoked as quickly as it is granted. Automatic controls based on defined settings and conditions, such as last validated date, will instantly quarantine inactive devices.
+              For a tunnel to be established, the network gateway and its
+              devices need to know each other's private encryption keys.
+              Wirewise efficiently manages the distribution and updating of
+              authorized keys on gateways and end user devices so access can be
+              revoked as quickly as it is granted. Automatic controls based on
+              defined settings and conditions, such as last validated date, will
+              instantly quarantine inactive devices.
             </p>
           </ScrollAnimation>
           <ScrollAnimation
@@ -212,7 +218,8 @@ const FineTunedControlSection = (props) => {
               <BsListUl />
               <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
               <p className="p-small">
-              A detailed event log ensures you can keep tabs on system activities and issues
+                A detailed event log ensures you can keep tabs on system
+                activities and issues
               </p>
             </ScrollAnimation>
             <ScrollAnimation
@@ -269,8 +276,8 @@ const ThirdPartyAuthentication = (props) => {
           >
             <h3 className="h3">3rd Party Authentication</h3>
             <p className="p-large">
-            Support for major auth providers to make logins a breeze
-          </p>
+              Support for major auth providers to make logins a breeze
+            </p>
           </ScrollAnimation>
           <div className="section--body">
             <AzureADLogo />
@@ -416,6 +423,8 @@ const SetupSection = (props) => {
   const [previousTab, setPreviousTab] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
 
+  const ref = useRef();
+
   const tabs = [
     {
       title: "Register",
@@ -447,11 +456,14 @@ const SetupSection = (props) => {
       setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1),
   });
 
+  // useEffect()
+
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="setupSection"
+        ref={ref}
       >
         <ScrollAnimation
           animateOnce={animateOnce}
@@ -477,14 +489,27 @@ const SetupSection = (props) => {
           >
             <ul className="tabs">
               {tabs.map((tab, i) => (
-                <div className="tab--outer" key={`tab-${i}`}>
+                <div
+                  className="tab--outer"
+                  key={`tab-${i}`}
+                  style={{
+                    pointerEvents: i == activeTab || !isMobile ? "all" : "none",
+                  }}
+                >
                   <StyledTab
                     className={`tab tab-${i + 1}`}
                     key={i}
                     active={i === activeTab}
                     onClick={(e) => {
                       setPreviousTab(activeTab);
-                      setActiveTab(i);
+
+                      if (isMobile) {
+                        if (activeTab == 4) {
+                          setActiveTab(0);
+                        } else setActiveTab(activeTab + 1);
+                      } else setActiveTab(i);
+
+                      console.log(tab.title);
                     }}
                   >
                     <span className="tab--num">{i + 1}</span>
@@ -499,24 +524,24 @@ const SetupSection = (props) => {
           </ScrollAnimation>
 
           <div className="slides-number-group">
-            <BsArrowLeft
+            <BsCaretLeftFill
               className="j-display _700 slides-number-group--item"
               style={{
-                opacity: activeTab === 0 ? 1 : 0.6,
+                visibility: activeTab == 0 ? "hidden" : "visible",
               }}
               onClick={(e) => setActiveTab(activeTab > 0 ? activeTab - 1 : 4)}
             >
               1
-            </BsArrowLeft>
-            <BsArrowRight
+            </BsCaretLeftFill>
+            <BsCaretRightFill
               className="j-display _700 slides-number-group--item"
               style={{
-                opacity: activeTab === 1 ? 1 : 0.6,
+                visibility: activeTab == 4 ? "hidden" : "visible",
               }}
               onClick={(e) => setActiveTab(activeTab <= 3 ? activeTab + 1 : 0)}
             >
               2
-            </BsArrowRight>
+            </BsCaretRightFill>
           </div>
           <ScrollAnimation
             animateOnce={animateOnce}
@@ -574,6 +599,49 @@ const SetupSection = (props) => {
               </ScrollAnimation>
             </Link>
           </div>
+          {/* {isMobile && (
+            <div className="tabs--mobile">
+              <button
+                className="tabs--mobile--btn tabs--mobile__left"
+                style={{
+                  visibility: activeTab == 0 ? "hidden" : "visible",
+                }}
+              >
+                <span className="tab--num">{activeTab}</span>
+                <BsCaretLeftFill
+                  onClick={(e) =>
+                    setActiveTab(activeTab > 0 ? activeTab - 1 : 4)
+                  }
+                >
+                  1
+                </BsCaretLeftFill>
+              </button>
+
+              <div className="tab">
+                <span className="tab--num">{activeTab + 1}</span>
+                <div className="tab--text">
+                  <h6 className="h6">{tabs[activeTab].title}</h6>
+                  <p className="p-small">{tabs[activeTab].par}</p>
+                </div>
+              </div>
+
+              <button
+                className="tabs--mobile--btn tabs--mobile__right"
+                style={{
+                  visibility: activeTab == 4 ? "hidden" : "visible",
+                }}
+              >
+                <span className="tab--num">{activeTab + 2}</span>
+                <BsCaretRightFill
+                  onClick={(e) =>
+                    setActiveTab(activeTab <= 3 ? activeTab + 1 : 0)
+                  }
+                >
+                  1
+                </BsCaretRightFill>
+              </button>
+            </div>
+          )} */}
         </article>
       </section>
     </ContentWrapper>
