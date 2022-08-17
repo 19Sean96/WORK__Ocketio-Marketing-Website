@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import styled from "styled-components";
 
 import ScrollAnimation from "react-animate-on-scroll";
@@ -422,7 +422,7 @@ const SetupSection = (props) => {
 
   const [previousTab, setPreviousTab] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
-
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
 
   const tabs = [
@@ -456,14 +456,25 @@ const SetupSection = (props) => {
       setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1),
   });
 
-  // useEffect()
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) =>
+        setIsIntersecting(entry.isIntersecting)
+      ),
+    []
+  );
+
+  useEffect(() => {
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [ref, observer]);
 
   return (
     <ContentWrapper>
       <section
         className="section section__with-grid all-columns"
         id="setupSection"
-        ref={ref}
       >
         <ScrollAnimation
           animateOnce={animateOnce}
@@ -549,7 +560,7 @@ const SetupSection = (props) => {
             duration={0.88}
             className="image__wrapper display"
           >
-            <div className="slideshow">
+            <div className="slideshow" ref={ref}>
               <div className="slideshow--item__wrapper">
                 <Slide1 active={activeTab === 0} previous={previousTab === 0} />
               </div>
@@ -599,49 +610,35 @@ const SetupSection = (props) => {
               </ScrollAnimation>
             </Link>
           </div>
-          {/* {isMobile && (
-            <div className="tabs--mobile">
+          {isMobile && (
+            <div className="tabs--mobile" style={{
+              transform: isIntersecting ? 'translate(-50%, 0)' : 'translate(-50%, 150%)'
+            }}>
               <button
                 className="tabs--mobile--btn tabs--mobile__left"
                 style={{
                   visibility: activeTab == 0 ? "hidden" : "visible",
                 }}
+                onClick={(e) => setActiveTab(activeTab > 0 ? activeTab - 1 : 4)}
               >
                 <span className="tab--num">{activeTab}</span>
-                <BsCaretLeftFill
-                  onClick={(e) =>
-                    setActiveTab(activeTab > 0 ? activeTab - 1 : 4)
-                  }
-                >
-                  1
-                </BsCaretLeftFill>
+                <BsCaretLeftFill />
               </button>
-
-              <div className="tab">
-                <span className="tab--num">{activeTab + 1}</span>
-                <div className="tab--text">
-                  <h6 className="h6">{tabs[activeTab].title}</h6>
-                  <p className="p-small">{tabs[activeTab].par}</p>
-                </div>
-              </div>
 
               <button
                 className="tabs--mobile--btn tabs--mobile__right"
                 style={{
                   visibility: activeTab == 4 ? "hidden" : "visible",
                 }}
+                onClick={(e) =>
+                  setActiveTab(activeTab <= 3 ? activeTab + 1 : 0)
+                }
               >
                 <span className="tab--num">{activeTab + 2}</span>
-                <BsCaretRightFill
-                  onClick={(e) =>
-                    setActiveTab(activeTab <= 3 ? activeTab + 1 : 0)
-                  }
-                >
-                  1
-                </BsCaretRightFill>
+                <BsCaretRightFill />
               </button>
             </div>
-          )} */}
+          )}
         </article>
       </section>
     </ContentWrapper>
