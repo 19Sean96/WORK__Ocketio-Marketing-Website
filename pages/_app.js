@@ -13,19 +13,12 @@ import Footer from "../components/Site.Globals/Footer";
 import "../styles/main.scss";
 import "animate.css";
 import TagManager from "react-gtm-module";
-// import OSTest from "../components/testing/OS.test";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   router.events.on("routeChangeComplete", pageview);
-  //   return () => {
-  //     router.events.off("routeChangeComplete", pageview);
-  //   };
-  // }, [router.events]);
-
   useEffect(() => {
-    console.log('PAGE PROPS: ', pageProps);
+    console.log("PAGE PROPS: ", pageProps);
     const mainDataLayer = {
       pageTypeName: pageProps.page || null,
       url: router.pathname,
@@ -35,11 +28,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* Google Tag Manager - Global base code */}
-      <Script
-        id="google-tag-manager"
-        strategy="afterInteractive"
-      >
+      <Script id="google-tag-manager" strategy="afterInteractive">
         {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -50,7 +39,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       <AppWrapper>
-        {/* <OSTest /> */} <Header />
+        <Header />
         <Component {...pageProps} />
         <Footer />
       </AppWrapper>

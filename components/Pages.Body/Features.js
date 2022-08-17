@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect, useMemo } from "react";
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
@@ -423,7 +424,6 @@ const SetupSection = (props) => {
   const [previousTab, setPreviousTab] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef();
 
   const tabs = [
     {
@@ -456,19 +456,27 @@ const SetupSection = (props) => {
       setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1),
   });
 
-  const observer = useMemo(
-    () =>
-      new IntersectionObserver(([entry]) =>
-        setIsIntersecting(entry.isIntersecting)
-      ),
-    []
-  );
+  const { ref, inView, entry } = useInView({})
+
 
   useEffect(() => {
-    observer.observe(ref.current);
+    console.log(inView);
+  }, [inView])
 
-    return () => observer.disconnect();
-  }, [ref, observer]);
+  // const observer = useMemo(
+  //   () =>
+  //     new IntersectionObserver(([entry]) =>
+  //       setIsIntersecting(entry.isIntersecting)
+  //     ),
+  //   []
+  // );
+
+  // useEffect(() => {
+  //   if (!ref.current) return
+  //   observer.observe(ref.current);
+
+  //   return () => observer.disconnect();
+  // }, [ref, observer]);
 
   return (
     <ContentWrapper>
@@ -611,8 +619,8 @@ const SetupSection = (props) => {
             </Link>
           </div>
           {isMobile && (
-            <div className="tabs--mobile" style={{
-              transform: isIntersecting ? 'translate(-50%, 0)' : 'translate(-50%, 150%)'
+            <div data-InView={inView} className="tabs--mobile" style={{
+              transform: inView ? 'translate(-50%, 0)' : 'translate(-50%, 150%)'
             }}>
               <button
                 className="tabs--mobile--btn tabs--mobile__left"
