@@ -13,7 +13,7 @@
 
     &--date {
       &__updated {
-        color: $gray-text;
+        color: $gray-1;
         font-size: 0.8em;
         line-height: 1;
         margin-bottom: 12px;
@@ -38,7 +38,7 @@
       align-items: flex-start;
       position: relative;
       padding-top: 5vw;
-      color: $white;
+      color: $primary-white;
 
       h2 {
         margin-bottom: 4px;
@@ -73,7 +73,7 @@
       ul {
         margin-bottom: 2.3em;
         padding: 32px 24px;
-        background-color: $off-white;
+        background-color: $secondary-white;
       }
 
       ul li {
@@ -239,11 +239,11 @@
         padding-bottom: 0;
         margin-bottom: 10px;
         h2 {
-          color: $navy-dark;
+          color: $gray-2;
         }
 
         p {
-          color: $navy-dark;
+          color: $gray-2;
         }
 
         @media screen and (max-width: 575px) {
@@ -313,7 +313,7 @@
         &-active {
           &::before {
             width: 100%;
-            background-color: $primary-orange;
+            background-color: $primary-black;
           }
         }
       }
