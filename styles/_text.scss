@@ -1,7 +1,7 @@
 @mixin heading
     (
     $font-size,
-    $font-weight, 
+    $font-weight,
     $line-height, 
     $letter-spacing, 
     ) 
@@ -13,99 +13,75 @@
 }
 
 
-
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
-label {
-    font-family: 'Plus Jakarta Display';
-    margin-inline: auto;
+* {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
 }
 
-p, 
-span,
-a,
-input,
-textarea,
-li {
-    font-family: 'Plus Jakarta Display';
-    margin-inline: auto;
+h1.h1 {
+    font-family: 'Poppins';
+    @include heading(48px, 700, 120%, 0);
+    &.semi-bold {
+        font-weight: 600;
+    }
+}
+h2.h2 {
+    font-family: 'Poppins';
+    @include heading(36px, 700, 135%, 0);
+    &.semi-bold {
+        font-weight: 600;
+    }
+}
+h3.h3 {
+    font-family: 'Poppins';
+    @include heading(28px, 700, 120%, 0);
+    &.semi-bold {
+        font-weight: 600;
+    }
+}
+h4.h4 {
+    font-family: 'Poppins';
+    @include heading(20px, 700, 145%, 0);
+    &.semi-bold {
+        font-weight: 600;
+        line-height: 120%;
+    }
+}
+h5.h5 {
+    font-family: 'Poppins';
+    @include heading(18px, 700, 145%, 0);
 }
 
-li {
-    margin-left: 0;
+h6.h6 {
+    font-family: 'Poppins';
+    @include heading(16px, 700, 145%, 0);
+}
+
+p.p {
+    &-lg {
+        font-size: 18px;
+        font-family: 'Noto Sans';
+        line-height: 160%;
+        font-weight: 400;
+    }
+    &-sm {
+        font-size: 16px;
+        font-family: 'Noto Sans';
+        line-height: 160%;
+        font-weight: 400;
+    }
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 input, textarea, label, select, select option {
     font-size: 16px;
-}
-
-.p-large {
-    font-size: 18px;
-    line-height: 1.5em;
-    font-weight: 300;
-    color: $gray-text;
-}
-
-.p-small {
-    font-size: 16px;
-    line-height: 160%;
-    color: $gray-text;
-}
-
-
-h1, .h1 { @include heading(54px, 500, 119.5%, .0175em) }
-
-h2, .h2 { @include heading(44px, 500, 127.5%, .035em) }
-
-h3, .h3 { 
-    @include heading(42px, 500, 120%, .025em);
-    letter-spacing: 0; 
-}
-
-h4, .h4 { @include heading(34px, 500, 145%, .025em) }
-
-h5, .h5 { @include heading(28px, 500, 120%, .035em) }
-
-h6, .h6 { @include heading(23px, 500, 145%, .025em) }
-
-
-.j-text {
-    font-family: 'Plus Jakarta Display';
-}
-
-.j-display {
-    font-family: 'Plus Jakarta Display';
-}
-
-.italic {
-    font-style: italic;
-}
-
-._200 {
-    font-weight: 200;
-}
-._300 {
-    font-weight: 300;
-}
-._400 {
-    font-weight: 400;
-}
-._500 {
-    font-weight: 500;
-}
-._600 {
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-}
-._700 {
-    font-weight: 700;
-}
-._800 {
-    font-weight: 800;
 }
 
 
@@ -116,7 +92,6 @@ h6, .h6 { @include heading(23px, 500, 145%, .025em) }
     h4, .h4 { @include heading(28px, 500, 145%, .025em) }
     h5, .h5 { @include heading(23px, 400, 120%, .035em) }
     h6, .h6 { @include heading(17px, 500, 145%, -.0125em) }
-
 }
 
 @media (max-width: 820px) {
@@ -126,7 +101,6 @@ h6, .h6 { @include heading(23px, 500, 145%, .025em) }
     h4, .h4 { @include heading(26px, 500, 145%, .025em) }
     h5, .h5 { @include heading(22px, 500, 120%, .035em) }
     h6, .h6 { @include heading(16px, 500, 145%, .025em) }
-
 }
 
 @media (max-width: 575px) {
