@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-
+import { 
+  AiFillMail,
+  AiOutlineArrowUp
+} from 'react-icons/ai'
 const EmailIntakeInput = () => {
   const {
     register,
@@ -44,11 +47,14 @@ const EmailIntakeInput = () => {
           {...register("email", { required: true })}
           className="section--form--input"
         />
+        <AiFillMail 
+          className="section--form--input__icon"
+        />
         <label
           htmlFor="email"
           className="section--form--input__label j-display _400"
         >
-          Your email
+          Email Address
         </label>
       </div>
       <input

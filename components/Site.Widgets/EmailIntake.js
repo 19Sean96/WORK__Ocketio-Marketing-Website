@@ -28,7 +28,7 @@ const EmailIntake = () => {
               delay={335}
               className="section--heading--title"
             >
-              <h4 className="h4">Stay in the loop.</h4>
+              <h3 className="h3">Be the first to know.</h3>
             </ScrollAnimation>
             <ScrollAnimation
               animateIn="animate__fadeInUp"
@@ -38,7 +38,7 @@ const EmailIntake = () => {
               className="section--heading--title"
             >
               <p className="p-small">
-              Follow along as we release updates and add features to make sure you never miss a beat.
+              Follow along as we test, tweak, and improve the beta to make sure you never miss a beat.
               </p>
             </ScrollAnimation>
           </div>
