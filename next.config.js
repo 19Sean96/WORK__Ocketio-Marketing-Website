@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+const webpack = require('webpack')
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
@@ -31,4 +31,38 @@ module.exports = {
     DIRECTUS_CMS_ACCESS_KEY: process.env.DIRECTUS_CMS_ACCESS_KEY,
     GTM_TESTING: process.env.GTM_TESTING
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      // use: ['@svgr/webpack', {
+      //   options: {
+      //     dimensions: false,
+      //     svgo: {
+      //       cleanupIDs: false
+      //     }
+      //   }
+      // }],
+      use: {
+        loader: '@svgr/webpack',
+        options: {
+          ref: true,
+          svgoConfig: {
+            plugins: [
+              {
+                name: 'removeDimensions',
+                active: true
+              },
+              {
+                name: 'cleanupIDs',
+                active: false
+              }
+            ]
+          }
+        }
+      }
+    })
+
+    return config
+  }
  };

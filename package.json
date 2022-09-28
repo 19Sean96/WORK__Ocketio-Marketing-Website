@@ -27,6 +27,7 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "babel-plugin-styled-components": "^2.0.2",
     "tf-next": "^0.12.2",
     "webpack": "^5.72.0"
