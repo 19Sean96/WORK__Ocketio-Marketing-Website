@@ -49,7 +49,7 @@ input:-webkit-autofill {
 }
 
 .hero_wrapper {
-  max-width: 1341px;
+  max-width: 1450px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -85,40 +85,47 @@ input:-webkit-autofill {
 }
 
 .btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 100%;
+  font-size: 16px;
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 12px 38px;
-  border-radius: 5px;
-  font-size: 16px;
-  border: none;
+  padding: 14px 35px;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   &--filled {
-    background-color: $primary-orange;
-    color: $off-white;
-    border: 2px solid $primary-orange;
+    background-color: $primary-black;
+    color: $primary-white;
+    border: 2px solid $primary-black;
     transform: scale(1) translateY(0);
     transition: 0.25s all;
-    // box-shadow: rgba($primary-orange, 0.45) 0px 25px 20px -20px;
-    &:hover,
-    &:focus {
-      transform: scale(1.02) translateY(-5%);
-      // box-shadow: rgba($primary-orange, 0.45) 0px 28px 25px -20px;
+
+    &__darkmode {
+      background-color: $primary-white;
+      color: $primary-black;
+      border: 2px solid $primary-white;
     }
 
-    &:active {
-      transform: scale(1.01) translateY(-2.5%);
-      // box-shadow: rgba($primary-orange, 0.45) 0px 26.5px 22.5px -20px;
-    }
+    // &:hover,
+    // &:focus {
+    //   transform: scale(1.02) translateY(-5%);
+    // }
+    // &:active {
+    //   transform: scale(1.01) translateY(-2.5%);
+    // }
   }
 
   &--bordered {
-    background-color: rgba($white, 0.6);
-    border: 2px solid $primary-orange;
-    color: $primary-orange;
+    background-color: rgba($primary-white, 0.6);
+    border: 3px solid $primary-black;
+    color: $primary-black;
     backdrop-filter: blur(3px);
   }
 }
@@ -149,11 +156,11 @@ input:-webkit-autofill {
   left: 0;
   width: 250px;
   min-height: 55px;
-  background-color: $off-white;
+  background-color: $secondary-white;
   padding: 28px 36px;
   border-radius: 6px;
   pointer-events: none;
-  box-shadow: rgba($black, 0.25) 0px 25px 20px -20px;
+  box-shadow: rgba($primary-black, 0.25) 0px 25px 20px -20px;
 }
 
 #vertLineCenter {
