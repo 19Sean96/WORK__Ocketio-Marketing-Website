@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
-import FeatureDiagram from "../Site.Graphics/FeatureDiagram";
 
 import {
   Slide1,
@@ -37,9 +36,15 @@ import {
   OktaLogo,
 } from "../Site.Graphics/ThirdPartyLogos";
 
-import Image_FineTunedControl from "../../public/images/features/body/_WW_Website_Graphic_Features-Control.svg";
+import ArchitectureDiagram from "../../public/images/features/architecture-diagram.svg";
+import FineTunedControlImage from "../../public/images/features/fine-tuned-control.svg";
+import OptimizedExperienceImage from "../../public/images/features/optimized-experience.svg";
 
-import Image_OptimizedExperience from "../../public/images/features/body/_WW_Website_Graphic_Features-Experience.svg";
+import SetupRegister from "../../public/images/features/setup/step-1-register.svg";
+import SetupCreateNetwork from "../../public/images/features/setup/step-2-create_network.svg";
+import SetupInstallGateway from "../../public/images/features/setup/step-3-install_gateway.svg";
+import SetupDeviceSetup from "../../public/images/features/setup/step-4-device_setup.svg";
+import SetupSecuritySettings from "../../public/images/features/setup/step-5-security_settings.svg";
 
 const animateOnce = true;
 
@@ -82,8 +87,8 @@ const ArchitectureSection = (props) => {
           offset={-186}
           className="section--heading"
         >
-          <h3 className="h3 capitalize">Thoughtful architecture</h3>
-          <p className="p-large">
+          <h2 className="h2 capitalize">Thoughtful architecture</h2>
+          <p className="p-lg">
             Built from the ground up to facilitate all the complex relationships
             involved in network access management. Here’s what it looks like
             when we pop the hood.
@@ -96,7 +101,7 @@ const ArchitectureSection = (props) => {
           delay={450}
           className="image_wrapper"
         >
-          <FeatureDiagram />
+          <ArchitectureDiagram />
         </ScrollAnimation>
         <div className="text-blocks">
           <ScrollAnimation
@@ -105,8 +110,8 @@ const ArchitectureSection = (props) => {
             duration={0.95}
             className="text-block text-block-1"
           >
-            <h6 className="h6 capitalize">industry-leading encryption</h6>
-            <p className="p-small">
+            <h4 className="h4 capitalize">industry-leading encryption</h4>
+            <p className="p-sm">
               Wirewise uses the WireGuard encryption framework, a new industry
               standard for securing tunneled traffic. With its state of the art
               cryptography and a code base just 1% the size of technologies
@@ -123,8 +128,8 @@ const ArchitectureSection = (props) => {
             delay={175}
             className="text-block text-block-2"
           >
-            <h6 className="h6 capitalize">Efficient Network Control</h6>
-            <p className="p-small">
+            <h4 className="h4 capitalize">Efficient Network Control</h4>
+            <p className="p-sm">
               For a tunnel to be established, the network gateway and its
               devices need to know each other's private encryption keys.
               Wirewise efficiently manages the distribution and updating of
@@ -141,8 +146,8 @@ const ArchitectureSection = (props) => {
             delay={325}
             className="text-block text-block-3"
           >
-            <h6 className="h6 capitalize">extensible client support</h6>
-            <p className="p-small">
+            <h4 className="h4 capitalize">extensible client support</h4>
+            <p className="p-sm">
               Do you have other devices besides Windows machines that need to
               access your network? Good news, we're working diligently to
               provide support for additional platforms. In the meantime, we’ve
@@ -188,12 +193,7 @@ const FineTunedControlSection = (props) => {
             duration={0.88}
             className="img-block"
           >
-            <Image
-              src={Image_FineTunedControl}
-              id="optimizeExperienceImage"
-              alt="Screenshot illustrating the optimized experience you get when using WireWise"
-              layout="responsive"
-            />
+            <FineTunedControlImage />
           </ScrollAnimation>
           <div className="text-blocks">
             <ScrollAnimation
@@ -351,11 +351,7 @@ const OptimizedExperienceSection = (props) => {
             duration={0.88}
             className="image__wrapper"
           >
-            <Image
-              src={Image_OptimizedExperience}
-              id="optimizeExperienceImage"
-              alt="Screenshot illustrating the optimized experience you get when using WireWise"
-            />
+            <OptimizedExperienceImage />
           </ScrollAnimation>
           <div className="text-blocks text-blocks_2">
             <ScrollAnimation
@@ -456,27 +452,11 @@ const SetupSection = (props) => {
       setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1),
   });
 
-  const { ref, inView, entry } = useInView({})
-
+  const { ref, inView, entry } = useInView({});
 
   useEffect(() => {
     console.log(inView);
-  }, [inView])
-
-  // const observer = useMemo(
-  //   () =>
-  //     new IntersectionObserver(([entry]) =>
-  //       setIsIntersecting(entry.isIntersecting)
-  //     ),
-  //   []
-  // );
-
-  // useEffect(() => {
-  //   if (!ref.current) return
-  //   observer.observe(ref.current);
-
-  //   return () => observer.disconnect();
-  // }, [ref, observer]);
+  }, [inView]);
 
   return (
     <ContentWrapper>
@@ -570,19 +550,29 @@ const SetupSection = (props) => {
           >
             <div className="slideshow" ref={ref}>
               <div className="slideshow--item__wrapper">
-                <Slide1 active={activeTab === 0} previous={previousTab === 0} />
+                <SetupRegister
+                  opacity={activeTab === 0 ? 1 : 0}
+                />
               </div>
               <div className="slideshow--item__wrapper">
-                <Slide2 active={activeTab === 1} previous={previousTab === 1} />
+                <SetupCreateNetwork
+                  opacity={activeTab === 1 ? 1 : 0}
+                />
               </div>
               <div className="slideshow--item__wrapper">
-                <Slide3 active={activeTab === 2} previous={previousTab === 2} />
+                <SetupInstallGateway
+                  opacity={activeTab === 2 ? 1 : 0}
+                />
               </div>
               <div className="slideshow--item__wrapper">
-                <Slide4 active={activeTab === 3} previous={previousTab === 3} />
+                <SetupDeviceSetup
+                  opacity={activeTab === 3 ? 1 : 0}
+                />
               </div>
               <div className="slideshow--item__wrapper">
-                <Slide5 active={activeTab === 4} previous={previousTab === 4} />
+                <SetupSecuritySettings
+                  opacity={activeTab === 4 ? 1 : 0}
+                />
               </div>
             </div>
           </ScrollAnimation>
@@ -619,9 +609,15 @@ const SetupSection = (props) => {
             </Link>
           </div>
           {isMobile && (
-            <div data-InView={inView} className="tabs--mobile" style={{
-              transform: inView ? 'translate(-50%, 0)' : 'translate(-50%, 150%)'
-            }}>
+            <div
+              data-InView={inView}
+              className="tabs--mobile"
+              style={{
+                transform: inView
+                  ? "translate(-50%, 0)"
+                  : "translate(-50%, 150%)",
+              }}
+            >
               <button
                 className="tabs--mobile--btn tabs--mobile__left"
                 style={{

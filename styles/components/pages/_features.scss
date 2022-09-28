@@ -683,8 +683,8 @@
           width: 52px;
           height: 52px;
           background-color: #fff;
-          color: $off-black;
-          border: 2px solid $off-black;
+          color: $secondary-black;
+          border: 2px solid $secondary-black;
         }
       }
 
@@ -916,18 +916,18 @@
               border-radius: 4px;
               box-shadow: 0 -5px 14px rgba(0,0,0,.19);
               cursor: pointer;
-              border: 2px solid $off-black;
-              background-color: $off-black;
+              border: 2px solid $secondary-black;
+              background-color: $secondary-black;
               svg {
                 width: 30px;
                 height: 30px;
-                fill: $off-white;
+                fill: $secondary-white;
               }
 
               .tab--num {
                 font-weight: 600;
                 font-size: 13px;
-                color: $off-white;
+                color: $secondary-white;
                 pointer-events: none;
                 width: 50px;
                 text-align: center;
@@ -942,7 +942,7 @@
                   left: 50%;
                   transform: translate(-50%, -50%);
                   background-color: transparent;
-                  border: 2px solid $off-white;
+                  border: 2px solid $secondary-white;
                   border-radius: 50%;
                   width: 32px;
                   height: 32px;

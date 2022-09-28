@@ -7,13 +7,15 @@ import Background from "../Site.Graphics/Waves/FeaturesHero";
 
 import { HeroLeft, HeroRight } from "../Site.Graphics/FeatureHeroImages";
 
+import HeroImageMain from '../../public/images/features/hero/features-hero-main.svg'
+import HeroImageSubTop from '../../public/images/features/hero/features-hero-sub_top.svg'
+import HeroImageSubBot from '../../public/images/features/hero/features-hero-sub_bot.svg'
 
 import { useAppContext } from "../../Context";
 const animateOnce = true;
 
 
 const StyledHeroLeft = styled(HeroLeft)`
-  color: green;
   transform: scale(1)
     ${props => ` translate(9%, calc(0px - ${props.offset / -10 + -1}px))`};
 
@@ -34,27 +36,71 @@ const StyledHeroLeft = styled(HeroLeft)`
 `
 
 const StyledHeroRight = styled(HeroRight)`
-  color: red;
-  transform: scale(1)
-  ${props => ` translate(${-(props.offset / -25)}px, calc(0px - ${props.offset / -15 + -1}px))`};
-
-  @media (max-width: 1150px) {
-    transform: scale(1)
-    ${props => ` translate(calc(25px + ${-(props.offset / -15)}px), calc(25px - ${props.offset / -15 + -1}px))`};
-  }
-  @media (max-width: 875px) {
-    transform: scale(1)
-    ${props => ` translate(calc(35px + ${-(props.offset / -15)}px), calc(-10% - ${props.offset / -15 + -1}px))`};
-  }
-
-  @media (max-width: 450px) {
-    transform: scale(1)
-    ${props => ` translate(calc(30% + ${-(props.offset / -15)}px), calc(0% - ${props.offset / -15 + -1}px))`};
-  }
+  
 `
 
+const StyledImageGroup = styled.div`
+
+  #heroImageMain {
+    transform: scale(1)
+    ${props => ` translate(9%, calc(0px - ${props.offset / -10 + -1}px))`};
+
+    @media (max-width: 1150px) {
+      transform: scale(1)
+      ${props => ` translate(22.5%, calc(-25px - ${props.offset / -10 + -1}px))`}
+    }
+    @media (max-width: 875px) {
+      transform: scale(1)
+      ${props => ` translate(-8%, calc(-25px - ${props.offset / -10 + -1}px))`}
+    }
+
+    @media (max-width: 450px) {
+      transform: scale(1)
+      ${props => ` translate(-50%, calc(-25px - ${props.offset / -10 + -1}px))`}
+    }
+  }
+
+  #heroImageSubTop {
+    transform: scale(1)
+    ${props => ` translate(${-(props.offset / -25)}px, calc(0px - ${props.offset / -15 + -1}px))`};
+  
+    @media (max-width: 1150px) {
+      transform: scale(1)
+      ${props => ` translate(calc(25px + ${-(props.offset / -15)}px), calc(25px - ${props.offset / -15 + -1}px))`};
+    }
+    @media (max-width: 875px) {
+      transform: scale(1)
+      ${props => ` translate(calc(35px + ${-(props.offset / -15)}px), calc(-10% - ${props.offset / -15 + -1}px))`};
+    }
+  
+    @media (max-width: 450px) {
+      transform: scale(1)
+      ${props => ` translate(calc(30% + ${-(props.offset / -15)}px), calc(0% - ${props.offset / -15 + -1}px))`};
+    }
+  }
+
+  #heroImageSubBot {
+    transform: scale(1)
+    ${props => ` translate(0px, calc(0px - ${props.offset / -15 + -1}px))`};
+  
+    @media (max-width: 1150px) {
+      transform: scale(1)
+      ${props => ` translate(0px, calc(25px - ${props.offset / -15 + -1}px))`};
+    }
+    @media (max-width: 875px) {
+      transform: scale(1)
+      ${props => ` translate(0px, calc(-10% - ${props.offset / -15 + -1}px))`};
+    }
+  
+    @media (max-width: 450px) {
+      transform: scale(1)
+      ${props => ` translate(0px, calc(0% - ${props.offset / -15 + -1}px))`};
+    }
+  }
+
+`
 const HeroFeatures = ({ offset }) => {
-  const { isMobile, isSafari } = useAppContext();
+  const { isMobile, isSafari, scrollOffset } = useAppContext();
 
   return (
     <div
@@ -76,10 +122,10 @@ const HeroFeatures = ({ offset }) => {
               animateIn="animate__fadeInLeft"
               duration={0.975}
             >
-              <h2 className="h2">
+              <h1 className="h1">
                 All of the essentials,
                 <br /> none of the complexity.
-              </h2>
+              </h1>
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -87,7 +133,7 @@ const HeroFeatures = ({ offset }) => {
               duration={0.95}
               delay={160}
             >
-              <p className="p-large">
+              <p className="p-lg">
                 Wirewise gets devices connected to a network in short order and
                 instantly levels up your WireGuard® implementation.
               </p>
@@ -114,18 +160,20 @@ const HeroFeatures = ({ offset }) => {
             duration={0.6}
             delay={450}
           >
-            <div className="image-group">
-              <StyledHeroLeft
-                id="featuresHeroImageLeft"
+            <StyledImageGroup className="image-group" offset={scrollOffset}>
+              <HeroImageMain
+                id="heroImageMain"
                 className="image-group__image"
-                offset={isSafari ? 0 : offset}
               />
-              <StyledHeroRight
-                id="featuresHeroImageRight"
+              <HeroImageSubTop
+                id="heroImageSubTop"
                 className="image-group__image"
-                offset={isSafari ? 0 : offset}
               />
-            </div>
+              <HeroImageSubBot
+                id="heroImageSubBot"
+                className="image-group__image"
+              />
+            </StyledImageGroup>
           </ScrollAnimation>
 
           <article id="supportedOS" className="banner f f-justify-between">
