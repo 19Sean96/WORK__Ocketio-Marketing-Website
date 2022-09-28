@@ -1,4 +1,5 @@
 import { NextSeo } from "next-seo";
+import Logo from '../../public/ocketio-logo.svg'
 
 const Head = () => {
   const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL;
@@ -15,7 +16,7 @@ const Head = () => {
           "All of the essentials, none of the complexity. Get brand new capabilities on top of the WireGuard framework that just make life easier.",
         images: [
           {
-            url: `${DIRECTUS_CMS_URL}/assets/dca92e08-54bc-491d-9646-1b4a98aa5153.png`,
+            url: Logo,
             width: 800,
             height: 600,
             alt: "Diagram of how Wirewise functions. From enabled devices to cloud services to admin",
