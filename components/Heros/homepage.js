@@ -1,71 +1,84 @@
 import Link from "next/link";
-import Image from "next/image";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-
-import HeroBG from "../Site.Graphics/HomepageHero";
+import { useEffect, useState } from "react";
+import HeroImageMain from "../../public/images/homepage/hero/homepage-hero-main.svg";
+import HeroImageSub from "../../public/images/homepage/hero/homepage-hero-sub.svg";
 
 import { useAppContext } from "../../Context";
 const animateOnce = true;
 
-const StyledMain = styled.div`
-
-  
-  transform-origin: top;
-  transform: scale(1)
-    ${(props) => ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
-
-  &::after {
-    top: 48%;
-    left: 17%;
+const StyledImageGroup = styled.div`
+  #heroImageMain {
     transform-origin: top;
     transform: scale(1)
-      ${(props) => ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
+      ${(props) => ` translate(0, calc(0px - ${props.offset / -25 + -0.4}px))`};
+  }
 
-    @media (max-width: 1200px) {
+  #heroImageSub {
+    top: 30%;
+    left: 20%;
+    transform-origin: top;
+    width: 666px;
+    transform: scale(1)
+      ${(props) => ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
+  }
+
+  @media screen and (max-width: 1200px) {
+    #heroImageMain {
+      transform: scale(1)
+        ${(props) => ` translate(0, calc(0px - ${props.offset / -45 + -31}px))`};
+    }
+
+    #heroImageSub {
       top: 37%;
       left: 20%;
-
       transform: scale(1)
         ${(props) => ` translate(0, calc(0px - ${props.offset / -35 + -35}px))`};
     }
-    @media (max-width: 1020px) {
+  }
+
+  @media screen and (max-width: 1020px) {
+    #heroImageSub {
       top: 41%;
     }
-    @media (max-width: 850px) {
+  }
+
+  @media screen and (max-width: 850px) {
+    #heroImageMain {
+      transform: scale(1.25)
+        ${(props) => ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
+    }
+
+    #heroImageSub {
       top: 46%;
       left: 17%;
-
-      transform: scale(.98)
+      transform: scale(0.98)
         ${(props) => ` translate(0, calc(-12% - ${props.offset / -60 - 46}px))`};
     }
-    @media (max-width: 575px) {
+  }
+
+  @media screen and (max-width: 575px) {
+    #heroImageSub {
       top: 37.5%;
       left: 16%;
 
-      transform: scale(.95)
-        ${(props) => ` translate(0, -50% + calc(-6vw - ${props.offset / -60 - 63}px))`};
+      transform: scale(0.95)
+        ${(props) =>
+          ` translate(0, -50% + calc(-6vw - ${props.offset / -60 - 63}px))`};
     }
-  }
-
-  @media (max-width: 1200px) {
-    transform: scale(1)
-      ${(props) => ` translate(0, calc(0px - ${props.offset / -45 + -31}px))`};
-  }
-
-  @media (max-width: 850px) {
-    transform: scale(1.05)
-      ${(props) => ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
-  }
-  @media (max-width: 575px) {
-    transform: scale(1.25)
-      ${(props) => ` translate(0, calc(-12% - ${props.offset / -75 - 35}px))`};
   }
 `;
 
 const HeroHome = ({ offset }) => {
-  const { isSafari } = useAppContext();
+  const { isSafari, scrollOffset } = useAppContext();
+  const [scrolled, setScrolled] = useState(false)
 
+  useEffect(() => {
+    if (scrollOffset > 0) {
+      setScrolled(true)
+    }
+  }, [scrollOffset])
   return (
     <div className="hero_wrapper">
       <section className="section section__with-grid" id="landing-hero">
@@ -86,7 +99,7 @@ const HeroHome = ({ offset }) => {
             duration={0.7}
             delay={250}
           >
-            <p className="p-large">
+            <p className="p-lg">
               A cloud-centric software solution that provides secure, remote
               access to networks you manage, whether on-prem or in the cloud.
             </p>
@@ -118,20 +131,16 @@ const HeroHome = ({ offset }) => {
           </ScrollAnimation>
         </div>
 
-        <div className="image-group" offset={isSafari ? 0 : offset}>
-          <StyledMain
-            className="image-group__image__wrapper"
-            id="heroImageMain__wrapper"
-            offset={isSafari ? 0 : offset}
-          >
-            <HeroBG
-              id="heroImageMain"
-              className={`image-group__image${
-                offset === 0 ? " heroImageMain" : ""
-              }`}
+        <StyledImageGroup className="image-group" offset={isSafari ? 0 : scrollOffset}>
+          <HeroImageMain
+            id="heroImageMain"
+            className={!scrolled ? "atTop" : ""}
+          />
+            <HeroImageSub
+              id="heroImageSub"
+              className={!scrolled ? "atTop" : ""}
             />
-          </StyledMain>
-        </div>
+        </StyledImageGroup>
       </section>
     </div>
   );
