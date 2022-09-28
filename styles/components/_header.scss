@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1390px;
+  max-width: 1575px;
   margin: auto;
   position: relative;
 
@@ -34,8 +34,6 @@
     height: 83px;
   }
   &__wrapper {
-      background: transparent;
-      // backdrop-filter: blur(10px);
       position: relative;
       top: 0;
       left: 50%;
@@ -79,29 +77,22 @@
     &--item {
       list-style: none;
       margin: 0;
-      font-size: 16px;
       cursor: pointer;
-      border-radius: 6px;
-      position: relative;
       transition: 0.1s ease-in-out;
-      box-shadow: rgba($off-black, 0) 0 11px 13px -10px;
-      overflow: hidden;
-      padding: 9px 0 16px;
 
       a {
-        color: $off-black;
+        color: $secondary-black;
         text-decoration: none;
         transition: .25s ease-in-out all;
-        font-weight: 400;
         padding: 16px 12px;
 
 
         &.darkmode {
-          color: $off-white;
+          color: $secondary-white;
         }
 
         &.active {
-          color: #1688F2;
+          color: $blue-light;
         }
       }
       &:hover,
@@ -109,7 +100,7 @@
       &:focus {
 
         a {
-          color: #1688F2;
+          color: $blue-light;
         }
       }
 
@@ -138,18 +129,18 @@
 
         li {
           font-size: 18px;
-          color: $off-white;
+          color: $secondary-white;
           a {
             text-align: center;
-            color: $off-white;
+            color: $secondary-white;
           }
 
           &::before,&::after {
             background: linear-gradient(
                 89.39deg,
-                $primary-orange -2.31%,
-                $secondary-yellow 61.2%,
-                $primary-orange 116.24%
+                $primary-black -2.31%,
+                $pastel-red 61.2%,
+                $primary-black 116.24%
               );
           }
         }
@@ -176,17 +167,10 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: 21px;
-
-      .pipe {
-        width: 1px;
-        background: $black;
-        align-self: stretch;
-        margin: 6px 11px 6px 0;
-      }
+      gap: 30px;
 
       #login {
-        color: $black;
+        color: $primary-black;
         font-size: 16px;
         text-decoration: none;
         position: relative;
@@ -198,7 +182,7 @@
           left: 0;
           width: 0%;
           height: 1px;
-          background: $black;
+          background: $primary-black;
         }
       }
 

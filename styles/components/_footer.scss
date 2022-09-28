@@ -1,9 +1,9 @@
 .footer {
   width: 95vw;
-  margin: 0 auto;
+  margin: 250px auto 0;
   max-width: 1600px;
   max-width: 1444px;
-  padding: 250px 25px 20px;
+  padding: 0px 25px 20px;
   position: relative;
   @media (min-width: 2160px) {
     max-width: 1880px;
@@ -41,7 +41,7 @@
 
       &.bold {
         font-weight: 700;
-        color: $black;
+        color: $primary-black;
         margin-bottom: 18px;
       }
     }

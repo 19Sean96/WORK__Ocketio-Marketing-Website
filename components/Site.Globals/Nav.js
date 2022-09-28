@@ -2,10 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-function Nav({ isMobile, menuOpen, darkMode }) {
+function Nav({ isMobile, menuOpen, headerDarkMode }) {
   const [navStyle, updateNavStyle] = useState();
   const router = useRouter();
-  console.log(router);
   useEffect(() => {
     if (!isMobile) {
       updateNavStyle({
@@ -33,10 +32,10 @@ function Nav({ isMobile, menuOpen, darkMode }) {
       style={navStyle}
     >
       <ul className="header--nav--list">
-        <li className="j-text _400 header--nav--item capitalize">
+        <li className="header--nav--item capitalize">
           <Link href="/features">
             <a
-              className={`${darkMode ? "darkmode" : ""} ${
+              className={`${headerDarkMode ? "darkmode" : ""} ${
                 router.pathname.includes("features") ? "active" : ""
               }`}
             >
@@ -44,10 +43,10 @@ function Nav({ isMobile, menuOpen, darkMode }) {
             </a>
           </Link>
         </li>
-        <li className="j-text _400 header--nav--item capitalize">
+        <li className="header--nav--item capitalize">
           <Link href="/pricing">
             <a
-              className={`${darkMode ? "darkmode" : ""} ${
+              className={`${headerDarkMode ? "darkmode" : ""} ${
                 router.pathname.includes("pricing") ? "active" : ""
               }`}
             >
@@ -55,10 +54,10 @@ function Nav({ isMobile, menuOpen, darkMode }) {
             </a>
           </Link>
         </li>
-        <li className="j-text _400 header--nav--item capitalize">
+        <li className="header--nav--item capitalize">
           <Link href="/contact">
             <a
-              className={`${darkMode ? "darkmode" : ""} ${
+              className={`${headerDarkMode ? "darkmode" : ""} ${
                 router.pathname.includes("contact") ? "active" : ""
               }`}
             >
@@ -66,10 +65,10 @@ function Nav({ isMobile, menuOpen, darkMode }) {
             </a>
           </Link>
         </li>
-        <li className="j-text _400 header--nav--item capitalize">
+        <li className="header--nav--item capitalize">
           <Link href="/blog">
             <a
-              className={`${darkMode ? "darkmode" : ""} ${
+              className={`${headerDarkMode ? "darkmode" : ""} ${
                 router.pathname.includes("blog") ? "active" : ""
               }`}
             >
