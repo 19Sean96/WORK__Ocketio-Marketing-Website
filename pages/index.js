@@ -11,7 +11,6 @@ import BlogLayout from "../components/BlogLayout";
 import { useAppContext } from "../Context";
 
 export default function Home({ blog_posts }) {
-  const { scrollOffset } = useAppContext();
 
   return (
     <>
@@ -19,12 +18,12 @@ export default function Home({ blog_posts }) {
  
       <main className="main" id="main">
         <span id="vertLineCenter"></span>
-        <Hero offset={scrollOffset} />
+        <Hero/>
         <FirstBanner />
         <WhatSection />
-        <WhoSection />
-        {/* <BlogLayout blogPosts={blog_posts} /> */}
         <EmailIntake />
+        <WhoSection />
+        <BlogLayout blogPosts={blog_posts} />
       </main>
     </>
   );
