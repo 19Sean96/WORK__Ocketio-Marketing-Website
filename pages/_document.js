@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* <meta charSet="utf-8"/> */}
-          <link rel="shortcut icon" href="/wirewise-favicon.ico" />
+          <link rel="shortcut icon" href="/ocketio-favicon.png" />
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{
