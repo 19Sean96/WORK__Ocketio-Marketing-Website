@@ -1,0 +1,14 @@
+<svg width="360" height="105" viewBox="0 0 360 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="features-hero-sub_bot">
+<rect id="bg" x="1.5" y="1.5" width="357" height="102" rx="8.5" fill="#F5F5F5" stroke="#101010" stroke-width="3"/>
+<g id="toggle-icon">
+<path id="Vector" d="M65.5 54.5C65.5 57.156 64.4699 59.7009 62.6401 61.5754C60.8106 63.4494 58.3319 64.5 55.75 64.5L35.25 64.5C32.6681 64.5 30.1894 63.4494 28.3599 61.5753C26.5301 59.7009 25.5 57.156 25.5 54.5C25.5 51.844 26.5301 49.2991 28.3599 47.4246C30.1894 45.5506 32.6681 44.5 35.25 44.5L55.75 44.5C58.3319 44.5 60.8106 45.5506 62.6401 47.4246C64.4699 49.2991 65.5 51.844 65.5 54.5Z" fill="#101010" stroke="#101010"/>
+<path id="Vector_2" d="M62.0157 58.8712C64.2929 56.594 65.5723 53.5054 65.5723 50.2849C65.5723 47.0644 64.2929 43.9758 62.0157 41.6986C59.7385 39.4214 56.6499 38.142 53.4294 38.142L31.1437 38.142C27.9232 38.142 24.8347 39.4214 22.5574 41.6986C20.2802 43.9758 19.0009 47.0644 19.0009 50.2849C19.0009 53.5054 20.2802 56.5939 22.5574 58.8712C24.8347 61.1484 27.9232 62.4277 31.1437 62.4277L53.4294 62.4277C56.6499 62.4277 59.7385 61.1484 62.0157 58.8712Z" fill="#101010" stroke="#F5F5F5" stroke-width="2"/>
+<circle id="Ellipse 2" cx="31" cy="50.2852" r="5.99999" fill="#ED1C24"/>
+</g>
+<g id="text">
+<text id="Auto-Join is Disabled" fill="#ED1C24" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="88" y="41.4">Auto-Join is Disabled</tspan></text>
+<text id="Users will be unable to join the tenant and log in until invited." fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="12" letter-spacing="0em"><tspan x="88" y="59.656">Users will be unable to join the tenant and </tspan><tspan x="88" y="75.656">log in until invited.</tspan></text>
+</g>
+</g>
+</svg>

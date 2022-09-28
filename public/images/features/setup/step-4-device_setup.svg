@@ -1,0 +1,70 @@
+<svg width="890" height="760" viewBox="0 0 890 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="step-4-device_setup" clip-path="url(#clip0_741_6242)">
+<rect id="bg" width="890" height="760" rx="10" fill="#C3CCCC"/>
+<g id="fg">
+<g id="card-bg" filter="url(#filter0_d_741_6242)">
+<rect x="55" y="110" width="780" height="540" rx="10" fill="#F5F5F5"/>
+<rect x="56.5" y="111.5" width="777" height="537" rx="8.5" stroke="#101010" stroke-width="3"/>
+</g>
+<g id="steps">
+<g id="Group 942">
+<text id="Device Details" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="182.73" y="316.4">Device Details</tspan></text>
+<path id="Ellipse_1" d="M149.5 331C160.27 331 169 322.269 169 311.5C169 300.73 160.27 292 149.5 292C138.73 292 130 300.73 130 311.5C130 322.269 138.73 331 149.5 331Z" fill="#151779"/>
+<text id="1" fill="#F5F5F5" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="22" font-weight="bold" letter-spacing="0em"><tspan x="144.73" y="320.2">1</tspan></text>
+</g>
+<g id="Group 941">
+<text id="Download Software" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="182.73" y="381.4">Download Software</tspan></text>
+<path id="Ellipse_2" d="M168.5 377C168.5 387.217 160.217 395.5 150 395.5C139.783 395.5 131.5 387.217 131.5 377C131.5 366.783 139.783 358.5 150 358.5C160.217 358.5 168.5 366.783 168.5 377Z" stroke="#151779" stroke-width="2"/>
+<text id="2" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="22" font-weight="bold" letter-spacing="0em"><tspan x="143.73" y="384.2">2</tspan></text>
+</g>
+<g id="Group 940">
+<text id="Apply Configuration" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="182.73" y="445.4">Apply Configuration</tspan></text>
+<g id="Group 939">
+<path id="Ellipse_3" d="M169.5 441C169.5 451.217 161.217 459.5 151 459.5C140.783 459.5 132.5 451.217 132.5 441C132.5 430.783 140.783 422.5 151 422.5C161.217 422.5 169.5 430.783 169.5 441Z" stroke="#151779" stroke-width="2"/>
+<text id="3" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="22" font-weight="bold" letter-spacing="0em"><tspan x="144.73" y="449.2">3</tspan></text>
+</g>
+</g>
+</g>
+<g id="form">
+<text id="title" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="402" y="266.545">Device Details</tspan></text>
+<g id="network-name-input">
+<text id="Network Name" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="412" y="316.845">Network Name</tspan></text>
+<rect id="Rectangle 465" x="402" y="324.863" width="373" height="50" rx="10" fill="#CCCCCC"/>
+</g>
+<g id="device-name-input">
+<text id="Device Name" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="412" y="410.762">Device Name</tspan></text>
+<rect id="Rectangle 466" x="402" y="418.862" width="373" height="50" rx="10" fill="#CCCCCC"/>
+</g>
+<path id="separator" d="M402 499.001H775" stroke="#999999" stroke-width="3" stroke-miterlimit="10"/>
+</g>
+<path id="Line_14" d="M115 199H775" stroke="#999999" stroke-width="3" stroke-miterlimit="10"/>
+<text id="Add a Device" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="169.668" y="169.048">Add a Device</tspan></text>
+<g id="Group 919">
+<path id="Rectangle_13" d="M144.667 168.055H116C115.448 168.055 115 168.502 115 169.055V170.277C115 170.829 115.448 171.277 116 171.277H144.667C145.219 171.277 145.667 170.829 145.667 170.277V169.055C145.667 168.502 145.219 168.055 144.667 168.055Z" fill="#339BFC"/>
+<path id="Rectangle_14" d="M141.621 147H118.434C117.881 147 117.434 147.448 117.434 148V164.055C117.434 164.607 117.881 165.055 118.434 165.055H141.621C142.173 165.055 142.621 164.607 142.621 164.055V148C142.621 147.448 142.173 147 141.621 147Z" stroke="#339BFC" stroke-width="2.5" stroke-miterlimit="10"/>
+</g>
+<g id="Frame 7">
+<rect x="581" y="521" width="194" height="49" rx="10" fill="#151779"/>
+<text id="Next" fill="#F5F5F5" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="623.516" y="551.1">Next</tspan></text>
+<g id="ant-design:arrow-right-outlined">
+<path id="Vector" d="M689.519 544.957L681.033 537.592C680.968 537.535 680.885 537.504 680.797 537.504H678.809C678.643 537.504 678.567 537.711 678.692 537.818L686.558 544.647H673.414C673.315 544.647 673.234 544.727 673.234 544.826V546.174C673.234 546.273 673.315 546.354 673.414 546.354H686.556L678.69 553.182C678.564 553.292 678.641 553.496 678.807 553.496H680.862C680.905 553.496 680.947 553.48 680.979 553.451L689.519 546.044C689.596 545.976 689.659 545.893 689.701 545.799C689.744 545.705 689.766 545.603 689.766 545.5C689.766 545.397 689.744 545.295 689.701 545.201C689.659 545.108 689.596 545.024 689.519 544.957Z" fill="#F5F5F5"/>
+</g>
+<rect x="581" y="521" width="194" height="49" rx="10" stroke="#F5F5F5"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_741_6242" x="37" y="98.9999" width="816" height="576" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="7"/>
+<feGaussianBlur stdDeviation="9"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0.157 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_741_6242"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_741_6242" result="shape"/>
+</filter>
+<clipPath id="clip0_741_6242">
+<rect width="890" height="760" fill="white"/>
+</clipPath>
+</defs>
+</svg>

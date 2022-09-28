@@ -1,0 +1,71 @@
+<svg width="890" height="760" viewBox="0 0 890 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="step-5-security_settings" clip-path="url(#clip0_741_6313)">
+<rect id="bg" width="890" height="760" rx="10" fill="#C3CCCC"/>
+<g id="fg">
+<g id="card-bg" filter="url(#filter0_d_741_6313)">
+<path d="M799.559 78.1953H89.5344C84.0185 78.1953 79.5469 82.6754 79.5469 88.2018V672.189C79.5469 677.715 84.0185 682.195 89.5344 682.195H799.559C805.075 682.195 809.547 677.715 809.547 672.189V88.2018C809.547 82.6754 805.075 78.1953 799.559 78.1953Z" fill="white"/>
+<path d="M89.5344 79.6953H799.559C804.244 79.6953 808.047 83.5011 808.047 88.2018V672.189C808.047 676.89 804.244 680.695 799.559 680.695H89.5344C84.8496 680.695 81.0469 676.89 81.0469 672.189V88.2018C81.0469 83.5011 84.8496 79.6953 89.5344 79.6953Z" stroke="#101010" stroke-width="3"/>
+</g>
+<path id="separator" d="M140 157H750" stroke="#999999" stroke-width="3" stroke-miterlimit="10"/>
+<g id="network">
+<text id="subtitle-1" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="353" y="200.6">Network</tspan></text>
+<g id="dns-config-input">
+<text id="DNS Configuration" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="188" y="244.9">DNS Configuration</tspan></text>
+<rect id="Rectangle 466" x="344" y="215" width="406" height="50" rx="10" fill="#CCCCCC"/>
+<text id="Gateway Default" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="14" letter-spacing="0em"><tspan x="362" y="244.932">Gateway Default</tspan></text>
+</g>
+</g>
+<g id="encryption-key">
+<text id="subtitle-2" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="353" y="324.544">Encryption Key</tspan></text>
+<g id="max-life-input">
+<text id="Max Life Managed" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="190" y="367.9">Max Life Managed</tspan></text>
+<rect id="Rectangle 467" x="344" y="338" width="406" height="50" rx="10" fill="#CCCCCC"/>
+<text id="30 Days" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="14" letter-spacing="0em"><tspan x="362" y="367.932">30 Days</tspan></text>
+</g>
+<g id="re-key-input">
+<text id="Re-Key Before Expiration" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="143" y="426.9">Re-Key Before Expiration</tspan></text>
+<rect id="Rectangle 468" x="344" y="397" width="406" height="50" rx="10" fill="#CCCCCC"/>
+<text id="3 Days" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="14" letter-spacing="0em"><tspan x="362" y="426.932">3 Days</tspan></text>
+</g>
+</g>
+<g id="user-validation">
+<text id="subtitle-3" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="353" y="500.544">User Validation Requirements</tspan></text>
+<g id="managed-devices-input">
+<text id="Managed Devices" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="191" y="542.9">Managed Devices</tspan></text>
+<rect id="bg_2" x="344" y="513" width="406" height="50" rx="10" fill="#CCCCCC"/>
+<text id="30 Days_2" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="14" letter-spacing="0em"><tspan x="362" y="542.932">30 Days</tspan></text>
+</g>
+<g id="expire-notification-input">
+<text id="Notify Before Expiration" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="154" y="602.9">Notify Before Expiration</tspan></text>
+<rect id="bg_3" x="344" y="573" width="406" height="50" rx="10" fill="#CCCCCC"/>
+<text id="1 Hour" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="14" letter-spacing="0em"><tspan x="362" y="602.932">1 Hour</tspan></text>
+</g>
+</g>
+<g id="title">
+<text id="card-title" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="200" y="129.048">Settings</tspan></text>
+<g id="settings-icon">
+<path id="Rectangle_35" d="M159.263 107.846H158.383C157.831 107.846 157.383 108.293 157.383 108.846V113.336C157.383 113.888 157.831 114.336 158.383 114.336H159.263C159.815 114.336 160.263 113.888 160.263 113.336V108.846C160.263 108.293 159.815 107.846 159.263 107.846Z" fill="#339BFC"/>
+<path id="Line_16" d="M140 111.346H176" stroke="#339BFC" stroke-width="2.75" stroke-miterlimit="10"/>
+<path id="Rectangle_36" d="M169.001 126.855H168.121C167.569 126.855 167.121 127.303 167.121 127.855V132.345C167.121 132.898 167.569 133.345 168.121 133.345H169.001C169.553 133.345 170.001 132.898 170.001 132.345V127.855C170.001 127.303 169.553 126.855 169.001 126.855Z" fill="#339BFC"/>
+<path id="Line_17" d="M140 130.346H176" stroke="#339BFC" stroke-width="2.75" stroke-miterlimit="10"/>
+<path id="Rectangle_37" d="M147.88 117.905H147C146.448 117.905 146 118.353 146 118.905V123.395C146 123.948 146.448 124.395 147 124.395H147.88C148.432 124.395 148.88 123.948 148.88 123.395V118.905C148.88 118.353 148.432 117.905 147.88 117.905Z" fill="#339BFC"/>
+<path id="Line_18" d="M140 121.346H176" stroke="#339BFC" stroke-width="2.75" stroke-miterlimit="10"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_741_6313" x="61.5469" y="67.1953" width="766" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="7"/>
+<feGaussianBlur stdDeviation="9"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0.157 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_741_6313"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_741_6313" result="shape"/>
+</filter>
+<clipPath id="clip0_741_6313">
+<rect width="890" height="760" fill="white"/>
+</clipPath>
+</defs>
+</svg>

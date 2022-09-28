@@ -1,0 +1,66 @@
+<svg width="890" height="760" viewBox="0 0 890 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="step-2-create_network" clip-path="url(#clip0_741_6346)">
+<rect id="bg" width="890" height="760" rx="10" fill="#C3CCCC"/>
+<g id="fg">
+<g id="card-bg" filter="url(#filter0_d_741_6346)">
+<rect x="95" y="72" width="700" height="616" rx="10" fill="#F5F5F5"/>
+<rect x="96.5" y="73.5" width="697" height="613" rx="8.5" stroke="#101010" stroke-width="3"/>
+</g>
+<g id="network-name-input">
+<text id="Network Definition" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="155" y="185.545">Network Definition</tspan></text>
+<text id="Network Name" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="164" y="211.845">Network Name</tspan></text>
+<rect id="Rectangle 459" x="155" y="219.945" width="580" height="50" rx="10" fill="#CCCCCC"/>
+</g>
+<g id="network-address-input">
+<text id="Network Address" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="155" y="307.545">Network Address</tspan></text>
+<g id="Reported Network Address: 100.000.00.0/10">
+<text fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="232.578" y="333.845">N</tspan><tspan x="294.854" y="333.845">A</tspan></text>
+<text fill="#EC5563" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="360.424" y="333.845">100.000.00.0/10</tspan></text>
+<text fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="164" y="333.845">Reported </tspan><tspan x="242.873" y="333.845">etwork </tspan><tspan x="304.875" y="333.845">ddress: </tspan></text>
+</g>
+<rect id="Rectangle 460" x="155" y="341.945" width="580" height="50" rx="10" fill="#CCCCCC"/>
+</g>
+<g id="DNS-server-input">
+<text id="title" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="155" y="429.545">DNS Server</tspan></text>
+<text id="Reported DNS Server" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="164" y="455.845">Reported DNS Server</tspan></text>
+<rect id="Rectangle 461" x="155" y="463.945" width="580" height="50" rx="10" fill="#CCCCCC"/>
+</g>
+<g id="enable-network-input">
+<text id="Enable Network" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="155" y="551.545">Enable Network</tspan></text>
+<text id="If you would like to enable the network now, check the box below. Otherwise, you can enable it at a later time." fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="155" y="578.645">If you would like to enable the network now, check the </tspan><tspan x="155" y="595.645">box below. Otherwise, you can enable it at a later time.</tspan></text>
+<g id="checkbox">
+<text id="Enable Network_2" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="182" y="619.806">Enable Network</tspan></text>
+<path id="Rectangle_11" d="M158 606.945H168.954C170.059 606.945 170.954 607.841 170.954 608.945V620.046C170.954 621.151 170.059 622.046 168.954 622.046H158C156.895 622.046 156 621.151 156 620.046V608.945C156 607.841 156.895 606.945 158 606.945Z" fill="#CCCCCC" stroke="#151779" stroke-width="2"/>
+</g>
+</g>
+<g id="btn">
+<rect x="541" y="605" width="194" height="49" rx="10" fill="#151779"/>
+<text id="Next" fill="#F5F5F5" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="583.516" y="635.1">Next</tspan></text>
+<path id="Vector" d="M646.284 628.956L637.798 621.592C637.733 621.535 637.65 621.504 637.563 621.504H635.575C635.409 621.504 635.332 621.711 635.458 621.818L643.324 628.646H630.18C630.081 628.646 630 628.727 630 628.826V630.174C630 630.273 630.081 630.354 630.18 630.354H643.322L635.456 637.182C635.33 637.292 635.406 637.496 635.573 637.496H637.628C637.67 637.496 637.713 637.48 637.745 637.451L646.284 630.044C646.362 629.976 646.424 629.892 646.467 629.799C646.51 629.705 646.532 629.603 646.532 629.5C646.532 629.397 646.51 629.295 646.467 629.201C646.424 629.108 646.362 629.024 646.284 628.956Z" fill="#F5F5F5"/>
+<rect x="541" y="605" width="194" height="49" rx="10" stroke="#F5F5F5"/>
+</g>
+<path id="separator" d="M155 140H735" stroke="#999999" stroke-width="3" stroke-miterlimit="10"/>
+<g id="title_2">
+<text id="Create a Network" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="208.902" y="122.048">Create a Network</tspan></text>
+<g id="Group 919">
+<path id="Rectangle_13" d="M184.667 121.055H156C155.448 121.055 155 121.502 155 122.055V123.277C155 123.829 155.448 124.277 156 124.277H184.667C185.219 124.277 185.667 123.829 185.667 123.277V122.055C185.667 121.502 185.219 121.055 184.667 121.055Z" fill="#339BFC"/>
+<path id="Rectangle_14" d="M181.621 100H158.434C157.881 100 157.434 100.448 157.434 101V117.055C157.434 117.607 157.881 118.055 158.434 118.055H181.621C182.173 118.055 182.621 117.607 182.621 117.055V101C182.621 100.448 182.173 100 181.621 100Z" stroke="#339BFC" stroke-width="2.5" stroke-miterlimit="10"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_741_6346" x="77" y="61" width="736" height="652" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="7"/>
+<feGaussianBlur stdDeviation="9"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0.157 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_741_6346"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_741_6346" result="shape"/>
+</filter>
+<clipPath id="clip0_741_6346">
+<rect width="890" height="760" fill="white"/>
+</clipPath>
+</defs>
+</svg>

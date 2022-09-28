@@ -1,0 +1,94 @@
+<svg width="850" height="754" viewBox="0 0 850 754" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="fine-tuned-control">
+<rect id="Rectangle 484" x="1.5" y="1.5" width="847" height="751" rx="8.5" fill="#F5F5F5" stroke="#101010" stroke-width="3"/>
+<path id="separator" d="M60 109H790" stroke="#999999" stroke-width="3" stroke-miterlimit="10"/>
+<g id="title">
+<text id="Events" fill="#101010" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="35" font-weight="bold" letter-spacing="0em"><tspan x="115.557" y="75.75">Events</tspan></text>
+<g id="list-icon">
+<g id="check">
+<path id="Line 224" d="M60.5859 63.4473L62.8487 65.4962" stroke="#339BFC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Line 225" d="M65.7869 61.4102L62.8477 65.4963" stroke="#339BFC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+<g id="check_2">
+<path id="Line 226" d="M60.5859 52.6719L62.8487 54.7208" stroke="#339BFC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Line 227" d="M65.7869 50.623L62.8477 54.7209" stroke="#339BFC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+<path id="Ellipse 240" d="M62.8925 77.9967C64.4901 77.9967 65.7851 76.6967 65.7851 75.0931C65.7851 73.4895 64.4901 72.1895 62.8925 72.1895C61.295 72.1895 60 73.4895 60 75.0931C60 76.6967 61.295 77.9967 62.8925 77.9967Z" fill="#339BFC" stroke="#339BFC" stroke-miterlimit="10"/>
+<path id="Line 228" d="M72.5645 53.0273H101.093" stroke="#339BFC" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Line 229" d="M72.5645 75.4785H101.093" stroke="#339BFC" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Line 230" d="M72.5645 63.9219H101.093" stroke="#339BFC" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="body">
+<g id="rows">
+<g id="r1">
+<rect id="Rectangle 478" x="60" y="282" width="730" height="100" fill="#C3CCCC"/>
+<text id="2/8/2022 11:56 AM" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="74" y="337.6">2/8/2022 11:56 AM</tspan></text>
+<text id="CloudApi" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="280" y="337.6">CloudApi</tspan></text>
+<g id="Group 1003">
+<text id="Gateway requested its encryption key" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="412" y="327.6">Gateway requested its encryption key</tspan></text>
+<g id="gateway: ocketio-gateway">
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="484.906" y="347.752">: </tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="412" y="347.752">gateway</tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="16" font-weight="500" letter-spacing="0em"><tspan x="492.922" y="347.752">ocketio-gateway</tspan></text>
+</g>
+</g>
+</g>
+<g id="r2">
+<text id="2/8/2022 11:40 AM" fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="74" y="437.6">2/8/2022 11:40 AM</tspan></text>
+<text id="Gateway" fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="280" y="437.6">Gateway</tspan></text>
+<g id="Group 1006">
+<text id="GOT CONFIGURATION FROM CLOUD" fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="412" y="427.6">GOT CONFIGURATION FROM CLOUD</tspan></text>
+<g id="gateway: ocketio-gateway_2">
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="484.906" y="447.752">: </tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="412" y="447.752">gateway</tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="16" font-weight="500" letter-spacing="0em"><tspan x="492.922" y="447.752">ocketio-gateway</tspan></text>
+</g>
+</g>
+</g>
+<g id="r3">
+<rect id="Rectangle 479" x="60" y="482" width="730" height="100" fill="#C3CCCC"/>
+<text id="2/8/2022 10:43 AM" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="74" y="537.6">2/8/2022 10:43 AM</tspan></text>
+<text id="CloudApi_2" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="280" y="537.6">CloudApi</tspan></text>
+<g id="Group 1008">
+<text id="Gateway sent health check" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="412" y="527.6">Gateway sent health check</tspan></text>
+<g id="gateway: ocketio-gateway_3">
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="484.906" y="547.752">: </tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="412" y="547.752">gateway</tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="16" font-weight="500" letter-spacing="0em"><tspan x="492.922" y="547.752">ocketio-gateway</tspan></text>
+</g>
+</g>
+</g>
+<g id="r4">
+<text id="2/8/2022 10:18 AM" fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="74" y="637.6">2/8/2022 10:18 AM</tspan></text>
+<text id="CloudApi_3" fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="280" y="637.6">CloudApi</tspan></text>
+<g id="Group 1010">
+<text id="Gateway reported local information" fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="412" y="627.6">Gateway reported local information</tspan></text>
+<g id="gateway: ocketio-gateway_4">
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="600" letter-spacing="0em"><tspan x="484.906" y="647.752">: </tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="412" y="647.752">gateway</tspan></text>
+<text fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="16" font-weight="500" letter-spacing="0em"><tspan x="492.922" y="647.752">ocketio-gateway</tspan></text>
+</g>
+</g>
+</g>
+</g>
+<g id="columns">
+<text id="Source" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="280" y="264">Source</tspan></text>
+<text id="Message" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="412" y="264">Message</tspan></text>
+<g id="Group 1002">
+<text id="Timestamp" fill="#151779" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="74" y="263.945">Timestamp</tspan></text>
+<path id="Vector" d="M210.619 263.775L218.448 256.076C218.508 256.017 218.541 255.941 218.541 255.862V254.058C218.541 253.907 218.321 253.838 218.207 253.952L210.948 261.089V249.163C210.948 249.073 210.862 249 210.757 249H209.325C209.22 249 209.134 249.073 209.134 249.163V261.087L201.875 253.95C201.758 253.836 201.541 253.905 201.541 254.056V255.921C201.541 255.96 201.558 255.998 201.589 256.027L209.463 263.775C209.535 263.846 209.624 263.902 209.724 263.941C209.823 263.98 209.931 264 210.041 264C210.151 264 210.259 263.98 210.358 263.941C210.458 263.902 210.547 263.846 210.619 263.775Z" fill="#151779"/>
+</g>
+</g>
+<g id="timeframe-input">
+<rect id="Rectangle 477" x="445.5" y="145.5" width="344" height="49" rx="9.5" stroke="#666666"/>
+<text id="timeframe" fill="#999999" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="18" letter-spacing="0em"><tspan x="455.059" y="176.984">timeframe</tspan></text>
+</g>
+<g id="search-box">
+<rect id="Rectangle 477_2" x="60.5" y="145.5" width="342" height="49" rx="9.5" stroke="#666666"/>
+<text id="search text" fill="#999999" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="18" letter-spacing="0em"><tspan x="107" y="176.984">search text</tspan></text>
+<path id="Vector_2" d="M93.9279 180.275L86.1369 172.484C87.3459 170.921 87.9999 169.01 87.9999 167C87.9999 164.594 87.0609 162.338 85.3629 160.637C83.6649 158.936 81.403 158 79 158C76.597 158 74.335 158.939 72.637 160.637C70.936 162.335 70 164.594 70 167C70 169.403 70.939 171.665 72.637 173.363C74.335 175.064 76.594 176 79 176C81.01 176 82.9179 175.346 84.4809 174.14L92.2719 181.928C92.2947 181.951 92.3219 181.969 92.3517 181.981C92.3816 181.994 92.4136 182 92.4459 182C92.4782 182 92.5102 181.994 92.5401 181.981C92.5699 181.969 92.5971 181.951 92.6199 181.928L93.9279 180.623C93.9508 180.6 93.9689 180.573 93.9813 180.543C93.9936 180.513 94 180.481 94 180.449C94 180.417 93.9936 180.385 93.9813 180.355C93.9689 180.325 93.9508 180.298 93.9279 180.275ZM83.7519 171.752C82.4799 173.021 80.794 173.72 79 173.72C77.206 173.72 75.52 173.021 74.248 171.752C72.979 170.48 72.28 168.794 72.28 167C72.28 165.206 72.979 163.517 74.248 162.248C75.52 160.979 77.206 160.28 79 160.28C80.794 160.28 82.4829 160.976 83.7519 162.248C85.0209 163.52 85.7199 165.206 85.7199 167C85.7199 168.794 85.0209 170.483 83.7519 171.752Z" fill="#666666"/>
+</g>
+</g>
+</g>
+</svg>

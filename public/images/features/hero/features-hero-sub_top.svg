@@ -1,0 +1,14 @@
+<svg width="360" height="106" viewBox="0 0 360 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="features-hero-sub_top">
+<rect id="bg" x="1.5" y="1.5" width="357" height="103" rx="8.5" fill="#F5F5F5" stroke="#101010" stroke-width="3"/>
+<g id="toggle-icon">
+<path id="Vector" d="M66.3574 55.5717C66.3574 58.1603 65.2865 60.6472 63.373 62.4841C61.4589 64.3217 58.8586 65.3574 56.1431 65.3574L34.7146 65.3574C31.9992 65.3574 29.3988 64.3217 27.4847 62.4841C25.5713 60.6472 24.5003 58.1603 24.5003 55.5717C24.5003 52.9831 25.5713 50.4962 27.4847 48.6593C29.3988 46.8218 31.9992 45.786 34.7146 45.786L56.1431 45.786C58.8586 45.786 61.4589 46.8218 63.373 48.6593C65.2865 50.4962 66.3574 52.9831 66.3574 55.5717Z" fill="#101010" stroke="#101010"/>
+<path id="Vector_2" d="M62.0157 59.8712C64.2929 57.594 65.5723 54.5054 65.5723 51.2849C65.5723 48.0644 64.2929 44.9758 62.0157 42.6986C59.7385 40.4214 56.6499 39.142 53.4294 39.142L31.1437 39.142C27.9232 39.142 24.8347 40.4214 22.5574 42.6986C20.2802 44.9758 19.0009 48.0644 19.0009 51.2849C19.0009 54.5054 20.2802 57.5939 22.5574 59.8712C24.8347 62.1484 27.9232 63.4277 31.1437 63.4277L53.4294 63.4277C56.6499 63.4277 59.7385 62.1484 62.0157 59.8712Z" fill="#101010" stroke="#F5F5F5" stroke-width="2"/>
+<circle id="Ellipse 2" cx="53.4297" cy="51.2852" r="5.99999" fill="#0B862D"/>
+</g>
+<g id="text">
+<text id="Ocketio logins are enabled" fill="#0B862D" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="88" y="32.4">Ocketio logins are enabled</tspan></text>
+<text id="Users will be able to authenticate with their Ocketio accounts, as well as any configured third party providers." fill="#333333" xml:space="preserve" style="white-space: pre" font-family="Noto Sans" font-size="12" letter-spacing="0em"><tspan x="88" y="50.656">Users will be able to authenticate with their </tspan><tspan x="88" y="66.656">Ocketio accounts, as well as any configured </tspan><tspan x="88" y="82.656">third party providers.</tspan></text>
+</g>
+</g>
+</svg>
