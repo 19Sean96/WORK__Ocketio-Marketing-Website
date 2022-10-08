@@ -206,57 +206,19 @@
 }
 
 #blogRoot {
-  #blogWave {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 100;
-    width: 100vw;
-    min-width: 2160px;
-    margin-top: -200px;
-    transform: translateX(-50%);
+  background: $primary-black;
 
-    @media screen and (max-width: 575px) {
-      margin-top: -250px;
+  .blog--root {
+    &--heading {
+      padding-top: 130px;
+      color: $primary-white;
     }
 
-    @media screen and (min-width: 2160px) {
-      transform: translateX(-50%) translateY(-2.5vw)
-    }
-  }
-
-  .main_wrapper {
-    position: relative;
-    z-index: 105;
-  }
-
-  #heading {
-    .section {
-      position: relative;
-      margin-top: 0 !important;
-      &--heading {
-        padding-top: 160px;
-        padding-bottom: 0;
-        margin-bottom: 10px;
-        h2 {
-          color: $gray-2;
-        }
-
-        p {
-          color: $gray-2;
-        }
-
-        @media screen and (max-width: 575px) {
-          padding-top: 110px;
-        }
-      }
-    }
   }
 
   &Content {
     width: 100%;
-    margin-top: 0 !important;
-
+    padding-top: 60px;
   }
   .filter-row {
     display: flex;
@@ -413,8 +375,8 @@
   left: 5vw;
   top: 0;
   z-index: 50;
+  color: $primary-white;
   p {
-    color: white;
     vertical-align: middle;
     display: flex;
     justify-content: flex-start;
@@ -422,8 +384,8 @@
     .link {
       cursor: pointer;
       font-size: 16px;
-      color: white;
       text-decoration: none;
+      color: inherit;
     }
 
     .divider {

@@ -43,9 +43,7 @@
       padding: 39px 0 20px;
       transition: .275s ease-out all;
 
-      @media screen and (max-width: 875px) {
-        padding: 20px 0;
-      }
+
     }
 
   #menuIcon {
@@ -111,7 +109,7 @@
       z-index: 1000;
       top: 50vh;
       left: 50vw;
-      background-color: #252939;
+      background-color: $secondary-black;
       width: 101vw;
       height: 100vh;
       backdrop-filter: blur(10px);
@@ -161,7 +159,6 @@
   }
 
   &--cta {
-    padding: 9px 30px 10px;
     &__wrapper {
       min-width: 175px;
       display: flex;
@@ -190,5 +187,18 @@
         gap: 12px;
       }
     }
+  }
+
+  @media screen and (max-width: 875px) {
+    width: 100vw;
+    padding: 0 5vw;
+
+    &__wrapper {
+      @media screen and (max-width: 875px) {
+        padding: 20px 0;
+        width: 100%;
+      }
+    }
+
   }
 }
