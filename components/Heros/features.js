@@ -100,7 +100,7 @@ const StyledImageGroup = styled.div`
 
 `
 const HeroFeatures = ({ offset }) => {
-  const { isMobile, isSafari, scrollOffset } = useAppContext();
+  const { isMobile, scrollOffset } = useAppContext();
 
   return (
     <div

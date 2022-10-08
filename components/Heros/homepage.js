@@ -70,18 +70,20 @@ const StyledImageGroup = styled.div`
   }
 `;
 
-const HeroHome = ({ offset }) => {
-  const { isSafari, scrollOffset } = useAppContext();
-  const [scrolled, setScrolled] = useState(false)
+const HeroHome = () => {
+  const { scrollOffset } = useAppContext();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (scrollOffset > 0) {
-      setScrolled(true)
+      setScrolled(true);
     }
-  }, [scrollOffset])
+  }, [scrollOffset]);
   return (
     <div className="hero_wrapper">
       <section className="section section__with-grid" id="landing-hero">
+        <div className="decor__angle"></div>
+
         <div id="landing-hero-message">
           <ScrollAnimation
             animateOnce={animateOnce}
@@ -131,15 +133,18 @@ const HeroHome = ({ offset }) => {
           </ScrollAnimation>
         </div>
 
-        <StyledImageGroup className="image-group" offset={isSafari ? 0 : scrollOffset}>
+        <StyledImageGroup
+          className="image-group"
+          offset={scrollOffset}
+        >
           <HeroImageMain
             id="heroImageMain"
             className={!scrolled ? "atTop" : ""}
           />
-            <HeroImageSub
-              id="heroImageSub"
-              className={!scrolled ? "atTop" : ""}
-            />
+          <HeroImageSub
+            id="heroImageSub"
+            className={!scrolled ? "atTop" : ""}
+          />
         </StyledImageGroup>
       </section>
     </div>
