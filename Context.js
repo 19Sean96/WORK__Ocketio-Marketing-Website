@@ -3,103 +3,82 @@ import { useRouter } from "next/router";
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const router = useRouter();
-  // Holds the X and Y position (in pixels) of the cursor in direct relation to the monitor
-  const [mousePositionPixels, setMousePositionPixels] = useState([0, 0]);
+	const router = useRouter();
+	// Holds the value of the number of pixels scrolled down on the page
+	const [scrollOffset, setScrollOffset] = useState(0);
+	// Describes if the viewport width is mobile or desktop (875px or less = mobile)
+	const [isMobile, setMobile] = useState(null);
+  // Dimensions of browser window
+	const [windowSize, setWindowSize] = useState({
+		width: 0,
+		height: 0,
+	});
+	// For managing certain styling where element is on dark background
+	const [headerDarkMode, setHeaderDarkMode] = useState(false);
+	const [footerDarkMode, setFooterDarkMode] = useState(false);
 
-  // Holds the value of the number of pixels scrolled down on the page
-  const [scrollOffset, setScrollOffset] = useState(0);
+	const headerDarkModeURLs = [
+		"/features",
+		"/blog",
+		"/blog/[category]",
+		"/contact",
+		"/pricing",
+	];
 
-  // Describes if the viewport width is mobile or desktop (875px or less = mobile)
-  const [isMobile, setMobile] = useState();
+	const footerDarkModeURLs = ["/", "features", "/blog", "/blog/[category]"];
 
-  // Simple boolean hook which tracks whether the browser is Safari based or not
-  const [isSafari, setIsSafari] = useState(null);
+	useEffect(() => {
 
-  const [windowInnerHeight, setWindowInnerHeight] = useState();
-  const [windowScrollY, setWindowScrollY] = useState();
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
 
-  // For managing certain styling where element is on dark background
-  const [headerDarkMode, setHeaderDarkMode] = useState(false);
-  const [footerDarkMode, setFooterDarkMode] = useState(false);
+    setMobile(window.innerWidth < 875)
 
-  const handleMouseMove = ({ clientX, clientY }) =>
-    setMousePositionPixels([clientX, clientY]);
+		const scrollHandler = () => {
+			setScrollOffset(
+				/^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+					? 0
+					: window.pageYOffset
+			);
+		};
+		const resizeHandler = () =>
+			setWindowSize({
+				width: window.innerWidth,
+				height: window.innerHeight,
+			});
 
-  useEffect(() => {
-    handleResize();
-    function handleScroll() {
+		window.addEventListener("scroll", scrollHandler);
+		window.addEventListener("resize", resizeHandler);
 
-      if (isSafari) setScrollOffset(0)
-      else setScrollOffset(window.pageYOffset);
-      setWindowInnerHeight(window.innerHeight);
-      setWindowScrollY(window.scrollY);
-    }
+		return () => {
+			window.removeEventListener("scroll", scrollHandler);
+			window.removeEventListener("resize", resizeHandler);
+		};
+	}, []);
 
-    function handleResize() {
-      if (window.innerWidth < 875) {
-        setMobile(true);
-        console.log("MOBILE");
-      } else {
-        setMobile(false);
-        console.log("DESKTOP");
-      }
-      setWindowInnerHeight(window.innerHeight);
-      setWindowScrollY(window.scrollY);
-    }
+  useEffect(() => setMobile(windowSize.width < 875), [windowSize.width])
 
-    let safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+	useEffect(() => {
+		setHeaderDarkMode(headerDarkModeURLs.some((url) => router.pathname == url));
+		setFooterDarkMode(footerDarkModeURLs.some((url) => router.pathname == url));
+	}, [router.asPath]);
 
-    setIsSafari(safari);
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log(router);
-    if (
-      router.pathname === "/features" ||
-      router.pathname.includes("/blog") ||
-      router.pathname === "/contact"
-    ) {
-      setHeaderDarkMode(true);
-    } else setHeaderDarkMode(false);
-
-    if (
-      router.pathname === "/" ||
-      router.pathname === "/features" ||
-      router.pathname === "/blog/[category]" ||
-      router.pathname === "/blog"
-    ) {
-      setFooterDarkMode(true);
-    } else setFooterDarkMode(false);
-  }, [router.asPath]);
-
-  return (
-    <AppContext.Provider
-      value={{
-        mousePositionPixels,
-        scrollOffset,
-        isMobile,
-        handleMouseMove,
-        isSafari,
-        windowInnerHeight,
-        windowScrollY,
-        headerDarkMode,
-        footerDarkMode
-      }}
-    >
-      {children}
-    </AppContext.Provider>
-  );
+	return (
+		<AppContext.Provider
+			value={{
+				scrollOffset,
+				isMobile,
+        windowSize,
+				headerDarkMode,
+				footerDarkMode,
+			}}>
+			{children}
+		</AppContext.Provider>
+	);
 }
 
 export function useAppContext() {
-  return useContext(AppContext);
+	return useContext(AppContext);
 }
