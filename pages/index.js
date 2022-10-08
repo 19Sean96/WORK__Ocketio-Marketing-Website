@@ -3,13 +3,12 @@ import Head from '../components/Pages.Head/Homepage'
 import { Hero } from "../components/Heros/homepage";
 import {
   FirstBanner,
-  WhoSection,
   WhatSection,
+  EmailIntakeSection,
+  WhoSection,
+  BlogSection
 } from "../components/Pages.Body/Homepage";
-import EmailIntake from "../components/Site.Widgets/EmailIntake";
-import BlogLayout from "../components/BlogLayout";
-import { useAppContext } from "../Context";
-
+import { _palemint } from '../components/Site.Globals/Colors'
 export default function Home({ blog_posts }) {
 
   return (
@@ -17,13 +16,23 @@ export default function Home({ blog_posts }) {
       <Head />
  
       <main className="main" id="main">
+        <div className="decor decor__angle" style={{
+          position: 'absolute',
+          left: 0,
+          top: -107,
+          zIndex: 1,
+          height: '60vw',
+          width: '33vw',
+          background: _palemint,
+          clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)'
+        }}></div>
         <span id="vertLineCenter"></span>
-        <Hero/>
+        <Hero />
         <FirstBanner />
         <WhatSection />
-        <EmailIntake />
+        <EmailIntakeSection />
         <WhoSection />
-        <BlogLayout blogPosts={blog_posts} />
+        <BlogSection blogPosts={blog_posts} />
       </main>
     </>
   );
@@ -33,7 +42,7 @@ export async function getStaticProps() {
   const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY;
   const DIRECTUS_CMS_URL = process.env.DIRECTUS_CMS_URL;
 
-  const blogURI = `${DIRECTUS_CMS_URL}/items/Blog_Posts`;
+  const blogURI = `${DIRECTUS_CMS_URL}/items/all_posts?sort=sort,-date_updated&limit=2`;
   let response, error;
   try {
     response = await axios({
