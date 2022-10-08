@@ -52,7 +52,7 @@ const EmailIntakeInput = () => {
         />
         <label
           htmlFor="email"
-          className="section--form--input__label j-display _400"
+          className="section--form--input__label"
         >
           Email Address
         </label>
