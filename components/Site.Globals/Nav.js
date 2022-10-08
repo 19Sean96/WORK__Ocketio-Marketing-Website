@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useAppContext } from "../../Context";
 
-function Nav({ isMobile, menuOpen, headerDarkMode }) {
+function Nav({ menuOpen }) {
   const [navStyle, updateNavStyle] = useState();
   const router = useRouter();
+  const { headerDarkMode, isMobile } = useAppContext()
+
   useEffect(() => {
     if (!isMobile) {
       updateNavStyle({
@@ -80,7 +83,7 @@ function Nav({ isMobile, menuOpen, headerDarkMode }) {
       </ul>
       {isMobile && (
         <button
-          className="header--cta btn btn--filled j-text _400"
+          className="header--cta btn btn--filled btn--filled__darkmode"
           aria-label="Get started with the beta program"
         >
           Try the Beta
