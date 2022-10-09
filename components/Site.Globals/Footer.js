@@ -15,6 +15,7 @@ const StyledFooter = styled.footer`
 		width: 102vw;
 		height: 150%;
 		background: ${(props) => props.background};
+		pointer-events: none;
 	}
 `;
 
