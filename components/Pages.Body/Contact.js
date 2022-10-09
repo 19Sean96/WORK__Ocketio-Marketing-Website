@@ -86,71 +86,12 @@ const ContactPortal = (props) => {
           duration={0.9}
           className="section--heading"
         >
-          <h2
-            className="h2 capitalize"
-            style={{
-              color: "#f6f6f6",
-            }}
-          >
-            contact us
-          </h2>
-          <p className="p-large">
+          <h1 className="h1 capitalize">contact us</h1>
+          <p className="p-lg">
             We're always here to help. Fill out this form and we'll get back to
             you right away.
           </p>
         </ScrollAnimation>
-        <div className="section--info">
-          <a href="mailto:support@wirewise.io" className="section--info--item">
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn="animate__fadeInUp"
-              duration={0.4}
-              delay={400}
-              className="section--info--icon"
-            >
-              <BsEnvelope
-                style={{
-                  height: "25px",
-                  width: "25px",
-                }}
-              />
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn="animate__fadeInRight"
-              duration={1.1}
-              className="section--info--text"
-            >
-              <h6 className="h6">Send us an email</h6>
-              <p className="p-small">support@wirewise.io</p>
-            </ScrollAnimation>
-          </a>
-          <a href="tel:4878701054" className="section--info--item">
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn="animate__fadeInUp"
-              duration={0.4}
-              delay={400}
-              className="section--info--icon"
-            >
-              <BsTelephone
-                style={{
-                  width: "25px",
-                  height: "25px",
-                }}
-              />
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateOnce={animateOnce}
-              animateIn="animate__fadeInRight"
-              duration={1.1}
-              className="section--info--text"
-            >
-              <h6 className="h6">Call us</h6>
-              <p className="p-small">(487) 870-1054</p>
-            </ScrollAnimation>
-          </a>
-        </div>
         <ScrollAnimation
           animateOnce={animateOnce}
           animateIn="animate__fadeInRight"
@@ -178,11 +119,10 @@ const ContactPortal = (props) => {
                 className="section--form--input"
                 type="text"
                 {...register("fullName", { required: true })}
-                // onChange={e => console.log(e)}
               />
               <label
                 htmlFor="fullName"
-                className="section--form--input__label j-display _400"
+                className="section--form--input__label"
               >
                 Full Name
               </label>
@@ -204,7 +144,7 @@ const ContactPortal = (props) => {
               />
               <label
                 htmlFor="companyName"
-                className="section--form--input__label j-display _400"
+                className="section--form--input__label"
               >
                 Company Name
               </label>
@@ -227,7 +167,7 @@ const ContactPortal = (props) => {
               />
               <label
                 htmlFor="emailInput"
-                className="section--form--input__label j-display _400"
+                className="section--form--input__label"
               >
                 Email Address
               </label>
@@ -261,7 +201,7 @@ const ContactPortal = (props) => {
               />
               <label
                 htmlFor="phone"
-                className="section--form--input__label j-display _400"
+                className="section--form--input__label"
               >
                 Phone Number
               </label>
@@ -327,11 +267,12 @@ const ContactPortal = (props) => {
               />
               <label
                 htmlFor="message"
-                className="section--form--input__label j-display _400"
+                className="section--form--input__label"
               >
                 Tell us more
               </label>
             </ScrollAnimation>
+            <div className="section--form--footer">
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInDown"
@@ -342,7 +283,7 @@ const ContactPortal = (props) => {
             >
               <label
                 htmlFor="newsletterOptIn"
-                className="section--form--input__label j-display _400"
+                className="section--form--input__label"
               >
                 <input
                   type="checkbox"
@@ -353,7 +294,7 @@ const ContactPortal = (props) => {
                 <span> Sign up for our newsletter</span>
               </label>
               <span className="disclaimer">
-                See our <Link href="/privacy">Privacy Policy.</Link>
+                See our <Link href="/privacy">Privacy Policy.</Link> for more information.
               </span>
             </ScrollAnimation>
             <ScrollAnimation
@@ -371,6 +312,7 @@ const ContactPortal = (props) => {
                 className="btn btn--filled capitalize"
               />
             </ScrollAnimation>
+            </div>
           </form>
         </ScrollAnimation>
       </section>
@@ -560,7 +502,7 @@ const ContactFAQ = (props) => {
           duration={0.48}
           className="section--heading"
         >
-          <h4 className="h4 capitalize">frequently asked questions</h4>
+          <h2 className="h2 capitalize">frequently asked questions</h2>
         </ScrollAnimation>
         <div className="section--body">
           <FAQList list={faqs} />
