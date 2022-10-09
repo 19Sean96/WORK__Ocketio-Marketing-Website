@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { BsLinkedin } from "react-icons/bs";
 import { useAppContext } from "../../Context";
 const StyledFooter = styled.footer`
+	margin-top: ${props => props.pathname == '/contact' ? '-220px' : 'auto'};
 	&::before {
 		content: "";
 		position: absolute;
@@ -23,11 +24,13 @@ const Footer = () => {
 	const router = useRouter();
 	const currentYear = new Date().getFullYear();
 	const { footerDarkMode } = useAppContext();
+	console.log('ROUTER: ', router);
 	return (
 		<StyledFooter
 			className="footer"
 			id="footer"
-			background={footerDarkMode ? "#101010" : "#f5f5f5"}>
+			background={footerDarkMode ? "#101010" : "#f5f5f5"}
+			pathname={router.pathname}>
 			<div className="footer--top">
 				<div className="footer--logo">
 					<Link href="/">
