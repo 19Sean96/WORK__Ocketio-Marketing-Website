@@ -15,9 +15,9 @@ export default function Pricing() {
 	const cardRef = useRef([]);
 	const [tallestCardHeading, setTallestCardHeading] = useState(0);
 	const [tallestFeaturesList, setTallestFeaturesList] = useState(0);
-  const { windowSize } = useAppContext()
-  const [ priceIsAnnual, setPriceIsAnnual ] = useState(true)
-  const handlePriceToggle = () => setPriceIsAnnual(!priceIsAnnual)
+	const { windowSize } = useAppContext();
+	const [priceIsAnnual, setPriceIsAnnual] = useState(true);
+	const handlePriceToggle = () => setPriceIsAnnual(!priceIsAnnual);
 	useEffect(() => {
 		let _headingHeights = [],
 			_featuresListHeights = [];
@@ -35,8 +35,8 @@ export default function Pricing() {
 			}
 		});
 
-    setTallestCardHeading(Math.max(..._headingHeights))
-    setTallestFeaturesList(Math.max(..._featuresListHeights))
+		setTallestCardHeading(Math.max(..._headingHeights));
+		setTallestFeaturesList(Math.max(..._featuresListHeights));
 	}, [cardRef, windowSize]);
 
 	return (
@@ -51,7 +51,7 @@ export default function Pricing() {
 				}}>
 				<ContentWrapper>
 					<section
-						className="section__with-grid all-columns section__with-max-width_95vw"
+						className="section section__with-grid all-columns section__with-max-width_95vw"
 						id="pricing">
 						<ScrollAnimation
 							animateOnce={animateOnce}
@@ -66,17 +66,28 @@ export default function Pricing() {
 						</ScrollAnimation>
 
 						<div className="section--body">
-              <div className="price-toggle">
-                <span className="visually-hidden" id='toggleBtnLabel'>Price Type: Check this button for annual price and uncheck for monthly price. Current Price Type: {priceIsAnnual ? 'Annual' : 'Monthly'}</span>
-                <span className="price-toggle--label price-toggle-label__monthly">Monthly</span>
-                <button 
-                  className={`price-toggle--btn toggled__${priceIsAnnual ? 'annual' : 'monthly'} `}
-                  id="toggleBtn" 
-                  aria-labelledby="toggleBtnLabel"
-                  aria-pressed={priceIsAnnual}
-                  onClick={handlePriceToggle}></button>
-                <span className="price-toggle--label price-toggle--label__annual">Annual</span>
-              </div>
+							<div className="price-toggle">
+								<span className="visually-hidden" id="toggleBtnLabel">
+									Price Type: Check this button for annual price and uncheck for
+									monthly price. Current Price Type:{" "}
+									{priceIsAnnual ? "Annual" : "Monthly"}
+								</span>
+								<span className="price-toggle--label price-toggle-label__monthly">
+									Monthly
+								</span>
+								<button
+									className={`price-toggle--btn toggled__${
+										priceIsAnnual ? "annual" : "monthly"
+									} `}
+									id="toggleBtn"
+									role="switch"
+									aria-labelledby="toggleBtnLabel"
+									aria-pressed={priceIsAnnual}
+									onClick={handlePriceToggle}></button>
+								<span className="price-toggle--label price-toggle--label__annual">
+									Annual
+								</span>
+							</div>
 							{priceCardData.map((card, i) => (
 								<PriceCard
 									{...{ ...card, tallestCardHeading, tallestFeaturesList }}
@@ -121,7 +132,18 @@ export default function Pricing() {
 }
 
 const PriceCard = forwardRef(
-	({ name, price, message, features, button, tallestCardHeading, tallestFeaturesList }, ref) => {
+	(
+		{
+			name,
+			price,
+			message,
+			features,
+			button,
+			tallestCardHeading,
+			tallestFeaturesList,
+		},
+		ref
+	) => {
 		return (
 			<ScrollAnimation
 				animateOnce={true}
@@ -135,9 +157,11 @@ const PriceCard = forwardRef(
 					{name}
 				</h2>
 
-				<div className="price-card--heading" style={{
-          minHeight: tallestCardHeading
-        }}>
+				<div
+					className="price-card--heading"
+					style={{
+						minHeight: tallestCardHeading,
+					}}>
 					<h3 className="price-card--price h3">
 						<span className="price capitalize">{price} </span>
 						<span className="freq">{price !== "free" ? "user/month" : ""}</span>
@@ -153,14 +177,16 @@ const PriceCard = forwardRef(
 				</Link>
 
 				<div className="price-card--features">
-					<div className="list list__1" style={{
-            minHeight: tallestFeaturesList
-          }}>
+					<div
+						className="list list__1"
+						style={{
+							minHeight: tallestFeaturesList,
+						}}>
 						<h6 className="h6">Includes</h6>
 						<ul>
 							{features[0].map((feat) => (
 								<li>
-									<AiFillCheckCircle aria-hidden='true'/>
+									<AiFillCheckCircle aria-hidden="true" />
 									<p className="p-sm">{feat}</p>
 								</li>
 							))}
@@ -171,7 +197,7 @@ const PriceCard = forwardRef(
 						<ul>
 							{features[1].map((feat) => (
 								<li>
-									<AiFillCheckCircle aria-hidden='true'/>
+									<AiFillCheckCircle aria-hidden="true" />
 									<p className="p-sm">{feat}</p>
 								</li>
 							))}
