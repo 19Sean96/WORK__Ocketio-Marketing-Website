@@ -14,31 +14,6 @@ import HeroImageSubBot from '../../public/images/features/hero/features-hero-sub
 import { useAppContext } from "../../Context";
 const animateOnce = true;
 
-
-const StyledHeroLeft = styled(HeroLeft)`
-  transform: scale(1)
-    ${props => ` translate(9%, calc(0px - ${props.offset / -10 + -1}px))`};
-
-  @media (max-width: 1150px) {
-    transform: scale(1)
-    ${props => ` translate(22.5%, calc(-25px - ${props.offset / -10 + -1}px))`}
-  }
-  @media (max-width: 875px) {
-    transform: scale(1)
-    ${props => ` translate(-8%, calc(-25px - ${props.offset / -10 + -1}px))`}
-  }
-
-  @media (max-width: 450px) {
-    transform: scale(1)
-    ${props => ` translate(-50%, calc(-25px - ${props.offset / -10 + -1}px))`}
-  }
-
-`
-
-const StyledHeroRight = styled(HeroRight)`
-  
-`
-
 const StyledImageGroup = styled.div`
 
   #heroImageMain {
@@ -99,12 +74,12 @@ const StyledImageGroup = styled.div`
   }
 
 `
-const HeroFeatures = ({ offset }) => {
+const HeroFeatures = () => {
   const { isMobile, scrollOffset } = useAppContext();
 
   return (
     <div
-      className="full-width_wrapper navy-bg"
+      className="full-width_wrapper"
     >
       <ScrollAnimation
         animateOnce={animateOnce}
@@ -116,6 +91,8 @@ const HeroFeatures = ({ offset }) => {
         }}
       >
         <section className="section section__with-grid" id="features-hero">
+        <div className="bg"></div>
+
           <div id="features-hero-message">
             <ScrollAnimation
               animateOnce={animateOnce}
@@ -147,7 +124,7 @@ const HeroFeatures = ({ offset }) => {
               delay={500}
             >
               <Link href="/pricing">
-                <button className="cta btn btn--filled j-text _400 capitalize">
+                <button className="cta btn btn--filled btn--filled__darkmode capitalize">
                   get started
                 </button>
               </Link>
@@ -194,7 +171,6 @@ const HeroFeatures = ({ offset }) => {
                 managed <span className="last-word">devices</span>
               </h6>
             </ScrollAnimation>
-            {/* <span className="divider"></span> */}
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
@@ -225,7 +201,6 @@ const HeroFeatures = ({ offset }) => {
                 monitored <span className="last-word">devices</span>
               </h6>
             </ScrollAnimation>
-            {/* <span className="divider"></span> */}
             <ScrollAnimation
               animateOnce={animateOnce}
               animateIn="animate__fadeInUp"
@@ -245,9 +220,6 @@ const HeroFeatures = ({ offset }) => {
           </article>
         </section>
       </ScrollAnimation>
-      <div id="featuresHeroBG">
-        <Background />
-      </div>
     </div>
   );
 };
