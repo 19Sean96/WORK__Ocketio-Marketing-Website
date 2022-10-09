@@ -16,6 +16,8 @@ export default function Pricing() {
 	const [tallestCardHeading, setTallestCardHeading] = useState(0);
 	const [tallestFeaturesList, setTallestFeaturesList] = useState(0);
   const { windowSize } = useAppContext()
+  const [ priceIsAnnual, setPriceIsAnnual ] = useState(true)
+  const handlePriceToggle = () => setPriceIsAnnual(!priceIsAnnual)
 	useEffect(() => {
 		let _headingHeights = [],
 			_featuresListHeights = [];
@@ -64,6 +66,17 @@ export default function Pricing() {
 						</ScrollAnimation>
 
 						<div className="section--body">
+              <div className="price-toggle">
+                <span className="visually-hidden" id='toggleBtnLabel'>Price Type: Check this button for annual price and uncheck for monthly price. Current Price Type: {priceIsAnnual ? 'Annual' : 'Monthly'}</span>
+                <span className="price-toggle--label price-toggle-label__monthly">Monthly</span>
+                <button 
+                  className={`price-toggle--btn toggled__${priceIsAnnual ? 'annual' : 'monthly'} `}
+                  id="toggleBtn" 
+                  aria-labelledby="toggleBtnLabel"
+                  aria-pressed={priceIsAnnual}
+                  onClick={handlePriceToggle}></button>
+                <span className="price-toggle--label price-toggle--label__annual">Annual</span>
+              </div>
 							{priceCardData.map((card, i) => (
 								<PriceCard
 									{...{ ...card, tallestCardHeading, tallestFeaturesList }}
@@ -78,7 +91,7 @@ export default function Pricing() {
 							animateIn="animate__fadeInUp"
 							className="section--footer">
 							<h6 className="h6">Interested in a custom plan?</h6>
-							<p className="p-small">
+							<p className="p-sm">
 								<Link href="/contact">
 									<a>Contact us</a>
 								</Link>
@@ -147,7 +160,7 @@ const PriceCard = forwardRef(
 						<ul>
 							{features[0].map((feat) => (
 								<li>
-									<AiFillCheckCircle />
+									<AiFillCheckCircle aria-hidden='true'/>
 									<p className="p-sm">{feat}</p>
 								</li>
 							))}
@@ -158,7 +171,7 @@ const PriceCard = forwardRef(
 						<ul>
 							{features[1].map((feat) => (
 								<li>
-									<AiFillCheckCircle />
+									<AiFillCheckCircle aria-hidden='true'/>
 									<p className="p-sm">{feat}</p>
 								</li>
 							))}

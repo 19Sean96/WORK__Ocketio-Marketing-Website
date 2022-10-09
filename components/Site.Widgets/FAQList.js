@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { BsChevronRight } from "react-icons/bs";
 import ScrollAnimation from "react-animate-on-scroll";
-
+import { AiOutlineRight } from "react-icons/ai";
+import { _primarywhite, _pastelred } from "../../static/Colors";
 const FAQList = ({ list }) => {
   return (
     <ScrollAnimation
@@ -30,14 +30,15 @@ const FAQListItem = ({ question, answer, index }) => {
       key={index}
     >
       <div className="heading">
-        <h6
-          className="h6"
+        <h5
+          className="h5"
           style={{
-            color: isOpen ? "#0144e4" : "#252939",
+            color: isOpen ? _pastelred : _primarywhite,
+            transition: "all .3s ease-in-out",
           }}
         >
           {question}
-        </h6>
+        </h5>
         <div
           className="icon"
           style={{
@@ -48,15 +49,15 @@ const FAQListItem = ({ question, answer, index }) => {
             width: "30px",
           }}
         >
-          <BsChevronRight
+          <AiOutlineRight
             style={{
               position: "absolute",
               top: "50%",
               left: "50%",
-              transform: "translate(-50%, -50%)",
-              fill: isOpen ? "#0144e4" : "#252939",
+              transform: "translate(-50%, -50%) scaleX(75%)",
+              fill: isOpen ? _pastelred : _primarywhite,
               transition: "all .3s ease-in-out",
-              height: "24px",
+              height: "36px",
               width: "auto",
             }}
           />
@@ -71,13 +72,14 @@ const FAQListItem = ({ question, answer, index }) => {
       >
         <p
           ref={ref}
-          className="p-small"
+          className="p-sm"
           style={{
             position: "relative",
             transition:
               "transform .35s cubic-bezier(.25, 1, .5, 1), opacity .25s cubic-bezier(0.64, 0, 0.78, 0)",
             transform: `translateY(${isOpen ? 0 : 100}%)`,
             opacity: isOpen ? 1 : 0,
+            color: _primarywhite
           }}
         >
           {answer}
