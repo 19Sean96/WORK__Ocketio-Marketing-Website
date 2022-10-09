@@ -8,7 +8,7 @@ import {
   WhoSection,
   BlogSection
 } from "../components/Pages.Body/Homepage";
-import { _palemint } from '../components/Site.Globals/Colors'
+import { _palemint } from '../static/Colors'
 export default function Home({ blog_posts }) {
 
   return (
