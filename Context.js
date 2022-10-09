@@ -21,7 +21,6 @@ export function AppWrapper({ children }) {
 		"/features",
 		"/blog",
 		"/blog/[category]",
-		"/contact",
 		"/pricing",
 	];
 
