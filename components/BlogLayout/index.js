@@ -1,16 +1,29 @@
 import ReactHtmlParser from "react-html-parser";
 import BlogItem from "./Item";
+import { Filter } from "../Site.Blog/Filter";
 import { useAppContext } from "../../Context";
 import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
-const BlogLayout = ({ blogPosts, searchTerm = "", preview }) => {
+const BlogLayout = ({
+	blogPosts,
+	searchTerm = "",
+	preview,
+	activeCategory,
+	setActiveCategory,
+	handleSearchUpdate,
+}) => {
 	const { isMobile } = useAppContext();
 	return (
 		<section
 			className="section section__with-grid all-columns section--blog-list section__with-max-width_95vw"
-			id="blogPosts"
-		>
+			id="blogPosts">
 			<div className="section--body">
+				<Filter
+					activeCategory={activeCategory}
+					setActiveCategory={setActiveCategory}
+					searchTerm={searchTerm}
+					handleSearchUpdate={handleSearchUpdate}
+				/>
 				<div className="blogs">
 					{blogPosts.map(
 						(blog, i) =>

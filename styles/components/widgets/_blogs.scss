@@ -9,16 +9,27 @@
 			&--body {
 				grid-row: 2/3;
 				grid-column: 1/13;
+				display: flex;
+				align-items: flex-start;
+				
+				.filter-row {
+					max-width: 400px;
+				}
+
+				.nav-filter {
+					flex-direction: column;
+				}
 
 				.blogs {
+					flex-grow: 1;
 					display: flex;
 					justify-content: flex-start;
 					align-items: stretch;
-					gap: 28px;
+					gap: 4%;
 					flex-wrap: wrap;
 					row-gap: 56px;
 					.blog {
-            text-decoration: none;
+						text-decoration: none;
 						cursor: pointer;
 						width: 31%;
 						display: flex;
@@ -31,14 +42,11 @@
 						position: relative;
 						transform: scale(1) translate3d(0, 0, 0);
 						will-change: contents;
-						width: 31%;
-            background: $primary-black;
-						box-shadow: 
-              0 20px 8px rgba(0, 0, 0, 0.01),
-							0 13px 7px rgba(0, 0, 0, 0.1), 
-              0 3px 6px rgba(0, 0, 0, 0.35),
-							0 3px 4px rgba(0, 0, 0, 0.6),
-              0 1px 2px rgba(0, 0, 0, 0.69),
+						width: 48%;
+						background: $primary-black;
+						box-shadow: 0 20px 8px rgba(0, 0, 0, 0.01),
+							0 13px 7px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.35),
+							0 3px 4px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.69),
 							0 0px 0px rgba(0, 0, 0, 0.7);
 
 						&__inner {
@@ -50,15 +58,12 @@
 						}
 
 						&:hover,
-            &:active,
-            &:focus {
+						&:active,
+						&:focus {
 							transform: scale(1.01) translate3d(0, -1%, 0);
-							box-shadow: 
-                0 24px 13px rgba(0, 0, 0, 0.02),
-								0 16px 11px rgba(0, 0, 0, 0.14),
-								0 9px 10px rgba(0, 0, 0, 0.48),
-								0 4px 7px rgba(0, 0, 0, 0.81), 
-                0 2px 4px rgba(0, 0, 0, 0.93),
+							box-shadow: 0 24px 13px rgba(0, 0, 0, 0.02),
+								0 16px 11px rgba(0, 0, 0, 0.14), 0 9px 10px rgba(0, 0, 0, 0.48),
+								0 4px 7px rgba(0, 0, 0, 0.81), 0 2px 4px rgba(0, 0, 0, 0.93),
 								0 0px 0px rgba(0, 0, 0, 0.95);
 						}
 
@@ -142,6 +147,17 @@
 								margin-top: 30px;
 								overflow: hidden;
 							}
+
+							&__placeholder {
+								content: "";
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								background-color: green;
+								z-index: 1;
+							}
 						}
 
 						&__bot {
@@ -166,38 +182,32 @@
 						padding: 52px 57px;
 						border-radius: 16px;
 						border: 3px solid $pastel-red;
-            text-decoration: none;
-            color: $primary-white;
-            transition: all 0.1s ease-out;
+						text-decoration: none;
+						color: $primary-white;
+						transition: all 0.1s ease-out;
 						transform: scale(1) translate3d(0, 0, 0);
-            box-shadow: 
-              0 20px 8px rgba(0, 0, 0, 0.01),
-              0 13px 7px rgba(0, 0, 0, 0.1), 
-              0 3px 6px rgba(0, 0, 0, 0.35),
-              0 3px 4px rgba(0, 0, 0, 0.6),
-              0 1px 2px rgba(0, 0, 0, 0.69),
-              0 0px 0px rgba(0, 0, 0, 0.7);
+						box-shadow: 0 20px 8px rgba(0, 0, 0, 0.01),
+							0 13px 7px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.35),
+							0 3px 4px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.69),
+							0 0px 0px rgba(0, 0, 0, 0.7);
 
-            svg {
-              position: relative;
-              transform-origin: top right;
-              transform: scale(1.15);
-              width: 116px;
-              height: 112px;
-            }
+						svg {
+							position: relative;
+							transform-origin: top right;
+							transform: scale(1.15);
+							width: 116px;
+							height: 112px;
+						}
 
-            &:hover,
-            &:active,
-            &:focus {
-              transform: scale(1.01) translate3d(0, -1%, 0);
-              box-shadow: 
-                0 24px 13px rgba(0, 0, 0, 0.02),
-								0 16px 11px rgba(0, 0, 0, 0.14),
-								0 9px 10px rgba(0, 0, 0, 0.48),
-								0 4px 7px rgba(0, 0, 0, 0.81), 
-                0 2px 4px rgba(0, 0, 0, 0.93),
+						&:hover,
+						&:active,
+						&:focus {
+							transform: scale(1.01) translate3d(0, -1%, 0);
+							box-shadow: 0 24px 13px rgba(0, 0, 0, 0.02),
+								0 16px 11px rgba(0, 0, 0, 0.14), 0 9px 10px rgba(0, 0, 0, 0.48),
+								0 4px 7px rgba(0, 0, 0, 0.81), 0 2px 4px rgba(0, 0, 0, 0.93),
 								0 0px 0px rgba(0, 0, 0, 0.95);
-            }
+						}
 					}
 
 					@media (max-width: 1275px) {

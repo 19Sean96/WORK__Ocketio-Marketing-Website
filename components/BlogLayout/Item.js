@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import readingTime from "reading-time";
-
 const BlogItem = ({
 	dateWritten,
 	dateUpdated,
@@ -38,12 +37,15 @@ const BlogItem = ({
 					<div className="blog__bot">
 						<p className="p-sm blog--cta">Read More</p>
 						<div className={`blog--img__wrapper`}>
-							<Image
-								src={`https://cms.wirewise-dev.com/assets/${imgId}`}
-								layout="fill"
-								className="blog--img"
-								objectFit="cover"
-							/>
+								<Image
+									src={`https://cms.wirewise-dev.com/assets/${imgId}`}
+									layout="fill"
+									className="blog--img"
+									objectFit="cover"
+									loading="lazy"
+									placeholder="blur"
+									blurDataURL="/images/placeholder/placeholder-img.svg"
+								/>
 						</div>
 					</div>
 				</div>
@@ -51,5 +53,4 @@ const BlogItem = ({
 		</Link>
 	);
 };
-
 export default BlogItem;

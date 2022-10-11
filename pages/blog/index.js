@@ -78,8 +78,7 @@ export default function Blog({ blog_posts }) {
 						duration={0.44}
 						offset={-186}
 						animateOnce={animateOnce}
-						className="section--heading"
-					>
+						className="section--heading">
 						<h2 className="h2">Blog</h2>
 						<p className="p-large">
 							Check out our setup guides, keep up with the latest Ocketio news,
@@ -87,20 +86,13 @@ export default function Blog({ blog_posts }) {
 						</p>
 					</ScrollAnimation>
 				</header>
-				<ContentWrapper>
-					<section
-						id="blogRootContent"
-						className="section section__with-grid all-columns section__with-max-width_95vw"
-					>
-						<Filter
-							activeCategory={activeCategory}
-							setActiveCategory={setActiveCategory}
-							searchTerm={searchTerm}
-							handleSearchUpdate={handleSearchUpdate}
-						/>
-					</section>
-				</ContentWrapper>
-				<BlogLayout blogPosts={filteredBlogList} searchTerm={searchTerm} />
+				<BlogLayout
+					blogPosts={filteredBlogList}
+					searchTerm={searchTerm}
+					activeCategory={activeCategory}
+					setActiveCategory={setActiveCategory}
+					handleSearchUpdate={handleSearchUpdate}
+				/>
 			</main>
 		</>
 	);
