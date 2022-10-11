@@ -6,15 +6,6 @@ import { useInView } from "react-intersection-observer";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "../Site.Globals/ContentWrapper";
-
-import {
-  Slide1,
-  Slide2,
-  Slide3,
-  Slide4,
-  Slide5,
-} from "../Site.Graphics/FeatureSlides";
-
 import { useSwipeable } from "react-swipeable";
 import {
   BsCaretRightFill,
@@ -34,7 +25,7 @@ import {
   Auth0Logo,
   GSuiteLogo,
   OktaLogo,
-} from "../Site.Graphics/ThirdPartyLogos";
+} from "../Site.Widgets/ThirdPartyLogos";
 
 import ArchitectureDiagram from "../../public/images/features/architecture-diagram.svg";
 import FineTunedControlImage from "../../public/images/features/fine-tuned-control.svg";

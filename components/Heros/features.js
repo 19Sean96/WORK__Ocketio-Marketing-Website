@@ -3,9 +3,6 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
-import Background from "../Site.Graphics/Waves/FeaturesHero";
-
-import { HeroLeft, HeroRight } from "../Site.Graphics/FeatureHeroImages";
 
 import HeroImageMain from '../../public/images/features/hero/features-hero-main.svg'
 import HeroImageSubTop from '../../public/images/features/hero/features-hero-sub_top.svg'
