@@ -7,10 +7,12 @@
     "tf-next": "tf-next build"
   },
   "dependencies": {
+    "@plaiceholder/next": "^2.5.0",
     "animate.css": "^4.1.1",
     "axios": "^0.24.0",
     "next": "^12.2.5",
     "next-seo": "^5.1.0",
+    "plaiceholder": "^2.5.0",
     "platform-detect": "^3.0.1",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
@@ -24,6 +26,7 @@
     "react-swipeable": "^6.2.0",
     "reading-time": "^1.5.0",
     "sass": "^1.44.0",
+    "sharp": "^0.31.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

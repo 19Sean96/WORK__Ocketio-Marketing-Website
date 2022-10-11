@@ -1,5 +1,6 @@
 const fs = require('fs');
 const webpack = require('webpack')
+// const { withPlaiceholder } = require('@')
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
