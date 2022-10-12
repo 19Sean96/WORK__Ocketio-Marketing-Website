@@ -79,6 +79,9 @@
 }
 
 #fineTunedControlSection {
+  position: relative;
+  margin-top: 75px;
+  padding-top: 275px;
   .section {
     &--body {
       grid-row: 2/3;
@@ -90,6 +93,21 @@
       max-width: 95vw;
       justify-self: center;
     }
+    &--heading {
+      color: $primary-white;
+    }
+  }
+
+  .bg {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: $primary-black;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    clip-path: polygon(0% 10vw, 100% 0%, 100% 100%, 0% 100%);
   }
 
   .img-block {
@@ -108,11 +126,23 @@
     .text-block {
       width: calc((100% / 2) - 60px);
 
+      .h5 {
+        color: $mint;
+        margin-bottom: 8px;
+      }
+
+      .p-sm {
+        color: $primary-white;
+      }
+
       svg {
         width: 40px;
         height: auto;
-        margin-bottom: 9px;
+        margin-bottom: 5px;
+        fill: $primary-white;
       }
+
+
     }
   }
   @media (max-width: 975px) {
@@ -194,13 +224,25 @@
 
 #thirdPartyAuth {
   margin-top: 145px;
-  margin-bottom: 25px;
+  margin-bottom: 225px;
   justify-items: stretch;
+  .bg {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: $primary-black;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    clip-path: polygon(0% 0vw, 100% 0%, 100% 100%, 0% 80%);
+  }
   .section {
     &--heading {
-
+      margin-bottom: 30px;
       * {
         text-align: center;
+        color: $primary-white;
       }
 
       h3 {
@@ -210,8 +252,8 @@
     &--body {
       grid-row: 2/3;
       grid-column: 2/12;
-      background-color: #f5f5f5;
-      border-radius: 6px;
+      background-color: $secondary-black;
+      border-radius: 10px;
       padding: 50px 80px;
       gap: 4.8vw;
       display: flex;
@@ -221,10 +263,16 @@
       justify-self: center;
       // flex-wrap: wrap;
       max-width: 90vw;
+      border-top: 3px solid $primary-white;
+      border-bottom: 3px solid $primary-white;
       svg {
         position: relative;
         transform: scale(1);
         transform-origin: center center;
+
+        path {
+            fill: $secondary-white;
+        }
       }
     }
   }

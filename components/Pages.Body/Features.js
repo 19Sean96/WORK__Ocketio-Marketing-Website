@@ -163,6 +163,7 @@ const FineTunedControlSection = (props) => {
         className="section section__with-grid all-columns"
         id="fineTunedControlSection"
       >
+        <div className="bg"></div>
         <ScrollAnimation
           animateOnce={animateOnce}
           animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
@@ -170,8 +171,8 @@ const FineTunedControlSection = (props) => {
           offset={-186}
           className="section--heading"
         >
-          <h3 className="h3 capitalize">fine-tuned control</h3>
-          <p className="p-large">
+          <h2 className="h2 capitalize">fine-tuned control</h2>
+          <p className="p-lg">
             No network administrator’s life needs to be harder. Mission-critical
             features allow you to simplify access management while dialing in
             core configuration.
@@ -194,8 +195,8 @@ const FineTunedControlSection = (props) => {
               className="text-block text-block-1"
             >
               <BsKey />
-              <h6 className="h6 capitalize">Multiple Authentication Options</h6>
-              <p className="p-small">
+              <h5 className="h5 capitalize">Multiple Authentication Options</h5>
+              <p className="p-sm">
                 Use your existing auth provider to streamline access and enforce
                 access requirements
               </p>
@@ -208,8 +209,8 @@ const FineTunedControlSection = (props) => {
               className="text-block text-block-2"
             >
               <BsListUl />
-              <h6 className="h6 capitalize">Comprehensive Activity Logging</h6>
-              <p className="p-small">
+              <h5 className="h5 capitalize">Comprehensive Activity Logging</h5>
+              <p className="p-sm">
                 A detailed event log ensures you can keep tabs on system
                 activities and issues
               </p>
@@ -222,8 +223,8 @@ const FineTunedControlSection = (props) => {
               className="text-block text-block-3"
             >
               <BsPhone />
-              <h6 className="h6 capitalize">Detailed Device Info</h6>
-              <p className="p-small">
+              <h5 className="h5 capitalize">Detailed Device Info</h5>
+              <p className="p-sm">
                 See all registered devices in one place and monitor connection
                 status, authentication schedules, and more
               </p>
@@ -236,8 +237,8 @@ const FineTunedControlSection = (props) => {
               className="text-block text-block-4"
             >
               <BsGear />
-              <h6 className="h6 capitalize">Configurable DNS</h6>
-              <p className="p-small">
+              <h5 className="h5 capitalize">Configurable DNS</h5>
+              <p className="p-sm">
                 Manage core settings and configuration from a streamlined online
                 interface
               </p>
@@ -253,6 +254,7 @@ const ThirdPartyAuthentication = (props) => {
   return (
     <ContentWrapper>
       <section className="section__with-grid all-columns" id="thirdPartyAuth">
+      <div className="bg"></div>
         <ScrollAnimation
           animateOnce={true}
           animateIn="animate__fadeInUp"
@@ -266,8 +268,8 @@ const ThirdPartyAuthentication = (props) => {
             delay={440}
             className="section--heading"
           >
-            <h3 className="h3">3rd Party Authentication</h3>
-            <p className="p-large">
+            <h2 className="h2">3rd Party Authentication</h2>
+            <p className="p-lg">
               Support for major auth providers to make logins a breeze
             </p>
           </ScrollAnimation>
@@ -316,7 +318,7 @@ const OptimizedExperienceSection = (props) => {
             >
               <BsCloud />
               <h6 className="h6 capitalize">Cloud-based admin console</h6>
-              <p className="p-small">
+              <p className="p-sm">
                 Manage core configuration and device permissions from a clean
                 web user interface
               </p>
@@ -330,7 +332,7 @@ const OptimizedExperienceSection = (props) => {
             >
               <BsHddStack />
               <h6 className="h6 capitalize">Minimal on-prem footprint</h6>
-              <p className="p-small">
+              <p className="p-sm">
                 Skip extra hardware and third-party applications for easier
                 training and tighter compliance
               </p>
@@ -354,7 +356,7 @@ const OptimizedExperienceSection = (props) => {
             >
               <BsWindow />
               <h6 className="h6 capitalize">Streamlined setup wizard</h6>
-              <p className="p-small">
+              <p className="p-sm">
                 Get started in just minutes with a guided setup process that
                 ensures nothing is missed
               </p>
@@ -368,7 +370,7 @@ const OptimizedExperienceSection = (props) => {
             >
               <BsClock />
               <h6 className="h6 capitalize">Always On Connection</h6>
-              <p className="p-small">
+              <p className="p-sm">
                 An uninterrupted conntection guarantees that your team members
                 connect seamlessly every time
               </p>
@@ -505,7 +507,7 @@ const SetupSection = (props) => {
                     <span className="tab--num">{i + 1}</span>
                     <div className="tab--text">
                       <h6 className="h6">{tab.title}</h6>
-                      <p className="p-small">{tab.par}</p>
+                      <p className="p-sm">{tab.par}</p>
                     </div>
                   </StyledTab>
                 </div>
