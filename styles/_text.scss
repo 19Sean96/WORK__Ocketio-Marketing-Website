@@ -85,9 +85,9 @@ input, textarea, label, select, select option {
 }
 
 
-@media (max-width: 1200px) {
-    h1, .h1 { @include heading(45px, 500, 127.5%, .0025em) }
-    h2, .h2 { @include heading(40px, 500, 127.5%, .035em) }
+@media (max-width: 1250px) {
+    h1.h1 { @include heading(42px, 700, 120%, 0) }
+    h2.h2 { @include heading(30px, 500, 135%, 0) }
     h3, .h3 { @include heading(35px, 500, 127.5%, .035em)}
     h4, .h4 { @include heading(28px, 500, 145%, .025em) }
     h5, .h5 { @include heading(23px, 400, 120%, .035em) }
