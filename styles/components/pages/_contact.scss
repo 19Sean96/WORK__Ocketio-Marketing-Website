@@ -12,19 +12,20 @@
 	margin-top: 29px;
 	align-items: flex-start;
 	grid-template-rows: min-content 1fr;
-  position: relative;
+	position: relative;
 
-  .bg {
-    content: '';
-    position: absolute;
-    left: 50%; top: 0;
-    transform: translate(-50%, 5px);
-    z-index: -1;
-    width: 100vw;
-    height: 100%;
-    background-color: $primary-black;
-    clip-path: polygon(0% 76%, 100% 30%, 100% 100%, 0% 100%);
-  }
+	.bg {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%, 5px);
+		z-index: -1;
+		width: 100vw;
+		height: 100%;
+		background-color: $primary-black;
+		clip-path: polygon(0% 76%, 100% 30%, 100% 100%, 0% 100%);
+	}
 
 	.section {
 		&--heading {
@@ -56,7 +57,7 @@
 			&__wrapper {
 				grid-row: 2/3;
 				grid-column: 3/11;
-				// margin-top: 56px;
+				z-index: 11;
 				padding: 40px 40px 55px;
 				border: 3px solid $primary-black;
 				background: $primary-white;
@@ -154,83 +155,83 @@
 					font-size: 18px;
 					min-width: 200px;
 					max-width: 350px;
-          margin-left: auto;
+					margin-left: auto;
 				}
 
 				.optInWrapper {
 					flex-direction: column;
 					align-items: flex-start;
 
-          label[for="newsletterOptIn"] {
-            position: relative;
-            pointer-events: all;
-            cursor: pointer;
-            top: unset;
-            left: unset;
-            margin-left: 0;
-            display: grid;
-            grid-template-columns: 1em auto;
-            gap: 12px;
-            padding-left: 0;
-            span {
-              margin-left: 8px;
-              color: $primary-black;
-              margin-top: -2px;
-              font-weight: 500;
-            }
-          }
-    
-          input[type="checkbox"] {
-            -webkit-appearance: none;
-            appearance: none;
-            background: $secondary-white;
-            margin: 0;
-            font: inherit;
-            color: $primary-black;
-            width: 22px;
-            height: 22px;
-            border: 3px solid $blue-mid;
-            border-radius: 2px;
-            transform: translateY(-3px);
-            display: grid;
-            place-content: center;
-    
-            &::before {
-              content: "";
-              width: 12px;
-              height: 12px;
-              transform: scale(0);
-              transition: 120ms transform ease-in-out;
-              box-shadow: inset 18px 18px $primary-black;
-              background-color: $primary-black;
-              transform-origin: bottom left;
-              clip-path: polygon(
-                14% 44%,
-                0 65%,
-                50% 100%,
-                100% 16%,
-                80% 0%,
-                43% 62%
-              );
-            }
-    
-            &:checked {
-              &::before {
-                transform: scale(1);
-              }
-            }
-    
-            &:focus {
-              outline: 2px solid $primary-black;
-              outline-offset: 2px;
-            }
-          }
+					label[for="newsletterOptIn"] {
+						position: relative;
+						pointer-events: all;
+						cursor: pointer;
+						top: unset;
+						left: unset;
+						margin-left: 0;
+						display: grid;
+						grid-template-columns: 1em auto;
+						gap: 12px;
+						padding-left: 0;
+						span {
+							margin-left: 8px;
+							color: $primary-black;
+							margin-top: -2px;
+							font-weight: 500;
+						}
+					}
+
+					input[type="checkbox"] {
+						-webkit-appearance: none;
+						appearance: none;
+						background: $secondary-white;
+						margin: 0;
+						font: inherit;
+						color: $primary-black;
+						width: 22px;
+						height: 22px;
+						border: 3px solid $blue-mid;
+						border-radius: 2px;
+						transform: translateY(-3px);
+						display: grid;
+						place-content: center;
+
+						&::before {
+							content: "";
+							width: 12px;
+							height: 12px;
+							transform: scale(0);
+							transition: 120ms transform ease-in-out;
+							box-shadow: inset 18px 18px $primary-black;
+							background-color: $primary-black;
+							transform-origin: bottom left;
+							clip-path: polygon(
+								14% 44%,
+								0 65%,
+								50% 100%,
+								100% 16%,
+								80% 0%,
+								43% 62%
+							);
+						}
+
+						&:checked {
+							&::before {
+								transform: scale(1);
+							}
+						}
+
+						&:focus {
+							outline: 2px solid $primary-black;
+							outline-offset: 2px;
+						}
+					}
 
 					.disclaimer {
 						margin-left: 0;
-            font-family: 'Noto Sans SemiCondensed';
+						font-family: "Noto Sans SemiCondensed";
 						font-weight: 500;
-            font-size: 16px;
+						font-size: 16px;
 						color: $gray-1;
 
 						a {
@@ -468,31 +469,34 @@
 
 #contactFAQ {
 	// margin-bottom: 160px;
-  position: relative;
-  z-index: 5;
-  padding-top: 160px;
-  padding-bottom: 120px;
-  margin-top: 0;
-  overflow: visible;
-  
-  .bg {
-    content: '';
-    position: absolute;
-    left: 50%; top: 0;
-    transform: translate(-50%, 0);
-    z-index: -1;
-    width: 100vw;
-    height: 100%;
-    background-color: $primary-black;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 580px, 0% 710px);
-  }
+	position: relative;
+	z-index: 11;
+	padding-top: 160px;
+	padding-bottom: 120px;
+	margin-top: 0;
+	overflow: visible;
+
+	&Wrapper {
+		.bg {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translate(-50%, 0);
+			z-index: 9;
+			width: 100vw;
+			height: 100%;
+			background-color: $primary-black;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 580px, 0% 710px);
+		}
+	}
 
 	.section {
 		&--heading {
-      margin-bottom: 40px;
+			margin-bottom: 40px;
 			h2 {
 				margin-bottom: 0;
-        color: $primary-white;
+				color: $primary-white;
 				text-align: center;
 			}
 			p {

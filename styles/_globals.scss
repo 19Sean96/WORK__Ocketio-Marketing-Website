@@ -13,7 +13,7 @@ body,
 }
 
 #__next {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 html {
@@ -22,7 +22,7 @@ html {
 
 body {
   background-color: $primary-white;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   width: 100vw;
   max-width: 100vw;
 }
@@ -54,8 +54,8 @@ input:-webkit-autofill {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 55px;
+  padding-right: 55px;
 
   &-features {
     max-width: 1280px;
