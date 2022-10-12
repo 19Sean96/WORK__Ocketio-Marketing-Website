@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "../../Context";
 import styled from "styled-components";
 import Menu from "./NavMobileMenu";
-
 import Logo from "../../public/ocketio-logo.svg";
 import Nav from "./Nav";
 
@@ -13,6 +12,12 @@ const StyledLogo = styled(Logo)`
 		fill: ${({ headerDarkMode, menuOpenOnMobile }) =>
 			headerDarkMode || menuOpenOnMobile ? "#f5f5f5" : "#101010"};
 	}
+`;
+
+const StyledHeader = styled.div`
+	position: ${(props) => (props.mobileAndMenuOpen ? "fixed" : "relative")};
+	background-color: ${(props) =>
+		props.headerDarkMode ? "#101010" : "transparent"};
 `;
 
 const Header = () => {
@@ -28,18 +33,43 @@ const Header = () => {
 
 	return (
 		<>
+			{isMobile && (
+				<button
+					id="menuIcon"
+					onClick={(e) => toggleMenuOpen(!menuOpen)}
+					aria-label={
+						menuOpen ? "close mobile navigation" : "open mobile navigation"
+					}>
+					<Menu
+						menuOpen={menuOpen}
+						headerDarkMode={
+							router.pathname === "/features" ||
+							router.pathname.includes("/blog") ||
+							router.pathname === "/contact"
+						}
+					/>
+				</button>
+			)}
 			<div
 				className="header__placeholder"
 				style={{
 					height: isMobile && menuOpen ? "52px" : "0px",
 					margin: isMobile && menuOpen ? "25px auto" : "0",
 				}}></div>
-			<div
-				className="header__wrapper"
-				style={{
-					position: isMobile && menuOpen ? "fixed" : "relative",
-					background: headerDarkMode ? "#101010" : "transparent",
-				}}>
+			<StyledHeader
+				headerDarkMode={headerDarkMode}
+				mobileAndMenuOpen={isMobile && menuOpen}
+				pagePath={router.pathname}
+				className="header__wrapper">
+				{router.pathname == "/blog" && (
+					<div className="decor--angle__blog decor"></div>
+				)}
+				{router.pathname == "/features" && (
+					<div className="decor--angle__features decor"></div>
+				)}
+				{router.pathname == "/" && (
+					<div className="decor--angle__homepage decor"></div>
+				)}
 				<header className="header">
 					<div className="header--logo">
 						<Link href="/">
@@ -52,23 +82,7 @@ const Header = () => {
 						</Link>
 					</div>
 					{!isMobile && <Nav menuOpen={menuOpen} />}
-					{isMobile ? (
-						<button
-							id="menuIcon"
-							onClick={(e) => toggleMenuOpen(!menuOpen)}
-							aria-label={
-								menuOpen ? "close mobile navigation" : "open mobile navigation"
-							}>
-							<Menu
-								menuOpen={menuOpen}
-								headerDarkMode={
-									router.pathname === "/features" ||
-									router.pathname.includes("/blog") ||
-									router.pathname === "/contact"
-								}
-							/>
-						</button>
-					) : (
+					{!isMobile && (
 						<div className="header--cta__wrapper">
 							<a
 								href="#"
@@ -89,7 +103,7 @@ const Header = () => {
 						</div>
 					)}
 				</header>
-			</div>
+			</StyledHeader>
 			{isMobile && (
 				<Nav
 					isMobile={isMobile}
