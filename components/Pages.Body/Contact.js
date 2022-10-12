@@ -15,6 +15,7 @@ import {
 import { useEffect } from "react";
 
 import { useAppContext } from "../../Context";
+import SingleCircleDecoration from "../Site.Widgets/SingleCircleDecoration";
 
 const animateOnce = true;
 
@@ -76,6 +77,19 @@ const ContactPortal = (props) => {
 	}, [watchAllInputs]);
 	return (
 		<ContentWrapper>
+			<SingleCircleDecoration
+				styles={{
+					height: "525px",
+					width: "525px",
+					bottom: "0",
+					left: "0",
+					transform: "translate(-20vw, 33%)",
+					backgroundColor: "#151779",
+					ringColor: "#339BFC",
+					ringSize: "132.5%",
+				}}
+				withRing
+			/>
 			<section
 				className="section section__with-grid all-columns"
 				id="contactPortal">
@@ -453,11 +467,34 @@ const ContactFAQ = (props) => {
 	];
 
 	return (
-		<ContentWrapper>
+		<ContentWrapper padBot={95} id="contactFAQWrapper">
+							<div className="bg"></div>
+
+			<SingleCircleDecoration
+				styles={{
+					height: "700px",
+					width: "700px",
+					top: "0",
+					right: "0",
+					transform: "translate(30vw, 0)",
+					backgroundColor: "#88E4C3",
+				}}
+				withRing={false}
+			/>
+			<SingleCircleDecoration
+				styles={{
+					height: "195px",
+					width: "195px",
+					top: "65%",
+					left: "0",
+					transform: "translate(-10vw, 0)",
+					backgroundColor: "#88E4C3",
+				}}
+				withRing={false}
+			/>
 			<section
 				className=" section section__with-grid all-columns"
 				id="contactFAQ">
-				<div className="bg"></div>
 
 				<ScrollAnimation
 					animateOnce={animateOnce}

@@ -19,7 +19,8 @@ const StyledImageGroup = styled.div`
     top: 30%;
     left: 20%;
     transform-origin: top;
-    width: 666px;
+    width: 46vw;
+    max-width: 666px;
     transform: scale(1)
       ${(props) => ` translate(0, calc(0px - ${props.offset / -20 + -0.4}px))`};
   }
@@ -32,13 +33,13 @@ const StyledImageGroup = styled.div`
 
     #heroImageSub {
       top: 37%;
-      left: 20%;
-      transform: scale(1)
-        ${(props) => ` translate(0, calc(0px - ${props.offset / -35 + -35}px))`};
+      left: 18%;
+      transform: scale(.95)
+        ${(props) => ` translate(0, calc(0px - ${props.offset / -35 + -22}px))`};
     }
   }
 
-  @media screen and (max-width: 1020px) {
+  @media screen and (max-width: 1100px) {
     #heroImageSub {
       top: 41%;
     }
@@ -82,7 +83,6 @@ const HeroHome = () => {
   return (
     <div className="hero_wrapper">
       <section className="section section__with-grid" id="landing-hero">
-        <div className="decor__angle"></div>
 
         <div id="landing-hero-message">
           <ScrollAnimation

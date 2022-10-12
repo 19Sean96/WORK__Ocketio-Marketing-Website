@@ -1,14 +1,15 @@
 import Link from "next/link";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-import { BsWindows, BsApple } from "react-icons/bs";
+import { BsWindows, BsApple, BsTranslate } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
-
+import CircleGridPattern from "../Site.Widgets/CircleGridPattern";
 import HeroImageMain from '../../public/images/features/hero/features-hero-main.svg'
 import HeroImageSubTop from '../../public/images/features/hero/features-hero-sub_top.svg'
 import HeroImageSubBot from '../../public/images/features/hero/features-hero-sub_bot.svg'
 
 import { useAppContext } from "../../Context";
+import SingleCircleDecoration from "../Site.Widgets/SingleCircleDecoration";
 const animateOnce = true;
 
 const StyledImageGroup = styled.div`
@@ -78,13 +79,27 @@ const HeroFeatures = () => {
     <div
       className="full-width_wrapper"
     >
+      <CircleGridPattern styles={{
+        top: '0',
+        left: '0',
+        backgroundColor: "#88E4C3",
+        transform: 'translate(-55%, 25%) rotate(150deg)' 
+      }}/>
+      <SingleCircleDecoration styles={{
+        height: '450px',
+        width: '450px',
+        bottom: '0',
+        right: '0',
+        backgroundColor: '#339BFC',
+        transform: 'translate(15%, 40%)'
+      }} withRing />
       <ScrollAnimation
         animateOnce={animateOnce}
         duration={0.3}
         animateIn="animate__fadeInDown"
         className="hero_wrapper hero_wrapper-features"
         style={{
-          maxWidth: "1300px",
+          maxWidth: "1400px",
         }}
       >
         <section className="section section__with-grid" id="features-hero">

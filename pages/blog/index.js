@@ -71,6 +71,7 @@ export default function Blog({ blog_posts }) {
 		<>
 			<Head />
 			<main className="main blog--root" id="blogRoot">
+				{/* <div className="decor--angle decor"></div> */}
 				<header className="full-width_wrapper blog--root--heading">
 					<Compass />
 					<ScrollAnimation

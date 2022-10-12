@@ -16,18 +16,6 @@ export default function Home({ blog_posts }) {
 			<Head />
 
 			<main className="main" id="main">
-				<div
-					className="decor decor__angle"
-					style={{
-						position: "absolute",
-						left: 0,
-						top: -107,
-						zIndex: 1,
-						height: "60vw",
-						width: "33vw",
-						background: _palemint,
-						clipPath: "polygon(0% 0%, 100% 0%, 0% 100%)",
-					}}></div>
 				<span id="vertLineCenter"></span>
 				<Hero />
 				<FirstBanner />
