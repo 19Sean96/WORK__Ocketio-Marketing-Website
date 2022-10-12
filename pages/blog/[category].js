@@ -1,13 +1,11 @@
 import BlogLayout from "../../components/BlogLayout";
 import axios from "axios";
 
-import { WaveAlt } from "../../components/Site.Graphics/Waves/BlogHero";
 import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "../../Context";
 import Compass from "../../components/Site.Blog/Compass";
 import { useRouter } from "next/router";
-import { FilterNav, FilterSearch } from "../../components/Site.Blog/Filter";
 import { useEffect, useState } from "react";
 
 const animateOnce = true;
@@ -76,10 +74,6 @@ export default function BlogCategory({ blog_posts, params }) {
                 animateOnce={animateOnce}
                 className="section--heading"
               >
-                <FilterSearch
-                  searchTerm={searchTerm}
-                  handleSearchUpdate={handleSearchUpdate}
-                />
                 <div className="section--heading--text">
                   <h2 className="h2 capitalize">{activeCategory} Posts</h2>
                   <p className="p-small">
@@ -87,14 +81,9 @@ export default function BlogCategory({ blog_posts, params }) {
                     WireWise news and more
                   </p>
                 </div>
-                <FilterNav
-                  activeCategory={activeCategory}
-                  setActiveCategory={setActiveCategory}
-                />
               </ScrollAnimation>
             </section>
           </ContentWrapper>
-          <WaveAlt />
         </div>
 
         <BlogLayout blogPosts={filteredBlogList} />

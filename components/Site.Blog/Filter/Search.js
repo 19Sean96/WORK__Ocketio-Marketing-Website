@@ -1,5 +1,5 @@
 import { BsSearch } from 'react-icons/bs'
-
+import { AiOutlineSearch } from 'react-icons/ai'
 const FilterSearch = ({ searchTerm, handleSearchUpdate }) => {
   return (
     <aside className="search-filter">
@@ -11,7 +11,7 @@ const FilterSearch = ({ searchTerm, handleSearchUpdate }) => {
         value={searchTerm}
         onChange={handleSearchUpdate}
       />
-      <BsSearch id="search-icon"/>
+      <AiOutlineSearch id="search-icon"/>
     </aside>
   );
 };

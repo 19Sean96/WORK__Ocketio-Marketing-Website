@@ -15,15 +15,18 @@ const BlogLayout = ({
 	const { isMobile } = useAppContext();
 	return (
 		<section
-			className="section section__with-grid all-columns section--blog-list section__with-max-width_95vw"
+			className="section all-columns section--blog-list"
 			id="blogPosts">
 			<div className="section--body">
-				<Filter
-					activeCategory={activeCategory}
-					setActiveCategory={setActiveCategory}
-					searchTerm={searchTerm}
-					handleSearchUpdate={handleSearchUpdate}
-				/>
+				{!preview && (
+					<Filter
+						activeCategory={activeCategory}
+						setActiveCategory={setActiveCategory}
+						searchTerm={searchTerm}
+						handleSearchUpdate={handleSearchUpdate}
+					/>
+				)}
+
 				<div className="blogs">
 					{blogPosts.map(
 						(blog, i) =>
