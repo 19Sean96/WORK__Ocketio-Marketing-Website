@@ -6,7 +6,7 @@ const StyledCircleGrid = styled.div`
 	position: absolute;
 	left: ${({ styles }) => styles?.left || 'unset'};
 	top: ${({ styles }) => styles?.top || 'unset'};
-	z-index: 10;
+	z-index: ${({ styles }) => styles?.zIndex || 1};
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(8, 1fr);
@@ -20,11 +20,11 @@ const StyledCircleGrid = styled.div`
 	}
 `;
 
-const CircleGridPattern = ({ styles }) => {
+const CircleGridPattern = ({ styles, uniqueClass }) => {
 	console.log(styles);
 	const arr = Array.from(Array(64).keys());
 	return (
-		<StyledCircleGrid className="decor decor--circle-grid" styles={styles}>
+		<StyledCircleGrid className={`decor decor--circle-grid ${uniqueClass}`} styles={styles}>
 			{arr.map((_, j) => {
 				return <div className={`circle`}></div>;
 			})}
