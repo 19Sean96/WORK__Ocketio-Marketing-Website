@@ -1,15 +1,55 @@
+@mixin fadeMainImage(
+	$startOpacity,
+	$endOpacity,
+	$startTransform,
+	$endTransform
+) {
+	animation: fadeMainImage 0.9s ease-out 0.3s forwards;
+	@keyframes fadeMainImage {
+		from {
+			opacity: $startOpacity;
+			transform: $startTransform;
+		}
+
+		to {
+			opacity: $endOpacity;
+			transform: $endTransform;
+		}
+	}
+}
+
+@mixin fadeSubImage(
+	$startOpacity,
+	$endOpacity,
+	$startTransform,
+	$endTransform
+) {
+	animation: fadeSubImage 0.75s ease-out 0.8s forwards;
+
+	@keyframes fadeSubImage {
+		from {
+			opacity: $startOpacity;
+			transform: $startTransform;
+		}
+
+		to {
+			opacity: $endOpacity;
+			transform: $endTransform;
+		}
+	}
+}
+
 #landing-hero {
 	margin-top: 46px;
 	grid-column: 1/13;
 	position: relative;
 	align-items: flex-start;
-
 	&-message {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
-
+    justify-self: center;
 		grid-column: 1/6;
 		grid-row: 1/2;
 		margin-top: 8%;
@@ -22,7 +62,6 @@
 		}
 		p {
 			text-align: left;
-			color: $primary-black;
 			margin-right: 12.5%;
 		}
 
@@ -31,10 +70,14 @@
 		}
 
 		@media (max-width: 1250px) {
-			margin-top: 5%;
+			margin-top: 6.5%;
 
-      p {
-        margin-right: 2.5%;
+			p {
+				margin-right: 2.5%;
+			}
+
+      .cta-group {
+        margin-top: 45px;
       }
 		}
 
@@ -46,26 +89,34 @@
 			p {
 				text-align: center;
 			}
-			h1 {
-				margin-bottom: 4px;
-			}
 		}
+    
 		@media (max-width: 820px) {
+      grid-column: 2/12;
+
 			h1 {
 				margin-bottom: 11px;
 			}
+
+      .cta-group {
+        flex-direction: column;
+        gap: 15px;
+
+        .btn {
+          width: 50vw;
+        }
+      }
 		}
+
 		@media (max-width: 575px) {
-			align-items: stretch;
-			grid-column: 1/13;
 			margin: 0 3.5vw;
-			h1 {
-				margin-top: -65px;
-				margin-bottom: 2px;
-			}
 
 			.cta-group {
 				margin: 20px 2.5vw 0;
+
+        .btn {
+          width: 75vw;
+        }
 			}
 		}
 	}
@@ -73,31 +124,13 @@
 	.image-group {
 		grid-column: 6/13;
 		grid-row: 1/2;
-		height: 750px;
+		height: 550px;
 		margin-top: 0;
 		position: relative;
 		margin-left: 50px;
 		max-width: 100%;
-		margin-bottom: -200px;
 		overflow: visible;
 		pointer-events: none;
-
-		#heroImageMain {
-			overflow: visible !important;
-			z-index: 5;
-			position: absolute;
-			top: 0;
-			left: 0;
-			transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
-			filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.11))
-				drop-shadow(0 0px 4px rgba(0, 0, 0, 0.23))
-				drop-shadow(-4px 16px 64px rgba(0, 0, 0, 0.22));
-
-			&.atTop {
-				opacity: 0;
-				animation: fadeInDownShort 0.9s ease-out 0.3s forwards;
-			}
-		}
 
 		#heroImageSub {
 			position: absolute;
@@ -107,16 +140,65 @@
 
 			&.atTop {
 				opacity: 0;
-				animation: fadeInDownShort 0.8s ease-out 0.75s forwards;
+
+				@include fadeSubImage(
+					0,
+					1,
+					scale(1) translate3d(0, -20%, 0),
+					scale(1) translate3d(0, 0.4px, 0)
+				);
+			}
+		}
+		#heroImageMain {
+			overflow: visible !important;
+			z-index: 5;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
+			filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.11))
+				drop-shadow(0 16px 16px rgba(0, 0, 0, 0.17))
+				drop-shadow(-4px 32px 32px rgba(0, 0, 0, 0.16));
+
+			&.atTop {
+				opacity: 0;
+
+				@include fadeMainImage(
+					0,
+					1,
+					scale(1) translate3d(0, -20%, 0),
+					scale(1) translate3d(0, 0.4px, 0)
+				);
 			}
 		}
 
 		@media (max-width: 1450px) {
-			height: 51vw;
+			height: 38vw;
 		}
 
 		@media (max-width: 1200px) {
-      height: 41vw;
+			height: 31vw;
+
+      #heroImageMain {
+        &.atTop {
+          @include fadeMainImage(
+            0,
+            1,
+            scale(1) translate3d(0, -20%, 0),
+            scale(1) translate3d(0, 31px, 0)
+          );
+        }
+      }
+      #heroImageSub {
+        &.atTop {
+          @include fadeSubImage(
+            0,
+            1,
+            scale(1) translate3d(0, -20%, 0),
+            scale(.95) translate3d(0, 22px, 0)
+          );
+        }
+      }
 		}
 
 		@media (max-width: 1100px) {
@@ -124,24 +206,78 @@
 			grid-column: 2/12;
 			margin-left: 0;
 			margin-top: 35px;
-			margin-bottom: -135px;
 			padding: 0;
+
+      #heroImageMain {
+        &.atTop {
+          @include fadeMainImage(
+            0,
+            1,
+            scale(1.1) translate3d(0, -20%, 0),
+            scale(1) translate3d(0, 31px, 0)
+          );
+        }
+      }
+      #heroImageSub {
+        &.atTop {
+          @include fadeSubImage(
+            0,
+            1,
+            scale(1.35) translate3d(0, 50px, 0),
+            scale(1.45) translate3d(0, 22px, 0)
+          );
+        }
+      }
 		}
 
-		@media (max-width: 855px) {
-			height: 73vw;
-		}
+		@media (max-width: 850px) {
+			height: 37vw;
 
-		@media (max-width: 675px) {
-			height: 84vw;
+      #heroImageMain {
+        &.atTop {
+          @include fadeMainImage(
+            0,
+            1,
+            scale(1.25) translate3d(-10%, -20%, 0),
+            scale(1.2) translate3d(-10%, 85px, 0)
+          );
+        }
+      }
+      #heroImageSub {
+        &.atTop {
+          @include fadeSubImage(
+            0,
+            1,
+            scale(1.5) translate3d(0, 75px, 0),
+            scale(1.65) translate3d(0, calc(-12% + 46px), 0)
+          );
+        }
+      }
 		}
 
 		@media (max-width: 575px) {
-			margin-bottom: -115px;
-			height: 100vw;
-			min-height: 375px;
-			max-height: 487px;
-			padding: 0 20px;
+			height: 40vw;
+      margin-top: 5px;
+      #heroImageMain {
+        &.atTop {
+          @include fadeMainImage(
+            0,
+            1,
+            scale(1.15) translate3d(-7%, -20%, 0),
+            scale(1.1) translate3d(-7%, 85px, 0)
+          );
+        }
+      }
+      #heroImageSub {
+        &.atTop {
+          @include fadeSubImage(
+            0,
+            1,
+            scale(1.6) translate3d(0, 75px, 0),
+            scale(1.75) translate3d(0, calc(-12% + 46px), 0)
+          );
+        }
+      }
 		}
 
 		@media (max-width: 500px) {
@@ -149,9 +285,9 @@
 		}
 	}
 
-  @media (max-width: 1200px) {
-    padding-bottom: 78px;
-  }
+	@media (max-width: 1200px) {
+		padding-bottom: 78px;
+	}
 
 	@media (max-width: 575px) {
 		margin-top: 95px;
@@ -169,7 +305,7 @@
 	.bg {
 		content: "";
 		position: absolute;
-		z-index: -1;
+		z-index: 0;
 		top: 0;
 		left: 50%;
 		width: 100vw;
@@ -179,6 +315,8 @@
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 87%);
 	}
 	&-message {
+    position: relative;
+    z-index: 2;
 		grid-column: 1/7;
 		grid-row: 1/2;
 		align-self: flex-end;
@@ -742,4 +880,12 @@
 			}
 		}
 	}
+}
+
+
+
+@media (max-width: 1700px) {
+  #main .features-decor__circle-grid {
+    transform: translate(calc(-90% + 7vw), 105%) rotate(150deg);
+  }
 }
