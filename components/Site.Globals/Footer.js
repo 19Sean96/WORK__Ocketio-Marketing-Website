@@ -11,10 +11,10 @@ const StyledFooter = styled.footer`
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		z-index: -1;
+		z-index: 0;
 		transform: translate(-50%);
-		width: 102vw;
-		height: 150%;
+		width: 100vw;
+		height: 100%;
 		background: ${(props) => props.background};
 		pointer-events: none;
 	}
@@ -24,7 +24,6 @@ const Footer = () => {
 	const router = useRouter();
 	const currentYear = new Date().getFullYear();
 	const { footerDarkMode } = useAppContext();
-	console.log('ROUTER: ', router);
 	return (
 		<StyledFooter
 			className="footer"
