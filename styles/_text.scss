@@ -1,123 +1,168 @@
-@mixin heading
-    (
-    $font-size,
-    $font-weight,
-    $line-height, 
-    $letter-spacing, 
-    ) 
-{
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;
+@mixin heading($font-size, $font-weight, $line-height, $letter-spacing) {
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
 }
 
-
 * {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
+	font-family: "Noto Sans", sans-serif;
+	font-weight: 400;
 }
 
 h1.h1 {
-    font-family: 'Poppins';
-    @include heading(48px, 700, 120%, 0);
-    &.semi-bold {
-        font-weight: 600;
-    }
+	font-family: "Poppins";
+	@include heading(48px, 700, 120%, 0);
+	&.semi-bold {
+		font-weight: 600;
+	}
 }
 h2.h2 {
-    font-family: 'Poppins';
-    @include heading(36px, 700, 135%, 0);
-    &.semi-bold {
-        font-weight: 600;
-    }
+	font-family: "Poppins";
+	@include heading(36px, 700, 135%, 0);
+	&.semi-bold {
+		font-weight: 600;
+	}
 }
 h3.h3 {
-    font-family: 'Poppins';
-    @include heading(28px, 700, 120%, 0);
-    &.semi-bold {
-        font-weight: 600;
-    }
+	font-family: "Poppins";
+	@include heading(28px, 700, 120%, 0);
+	&.semi-bold {
+		font-weight: 600;
+	}
 }
 h4.h4 {
-    font-family: 'Poppins';
-    @include heading(20px, 700, 145%, 0);
-    &.semi-bold {
-        font-weight: 600;
-        line-height: 120%;
-    }
+	font-family: "Poppins";
+	@include heading(20px, 700, 145%, 0);
+	&.semi-bold {
+		font-weight: 600;
+		line-height: 120%;
+	}
 }
 h5.h5 {
-    font-family: 'Poppins';
-    @include heading(18px, 700, 145%, 0);
+	font-family: "Poppins";
+	@include heading(18px, 700, 145%, 0);
 }
 
 h6.h6 {
-    font-family: 'Poppins';
-    @include heading(16px, 700, 145%, 0);
+	font-family: "Poppins";
+	@include heading(16px, 700, 145%, 0);
 }
 
 p.p {
-    &-lg {
-        font-size: 18px;
-        font-family: 'Noto Sans', sans-serif;
-        line-height: 160%;
-        font-weight: 400;
-    }
-    &-sm {
-        font-size: 16px;
-        font-family: 'Noto Sans', sans-serif;
-        line-height: 160%;
-        font-weight: 400;
-    }
+	&-lg {
+		font-size: 18px;
+		font-family: "Noto Sans", sans-serif;
+		line-height: 160%;
+		font-weight: 400;
+	}
+	&-sm {
+		font-size: 16px;
+		font-family: "Noto Sans", sans-serif;
+		line-height: 160%;
+		font-weight: 400;
+	}
 }
 
 a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 16px;
 }
 
-input, textarea, label, select, select option {
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+input,
+textarea,
+label,
+select,
+select option {
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
 }
-
 
 @media (max-width: 1250px) {
-    h1.h1 { @include heading(42px, 700, 120%, 0) }
-    h2.h2 { @include heading(30px, 500, 135%, 0) }
-    h3, .h3 { @include heading(35px, 500, 127.5%, .035em)}
-    h4, .h4 { @include heading(28px, 500, 145%, .025em) }
-    h5, .h5 { @include heading(23px, 400, 120%, .035em) }
-    h6, .h6 { @include heading(17px, 500, 145%, -.0125em) }
+	h1.h1 {
+		@include heading(42px, 700, 120%, 0);
+	}
+	h2.h2 {
+		@include heading(30px, 500, 135%, 0);
+	}
+	h3.h3 {
+		@include heading(25px, 700, 120%, 0);
+	}
+	h4,
+	.h4 {
+		@include heading(28px, 500, 145%, 0.025em);
+	}
+	h5.h5 {
+		@include heading(17px, 700, 145%, 0);
+	}
+	h6.h6 {
+		@include heading(15px, 700, 145%, 0);
+	}
 }
 
 @media (max-width: 820px) {
-    h1, .h1 { @include heading(36px, 500, 127.5%, .0025em) }
-    h2, .h2 { @include heading(33px, 500, 127.5%, .035em) }
-    h3, .h3 { @include heading(31px, 500, 127.5%, .035em)}
-    h4, .h4 { @include heading(26px, 500, 145%, .025em) }
-    h5, .h5 { @include heading(22px, 500, 120%, .035em) }
-    h6, .h6 { @include heading(16px, 500, 145%, .025em) }
+	h1.h1 {
+		@include heading(37px, 700, 120%, 0);
+	}
+	h2.h2 {
+		@include heading(27px, 500, 135%, 0);
+	}
+	h3.h3 {
+		@include heading(21px, 700, 120%, 0);
+	}
+	h4,
+	.h4 {
+		@include heading(26px, 500, 145%, 0.025em);
+	}
+	h5.h5 {
+		@include heading(16px, 700, 145%, 0);
+	}
+	h6.h6 {
+		@include heading(14px, 700, 145%, 0);
+	}
+
+	p.p {
+		&-lg {
+			font-size: 16px;
+		}
+		&-sm {
+			font-size: 14px;
+		}
+	}
 }
 
 @media (max-width: 575px) {
-    .p-large {
-        font-size: 15px;
-    }
-    .p-small {
-        font-size: 13px;
+    p.p {
+        &-lg {
+            font-size: 15px;
+        }
+        &-sm {
+            font-size: 13px;
+        }
     }
 }
 
 @media (max-width: 530px) {
-    h1, .h1 { @include heading(32px, 500, 127.5%, .0025em) }
-    h2, .h2 { @include heading(29px, 500, 127.5%, .035em) }
-    h3, .h3 { @include heading(27px, 500, 127.5%, .035em)}
-    h4, .h4 { @include heading(23px, 500, 145%, .025em) }
-    h5, .h5 { @include heading(19px, 400, 120%, .035em) }
-    h6, .h6 { @include heading(14px, 500, 145%, .025em) }
-
+	h1.h1 {
+		@include heading(32px, 700, 120%, 0);
+	}
+	h2.h2 {
+		@include heading(23px, 500, 135%, 0);
+	}
+	h3.h3 {
+		@include heading(19px, 700, 120%, 0);
+	}
+	h4,
+	.h4 {
+		@include heading(23px, 500, 145%, 0.025em);
+	}
+	h5.h5 {
+		@include heading(15px, 700, 145%, 0);
+	}
+	h6,
+	.h6 {
+		@include heading(14px, 500, 145%, 0.025em);
+	}
 }
