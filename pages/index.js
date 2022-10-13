@@ -14,8 +14,9 @@ export default function Home({ blog_posts }) {
 	return (
 		<>
 			<Head />
-
-			<main className="main" id="main">
+			<main className="main" id="main" style={{
+				overflowX: 'hidden'
+			}}>
 				<span id="vertLineCenter"></span>
 				<Hero />
 				<FirstBanner />
