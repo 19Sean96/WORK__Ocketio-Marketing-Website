@@ -6,7 +6,6 @@
 	max-width: 1700px;
 	margin: auto;
 	position: relative;
-
 	&--logo {
 		position: relative;
 		z-index: 200;
@@ -38,7 +37,7 @@
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		z-index: 0;
+    z-index: 1;
 		width: 100vw;
 		padding: 39px 0 20px;
 		transition: 0.275s ease-out all;

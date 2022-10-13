@@ -309,7 +309,7 @@ const StyledCostEffectiveImg = styled(CostEffectiveImg)`
 	}
 `;
 
-const WhatSection = (props) => {
+const WhatSection = () => {
 	const { isMobile } = useAppContext();
 
 	const whatSectionContent = [
