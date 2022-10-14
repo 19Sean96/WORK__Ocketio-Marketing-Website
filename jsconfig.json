@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@images/*": ["public/images/*"],
+            "@elements/*": ["app/components/elements/*"],
+            "@modules/*": ["app/components/modules/*"],
+            "@layouts/*": ["app/components/layouts/*"],
+            "@util/*": ["app/components/util/*"],
+            "@context/*": ["app/context/*"],
+            "@styles/*": ["app/styles/*"],
+            "@constants/*": ["app/constants/*"],
+            "@head/*": ["app/components/head/*"]
+        }
+    }
+}

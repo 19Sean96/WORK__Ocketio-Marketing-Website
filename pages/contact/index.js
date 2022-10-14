@@ -1,16 +1,10 @@
-import { ContactPortal, ContactFAQ } from "../../components/Pages.Body/Contact";
-import Head from "../../components/Pages.Head/Contact";
-
+import Head from "@head/Contact";
+import Body from "@layouts/contact";
 export default function Contact() {
-  return (
-    <>
-      <Head />
-      <div>
-        <main className="main" id="main">
-          <ContactPortal />
-          <ContactFAQ />
-        </main>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<Head />
+			<Body />
+		</>
+	);
 }

@@ -1,33 +1,17 @@
 import axios from "axios";
-import Head from "../components/Pages.Head/Homepage";
-import { Hero } from "../components/Heros/homepage";
-import {
-	FirstBanner,
-	WhatSection,
-	EmailIntakeSection,
-	WhoSection,
-	BlogSection,
-} from "../components/Pages.Body/Homepage";
+import Head from "@head/Homepage";
+import Body from '@layouts/homepage'
 import { _palemint } from "../static/Colors";
 
 export default function Home({ blog_posts }) {
 	return (
 		<>
 			<Head />
-			<main className="main" id="main" style={{
-				overflowX: 'hidden'
-			}}>
-				<span id="vertLineCenter"></span>
-				<Hero />
-				<FirstBanner />
-				<WhatSection />
-				<EmailIntakeSection />
-				<WhoSection />
-				<BlogSection blogPosts={blog_posts} />
-			</main>
+			<Body blog_posts={blog_posts} />
 		</>
 	);
 }
+
 
 export async function getStaticProps() {
 	const DIRECTUS_CMS_ACCESS_KEY = process.env.DIRECTUS_CMS_ACCESS_KEY;

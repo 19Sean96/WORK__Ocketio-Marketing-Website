@@ -3,10 +3,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import readingTime from "reading-time";
 import ReactHtmlParser from "react-html-parser";
-import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
+import ContentWrapper from "@util/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
-import Compass from "../../components/Site.Blog/Compass";
-const animateOnce = true;
+import Compass from "@modules/blog/Compass";
 
 const Blog = ({ blog_posts }) => {
   const router = useRouter();
@@ -30,7 +29,7 @@ const Blog = ({ blog_posts }) => {
         <section className="section all-columns" id="blogPage">
           <Compass pageName={blog.post_title}/>
           <ScrollAnimation
-            animateOnce={animateOnce}
+            animateOnce={true}
             duration={0.6}
             animateIn="animate__fadeInDown"
             className="full-width_wrapper"
@@ -38,7 +37,7 @@ const Blog = ({ blog_posts }) => {
             <div className="section--heading">
               <div className="text">
                 <ScrollAnimation
-                  animateOnce={animateOnce}
+                  animateOnce={true}
                   animateIn="animate__fadeInDown"
                   duration={1.5}
                   delay={300}
@@ -46,7 +45,7 @@ const Blog = ({ blog_posts }) => {
                   <h2 className="h2">{blog.post_title}</h2>
                 </ScrollAnimation>
                 <ScrollAnimation
-                  animateOnce={animateOnce}
+                  animateOnce={true}
                   animateIn="animate__fadeInUp"
                   duration={0.995}
                   delay={450}
@@ -65,7 +64,7 @@ const Blog = ({ blog_posts }) => {
                 </ScrollAnimation>
               </div>
               <ScrollAnimation
-                animateOnce={animateOnce}
+                animateOnce={true}
                 animateIn="animate__fadeInUp"
                 duration={1.18}
                 delay={225}

@@ -1,15 +1,12 @@
-import BlogLayout from "../../components/BlogLayout";
+import Head from "@head/Blog";
+import BlogLayout from "@modules/blog";
 import axios from "axios";
-import Head from "../../components/Pages.Head/Blog";
-import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
-import { useAppContext } from "../../Context";
-import Compass from "../../components/Site.Blog/Compass";
+import { useAppContext } from "@context/app";
+import Compass from "@modules/blog/Compass";
 import { useRouter } from "next/router";
-import { Filter } from "../../components/Site.Blog/Filter";
 import { useState, useEffect } from "react";
 
-const animateOnce = true;
 export default function Blog({ blog_posts }) {
 	// holds ARRAY of blog posts constrained by the "activeCategory"
 	const [filteredBlogList, setFilteredBlogList] = useState([...blog_posts]);
@@ -78,7 +75,7 @@ export default function Blog({ blog_posts }) {
 						animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
 						duration={0.44}
 						offset={-186}
-						animateOnce={animateOnce}
+						animateOnce={true}
 						className="section--heading">
 						<h2 className="h2">Blog</h2>
 						<p className="p-large">

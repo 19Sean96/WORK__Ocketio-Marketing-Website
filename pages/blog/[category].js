@@ -1,14 +1,13 @@
-import BlogLayout from "../../components/BlogLayout";
+import BlogLayout from "@modules/blog";
 import axios from "axios";
 
-import ContentWrapper from "../../components/Site.Globals/ContentWrapper";
+import ContentWrapper from "@util/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
-import { useAppContext } from "../../Context";
-import Compass from "../../components/Site.Blog/Compass";
+import { useAppContext } from "@context/app";
+import Compass from "@modules/blog/Compass";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const animateOnce = true;
 export default function BlogCategory({ blog_posts, params }) {
   const router = useRouter()
   // holds ARRAY of blog posts constrained by the "activeCategory"
@@ -71,7 +70,7 @@ export default function BlogCategory({ blog_posts, params }) {
                 }
                 duration={0.44}
                 offset={-186}
-                animateOnce={animateOnce}
+                animateOnce={true}
                 className="section--heading"
               >
                 <div className="section--heading--text">

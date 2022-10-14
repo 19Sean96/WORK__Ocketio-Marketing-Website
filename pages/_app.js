@@ -7,9 +7,9 @@ import {
   datalayerloaded,
   gtmVirtualPageView,
 } from "../lib/gtm";
-import { AppWrapper } from "../Context";
-import Header from "../components/Site.Globals/Header";
-import Footer from "../components/Site.Globals/Footer";
+import { AppWrapper } from "@context/app";
+import Header from "@modules/header";
+import Footer from "@modules/footer";
 import "../styles/main.scss";
 import "animate.css";
 import TagManager from "react-gtm-module";

@@ -1,30 +1,10 @@
-import { Hero } from "../../components/Heros/features";
-import {
-  ArchitectureSection,
-  FineTunedControlSection,
-  ThirdPartyAuthentication,
-  OptimizedExperienceSection,
-  SetupSection,
-} from "../../components/Pages.Body/Features";
-import { useAppContext } from "../../Context";
-import Head from "../../components/Pages.Head/Features";
-
+import Head from "@head/Features";
+import Body from "@layouts/features";
 export default function Features() {
-  const { scrollOffset } = useAppContext();
-
-  return (
-    <>
-      <Head />
-      <main className="main" id="main">
-        <span id="vertLineCenter"></span>
-
-        <Hero offset={scrollOffset} />
-        <ArchitectureSection />
-        <FineTunedControlSection />
-        <ThirdPartyAuthentication />
-        <OptimizedExperienceSection />
-        <SetupSection />
-      </main>
-    </>
-  );
+	return (
+		<>
+			<Head />
+			<Body />
+		</>
+	);
 }
