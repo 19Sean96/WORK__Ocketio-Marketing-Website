@@ -10,19 +10,19 @@ export default styled.div`
 	right: ${({ styles }) => styles?.right || "unset"};
 	transform: ${({ styles }) => styles?.transform || "translate(0,0)"};
 	background-color: ${({ styles }) => styles?.backgroundColor || "#f5f5f5"};
-	z-index: 10;
+	z-index: ${({ styles }) => styles?.zIndex || 1};
 	border-radius: 50%;
 
 	&::before {
 		display: ${({ withRing }) => (withRing ? "block" : "none")};
 		content: "";
 		position: absolute;
-		width: ${({ styles }) => styles?.ringSize || "115%"};
-		height: ${({ styles }) => styles?.ringSize || "115%"};
+		width: ${({ styles }) => styles?.ringSize || "125%"};
+		height: ${({ styles }) => styles?.ringSize || "125%"};
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		border: 3px solid ${({ styles }) => styles?.ringColor || "88E4C3"};
+		border: 3px solid ${({ styles }) => styles?.ringColor || "#88E4C3"};
 		border-radius: 50%;
 	}
 `;
