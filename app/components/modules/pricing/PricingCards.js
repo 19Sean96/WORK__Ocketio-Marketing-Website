@@ -10,28 +10,35 @@ export default () => {
 	const cardRef = useRef([]);
 	const [tallestCardHeading, setTallestCardHeading] = useState(0);
 	const [tallestFeaturesList, setTallestFeaturesList] = useState(0);
-	const { windowSize } = useAppContext();
+	const { windowSize, isMobile } = useAppContext();
 	const [priceIsAnnual, setPriceIsAnnual] = useState(true);
 	const handlePriceToggle = () => setPriceIsAnnual(!priceIsAnnual);
 	useEffect(() => {
 		let _headingHeights = [],
 			_featuresListHeights = [];
 
-		cardRef.current.map(({ node }, i) => {
-			let headingClass = "price-card--heading",
-				featuresListClass = "price-card--features";
-			const { children } = node;
+		if (!isMobile) {
+			cardRef.current.map(({ node }, i) => {
+				let headingClass = "price-card--heading",
+					featuresListClass = "price-card--features";
+				const { children } = node;
+	
+				for (const el of children) {
+					if (el.classList.contains(headingClass))
+						_headingHeights.push(el.clientHeight);
+					if (el.classList.contains(featuresListClass))
+						_featuresListHeights.push(el.children[0].clientHeight);
+				}
+			});
+	
+			setTallestCardHeading(Math.max(..._headingHeights));
+			setTallestFeaturesList(Math.max(..._featuresListHeights));
+		}
+		else {
+			setTallestCardHeading(0);
+			setTallestFeaturesList(0);
+		}
 
-			for (const el of children) {
-				if (el.classList.contains(headingClass))
-					_headingHeights.push(el.clientHeight);
-				if (el.classList.contains(featuresListClass))
-					_featuresListHeights.push(el.children[0].clientHeight);
-			}
-		});
-
-		setTallestCardHeading(Math.max(..._headingHeights));
-		setTallestFeaturesList(Math.max(..._featuresListHeights));
 	}, [cardRef, windowSize]);
 
 	return (

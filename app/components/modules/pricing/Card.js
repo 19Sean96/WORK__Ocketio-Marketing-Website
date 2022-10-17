@@ -34,10 +34,10 @@ export default forwardRef(
 					style={{
 						minHeight: tallestCardHeading,
 					}}>
-					<h3 className="price-card--price h3">
+					<h2 className="price-card--price h2">
 						<span className="price capitalize">{price} </span>
 						<span className="freq">{price !== "free" ? "user/month" : ""}</span>
-					</h3>
+					</h2>
 					<p className="p-sm price-card--description">{message}</p>
 				</div>
 
