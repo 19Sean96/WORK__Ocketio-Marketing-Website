@@ -7,7 +7,7 @@ export default styled.div`
 		@media (max-width: 1150px) {
 			transform: scale(1)
 				${(props) =>
-					` translate(22.5%, calc(-25px - ${props.offset / -10 + -1}px))`};
+					` translate(5%, calc(-25px - ${props.offset / -10 + -1}px))`};
 		}
 		@media (max-width: 875px) {
 			transform: scale(1)
@@ -32,15 +32,15 @@ export default styled.div`
 		@media (max-width: 1150px) {
 			transform: scale(1)
 				${(props) =>
-					` translate(calc(25px + ${-(props.offset / -15)}px), calc(25px - ${
-						props.offset / -15 + -1
+					` translate(calc(0px + ${-(props.offset / -15)}px), calc(-25px - ${
+						props.offset / -15
 					}px))`};
 		}
 		@media (max-width: 875px) {
 			transform: scale(1)
 				${(props) =>
 					` translate(calc(35px + ${-(props.offset / -15)}px), calc(-10% - ${
-						props.offset / -15 + -1
+						props.offset / -15
 					}px))`};
 		}
 
@@ -60,7 +60,7 @@ export default styled.div`
 		@media (max-width: 1150px) {
 			transform: scale(1)
 				${(props) =>
-					` translate(0px, calc(25px - ${props.offset / -15 + -1}px))`};
+					` translate(-25px, calc(-25px - ${props.offset / -15 + -1}px))`};
 		}
 		@media (max-width: 875px) {
 			transform: scale(1)

@@ -37,38 +37,41 @@
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-    z-index: 1;
+		z-index: 1;
 		width: 100vw;
 		padding: 39px 0 20px;
 		transition: 0.275s ease-out all;
 
-    .decor--angle__blog {
-      position: absolute;
-      right: 0; top: 0;
-      z-index: 0;
-      width: 32vw;
-      height: 45vw;
-      background-color: $secondary-black;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
-    }
-    .decor--angle__features {
-      position: absolute;
-      left: 0; top: 0;
-      z-index: 0;
-      width: 32vw;
-      height: 59vw;
-      background-color: $secondary-black;
-      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    }
-    .decor--angle__homepage {
-      position: absolute;
-      left: 0; top: 0;
-      z-index: 0;
-      width: 32vw;
-      height: 59vw;
-      background-color: $pale-mint;
-      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    }
+		.decor--angle__blog {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 0;
+			width: 32vw;
+			height: 45vw;
+			background-color: $secondary-black;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+		}
+		.decor--angle__features {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 0;
+			width: max(32vw, 545px);
+			height: max(59vw, 1100px);
+			background-color: $secondary-black;
+			clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+		}
+		.decor--angle__homepage {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 0;
+			width: 32vw;
+			height: 59vw;
+			background-color: $pale-mint;
+			clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+		}
 	}
 
 	&--nav {
@@ -80,7 +83,7 @@
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
-			gap: 47px;
+			gap: 35px;
 		}
 
 		&--item {
@@ -153,17 +156,6 @@
 				}
 			}
 		}
-
-		@media (max-width: 1020px) {
-			left: calc(50% - 34px);
-			&--list {
-				gap: 15px;
-			}
-
-			&__mobile {
-				left: 50vw;
-			}
-		}
 	}
 
 	&--cta {
@@ -197,10 +189,37 @@
 		}
 	}
 
+	@media screen and (max-width: 1250px) {
+		&--cta {
+			&__wrapper {
+				gap: 20px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1150px) {
+		&--nav {
+			left: calc(50% - 50px);
+			&--list {
+				gap: 20px;
+			}
+		}
+	}
+	@media (max-width: 1020px) {
+		&--nav {
+			&--list {
+				gap: 8px;
+			}
+
+			&__mobile {
+				left: 50vw;
+			}
+		}
+	}
+
 	@media screen and (max-width: 875px) {
 		width: 100vw;
 		padding: 0 5vw;
-
 	}
 }
 
@@ -213,7 +232,7 @@
 	border: none;
 	overflow: visible;
 	margin-right: 10px;
-  cursor: pointer;
+	cursor: pointer;
 	&--SVG {
 		width: 62px;
 		height: 62px;

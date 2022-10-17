@@ -19,14 +19,15 @@ export default () => (
 		/>
 		<SingleCircle
 			styles={{
-				height: "450px",
-				width: "450px",
+				height: "400px",
+				width: "400px",
 				bottom: "0",
 				right: "0",
 				backgroundColor: "#339BFC",
 				transform: "translate(15%, 40%)",
 			}}
 			withRing
+			uniqueClass={"features-decor__single-circle"}
 		/>
 		<ScrollAnimation
 			animateOnce={true}

@@ -2,11 +2,11 @@ import { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsWindows, BsApple } from "react-icons/bs";
 import { DiAndroid, DiLinux } from "react-icons/di";
-import tooltips from "@constants/features/tooltips"
+import tooltips from "@constants/features/tooltips";
 import { useAppContext } from "@context/app";
 
 export default () => {
-    const [hoverInfoBox, toggleHoverInfoBox] = useState("");
+	const [hoverInfoBox, toggleHoverInfoBox] = useState("");
 	const { isMobile } = useAppContext();
 
 	return (
@@ -23,9 +23,7 @@ export default () => {
 					<BsWindows className="item--img" />
 					<span className="item--img--text">Windows</span>
 				</div>
-				<h6 className="h6 capitalize">
-					managed <span className="last-word">devices</span>
-				</h6>
+				<h6 className="h6 capitalize">managed devices</h6>
 			</ScrollAnimation>
 			<ScrollAnimation
 				animateOnce={true}
@@ -52,9 +50,7 @@ export default () => {
 						<span className="item--img--text">Android</span>
 					</div>
 				</div>
-				<h6 className="h6 capitalize">
-					monitored <span className="last-word">devices</span>
-				</h6>
+				<h6 className="h6 capitalize">monitored devices</h6>
 			</ScrollAnimation>
 			<ScrollAnimation
 				animateOnce={true}
@@ -67,9 +63,7 @@ export default () => {
 					<DiLinux className="item--img" />
 					<span className="item--img--text">Linux</span>
 				</div>
-				<h6 className="h6 capitalize">
-					gateway <span className="last-word">management</span>
-				</h6>
+				<h6 className="h6 capitalize">gateway management</h6>
 			</ScrollAnimation>
 		</article>
 	);

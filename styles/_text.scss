@@ -19,7 +19,7 @@ h1.h1 {
 }
 h2.h2 {
 	font-family: "Poppins";
-	@include heading(36px, 700, 135%, 0);
+	@include heading(36px, 600, 135%, 0);
 	&.semi-bold {
 		font-weight: 600;
 	}
@@ -85,7 +85,7 @@ select option {
 		@include heading(42px, 700, 120%, 0);
 	}
 	h2.h2 {
-		@include heading(30px, 500, 135%, 0);
+		@include heading(30px, 600, 135%, 0);
 	}
 	h3.h3 {
 		@include heading(25px, 700, 120%, 0);
