@@ -13,6 +13,7 @@ export default () => {
 	const { windowSize, isMobile } = useAppContext();
 	const [priceIsAnnual, setPriceIsAnnual] = useState(true);
 	const handlePriceToggle = () => setPriceIsAnnual(!priceIsAnnual);
+
 	useEffect(() => {
 		let _headingHeights = [],
 			_featuresListHeights = [];

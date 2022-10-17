@@ -1,4 +1,5 @@
 import ReactHtmlParser from "react-html-parser";
+import { useRef } from "react";
 import BlogItem from "./Item";
 import { Filter } from "./Filter";
 import { useAppContext } from "@context/app";
@@ -14,6 +15,7 @@ export default ({
 	handleSearchUpdate,
 }) => {
 	const { isMobile } = useAppContext();
+	const ref= useRef()
 	return (
 		<section className="section all-columns section--blog-list" id="blogPosts">
 			<div className="section--body">
@@ -23,10 +25,11 @@ export default ({
 						setActiveCategory={setActiveCategory}
 						searchTerm={searchTerm}
 						handleSearchUpdate={handleSearchUpdate}
+						blogsRef={ref.current}
 					/>
 				)}
 
-				<div className="blogs">
+				<div className="blogs" ref={ref}>
 					{blogPosts.map(
 						(blog, i) =>
 							blog.post_title
