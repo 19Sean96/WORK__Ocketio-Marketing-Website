@@ -1,5 +1,6 @@
 // PRICING PAGE
 
+
 #pricing {
 	margin-top: 75px;
 	padding-bottom: 0px;
@@ -457,6 +458,20 @@
 			&--body {
 				grid-column: 1/13;
 			}
+		}
+	}
+}
+
+#main .decor {
+	@media (max-width: 940px) {
+		&--circle-grid__pricing {
+			transform: translate(50%, 75%) rotate(45deg);
+		}
+		&--single-circle__pricing-1 {
+			transform: translate(-25%, -100%);
+		}
+		&--single-circle__pricing-2 {
+			transform: translate(-7vw, -7vw);
 		}
 	}
 }

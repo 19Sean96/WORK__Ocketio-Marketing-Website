@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { useAppContext } from "@context/app";
 import pricingCards from "@constants/pricing/pricingCards";
 import Card from "./Card";
+import CircleGridPattern from "@elements/decorations/CircleGridPattern";
+import SingleCircle from '@elements/decorations/SingleCircle';
 
 export default () => {
 	const cardRef = useRef([]);
@@ -44,6 +46,40 @@ export default () => {
 
 	return (
 		<ContentWrapper>
+			<CircleGridPattern 
+				styles={{
+					left: "60vw",
+					top: '0',
+					zIndex: '0',
+					backgroundColor: '#339BFC',
+					transform: 'rotate(45deg) translate(25vw, 5vw)'
+				}}
+				uniqueClass="decor--circle-grid__pricing"
+			/>
+			<SingleCircle 
+				styles={{
+					height: '455px',
+					width: '455px',
+					bottom: '0',
+					left: '0',
+					backgroundColor: '#88E4C3',
+					zIndex: '0',
+					transform: 'translate(-25%, 5%)'
+				}}
+				uniqueClass="decor--single-circle__pricing-1"
+			/>
+			<SingleCircle 
+				styles={{
+					height: '46px',
+					width: '46px',
+					bottom: '25%',
+					left: '0',
+					backgroundColor: '#f5f5f5',
+					zIndex: '0',
+					transform: 'translate(-9vw, -3vw)'
+				}}
+				uniqueClass="decor--single-circle__pricing-2"
+			/>
 			<section
 				className="section section__with-grid all-columns section__with-max-width_95vw"
 				id="pricing">
