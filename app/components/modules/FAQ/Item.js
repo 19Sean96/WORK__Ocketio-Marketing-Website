@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { AiOutlineRight } from "react-icons/ai";
-import { _primarywhite, _pastelred } from "static/Colors";
+import { _primarywhite, _pastelred } from "@lib/Colors";
 
 export default ({ question, answer, index }) => {
 	const [isOpen, toggleOpen] = useState(false);

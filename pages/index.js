@@ -1,7 +1,7 @@
 import axios from "axios";
 import Head from "@head/Homepage";
 import Body from '@layouts/homepage'
-import { _palemint } from "../static/Colors";
+import { _palemint } from "@lib/Colors";
 
 export default function Home({ blog_posts }) {
 	return (

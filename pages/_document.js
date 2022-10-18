@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
-import { GTM_ID } from "../lib/gtm";
+import { GTM_ID } from "@lib/gtm";
 import { ServerStyleSheet } from "styled-components";
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {

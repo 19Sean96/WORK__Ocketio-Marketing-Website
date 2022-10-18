@@ -1,5 +1,5 @@
 import axios from "axios";
-import callHandler from "../../lib/sib/callHandler";
+import callHandler from "@lib/sib/callHandler";
 const k = process.env.SIB_KEY;
 const sibURL = "https://api.sendinblue.com/v3";
 

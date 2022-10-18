@@ -10,7 +10,8 @@
             "@context/*": ["app/context/*"],
             "@styles/*": ["app/styles/*"],
             "@constants/*": ["app/constants/*"],
-            "@head/*": ["app/components/head/*"]
+            "@head/*": ["app/components/head/*"],
+            "@lib/*": ["app/lib/*"]
         }
     }
 }

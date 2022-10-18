@@ -6,11 +6,11 @@ import {
   pageview,
   datalayerloaded,
   gtmVirtualPageView,
-} from "../lib/gtm";
+} from "@lib/gtm";
 import { AppWrapper } from "@context/app";
 import Header from "@modules/header";
 import Footer from "@modules/footer";
-import "../styles/main.scss";
+import "@styles/main.scss";
 import "animate.css";
 import TagManager from "react-gtm-module";
 
