@@ -3,13 +3,13 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useAppContext } from "@context/app";
 import Link from "next/link";
 import StyledMap from "./StyledMap";
-
+import Section from './index.styled'
 export default () => {
 	const { isMobile } = useAppContext();
 	return (
 		<ContentWrapper width="1500px">
 			<div className="all-columns">
-				<section
+				<Section
 					className="section section__with-grid all-columns"
 					id="firstBannerHomepage">
 					<div className="decor decor__circle-1"></div>
@@ -54,7 +54,7 @@ export default () => {
 						offset={-100}>
 						<StyledMap />
 					</ScrollAnimation>
-				</section>
+				</Section>
 			</div>
 		</ContentWrapper>
 	);

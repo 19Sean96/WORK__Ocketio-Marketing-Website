@@ -5,3 +5,75 @@
 @import './text';
 @import './util';
 @import './components/index';
+
+
+@mixin fadeMainImage(
+	$startOpacity,
+	$endOpacity,
+	$startTransform,
+	$endTransform
+) {
+	animation: fadeMainImage 0.9s ease-out 0.3s forwards;
+	@keyframes fadeMainImage {
+		from {
+			opacity: $startOpacity;
+			transform: $startTransform;
+		}
+
+		to {
+			opacity: $endOpacity;
+			transform: $endTransform;
+		}
+	}
+}
+
+@mixin fadeSubImage(
+	$startOpacity,
+	$endOpacity,
+	$startTransform,
+	$endTransform
+) {
+	animation: fadeSubImage 0.75s ease-out 0.8s forwards;
+
+	@keyframes fadeSubImage {
+		from {
+			opacity: $startOpacity;
+			transform: $startTransform;
+		}
+
+		to {
+			opacity: $endOpacity;
+			transform: $endTransform;
+		}
+	}
+}
+
+#landing-hero {
+	.image-group {
+		#heroImageSub {
+			&.atTop {
+				opacity: 0;
+
+				@include fadeSubImage(
+					0,
+					1,
+					scale(1) translate3d(0, -20%, 0),
+					scale(1) translate3d(0, 0.4px, 0)
+				);
+			}
+		}
+
+		#heroImageMain {
+			&.atTop {
+				opacity: 0;
+
+				@include fadeMainImage(
+					0,
+					1,
+					scale(1) translate3d(0, -20%, 0),
+					scale(1) translate3d(0, 0.4px, 0)
+				);
+			}
+		}
+	}
+}

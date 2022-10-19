@@ -3,6 +3,7 @@
         "baseUrl": ".",
         "paths": {
             "@images/*": ["public/images/*"],
+            "@fonts/*": ["public/fonts/*"],
             "@elements/*": ["app/components/elements/*"],
             "@modules/*": ["app/components/modules/*"],
             "@layouts/*": ["app/components/layouts/*"],

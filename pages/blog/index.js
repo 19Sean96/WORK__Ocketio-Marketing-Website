@@ -1,97 +1,11 @@
 import Head from "@head/Blog";
-import BlogLayout from "@modules/blog";
+import Body from "@layouts/blog";
 import axios from "axios";
-import ScrollAnimation from "react-animate-on-scroll";
-import { useAppContext } from "@context/app";
-import Compass from "@modules/blog/Compass";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-
 export default function Blog({ blog_posts }) {
-	// holds ARRAY of blog posts constrained by the "activeCategory"
-	const [filteredBlogList, setFilteredBlogList] = useState([...blog_posts]);
-	// holds STRING indicating which category of posts to show in the #blogContent
-	const [activeCategory, setActiveCategory] = useState("all");
-	// live STRING which filters which posts to show via keywords in post_title
-	const [searchTerm, setSearchTerm] = useState("");
-
-	const handleSearchUpdate = (event) => setSearchTerm(event.target.value);
-
-	const { isMobile } = useAppContext();
-	const router = useRouter();
-
-	useEffect(() => {
-		const blogs = [...blog_posts];
-
-		if (activeCategory === "all") {
-			setFilteredBlogList(blogs);
-		} else if (activeCategory === "tutorials") {
-			setFilteredBlogList(
-				blogs.filter((blog) => blog.all_categories.includes("tutorial"))
-			);
-		} else if (activeCategory === "latest") {
-			setFilteredBlogList(
-				blogs.filter((blog) => {
-					const now = new Date();
-					const blogDate = new Date(
-						blog?.date_updated ? blog.date_updated : blog.date_created
-					);
-					console.log("NOW: ", now);
-					console.log("BLOG DATE: ", blogDate, "OLD: ", blog.date_updated);
-
-					const diff = (now.getTime() - blogDate.getTime()) / 1000 / 60 / 60;
-					console.log(diff);
-					return diff < 6;
-				})
-			);
-		} else if (activeCategory === "news") {
-			setFilteredBlogList(
-				blogs.filter((blog) => blog.all_categories.includes("news"))
-			);
-		} else if (activeCategory === "product-updates") {
-			{
-				setFilteredBlogList(
-					blogs.filter((blog) => blog.all_categories.includes("product"))
-				);
-			}
-		}
-	}, [activeCategory]);
-
-	useEffect(() => {
-		sendinblue.page("blog[main]", {
-			ma_title: "Main Blog Page",
-			ma_path: "/blog",
-		});
-	}, []);
-
 	return (
 		<>
 			<Head />
-			<main className="main blog--root" id="blogRoot">
-				{/* <div className="decor--angle decor"></div> */}
-				<header className="full-width_wrapper blog--root--heading">
-					<Compass />
-					<ScrollAnimation
-						animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}
-						duration={0.44}
-						offset={-186}
-						animateOnce={true}
-						className="section--heading">
-						<h2 className="h2">Blog</h2>
-						<p className="p-large">
-							Check out our setup guides, keep up with the latest Ocketio news,
-							and more!
-						</p>
-					</ScrollAnimation>
-				</header>
-				<BlogLayout
-					blogPosts={filteredBlogList}
-					searchTerm={searchTerm}
-					activeCategory={activeCategory}
-					setActiveCategory={setActiveCategory}
-					handleSearchUpdate={handleSearchUpdate}
-				/>
-			</main>
+			<Body blog_posts={blog_posts} />
 		</>
 	);
 }

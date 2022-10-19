@@ -3,11 +3,10 @@ import FAQList from "@modules/FAQ";
 import ScrollAnimation from "react-animate-on-scroll";
 import contactFAQs from "@constants/contact/contactFAQs";
 import SingleCircle from "@elements/decorations/SingleCircle";
-
+import { Section, Background } from './ContactFAQs.styled'
 export default () => (
 	<ContentWrapper padBot={95} id="contactFAQWrapper">
-		<div className="bg"></div>
-
+		<Background className="bg" />
 		<SingleCircle
 			styles={{
 				height: "700px",
@@ -30,7 +29,7 @@ export default () => (
 			}}
 			withRing={false}
 		/>
-		<section
+		<Section
 			className=" section section__with-grid all-columns"
 			id="contactFAQ">
 			<ScrollAnimation
@@ -43,6 +42,6 @@ export default () => (
 			<div className="section--body">
 				<FAQList list={contactFAQs} />
 			</div>
-		</section>
+		</Section>
 	</ContentWrapper>
 );

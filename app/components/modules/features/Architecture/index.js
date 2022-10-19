@@ -2,34 +2,13 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "@util/ContentWrapper";
 import { useAppContext } from "@context/app";
 import ArchitectureDiagram from "@images/features/architecture-diagram.svg";
-
+import Section from './index.styled'
 const Architecture = () => {
 	const { isMobile } = useAppContext();
 
-	const OSTips = [
-		{
-			title: "managed devices",
-			slug: "managedDevices",
-			message:
-				"a managed device is a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
-		},
-		{
-			title: "supervised devices",
-			slug: "supervisedDevices",
-			message:
-				"supervised devices support Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
-		},
-		{
-			title: "gateway management",
-			slug: "gatewayManagement",
-			message:
-				"THe purpose of gateway management is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi felis, et id aliquam ac tincidunt.",
-		},
-	];
-
 	return (
 		<ContentWrapper>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="architectureSection">
 				<ScrollAnimation
@@ -105,7 +84,7 @@ const Architecture = () => {
 						</p>
 					</ScrollAnimation>
 				</div>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

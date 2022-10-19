@@ -2,10 +2,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "@util/ContentWrapper";
 import FAQList from "@modules/FAQ";
 import pricingFAQs from "@constants/pricing/pricingFAQs";
-
+import { FAQSection } from "./pricing.styled";
 export default () => (
 	<ContentWrapper>
-		<section className="section__with-grid all-columns" id="pricingFAQ">
+		<FAQSection className="section__with-grid all-columns" id="pricingFAQ">
 			<ScrollAnimation
 				animateOnce={true}
 				animateIn="animate__fadeIn"
@@ -16,6 +16,6 @@ export default () => (
 			<div className="section--body">
 				<FAQList list={pricingFAQs} />
 			</div>
-		</section>
+		</FAQSection>
 	</ContentWrapper>
 );

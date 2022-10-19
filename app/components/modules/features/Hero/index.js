@@ -4,9 +4,10 @@ import SingleCircle from "@elements/decorations/SingleCircle";
 import CircleGridPattern from "@elements/decorations/CircleGridPattern";
 import SupportedOS from "./SupportedOS";
 import HeroImages from "./HeroImages";
+import StyledHero from './index.styled'
 
 export default () => (
-	<div className="full-width_wrapper">
+	<StyledHero className="full-width_wrapper">
 		<CircleGridPattern
 			styles={{
 				top: "0",
@@ -78,5 +79,5 @@ export default () => (
 				<SupportedOS />
 			</section>
 		</ScrollAnimation>
-	</div>
+	</StyledHero>
 );

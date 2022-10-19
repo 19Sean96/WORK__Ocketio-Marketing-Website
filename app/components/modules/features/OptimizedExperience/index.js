@@ -8,13 +8,13 @@ import {
 } from "react-icons/bs";
 import { useAppContext } from "@context/app";
 import OptimizedExperienceImage from "@images/features/optimized-experience.svg";
-
+import Section from './index.styled'
 const OptimizedExperience = () => {
 	const { isMobile } = useAppContext();
 
 	return (
 		<ContentWrapper>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="optimizedExperience">
 				<ScrollAnimation
@@ -94,7 +94,7 @@ const OptimizedExperience = () => {
 						</ScrollAnimation>
 					</div>
 				</div>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

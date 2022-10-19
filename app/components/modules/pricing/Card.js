@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { forwardRef } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import { AiFillCheckCircle } from "react-icons/ai";
-
+import { StyledCard } from "./pricing.styled";
 export default forwardRef(
 	(
 		{
@@ -17,7 +16,7 @@ export default forwardRef(
 		ref
 	) => {
 		return (
-			<ScrollAnimation
+			<StyledCard
 				animateOnce={true}
 				duration={0.7}
 				delay={400}
@@ -76,7 +75,7 @@ export default forwardRef(
 						</ul>
 					</div>
 				</div>
-			</ScrollAnimation>
+			</StyledCard>
 		);
 	}
 );

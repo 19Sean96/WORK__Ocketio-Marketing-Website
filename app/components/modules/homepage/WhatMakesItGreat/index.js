@@ -1,4 +1,5 @@
 import ContentWrapper from "@util/ContentWrapper";
+import Section from './index.styled'
 import Link from "next/link";
 import Item from "./Item";
 import { useAppContext } from "@context/app";
@@ -84,7 +85,7 @@ export default () => {
 
 	return (
 		<ContentWrapper width="1575px">
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="sectionWhatHomepage">
 				<ScrollAnimation
@@ -141,7 +142,7 @@ export default () => {
 						</Link>
 					</div>
 				</div>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

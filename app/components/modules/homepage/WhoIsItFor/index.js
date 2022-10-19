@@ -1,4 +1,5 @@
 import ScrollAnimation from "react-animate-on-scroll";
+import Section from './index.styled'
 import ContentWrapper from "@util/ContentWrapper";
 import { useAppContext } from "@context/app";
 import { AiOutlineRocket, AiOutlineShop, AiOutlineUser } from "react-icons/ai";
@@ -9,7 +10,7 @@ export default () => {
 
 	return (
 		<ContentWrapper>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="sectionWhoHomepage">
 				<div className="bg"></div>
@@ -99,7 +100,7 @@ export default () => {
 						</Link>
 					</ScrollAnimation>
 				</article>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

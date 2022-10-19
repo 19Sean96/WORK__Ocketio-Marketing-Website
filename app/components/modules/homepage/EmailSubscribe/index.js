@@ -1,10 +1,10 @@
-import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "@util/ContentWrapper";
 import SubscribeInput from "@elements/SubscribeInput";
+import Section from './index.styled'
 
 export default () => (
 	<ContentWrapper>
-		<ScrollAnimation
+		<Section
 			animateIn="animate__fadeInUp"
 			animateOnce={true}
 			duration={0.623}
@@ -15,6 +15,6 @@ export default () => (
 			<div className="decor decor__circle-1"></div>
 			<div className="decor decor__circle-2"></div>
 			<SubscribeInput />
-		</ScrollAnimation>
+		</Section>
 	</ContentWrapper>
 );

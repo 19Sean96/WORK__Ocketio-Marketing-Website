@@ -5,7 +5,7 @@ import { Filter } from "./Filter";
 import { useAppContext } from "@context/app";
 import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
-
+import StyledBlogs from './index.styled'
 export default ({
 	blogPosts,
 	searchTerm = "",
@@ -29,7 +29,7 @@ export default ({
 					/>
 				)}
 
-				<div className="blogs" ref={ref}>
+				<StyledBlogs className="blogs" ref={ref}>
 					{blogPosts.map(
 						(blog, i) =>
 							blog.post_title
@@ -63,7 +63,7 @@ export default ({
 							</a>
 						</Link>
 					)}
-				</div>
+				</StyledBlogs>
 			</div>
 		</section>
 	);

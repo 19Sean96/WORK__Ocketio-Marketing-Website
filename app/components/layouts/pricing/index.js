@@ -1,8 +1,8 @@
 import PricingCards from "@modules/pricing/PricingCards";
 import PricingFAQs from "@modules/pricing/PricingFAQs";
-
+import Main from './index.styled'
 export default () => (
-	<main
+	<Main
 		className="main"
 		id="main"
 		style={{
@@ -11,5 +11,5 @@ export default () => (
 		}}>
 		<PricingCards />
 		<PricingFAQs />
-	</main>
+	</Main>
 );

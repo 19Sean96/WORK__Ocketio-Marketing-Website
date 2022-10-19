@@ -1,10 +1,10 @@
 import HeroImages from './HeroImages'
 import ScrollAnimation from 'react-animate-on-scroll';
 import Link from "next/link";
-
+import StyledWrapper from './index.styled'
 export default () => {
 	return (
-		<div className="hero_wrapper">
+		<StyledWrapper className="hero_wrapper">
 			<section className="section section__with-grid" id="landing-hero">
 				<div id="landing-hero-message">
 					<ScrollAnimation
@@ -51,6 +51,6 @@ export default () => {
 				</div>
                 <HeroImages />
 			</section>
-		</div>
+		</StyledWrapper>
 	);
 };

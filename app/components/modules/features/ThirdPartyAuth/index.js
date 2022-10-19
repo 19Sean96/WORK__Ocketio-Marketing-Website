@@ -6,11 +6,12 @@ import {
 	GSuiteLogo,
 	OktaLogo,
 } from "@elements/ThirdPartyLogos";
+import Section from './index.styled'
 
 const ThirdPartyAuthentication = () => {
 	return (
 		<ContentWrapper>
-			<section className="section__with-grid all-columns" id="thirdPartyAuth">
+			<Section className="section__with-grid all-columns" id="thirdPartyAuth">
 				<div className="bg"></div>
 				<ScrollAnimation
 					animateOnce={true}
@@ -35,7 +36,7 @@ const ThirdPartyAuthentication = () => {
 						<GSuiteLogo />
 					</div>
 				</ScrollAnimation>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

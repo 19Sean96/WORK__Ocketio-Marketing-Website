@@ -14,7 +14,7 @@ const Footer = () => {
 		<StyledFooter
 			className="footer"
 			id="footer"
-			background={footerDarkMode ? "#101010" : "#f5f5f5"}
+			darkMode={footerDarkMode}
 			pathname={router.pathname}>
 			<div className="footer--top">
 				<Link href="/">

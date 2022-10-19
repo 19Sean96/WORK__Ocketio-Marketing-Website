@@ -3,12 +3,12 @@ import ContentWrapper from "@util/ContentWrapper";
 import { BsKey, BsListUl, BsGear, BsPhone } from "react-icons/bs";
 import { useAppContext } from "@context/app";
 import FineTunedControlImage from "@images/features/fine-tuned-control.svg";
-
+import Section from './index.styled'
 const FineTunedControl = () => {
 	const { isMobile } = useAppContext();
 	return (
 		<ContentWrapper>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="fineTunedControlSection">
 				<div className="bg"></div>
@@ -87,7 +87,7 @@ const FineTunedControl = () => {
 						</ScrollAnimation>
 					</div>
 				</div>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

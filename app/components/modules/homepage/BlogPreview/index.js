@@ -1,11 +1,11 @@
 import ContentWrapper from "@util/ContentWrapper";
 import BlogPreview from '@modules/blog'
-
+import Section from './index.styled'
 
 export default ({ blog_posts }) => {
 	return (
 		<ContentWrapper>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="blogPreview">
 				<div className="section--heading">
@@ -14,7 +14,7 @@ export default ({ blog_posts }) => {
 				<div className="section--body">
 					<BlogPreview blogPosts={blog_posts} preview />
 				</div>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

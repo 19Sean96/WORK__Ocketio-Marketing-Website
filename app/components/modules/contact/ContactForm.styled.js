@@ -1,6 +1,7 @@
-// CONTACT PAGE
+import { $bluemid, $gray1, $gray2, $primaryblack, $primarywhite, $secondarywhite } from "@lib/Colors";
+import styled from "styled-components";
 
-#contactPortal {
+export default styled.section`
 	margin-top: 29px;
 	align-items: flex-start;
 	grid-template-rows: min-content 1fr;
@@ -15,7 +16,7 @@
 		z-index: 0;
 		width: 100vw;
 		height: 100%;
-		background-color: $primary-black;
+		background-color: ${$primaryblack};
 		clip-path: polygon(0% 76%, 100% 30%, 100% 100%, 0% 100%);
 	}
 
@@ -51,8 +52,8 @@
 				grid-column: 3/11;
 				z-index: 11;
 				padding: 40px 40px 55px;
-				border: 3px solid $primary-black;
-				background: $primary-white;
+				border: 3px solid ${$primaryblack};
+				background: ${$primarywhite};
 				border-radius: 10px;
 				box-shadow: 0 3px 10px 0 rgb(8 15 52 / 4%);
 				max-width: 925px;
@@ -66,12 +67,12 @@
 				width: 100%;
 				height: 51px;
 				padding: 12px 16px 4px 21px;
-				border: 1px solid $gray-1;
+				border: 1px solid ${$gray1};
 				border-bottom-width: 3px;
 				border-radius: 6px;
 				border-radius: 4px 4px 2px 2px;
 				box-shadow: 0 3px 15px 0 rgb(8 15 52 / 10%);
-				background-color: $secondary-white;
+				background-color: ${$secondarywhite};
 
 				&__wrapper {
 					position: relative;
@@ -93,10 +94,9 @@
 					}
 
 					select {
-						// max-width: 583px;
 						appearance: none;
 						option {
-							color: $gray-1;
+							color: ${$gray1};
 						}
 					}
 				}
@@ -104,7 +104,7 @@
 				&__label {
 					font-family: "Noto Sans SemiCondensed";
 					font-weight: 400;
-					color: $gray-1;
+					color: ${$gray1};
 					position: absolute;
 					top: 25px;
 					left: 21px;
@@ -126,7 +126,7 @@
 					right: 30px;
 					transform: translate(0, -50%) scaleX(1.225);
 					transform-origin: right center;
-					fill: #5c5f6b;
+					fill: ${$gray2};
 					height: 18px;
 					width: auto;
 				}
@@ -144,7 +144,7 @@
 					width: 100%;
 					border-radius: 3px;
 					text-align: left;
-					background-color: $blue-mid;
+					background-color: ${$bluemid};
 					font-size: 18px;
 					min-width: 200px;
 					max-width: 350px;
@@ -168,7 +168,7 @@
 						padding-left: 0;
 						span {
 							margin-left: 8px;
-							color: $primary-black;
+							color: ${$primaryblack};
 							margin-top: -2px;
 							font-weight: 500;
 						}
@@ -177,13 +177,13 @@
 					input[type="checkbox"] {
 						-webkit-appearance: none;
 						appearance: none;
-						background: $secondary-white;
+						background: ${$secondarywhite};
 						margin: 0;
 						font: inherit;
-						color: $primary-black;
+						color: ${$primaryblack};
 						width: 22px;
 						height: 22px;
-						border: 3px solid $blue-mid;
+						border: 3px solid ${$bluemid};
 						border-radius: 2px;
 						transform: translateY(-3px);
 						display: grid;
@@ -195,8 +195,8 @@
 							height: 12px;
 							transform: scale(0);
 							transition: 120ms transform ease-in-out;
-							box-shadow: inset 18px 18px $primary-black;
-							background-color: $primary-black;
+							box-shadow: inset 18px 18px ${$primaryblack};
+							background-color: ${$primaryblack};
 							transform-origin: bottom left;
 							clip-path: polygon(
 								14% 44%,
@@ -215,7 +215,7 @@
 						}
 
 						&:focus {
-							outline: 2px solid $primary-black;
+							outline: 2px solid ${$primaryblack};
 							outline-offset: 2px;
 						}
 					}
@@ -225,11 +225,11 @@
 						font-family: "Noto Sans SemiCondensed";
 						font-weight: 500;
 						font-size: 16px;
-						color: $gray-1;
+						color: ${$gray1};
 
 						a {
 							font-weight: 500;
-							color: $blue-mid;
+							color: ${$bluemid};
 						}
 					}
 				}
@@ -252,7 +252,6 @@
 			&--heading {
 				border-bottom: 0;
 				padding-right: 56px;
-				// border-right: 1px solid #e9eaf0;
 				padding-bottom: 0;
 				align-self: center;
 
@@ -293,7 +292,6 @@
 				grid-row: 2/3;
 				margin-top: 42px;
 				align-self: center;
-
 				flex-direction: row;
 			}
 
@@ -390,130 +388,4 @@
 	@media (min-width: 1920px) {
 		padding-bottom: 1.9vw;
 	}
-}
-
-#moreContact {
-	margin-top: 100px;
-
-	.section {
-		&--heading {
-			h4 {
-				text-align: center;
-				margin-bottom: 14px;
-			}
-		}
-
-		&--body {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 26px;
-			grid-row: 2/3;
-			grid-column: 1/13;
-
-			&--item {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding: 48px 32px;
-				background-color: #f7f8fa;
-				text-decoration: none;
-
-				&__wrapper {
-					width: calc((100% / 3) - 26px);
-					min-width: 260px;
-					max-width: 75%;
-					flex-grow: 1;
-				}
-
-				h6,
-				p,
-				a {
-					text-align: center;
-					text-decoration: none;
-				}
-
-				svg {
-					height: 45px;
-					width: 45px;
-					margin-bottom: 11px;
-					fill: $secondary-black;
-				}
-
-				h6 {
-					margin-bottom: 12px;
-					color: $secondary-black;
-				}
-
-				.text {
-					margin-bottom: 26px;
-				}
-
-				.cta {
-					font-weight: 600;
-					color: #0144e4;
-				}
-			}
-		}
-
-		@media (max-width: 650px) {
-			&--body {
-				&--item {
-					padding: 36px 24px;
-					max-width: 86%;
-				}
-			}
-		}
-	}
-}
-
-#contactFAQ {
-	// margin-bottom: 160px;
-	position: relative;
-	z-index: 11;
-	padding-top: 160px;
-	padding-bottom: 120px;
-	margin-top: 0;
-	overflow: visible;
-
-	&Wrapper {
-		.bg {
-			content: "";
-			position: absolute;
-			left: 50%;
-			top: 0;
-			transform: translate(-50%, 0);
-			z-index: 9;
-			width: 100vw;
-			height: 100%;
-			background-color: $primary-black;
-			clip-path: polygon(0% 0%, 100% 0%, 100% 580px, 0% 710px);
-		}
-	}
-
-	.section {
-		&--heading {
-			margin-bottom: 40px;
-			h2 {
-				margin-bottom: 0;
-				color: $primary-white;
-				text-align: center;
-			}
-			p {
-				padding: 0 2.5vw;
-			}
-		}
-
-		&--body {
-			grid-row: 2/3;
-			grid-column: 2/12;
-		}
-
-		@media (max-width: 700px) {
-			&--body {
-				grid-column: 1/13;
-			}
-		}
-	}
-}
+`;

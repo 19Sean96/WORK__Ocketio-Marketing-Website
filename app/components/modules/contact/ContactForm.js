@@ -2,6 +2,7 @@ import { useForm, Controller } from "react-hook-form";
 import NumberFormat from "react-number-format";
 import ContentWrapper from "@util/ContentWrapper";
 import ScrollAnimation from "react-animate-on-scroll";
+import Section from './ContactForm.styled'
 import Link from "next/link";
 import { BsCaretDownFill } from "react-icons/bs";
 import { useEffect } from "react";
@@ -57,13 +58,13 @@ export default () => {
 		}
 		console.log("RESULTING: ", res);
 	};
-
 	const { isMobile } = useAppContext();
-
 	const watchAllInputs = watch();
+
 	useEffect(() => {
 		console.log(watchAllInputs);
 	}, [watchAllInputs]);
+
 	return (
 		<ContentWrapper>
 			<SingleCircle
@@ -79,7 +80,7 @@ export default () => {
 				}}
 				withRing
 			/>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="contactPortal">
 				<div className="bg"></div>
@@ -294,7 +295,7 @@ export default () => {
 						</div>
 					</form>
 				</ScrollAnimation>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

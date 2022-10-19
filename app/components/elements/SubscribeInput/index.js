@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { AiFillMail, AiOutlineArrowUp } from "react-icons/ai";
 import ScrollAnimation from "react-animate-on-scroll";
+import Section from './index.styled'
 
 export default () => {
 	const {
@@ -34,7 +35,7 @@ export default () => {
         }, [watchAllInputs]);
 	};
 	return (
-		<section
+		<Section
 			className="section section__with-grid all-columns"
 			id="emailIntake">
 			<div className="bg"></div>
@@ -86,6 +87,6 @@ export default () => {
 					/>
 				</form>
 			</ScrollAnimation>
-		</section>
+		</Section>
 	);
 };

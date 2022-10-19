@@ -2,6 +2,8 @@ import FilterNav from "./Nav";
 import FilterSearch from "./Search";
 import { useRef, useState, useEffect } from "react";
 import { useAppContext } from "@context/app";
+import StyledFilter from './index.styled'
+
 const Filter = ({
 	activeCategory,
 	setActiveCategory,
@@ -20,16 +22,18 @@ const Filter = ({
 	}, [scrollOffset]);
 
 	return (
-		<div className={"filter-row" + (isSticky ? " isSticky" : "")} ref={ref}>
+		<StyledFilter className={"filter-row" + (isSticky ? " isSticky" : "")} ref={ref}>
 			<FilterSearch
 				searchTerm={searchTerm}
 				handleSearchUpdate={handleSearchUpdate}
+				isSticky={isSticky}
 			/>
 			<FilterNav
 				activeCategory={activeCategory}
 				setActiveCategory={setActiveCategory}
+				isSticky={isSticky}
 			/>
-		</div>
+		</StyledFilter>
 	);
 };
 

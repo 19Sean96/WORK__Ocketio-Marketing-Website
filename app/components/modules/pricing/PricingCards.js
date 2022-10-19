@@ -7,7 +7,7 @@ import pricingCards from "@constants/pricing/pricingCards";
 import Card from "./Card";
 import CircleGridPattern from "@elements/decorations/CircleGridPattern";
 import SingleCircle from '@elements/decorations/SingleCircle';
-
+import { Section } from "./pricing.styled";
 export default () => {
 	const cardRef = useRef([]);
 	const [tallestCardHeading, setTallestCardHeading] = useState(0);
@@ -80,7 +80,7 @@ export default () => {
 				}}
 				uniqueClass="decor--single-circle__pricing-2"
 			/>
-			<section
+			<Section
 				className="section section__with-grid all-columns section__with-max-width_95vw"
 				id="pricing">
 				<ScrollAnimation
@@ -139,7 +139,7 @@ export default () => {
 						<span> for information.</span>
 					</p>
 				</ScrollAnimation>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

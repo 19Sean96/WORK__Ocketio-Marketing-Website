@@ -12,7 +12,7 @@ import SetupCreateNetwork from "@images/features/setup/step-2-create_network.svg
 import SetupInstallGateway from "@images/features/setup/step-3-install_gateway.svg";
 import SetupDeviceSetup from "@images/features/setup/step-4-device_setup.svg";
 import SetupSecuritySettings from "@images/features/setup/step-5-security_settings.svg";
-
+import Section from './index.styled'
 import Tabs from "@elements/features/SetupSlides/Tabs";
 
 const SetupSlides = (props) => {
@@ -38,7 +38,7 @@ const SetupSlides = (props) => {
 
 	return (
 		<ContentWrapper>
-			<section
+			<Section
 				className="section section__with-grid all-columns"
 				id="setupSection">
 				<ScrollAnimation
@@ -172,7 +172,7 @@ const SetupSlides = (props) => {
 						</div>
 					)}
 				</article>
-			</section>
+			</Section>
 		</ContentWrapper>
 	);
 };

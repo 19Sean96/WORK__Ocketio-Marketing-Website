@@ -1,8 +1,8 @@
-import { BsSearch } from 'react-icons/bs'
 import { AiOutlineSearch } from 'react-icons/ai'
-const FilterSearch = ({ searchTerm, handleSearchUpdate }) => {
+import Search from './Search.styled'
+const FilterSearch = ({ searchTerm, handleSearchUpdate, isSticky }) => {
   return (
-    <aside className="search-filter">
+    <Search className="search-filter" isSticky={isSticky}>
       <input
         type="text"
         className="search-filter--input"
@@ -12,7 +12,7 @@ const FilterSearch = ({ searchTerm, handleSearchUpdate }) => {
         onChange={handleSearchUpdate}
       />
       <AiOutlineSearch id="search-icon"/>
-    </aside>
+    </Search>
   );
 };
 

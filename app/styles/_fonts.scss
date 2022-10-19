@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Noto Sans";
-    src: url("../public/fonts/NotoSans/woff2/NotoSans-Regular.woff2") format('woff2'),
-         url("../public/fonts/NotoSans/woff/NotoSans-Regular.woff") format('woff'),
-         url("../public/fonts/NotoSans/ttf/NotoSans-Regular.ttf") format('truetype');
+    src: url("../../public/fonts/NotoSans/woff2/NotoSans-Regular.woff2") format('woff2'),
+         url("../../public/fonts/NotoSans/woff/NotoSans-Regular.woff") format('woff'),
+         url("../../public/fonts/NotoSans/ttf/NotoSans-Regular.ttf") format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
     font-family: "Noto Sans";
-    src: url("../public/fonts/NotoSans/woff2/NotoSans-Medium.woff2") format('woff2'),
-         url("../public/fonts/NotoSans/woff/NotoSans-Medium.woff") format('woff'),
-         url("../public/fonts/NotoSans/ttf/NotoSans-Medium.ttf") format('truetype');
+    src: url("../../public/fonts/NotoSans/woff2/NotoSans-Medium.woff2") format('woff2'),
+         url("../../public/fonts/NotoSans/woff/NotoSans-Medium.woff") format('woff'),
+         url("../../public/fonts/NotoSans/ttf/NotoSans-Medium.ttf") format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -20,9 +20,9 @@
 
 @font-face {
     font-family: "Noto Sans SemiCondensed";
-    src: url("../public/fonts/NotoSans/woff2/NotoSans-SemiCondensed.woff2") format('woff2'),
-         url("../public/fonts/NotoSans/woff/NotoSans-SemiCondensed.woff") format('woff'),
-         url("../public/fonts/NotoSans/ttf/NotoSans-SemiCondensed.ttf") format('truetype');
+    src: url("../../public/fonts/NotoSans/woff2/NotoSans-SemiCondensed.woff2") format('woff2'),
+         url("../../public/fonts/NotoSans/woff/NotoSans-SemiCondensed.woff") format('woff'),
+         url("../../public/fonts/NotoSans/ttf/NotoSans-SemiCondensed.ttf") format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -30,9 +30,9 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("../public/fonts/Poppins/woff2/Poppins-Medium.woff2") format('woff2'),
-         url("../public/fonts/Poppins/woff/Poppins-Medium.woff") format('woff'),
-         url("../public/fonts/Poppins/ttf/Poppins-Medium.ttf") format('truetype');
+    src: url("../../public/fonts/Poppins/woff2/Poppins-Medium.woff2") format('woff2'),
+         url("../../public/fonts/Poppins/woff/Poppins-Medium.woff") format('woff'),
+         url("../../public/fonts/Poppins/ttf/Poppins-Medium.ttf") format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -40,9 +40,9 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("../public/fonts/Poppins/woff2/Poppins-SemiBold.woff2") format('woff2'),
-         url("../public/fonts/Poppins/woff/Poppins-SemiBold.woff") format('woff'),
-         url("../public/fonts/Poppins/ttf/Poppins-SemiBold.ttf") format('truetype');
+    src: url("../../public/fonts/Poppins/woff2/Poppins-SemiBold.woff2") format('woff2'),
+         url("../../public/fonts/Poppins/woff/Poppins-SemiBold.woff") format('woff'),
+         url("../../public/fonts/Poppins/ttf/Poppins-SemiBold.ttf") format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -50,9 +50,9 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("../public/fonts/Poppins/woff2/Poppins-Bold.woff2") format('woff2'),
-         url("../public/fonts/Poppins/woff/Poppins-Bold.woff") format('woff'),
-         url("../public/fonts/Poppins/ttf/Poppins-Bold.ttf") format('truetype');
+    src: url("../../public/fonts/Poppins/woff2/Poppins-Bold.woff2") format('woff2'),
+         url("../../public/fonts/Poppins/woff/Poppins-Bold.woff") format('woff'),
+         url("../../public/fonts/Poppins/ttf/Poppins-Bold.ttf") format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
