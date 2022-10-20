@@ -7,11 +7,21 @@
 
 html,
 body,
+#__next {
+	min-height: 100vh;
+}
+
+html,
+body,
 #main,
 #__next {
+	position: relative;
 	max-width: 100vw;
 	background-color: $primary-white;
 	scroll-behavior: smooth;
+}
+#__next {
+	overflow-x: hidden;
 }
 
 #main {
