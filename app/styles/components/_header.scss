@@ -216,17 +216,12 @@
 			}
 		}
 	}
-
-	@media screen and (max-width: 875px) {
-		width: 100vw;
-		padding: 0 5vw;
-	}
 }
 
 #menuIcon {
 	position: absolute;
 	top: 28px;
-	right: 5vw;
+	right: 2.5vw;
 	z-index: 5000;
 	background: none;
 	border: none;
