@@ -1,6 +1,16 @@
 import { $primaryblack, $primarywhite } from "@lib/Colors";
 import styled from "styled-components";
 
+const Background = styled.div`
+	position: absolute;
+	width: 100vw;
+	height: 100%;
+	background-color: ${$primaryblack};
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+`
+
 export default styled.main`
 	background-color: ${$primaryblack};
 	display: grid;

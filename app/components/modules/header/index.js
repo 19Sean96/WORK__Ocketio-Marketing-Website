@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "@context/app";
 import Menu from "./MobileMenuToggle";
 import Nav from "./Nav";
-import Logo from "@elements/logo/Logo.styled"
-import StyledHeader from './Header.styled'
+import Logo from "@elements/logo/Logo.styled";
+import StyledHeader from "./Header.styled";
+import Compass from "@modules/blog/Compass";
 
 const Header = () => {
 	const [menuOpen, toggleMenuOpen] = useState(false);
@@ -51,6 +52,7 @@ const Header = () => {
 					<div className="decor--angle__homepage decor"></div>
 				)}
 				<header className="header">
+					{router.pathname.includes("blog") && <Compass />}
 					<div className="header--logo">
 						<Link href="/">
 							<a>

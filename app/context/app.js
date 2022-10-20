@@ -24,7 +24,12 @@ export function AppWrapper({ children }) {
 		"/pricing",
 	];
 
-	const footerDarkModeURLs = ["/", "/features", "/blog", "/blog/[category]"];
+	const footerDarkModeURLs = [
+		"/", 
+		"/features", 
+		"/blog", 
+		"/blog/[...slug]"
+	];
 
 	useEffect(() => {
 		setWindowSize({

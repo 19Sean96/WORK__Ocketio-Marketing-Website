@@ -1,11 +1,15 @@
 import Head from "@head/Blog";
 import Body from "@layouts/blog";
 import axios from "axios";
+import { useBlogContext } from "@context/blog";
+import { useEffect } from "react";
 export default function Blog({ blog_posts }) {
+	const { setBlogs } = useBlogContext();
+	useEffect(() => setBlogs(blog_posts), [blog_posts]);
 	return (
 		<>
 			<Head />
-			<Body blog_posts={blog_posts} />
+			<Body />
 		</>
 	);
 }
