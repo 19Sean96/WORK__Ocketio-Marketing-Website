@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import { ThemeProvider } from "styled-components";
 import {
 	GTM_ID,
 	pageview,
@@ -9,6 +8,7 @@ import {
 	gtmVirtualPageView,
 } from "@lib/gtm";
 import { AppWrapper } from "@context/app";
+import { BlogWrapper } from "@context/blog";
 import Header from "@modules/header";
 import Footer from "@modules/footer";
 import "@styles/main.scss";
@@ -39,9 +39,11 @@ function MyApp({ Component, pageProps }) {
         `}
 			</Script>
 			<AppWrapper>
-				<Header />
-				<Component {...pageProps} />
-				<Footer />
+				<BlogWrapper>
+					<Header />
+					<Component {...pageProps} />
+					<Footer />
+				</BlogWrapper>
 			</AppWrapper>
 		</>
 	);
