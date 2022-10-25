@@ -17,9 +17,9 @@ export default ({
 	const { scrollOffset, windowSize } = useAppContext();
 
 	const distanceY =
-		ref?.current?.getBoundingClientRect()?.top +
+		(ref?.current?.getBoundingClientRect()?.top +
 		scrollOffset -
-		windowSize.height / 2;
+		windowSize.height / 2) || 0;
 
 	return (
 		<article
@@ -60,8 +60,8 @@ export default ({
 					id={id}
 					className="section--body--item__image image"
 					ref={ref}
-					offset={scrollOffset}
-					distanceY={distanceY}
+					$offset={scrollOffset}
+					$distanceY={distanceY}
 				/>
 			</ScrollAnimation>
 		</article>

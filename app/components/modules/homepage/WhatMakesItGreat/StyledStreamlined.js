@@ -6,37 +6,37 @@ export default styled(StreamlinedImg)`
 
 	#user-card {
 		transform: scale(1)
-			${(props) =>
-				props.offset > 0
-					? `translate(0, calc(${(props.offset - props.distanceY) / -34}px))`
+			${({ $offset, $distanceY }) =>
+				$offset > 0
+					? `translate(0, calc(${($offset - $distanceY) / -34}px))`
 					: `translate(0,0)`};
 	}
 	#cloud-card {
 		transform: scale(1)
-			${(props) =>
-				props.offset > 0
-					? `translate(0, calc(${(props.offset - props.distanceY) / -48}px))`
+			${({ $offset, $distanceY }) =>
+				$offset > 0
+					? `translate(0, calc(${($offset - $distanceY) / -48}px))`
 					: `translate(0,0)`};
 	}
 	#phone-card {
 		transform: scale(1)
-			${(props) =>
-				props.offset > 0
-					? `translate(0, calc(${(props.offset - props.distanceY) / 75}px))`
+			${({ $offset, $distanceY }) =>
+				$offset > 0
+					? `translate(0, calc(${($offset - $distanceY) / 75}px))`
 					: `translate(0,0)`};
 	}
 	#folder-card {
 		transform: scale(1)
-			${(props) =>
-				props.offset > 0
-					? `translate(0, calc(${(props.offset - props.distanceY) / -75}px))`
+			${({ $offset, $distanceY }) =>
+				$offset > 0
+					? `translate(0, calc(${($offset - $distanceY) / -75}px))`
 					: `translate(0,0)`};
 	}
 	#browser-window {
 		transform: scale(1)
-			${(props) =>
-				props.offset > 0
-					? `translate(0, calc(${(props.offset - props.distanceY) / 68}px))`
+			${({ $offset, $distanceY }) =>
+				$offset > 0
+					? `translate(0, calc(${($offset - $distanceY) / 68}px))`
 					: `translate(0,0)`};
 	}
 `;
