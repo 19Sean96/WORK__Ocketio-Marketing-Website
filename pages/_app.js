@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter();
 
 	useEffect(() => {
-		console.log("PAGE PROPS: ", pageProps);
 		const mainDataLayer = {
 			pageTypeName: pageProps.page || null,
 			url: router.pathname,
