@@ -4,6 +4,8 @@ import { BsKey, BsListUl, BsGear, BsPhone } from "react-icons/bs";
 import { useAppContext } from "@context/app";
 import FineTunedControlImage from "@images/features/fine-tuned-control.svg";
 import Section from './index.styled'
+import SingleCircle from "@elements/decorations/SingleCircle";
+import { $secondaryblack } from "@lib/Colors";
 const FineTunedControl = () => {
 	const { isMobile } = useAppContext();
 	return (
@@ -11,7 +13,19 @@ const FineTunedControl = () => {
 			<Section
 				className="section section__with-grid all-columns"
 				id="fineTunedControlSection">
+				<div className="divider"></div>
 				<div className="bg"></div>
+				<SingleCircle 
+					styles={{
+						height: "455px",
+						width: "455px",
+						top: '0',
+						left: '0',
+						backgroundColor: $secondaryblack,
+						transform: "translate(-25vw, 0)"
+					}}
+					uniqueClass="decor-circle"
+				/>
 				<ScrollAnimation
 					animateOnce={true}
 					animateIn={isMobile ? "animate__fadeInUp" : "animate__fadeInDown"}

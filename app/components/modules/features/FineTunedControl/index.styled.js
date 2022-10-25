@@ -1,11 +1,11 @@
-import { $mint, $primaryblack, $primarywhite } from "@lib/Colors";
+import { $mint, $palemint, $primaryblack, $primarywhite } from "@lib/Colors";
 import styled from "styled-components";
 
 export default styled.section`
 	position: relative;
-	margin-top: 75px;
+	margin-top: 45px;
 	padding-top: 275px;
-
+	z-index: 0;
 	.section {
 		&--body {
 			grid-row: 2/3;
@@ -23,6 +23,17 @@ export default styled.section`
 		}
 	}
 
+	.divider {
+		position: absolute;
+		width: 100vw;
+		height: 500px;
+		background-color: ${$palemint};
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 0% 100%);
+	}
+
 	.bg {
 		position: absolute;
 		width: 100vw;
@@ -33,6 +44,20 @@ export default styled.section`
 		transform: translateX(-50%);
 		z-index: 0;
 		clip-path: polygon(0% 10vw, 100% 0%, 100% 100%, 0% 100%);
+	}
+
+	.decor-circle {
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 115px;
+			height: 115px;
+			background-color: ${$palemint};
+			transform: translate(-1.5vw, 200%);
+			border-radius: 50%;
+		}
 	}
 
 	.img-block {

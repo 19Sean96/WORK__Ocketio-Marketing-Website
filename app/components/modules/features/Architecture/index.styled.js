@@ -4,7 +4,8 @@ import {
     $gray1
 } from '@lib/Colors'
 export default styled.section`
-
+	position: relative;
+	z-index: 1;
 	align-content: flex-start;
 	align-items: flex-start;
 	margin-top: 80px;
