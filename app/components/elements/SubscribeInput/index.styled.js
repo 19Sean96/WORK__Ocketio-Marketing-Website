@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default styled.section`
 	position: relative;
 	display: flex;
-	z-index: 10;
+	z-index: 1;
 	flex-direction: column;
 	align-items: center;
 	row-gap: 43px;
@@ -13,6 +13,30 @@ export default styled.section`
 	max-width: 1150px;
 	width: 80vw;
 	grid-column: 1/13;
+
+	.emailIntake-decor {
+		&-1,
+		&-2 {
+		}
+
+		@media (max-width: 775px) {
+			&-1 {
+				transform: translate(-35vw, -35%);
+			}
+		}
+		@media (max-width: 565px) {
+			&-1 {
+				transform: translate(-15vw, -45%);
+				min-height: 150px;
+				min-width: 150px;
+			}
+		}
+		@media (max-width: 420px) {
+			&-1 {
+				transform: translate(-15vw, -60%);
+			}
+		}
+	}
 
 	.bg {
 		content: "";
@@ -29,6 +53,8 @@ export default styled.section`
 
 	.section {
 		&--heading {
+			position: relative;
+			z-index: 3;
 			max-width: 450px;
 			margin-bottom: 0;
 			display: flex;
@@ -51,6 +77,8 @@ export default styled.section`
 			flex-grow: 1;
 
 			&__wrapper {
+				position: relative;
+				z-index: 3;
 				flex-grow: 1;
 				display: flex;
 				align-items: center;

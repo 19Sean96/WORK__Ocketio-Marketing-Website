@@ -7,6 +7,8 @@ import {
 	OktaLogo,
 } from "@elements/ThirdPartyLogos";
 import Section from './index.styled'
+import SingleCircle from "@elements/decorations/SingleCircle";
+import { $bluedark } from "@lib/Colors";
 
 const ThirdPartyAuthentication = () => {
 	return (

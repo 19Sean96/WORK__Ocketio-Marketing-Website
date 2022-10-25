@@ -1,6 +1,6 @@
 import ContentWrapper from "@util/ContentWrapper";
 import SubscribeInput from "@elements/SubscribeInput";
-import Section from './index.styled'
+import Section from "./index.styled";
 
 export default () => (
 	<ContentWrapper>
@@ -12,9 +12,8 @@ export default () => (
 			style={{
 				justifyItems: "center",
 			}}>
-			<div className="decor decor__circle-1"></div>
-			<div className="decor decor__circle-2"></div>
 			<SubscribeInput />
+
 		</Section>
 	</ContentWrapper>
 );
