@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Logo from "@elements/logo/Logo.styled"
+import Logo from "@elements/logo/Logo.styled";
 import { BsLinkedin } from "react-icons/bs";
 import { useAppContext } from "@context/app";
 import StyledFooter from "./Footer.styled";
-import Nav from './nav'
+import { $primaryblack, $primarywhite } from "@lib/Colors";
+import Nav from "./nav";
 
 const Footer = () => {
 	const router = useRouter();
@@ -19,10 +20,10 @@ const Footer = () => {
 			<div className="footer--top">
 				<Link href="/">
 					<a className="footer--logo">
-						<Logo darkMode={footerDarkMode} menuOpenOnMobile={null}/>
+						<Logo $fill={footerDarkMode ? $primarywhite : $primaryblack} />
 					</a>
 				</Link>
-                <Nav />
+				<Nav />
 			</div>
 			<div
 				className="footer--bot"

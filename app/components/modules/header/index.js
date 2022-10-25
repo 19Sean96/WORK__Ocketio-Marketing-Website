@@ -7,6 +7,7 @@ import Nav from "./Nav";
 import Logo from "@elements/logo/Logo.styled";
 import StyledHeader from "./Header.styled";
 import Compass from "@modules/blog/Compass";
+import { $primaryblack, $primarywhite } from "@lib/Colors";
 
 const Header = () => {
 	const [menuOpen, toggleMenuOpen] = useState(false);
@@ -57,8 +58,11 @@ const Header = () => {
 						<Link href="/">
 							<a>
 								<Logo
-									darkMode={headerDarkMode}
-									menuOpenOnMobile={menuOpen && isMobile}
+									$fill={
+										headerDarkMode || (menuOpen && isMobile)
+											? $primarywhite
+											: $primaryblack
+									}
 								/>
 							</a>
 						</Link>
