@@ -12,6 +12,7 @@ import { BlogWrapper } from "@context/blog";
 import Header from "@modules/header";
 import Footer from "@modules/footer";
 import "@styles/main.scss";
+import Transition from "@context/Transition";
 import "animate.css";
 import TagManager from "react-gtm-module";
 
@@ -38,13 +39,15 @@ function MyApp({ Component, pageProps }) {
         })(window,document,'script','dataLayer','${process.env.GTM_TESTING}');
         `}
 			</Script>
-			<AppWrapper>
-				<BlogWrapper>
-					<Header />
-					<Component {...pageProps} />
-					<Footer />
-				</BlogWrapper>
-			</AppWrapper>
+			{/* <Transition> */}
+				<AppWrapper>
+					<BlogWrapper>
+						<Header />
+						<Component {...pageProps} />
+						<Footer />
+					</BlogWrapper>
+				</AppWrapper>
+			{/* </Transition> */}
 		</>
 	);
 }
