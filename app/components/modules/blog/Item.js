@@ -4,13 +4,12 @@ import readingTime from "reading-time";
 import StyledBlog from "./Item.styled";
 const BlogItem = ({
 	dateWritten,
-	dateUpdated,
 	title,
 	body,
 	imgId,
 	category,
 	slug,
-}) => {
+}, key) => {
 	const readStats = readingTime(body);
 	const formatDate = (date) =>
 		new Date(date).toLocaleDateString(
@@ -24,7 +23,7 @@ const BlogItem = ({
 		);
 
 	return (
-		<Link href="/blog/[...slug]" as={`/blog/${category}/${slug}`}>
+		<Link href="/blog/[...slug]" as={`/blog/${category}/${slug}`} key={key}>
 			<StyledBlog className="blog">
 				<div className="blog__top">
 					<p className="p-small blog--info">

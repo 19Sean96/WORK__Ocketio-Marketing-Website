@@ -13,8 +13,8 @@ export default ({ title, links }) => {
 				{title}
 			</h6>
 			<ul>
-				{links.map((link) => (
-					<li className="p-sm">
+				{links.map((link, i) => (
+					<li className="p-sm" key={i}>
 						<Link href={link.href}>
 							<a
 								style={{
