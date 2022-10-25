@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export default styled.div`
 	position: absolute;
+	max-width: 30vw;
+	max-height: 30vw;
+	min-height: 250px;
+	min-width: 250px;
 	height: ${({ styles }) => styles?.height || "auto"};
 	width: ${({ styles }) => styles?.height || "auto"};
 	top: ${({ styles }) => styles?.top || "unset"};
