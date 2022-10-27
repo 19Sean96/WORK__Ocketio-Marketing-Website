@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export default styled.section`
 	position: relative;
-	margin-top: 45px;
-	padding-top: 275px;
+	margin-top: -10px;
+	padding-top: 255px;
 	z-index: 0;
 	.section {
 		&--body {
@@ -16,10 +16,14 @@ export default styled.section`
 			align-items: center;
 			max-width: 95vw;
 			justify-self: center;
+			gap: 8vw;
 		}
 		&--heading {
-			color: ${$primarywhite};
 			position: relative;
+			margin-bottom: 75px;
+			* {
+				color: ${$primarywhite};
+			}
 		}
 	}
 
@@ -48,7 +52,7 @@ export default styled.section`
 
 	.decor-circle {
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 50%;
@@ -61,17 +65,16 @@ export default styled.section`
 	}
 
 	.img-block {
-		width: 82vw;
+		width: 90vw;
 		max-width: 490px;
-		min-width: 300px;
+		min-width: 400px;
 	}
 
 	.text-blocks {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: 60px;
-		margin-left: 17px;
 
 		.text-block {
 			width: calc((100% / 2) - 60px);
@@ -86,9 +89,9 @@ export default styled.section`
 			}
 
 			svg {
-				width: 40px;
+				width: 35px;
 				height: auto;
-				margin-bottom: 5px;
+				margin-bottom: 7px;
 				fill: ${$primarywhite};
 			}
 		}
