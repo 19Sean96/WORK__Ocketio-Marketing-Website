@@ -11,20 +11,13 @@ export default styled.section`
 	margin-top: 80px;
 
 	.section--heading {
-		grid-row: 3/4;
-		margin-bottom: 27px;
-
-		.p-large {
-			color: ${$primaryblack};
-			opacity: 0.75;
-			max-width: 668px;
-		}
+		margin-bottom: 65px;
 	}
 
 	.image_wrapper {
 		grid-row: 4/5;
 		grid-column: 1/13;
-		margin-bottom: 40px;
+		margin-bottom: 70px;
 		padding: 0 50px;
 
 		svg {
@@ -42,14 +35,13 @@ export default styled.section`
 	}
 
 	.text-block {
-		h6 {
+		.h4 {
 			font-weight: 700;
-			margin-bottom: 17px;
-		}
+			margin-bottom: 8px;
 
-		p {
-			color: ${$gray1};
-			opacity: 1;
+			br {
+				display: none;
+			}
 		}
 	}
 
@@ -57,21 +49,38 @@ export default styled.section`
 		margin-top: 10vw;
 	}
 
-	@media (max-width: 925px) {
+	@media (max-width: 1100px) {
+		margin-top: 0;
+
 		.text-blocks {
-			column-gap: 30px;
+			column-gap: 35px;
+			padding: 0 40px;
+		}
+	}
+
+	@media (max-width: 1020px) {
+		.text-block {
+			.h4 {
+				br {
+					display: block;
+				}
+			}
 		}
 	}
 
 	@media (max-width: 850px) {
 		.text-blocks {
 			flex-direction: column;
-			row-gap: 25px;
+			row-gap: 35px;
 		}
 
 		.text-block {
-			h6 {
-				margin-bottom: 0;
+			.h4 {
+				margin-bottom: 6px;
+
+				br {
+					display: none;
+				}
 			}
 		}
 	}

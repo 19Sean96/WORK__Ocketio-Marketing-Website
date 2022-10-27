@@ -38,7 +38,7 @@ const Architecture = () => {
 						animateIn="animate__fadeInUp"
 						duration={0.95}
 						className="text-block text-block-1">
-						<h4 className="h4 capitalize">industry-leading encryption</h4>
+						<h4 className="h4 capitalize">industry-leading <br />encryption</h4>
 						<p className="p-sm">
 							Wirewise uses the WireGuard encryption framework, a new industry
 							standard for securing tunneled traffic. With its state of the art
@@ -55,7 +55,7 @@ const Architecture = () => {
 						duration={0.8}
 						delay={175}
 						className="text-block text-block-2">
-						<h4 className="h4 capitalize">Efficient Network Control</h4>
+						<h4 className="h4 capitalize">Efficient <br />Network Control</h4>
 						<p className="p-sm">
 							For a tunnel to be established, the network gateway and its
 							devices need to know each other's private encryption keys.
@@ -72,7 +72,7 @@ const Architecture = () => {
 						duration={0.65}
 						delay={325}
 						className="text-block text-block-3">
-						<h4 className="h4 capitalize">extensible client support</h4>
+						<h4 className="h4 capitalize">extensible <br />client support</h4>
 						<p className="p-sm">
 							Do you have other devices besides Windows machines that need to
 							access your network? Good news, we're working diligently to
