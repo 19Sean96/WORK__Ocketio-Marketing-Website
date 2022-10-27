@@ -228,6 +228,8 @@ export default styled.div`
 
 		@media (max-width: 575px) {
 			margin-top: 95px;
+			padding-left: 0.5vw;
+			padding-right: 0.5vw;
 		}
 	}
 `;
