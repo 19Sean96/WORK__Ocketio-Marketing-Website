@@ -23,7 +23,7 @@ export default () => {
 					<BsWindows className="item--img" />
 					<span className="item--img--text">Windows</span>
 				</div>
-				<h6 className="h6 capitalize">managed devices</h6>
+				<h6 className="h6 capitalize">managed <br />devices</h6>
 			</ScrollAnimation>
 			<ScrollAnimation
 				animateOnce={true}
@@ -50,7 +50,7 @@ export default () => {
 						<span className="item--img--text">Android</span>
 					</div>
 				</div>
-				<h6 className="h6 capitalize">monitored devices</h6>
+				<h6 className="h6 capitalize">monitored <br />devices</h6>
 			</ScrollAnimation>
 			<ScrollAnimation
 				animateOnce={true}
@@ -63,7 +63,7 @@ export default () => {
 					<DiLinux className="item--img" />
 					<span className="item--img--text">Linux</span>
 				</div>
-				<h6 className="h6 capitalize">gateway management</h6>
+				<h6 className="h6 capitalize">gateway <br />management</h6>
 			</ScrollAnimation>
 		</article>
 	);

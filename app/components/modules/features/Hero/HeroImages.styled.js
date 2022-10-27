@@ -1,76 +1,214 @@
 import styled from "styled-components";
-export default styled.div`
-	#heroImageMain {
-		transform: scale(1)
-			${(props) => ` translate(9%, calc(0px - ${props.offset / -10 + -1}px))`};
+import ScrollAnimation from "react-animate-on-scroll";
 
-		@media (max-width: 1150px) {
+export default styled(ScrollAnimation)`
+	align-self: center;
+	position: relative;
+	z-index: 5;
+	grid-column: 7/13;
+	grid-row: 1/2;
+
+	svg {
+	}
+
+	#heroImageSubTop,
+	#heroImageSubBot,
+	#heroImageMain {
+		max-width: 360px;
+		width: 75%;
+	}
+
+	#heroImageMain {
+		transition: transform 4s cubic-bezier(0.22, 1, 0.36, 1);
+		position: relative;
+		filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.61))
+			drop-shadow(0 0px 4px rgba(0, 0, 0, 0.63))
+			drop-shadow(-4px 16px 64px rgba(0, 0, 0, 0.82));
+
+		transform: scale(1)
+			${(props) => `translate(
+				9%, 
+				${props.offset / 7.5}px
+			)`};
+
+		@media (max-width: 1375px) {
 			transform: scale(1)
-				${(props) =>
-					` translate(5%, calc(-25px - ${props.offset / -10 + -1}px))`};
+				${(props) => `translate(
+					0%,
+					${props.offset / 7.5}px
+				)`};
 		}
-		@media (max-width: 875px) {
+
+		@media (max-width: 1250px) {
 			transform: scale(1)
-				${(props) =>
-					` translate(-8%, calc(-25px - ${props.offset / -10 + -1}px))`};
+				${(props) => `translate(
+					4%,
+					${props.offset / 9}px
+				)`};
+		}
+		@media (max-width: 1100px) {
+			transform: scale(1)
+				${(props) => `translate(
+					-6vw,
+					${-25 + (props.offset / 9)}px
+				)`};
+		}
+		@media (max-width: 960px) {
+			transform: scale(1)
+				${(props) => `translate(
+					-12vw,
+					${-25 + (props.offset / 9)}px
+				)`};
+		}
+		@media (max-width: 650px) {
+			transform: scale(1.1)
+				${(props) => `translate(
+					-15vw,
+					${-5 + (props.offset / 9)}px
+				)`};
 		}
 
 		@media (max-width: 450px) {
-			transform: scale(1)
-				${(props) =>
-					` translate(-50%, calc(-25px - ${props.offset / -10 + -1}px))`};
+			transform: scale(.825)
+				${(props) => `translate(
+					-15vw,
+					${props.offset / 9}px
+				)`};
 		}
 	}
 
-	#heroImageSubTop {
-		transform: scale(1)
-			${(props) =>
-				` translate(${-(props.offset / -25)}px, calc(0px - ${
-					props.offset / -15 + -1
-				}px))`};
+	#heroImageSubTop,
+	#heroImageSubBot {
+		position: absolute;
+		filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.11))
+			drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.23))
+			drop-shadow(-16px 16px 32px rgba(0, 0, 0, 0.22));
+	}
 
-		@media (max-width: 1150px) {
+	#heroImageSubTop {
+		left: 50%;
+		top: 51.125%;
+		transition: transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+		transform: scale(1)
+			${(props) => `translate(
+				${-20 + props.offset / 17.5}px, 
+				${-20 + props.offset / 15}px
+			)`};
+
+		@media (max-width: 1250px) {
 			transform: scale(1)
-				${(props) =>
-					` translate(calc(0px + ${-(props.offset / -15)}px), calc(-25px - ${
-						props.offset / -15
-					}px))`};
+				${(props) => `translate(
+					calc(-.75vw + ${props.offset / 17.5}px), 
+					calc(-2.4vw + ${props.offset / 10}px)
+				)`};
 		}
-		@media (max-width: 875px) {
+
+		@media (max-width: 1100px) {
 			transform: scale(1)
-				${(props) =>
-					` translate(calc(35px + ${-(props.offset / -15)}px), calc(-10% - ${
-						props.offset / -15
-					}px))`};
+				${(props) => `translate(
+					calc(.5vw + ${props.offset / 17.5}px), 
+					calc(-5vw + ${props.offset / 10}px)
+				)`};
+		}
+
+		@media (max-width: 960px) {
+			transform: scale(1.05)
+				${(props) => `translate(
+					calc(-1vw + ${props.offset / 17.5}px), 
+					calc(-7.5vw + ${props.offset / 10}px)
+				)`};
+		}
+
+		@media (max-width: 650px) {
+			transform: scale(1.05)
+				${(props) => `translate(
+					${props.offset / 17.5}px, 
+					calc(-11vw + ${props.offset / 10}px)
+				)`};
 		}
 
 		@media (max-width: 450px) {
-			transform: scale(1)
-				${(props) =>
-					` translate(calc(30% + ${-(props.offset / -15)}px), calc(0% - ${
-						props.offset / -15 + -1
-					}px))`};
+			transform: scale(.825)
+				${(props) => `translate(
+					calc(-19vw + ${props.offset / 17.5}px), 
+					calc(-23vw + ${props.offset / 10}px)
+				)`};
 		}
 	}
 
 	#heroImageSubBot {
-		transform: scale(1)
-			${(props) => ` translate(0px, calc(0px - ${props.offset / -15 + -1}px))`};
+		left: 45%;
+		top: 82.5%;
+		transition: transform 3s cubic-bezier(0.22, 1, 0.36, 1);
 
-		@media (max-width: 1150px) {
+		transform: scale(1)
+			${(props) => `translate(
+				${-20 + props.offset / 17.5}px, 
+				${-20 + props.offset / 10}px
+			)`};
+
+		@media (max-width: 1250px) {
 			transform: scale(1)
-				${(props) =>
-					` translate(-25px, calc(-25px - ${props.offset / -15 + -1}px))`};
+				${(props) => `translate(
+					calc(-.75vw + ${props.offset / 17.5}px), 
+					calc(-2.4vw + ${props.offset / 8}px)
+				)`};
 		}
-		@media (max-width: 875px) {
+
+		@media (max-width: 1100px) {
 			transform: scale(1)
-				${(props) =>
-					` translate(0px, calc(-10% - ${props.offset / -15 + -1}px))`};
+				${(props) => `translate(
+					calc(-4.5vw + ${props.offset / 17.5}px), 
+					calc(-4vw + ${props.offset / 8}px)
+				)`};
+		}
+
+		@media (max-width: 960px) {
+			transform: scale(1.05)
+				${(props) => `translate(
+					calc(-5vw + ${props.offset / 17.5}px), 
+					calc(-6vw + ${props.offset / 8}px)
+				)`};
+		}
+
+		@media (max-width: 650px) {
+			transform: scale(1.05)
+				${(props) => `translate(
+					calc(-2.5vw + ${props.offset / 17.5}px), 
+					calc(-9vw + ${props.offset / 8}px)
+				)`};
 		}
 
 		@media (max-width: 450px) {
-			transform: scale(1)
-				${(props) => ` translate(0px, calc(0% - ${props.offset / -15 + -1}px))`};
+			transform: scale(.825)
+				${(props) => `translate(
+					calc(-25vw + ${props.offset / 17.5}px), 
+					calc(-28vw + ${props.offset / 10}px)
+				)`};
 		}
+	}
+
+	@media screen and (max-width: 1250px) {
+		#heroImageSubTop,
+		#heroImageSubBot,
+		#heroImageMain {
+			max-width: 340px;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		grid-row: 2/3;
+		grid-column: 4/10;
+
+		#heroImageSubTop,
+		#heroImageSubBot,
+		#heroImageMain {
+			width: 100%;
+			max-width: 380px;
+		}
+	}
+	@media screen and (max-width: 450px) {
+		grid-column: 1/13;
 	}
 `;

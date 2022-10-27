@@ -7,7 +7,7 @@ import HeroImages from "./HeroImages";
 import StyledHero from './index.styled'
 
 export default () => (
-	<StyledHero className="full-width_wrapper">
+	<StyledHero>
 		<CircleGridPattern
 			styles={{
 				top: "0",
@@ -41,7 +41,7 @@ export default () => (
 			<section className="section section__with-grid" id="features-hero">
 				<div className="bg"></div>
 
-				<div id="features-hero-message">
+				<div className="message">
 					<ScrollAnimation
 						animateOnce={true}
 						animateIn="animate__fadeInLeft"
