@@ -183,7 +183,7 @@
 				}
 			}
 
-			@media (max-width: 1020px) {
+			@media screen and (max-width: 1020px) {
 				gap: 12px;
 			}
 		}
@@ -205,7 +205,7 @@
 			}
 		}
 	}
-	@media (max-width: 1020px) {
+	@media screen and (max-width: 1020px) {
 		&--nav {
 			&--list {
 				gap: 8px;

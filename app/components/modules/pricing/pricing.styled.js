@@ -28,7 +28,7 @@ const Section = styled.section`
 				color: ${$primarywhite};
 			}
 
-			@media (max-width: 875px) {
+			@media screen and (max-width: 875px) {
 				margin-bottom: 40px;
 			}
 		}
@@ -127,17 +127,17 @@ const Section = styled.section`
 				}
 			}
 
-			@media (max-width: 1080px) {
+			@media screen and (max-width: 1080px) {
 				gap: 20px;
 			}
 
-			@media (max-width: 875px) {
+			@media screen and (max-width: 875px) {
 				flex-direction: column;
 				align-items: center;
 				row-gap: 50px;
 			}
 
-			@media (max-width: 450px) {
+			@media screen and (max-width: 450px) {
 				.price-toggle {
 					align-items: flex-start;
 					&--label {
@@ -181,12 +181,12 @@ const Section = styled.section`
 			}
 		}
 
-		@media (min-width: 2325px) {
+		@media screen and (min-width: 2325px) {
 			&--footer {
 				margin-top: 8vw;
 			}
 		}
-		@media (min-width: 3069px) {
+		@media screen and (min-width: 3069px) {
 			&--footer {
 				margin-top: 52px;
 
@@ -313,7 +313,7 @@ const StyledCard = styled(ScrollAnimation)`
 			}
 		}
 	}
-	@media (max-width: 875px) {
+	@media screen and (max-width: 875px) {
 		max-width: 600px;
 		width: 90vw;
 		min-width: 250px;
@@ -321,7 +321,7 @@ const StyledCard = styled(ScrollAnimation)`
 		padding: 57.5px 45px 65px;
 	}
 
-	@media (max-width: 625px) {
+	@media screen and (max-width: 625px) {
 		padding: 52px 40px 72px;
 		.price-card {
 			&--description {
@@ -330,7 +330,7 @@ const StyledCard = styled(ScrollAnimation)`
 			}
 		}
 	}
-	@media (max-width: 450px) {
+	@media screen and (max-width: 450px) {
 		padding: 48px 22px 42px;
 	}
 `;
@@ -366,7 +366,7 @@ const FAQSection = styled.section`
 			grid-row: 2/3;
 			grid-column: 2/12;
 
-			@media (max-width: 700px) {
+			@media screen and (max-width: 700px) {
 				grid-column: 1/13;
 			}
 		}

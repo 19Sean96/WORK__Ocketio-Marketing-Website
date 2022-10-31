@@ -34,12 +34,12 @@ const Item = styled.li`
 			}
 		}
 
-		@media (max-width: 1050px) {
+		@media screen and (max-width: 1050px) {
 			padding: 7px 0 7px 5px;
 			margin: 0 0 4px 0;
 		}
 
-		@media (max-width: 750px) {
+		@media screen and (max-width: 750px) {
 			padding: 7px;
 			font-size: 15px;
 
@@ -57,12 +57,12 @@ const Item = styled.li`
 				}
 			}
 		}
-		@media (max-width: 420px) {
+		@media screen and (max-width: 420px) {
 			margin-bottom: 2px;
 			padding: 4px;
 			font-size: 13px;
 		}
-		@media (max-width: 350px) {
+		@media screen and (max-width: 350px) {
 			margin-bottom: 2px;
 			padding: 3px;
 			font-size: 12px;
@@ -81,16 +81,16 @@ const Nav = styled.ul`
 	border: 3px solid
 		${({ isSticky }) => (isSticky ? $primarywhite : "transparent")};
 
-	@media (max-width: 1050px) {
+	@media screen and (max-width: 1050px) {
 		padding: 25px 30px 30px 25px;
 	}
-	@media (max-width: 750px) {
+	@media screen and (max-width: 750px) {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
 		padding: 27.5px 30px;
 	}
-	@media (max-width: 500px) {
+	@media screen and (max-width: 500px) {
 		justify-content: center;
 		gap: 6px;
 		padding: 16px 4px;

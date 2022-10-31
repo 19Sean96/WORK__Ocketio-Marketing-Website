@@ -112,7 +112,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1600px) {
+	@media screen and (max-width: 1600px) {
 		padding: 200px 2.5vw;
 
 		.banner {
@@ -127,7 +127,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1250px) {
+	@media screen and (max-width: 1250px) {
 		.banner {
 			&--title {
 				.h2 {
@@ -142,7 +142,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1080px) {
+	@media screen and (max-width: 1080px) {
 		padding: 225px 2.5vw 150px;
 		grid-template-rows: min-content min-content min-content;
 		row-gap: 30px;
@@ -171,7 +171,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media screen and (max-width: 900px) {
 		padding: 150px 2.5vw 150px;
 
 		.bg {
@@ -179,7 +179,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 675px) {
+	@media screen and (max-width: 675px) {
 		padding: 130px 2.5vw 150px;
 
 		.banner {
@@ -192,7 +192,7 @@ export default styled.section`
 			}
 		}
 	}
-	@media (max-width: 475px) {
+	@media screen and (max-width: 475px) {
 		padding: 125px 2.5vw;
 
 		.banner {

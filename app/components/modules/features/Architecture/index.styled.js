@@ -45,11 +45,11 @@ export default styled.section`
 		}
 	}
 
-	@media (min-width: 2160px) {
+	@media screen and (min-width: 2160px) {
 		margin-top: 10vw;
 	}
 
-	@media (max-width: 1100px) {
+	@media screen and (max-width: 1100px) {
 		margin-top: 0;
 
 		.text-blocks {
@@ -58,7 +58,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1020px) {
+	@media screen and (max-width: 1020px) {
 		.text-block {
 			.h4 {
 				br {
@@ -68,7 +68,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 850px) {
+	@media screen and (max-width: 850px) {
 
 		.image_wrapper {
 			padding: 0 2.5vw;
@@ -89,7 +89,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 525px) {
+	@media screen and (max-width: 525px) {
 
 		.section--heading {
 			margin-bottom: 25px;

@@ -68,11 +68,11 @@ export default styled.footer`
 			width: 10vw;
 			cursor: pointer;
 		}
-		@media (min-width: 2160px) {
+		@media screen and (min-width: 2160px) {
 			max-width: 1880px;
 		}
 
-		@media (max-width: 550px) {
+		@media screen and (max-width: 550px) {
 			&--top {
 				flex-direction: column;
 				gap: 32px;

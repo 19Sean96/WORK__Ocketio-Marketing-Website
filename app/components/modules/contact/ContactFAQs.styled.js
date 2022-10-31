@@ -27,7 +27,7 @@ const Section = styled.section`
 			grid-column: 2/12;
 		}
 
-		@media (max-width: 700px) {
+		@media screen and (max-width: 700px) {
 			&--body {
 				grid-column: 1/13;
 				margin: 0 5vw;

@@ -8,15 +8,15 @@ export default styled.div`
 	row-gap: 56px;
 	column-gap: 30px;
 
-	@media (max-width: 1250px) {
+	@media screen and (max-width: 1250px) {
 		grid-template-columns: 1fr;
 	}
 
-	@media (max-width: 850px) {
+	@media screen and (max-width: 850px) {
 		grid-column: 2/3;
 		row-gap: 18px;
 	}
-	@media (max-width: 750px) {
+	@media screen and (max-width: 750px) {
 		grid-column: 1/2;
 	}
 `;

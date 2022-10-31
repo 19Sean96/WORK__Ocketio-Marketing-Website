@@ -114,10 +114,10 @@ export default styled.section`
 						}
 					}
 
-					@media (max-width: 1280px) {
+					@media screen and (max-width: 1280px) {
 						height: 114%;
 					}
-					@media (max-width: 875px) {
+					@media screen and (max-width: 875px) {
 						height: 100%;
 						&--item {
 							position: relative;
@@ -183,7 +183,7 @@ export default styled.section`
 			}
 		}
 	}
-	@media (max-width: 1450px) {
+	@media screen and (max-width: 1450px) {
 		.section {
 			&--body {
 				.cta-group {
@@ -193,7 +193,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1150px) {
+	@media screen and (max-width: 1150px) {
 		.section {
 			&--body {
 				column-gap: 20px;
@@ -224,7 +224,7 @@ export default styled.section`
 			}
 		}
 	}
-	@media (max-width: 1080px) {
+	@media screen and (max-width: 1080px) {
 		margin-top: 145px;
 		.section {
 			&--heading {
@@ -239,7 +239,7 @@ export default styled.section`
 			}
 		}
 	}
-	@media (max-width: 1000px) {
+	@media screen and (max-width: 1000px) {
 		.section {
 			&--body {
 				column-gap: 10px;
@@ -278,7 +278,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 875px) {
+	@media screen and (max-width: 875px) {
 		margin-top: 100px;
 		.section {
 
@@ -359,7 +359,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		.section {
 			&--heading {
 				grid-column: 2/12;
@@ -479,7 +479,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 420px) {
+	@media screen and (max-width: 420px) {
 		.section {
 			&--body {
 				.tabs {

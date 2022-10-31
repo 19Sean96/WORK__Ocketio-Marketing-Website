@@ -125,7 +125,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 975px) {
+	@media screen and (max-width: 975px) {
 		padding-top: 150px;
 
 		.section {
@@ -168,7 +168,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 790px) {
+	@media screen and (max-width: 790px) {
 		.section {
 			&--body {
 				flex-direction: column;
@@ -198,7 +198,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		padding-top: 105px;
 		.section {
 			&--heading {

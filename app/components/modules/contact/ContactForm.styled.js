@@ -242,13 +242,13 @@ export default styled.section`
 			}
 		}
 
-		@media (max-width: 1200px) {
+		@media screen and (max-width: 1200px) {
 			&--info {
 				grid-column: 1/5;
 			}
 		}
 
-		@media (max-width: 980px) {
+		@media screen and (max-width: 980px) {
 			&--heading {
 				border-bottom: 0;
 				padding-right: 56px;
@@ -276,7 +276,7 @@ export default styled.section`
 			}
 		}
 
-		@media (max-width: 720px) {
+		@media screen and (max-width: 720px) {
 			&--heading {
 				border-right: 0;
 				padding-right: 0;
@@ -320,7 +320,7 @@ export default styled.section`
 			}
 		}
 
-		@media (max-width: 475px) {
+		@media screen and (max-width: 475px) {
 			&--heading {
 				padding-top: 0;
 
@@ -385,7 +385,7 @@ export default styled.section`
 		}
 	}
 
-	@media (min-width: 1920px) {
+	@media screen and (min-width: 1920px) {
 		padding-bottom: 1.9vw;
 	}
 `;

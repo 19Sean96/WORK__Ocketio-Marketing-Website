@@ -51,7 +51,7 @@ const Answer = styled.div`
 		opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
 		color: ${$primarywhite};
 	}
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		p {
 			margin-top: 8px;
 		}
@@ -68,7 +68,7 @@ const Item = styled.article`
 	padding: 32px 34px;
 	overflow: hidden;
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		padding: 22px 28px;
 	}
 `;

@@ -49,13 +49,13 @@ export default styled.main`
 			gap: 20px;
 		}
 
-		@media (max-width: 850px) {
+		@media screen and (max-width: 850px) {
 			&--body {
 				grid-template-columns: 200px 1fr;
 			}
 		}
 
-		@media (max-width: 750px) {
+		@media screen and (max-width: 750px) {
 			&--body {
 				grid-template-columns: 1fr;
 				grid-template-rows: min-content auto;

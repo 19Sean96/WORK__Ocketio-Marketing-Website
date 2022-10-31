@@ -19,19 +19,19 @@ export default styled.section`
 		&-2 {
 		}
 
-		@media (max-width: 775px) {
+		@media screen and (max-width: 775px) {
 			&-1 {
 				transform: translate(-35vw, -35%);
 			}
 		}
-		@media (max-width: 565px) {
+		@media screen and (max-width: 565px) {
 			&-1 {
 				transform: translate(-15vw, -45%);
 				min-height: 150px;
 				min-width: 150px;
 			}
 		}
-		@media (max-width: 420px) {
+		@media screen and (max-width: 420px) {
 			&-1 {
 				transform: translate(-15vw, -60%);
 			}
@@ -152,7 +152,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 820px) {
+	@media screen and (max-width: 820px) {
 		padding: 85px 0px 90px;
 		width: 85vw;
 		min-width: 275px;
@@ -189,7 +189,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		padding: 75px 0;
 		margin-top: 110px;
 		width: 95vw;
@@ -209,7 +209,7 @@ export default styled.section`
 			}
 		}
 	}
-	@media (max-width: 450px) {
+	@media screen and (max-width: 450px) {
 		.section {
 			&--form {
 				&--input {

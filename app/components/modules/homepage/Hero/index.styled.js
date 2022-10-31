@@ -32,7 +32,7 @@ export default styled.div`
 				margin-top: 60px;
 			}
 
-			@media (max-width: 1250px) {
+			@media screen and (max-width: 1250px) {
 				margin-top: 6.5%;
 
 				p {
@@ -44,7 +44,7 @@ export default styled.div`
 				}
 			}
 
-			@media (max-width: 1100px) {
+			@media screen and (max-width: 1100px) {
 				grid-column: 3/11;
 				align-items: center;
 				margin-top: 0;
@@ -54,7 +54,7 @@ export default styled.div`
 				}
 			}
 
-			@media (max-width: 820px) {
+			@media screen and (max-width: 820px) {
 				grid-column: 2/12;
 
 				h1 {
@@ -71,7 +71,7 @@ export default styled.div`
 				}
 			}
 
-			@media (max-width: 575px) {
+			@media screen and (max-width: 575px) {
 				margin: 0 3.5vw;
 
 				.cta-group {
@@ -113,11 +113,11 @@ export default styled.div`
 					drop-shadow(-4px 32px 32px rgba(0, 0, 0, 0.16));
 			}
 
-			@media (max-width: 1450px) {
+			@media screen and (max-width: 1450px) {
 				height: 38vw;
 			}
 
-			@media (max-width: 1200px) {
+			@media screen and (max-width: 1200px) {
 				height: 31vw;
 
 				#heroImageMain {
@@ -142,7 +142,7 @@ export default styled.div`
 				}
 			}
 
-			@media (max-width: 1100px) {
+			@media screen and (max-width: 1100px) {
 				grid-row: 2/3;
 				grid-column: 2/12;
 				margin-left: 0;
@@ -171,7 +171,7 @@ export default styled.div`
 				}
 			}
 
-			@media (max-width: 850px) {
+			@media screen and (max-width: 850px) {
 				height: 37vw;
 
 				#heroImageMain {
@@ -196,7 +196,7 @@ export default styled.div`
 				}
 			}
 
-			@media (max-width: 575px) {
+			@media screen and (max-width: 575px) {
 				height: 40vw;
 				margin-top: 5px;
 				#heroImageMain {
@@ -222,11 +222,11 @@ export default styled.div`
 			}
 		}
 
-		@media (max-width: 1200px) {
+		@media screen and (max-width: 1200px) {
 			padding-bottom: 78px;
 		}
 
-		@media (max-width: 575px) {
+		@media screen and (max-width: 575px) {
 			margin-top: 95px;
 			padding-left: 0.5vw;
 			padding-right: 0.5vw;

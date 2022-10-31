@@ -11,11 +11,11 @@ export default styled.nav`
 	gap: 10px;
 	max-width: 100%;
 
-	@media (max-width: 850px) {
+	@media screen and (max-width: 850px) {
 		grid-column: 1/2;
 	}
 
-	@media (max-width: 750px) {
+	@media screen and (max-width: 750px) {
 		z-index: 2;
 		top: 50px;
 	}

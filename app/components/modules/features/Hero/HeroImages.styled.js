@@ -31,7 +31,7 @@ export default styled(ScrollAnimation)`
 				${props.offset / 7.5}px
 			)`};
 
-		@media (max-width: 1375px) {
+		@media screen and (max-width: 1375px) {
 			transform: scale(1)
 				${(props) => `translate(
 					0%,
@@ -39,28 +39,28 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 1250px) {
+		@media screen and (max-width: 1250px) {
 			transform: scale(1)
 				${(props) => `translate(
 					4%,
 					${props.offset / 9}px
 				)`};
 		}
-		@media (max-width: 1100px) {
+		@media screen and (max-width: 1100px) {
 			transform: scale(1)
 				${(props) => `translate(
 					-6vw,
 					${-25 + (props.offset / 9)}px
 				)`};
 		}
-		@media (max-width: 960px) {
+		@media screen and (max-width: 960px) {
 			transform: scale(1)
 				${(props) => `translate(
 					-12vw,
 					${-25 + (props.offset / 9)}px
 				)`};
 		}
-		@media (max-width: 650px) {
+		@media screen and (max-width: 650px) {
 			transform: scale(1.1)
 				${(props) => `translate(
 					-15vw,
@@ -68,7 +68,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 450px) {
+		@media screen and (max-width: 450px) {
 			transform: scale(.825)
 				${(props) => `translate(
 					-15vw,
@@ -96,7 +96,7 @@ export default styled(ScrollAnimation)`
 				${-20 + props.offset / 15}px
 			)`};
 
-		@media (max-width: 1250px) {
+		@media screen and (max-width: 1250px) {
 			transform: scale(1)
 				${(props) => `translate(
 					calc(-.75vw + ${props.offset / 17.5}px), 
@@ -104,7 +104,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 1100px) {
+		@media screen and (max-width: 1100px) {
 			transform: scale(1)
 				${(props) => `translate(
 					calc(.5vw + ${props.offset / 17.5}px), 
@@ -112,7 +112,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 960px) {
+		@media screen and (max-width: 960px) {
 			transform: scale(1.05)
 				${(props) => `translate(
 					calc(-1vw + ${props.offset / 17.5}px), 
@@ -120,7 +120,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 650px) {
+		@media screen and (max-width: 650px) {
 			transform: scale(1.05)
 				${(props) => `translate(
 					${props.offset / 17.5}px, 
@@ -128,7 +128,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 450px) {
+		@media screen and (max-width: 450px) {
 			transform: scale(.825)
 				${(props) => `translate(
 					calc(-19vw + ${props.offset / 17.5}px), 
@@ -148,7 +148,7 @@ export default styled(ScrollAnimation)`
 				${-20 + props.offset / 10}px
 			)`};
 
-		@media (max-width: 1250px) {
+		@media screen and (max-width: 1250px) {
 			transform: scale(1)
 				${(props) => `translate(
 					calc(-.75vw + ${props.offset / 17.5}px), 
@@ -156,7 +156,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 1100px) {
+		@media screen and (max-width: 1100px) {
 			transform: scale(1)
 				${(props) => `translate(
 					calc(-4.5vw + ${props.offset / 17.5}px), 
@@ -164,7 +164,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 960px) {
+		@media screen and (max-width: 960px) {
 			transform: scale(1.05)
 				${(props) => `translate(
 					calc(-5vw + ${props.offset / 17.5}px), 
@@ -172,7 +172,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 650px) {
+		@media screen and (max-width: 650px) {
 			transform: scale(1.05)
 				${(props) => `translate(
 					calc(-2.5vw + ${props.offset / 17.5}px), 
@@ -180,7 +180,7 @@ export default styled(ScrollAnimation)`
 				)`};
 		}
 
-		@media (max-width: 450px) {
+		@media screen and (max-width: 450px) {
 			transform: scale(.825)
 				${(props) => `translate(
 					calc(-25vw + ${props.offset / 17.5}px), 

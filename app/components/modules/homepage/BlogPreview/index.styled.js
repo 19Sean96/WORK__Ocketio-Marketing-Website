@@ -5,7 +5,7 @@ export default styled.section`
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	margin-top: 0;
+	margin-top: -5px;
 	padding-top: 170px;
 	padding-bottom: 45px;
 	padding: 170px 5vw 45px;
@@ -75,7 +75,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1150px) {
+	@media screen and (max-width: 1150px) {
 		.blogs {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 1fr min-content;
@@ -96,10 +96,10 @@ export default styled.section`
 			}
 		}
 	}
-	@media (max-width: 960px) {
+	@media screen and (max-width: 960px) {
 		padding-top: 95px;
 	}
-	@media (max-width: 850px) {
+	@media screen and (max-width: 850px) {
 		.blogs {
 			row-gap: 25px;
 			column-gap: 10px;
@@ -123,7 +123,7 @@ export default styled.section`
 			margin-top: 5px;
 		}
 	}
-	@media (max-width: 650px) {
+	@media screen and (max-width: 650px) {
 		.blogs {
 			&--preview {
 				padding: 20px 45px;

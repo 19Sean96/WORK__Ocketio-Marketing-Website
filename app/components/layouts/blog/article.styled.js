@@ -180,7 +180,7 @@ export default styled.section`
 				height: 100%;
 			}
 
-			@media (max-width: 1920px) {
+			@media screen and (max-width: 1920px) {
 				p {
 					font-size: 17px;
 				}
@@ -201,7 +201,7 @@ export default styled.section`
 				}
 			}
 
-			@media (max-width: 1150px) {
+			@media screen and (max-width: 1150px) {
 				p {
 					font-size: 16px;
 				}
@@ -222,10 +222,10 @@ export default styled.section`
 				}
 			}
 
-			@media (max-width: 820px) {
+			@media screen and (max-width: 820px) {
 			}
 
-			@media (max-width: 530px) {
+			@media screen and (max-width: 530px) {
 			}
 		}
 	}

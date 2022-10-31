@@ -64,7 +64,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1200px) {
+	@media screen and (max-width: 1200px) {
 		.section {
 			&--heading {
 				margin-bottom: 60px;
@@ -134,7 +134,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 975px) {
+	@media screen and (max-width: 975px) {
 		.section {
 			&--heading {
 				margin-bottom: 45px;
@@ -158,7 +158,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 790px) {
+	@media screen and (max-width: 790px) {
 		.section {
 			&--heading {
 				margin-bottom: 10px;
@@ -205,7 +205,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		.section {
 
 			&--heading {

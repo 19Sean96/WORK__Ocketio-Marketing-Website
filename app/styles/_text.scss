@@ -83,7 +83,7 @@ select option {
 	font-weight: 600;
 }
 
-@media (max-width: 1250px) {
+@media screen and (max-width: 1250px) {
 	h1.h1 {
 		@include heading(42px, 700, 120%, 0);
 	}
@@ -105,7 +105,7 @@ select option {
 	}
 }
 
-@media (max-width: 820px) {
+@media screen and (max-width: 820px) {
 	h1.h1 {
 		@include heading(37px, 700, 120%, 0);
 	}
@@ -136,7 +136,7 @@ select option {
 	}
 }
 
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
     p.p {
         &-lg {
             font-size: 15px;
@@ -147,7 +147,7 @@ select option {
     }
 }
 
-@media (max-width: 530px) {
+@media screen and (max-width: 530px) {
 	h1.h1 {
 		@include heading(32px, 700, 120%, 0);
 	}

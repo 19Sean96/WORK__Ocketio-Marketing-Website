@@ -111,11 +111,11 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1525px) {
+	@media screen and (max-width: 1525px) {
 		margin-top: 100px;
 	}
 
-	@media (max-width: 1250px) {
+	@media screen and (max-width: 1250px) {
 		.section {
 			&--body {
 				row-gap: 65px;
@@ -153,7 +153,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1100px) {
+	@media screen and (max-width: 1100px) {
 		margin-top: 80px;
 		.section {
 			&--body {
@@ -194,7 +194,22 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 820px) {
+	@media screen and (max-width: 925px) {
+		.section {
+			&--body {
+				&--item {
+					.image {
+						&__wrapper {
+							width: 550px;
+						}
+					}
+				}
+			}
+		}
+			
+	}
+
+	@media screen and (max-width: 820px) {
 		margin-top: 70px;
 
 		.section {
@@ -229,10 +244,17 @@ export default styled.section`
 							}
 						}
 
+						.text-block {
+							.p-sm {
+								max-width: 75ch;
+							}
+						}
+
 						.image__wrapper {
 							grid-row: 2/3;
 							grid-column: 1/7;
 							padding: 40px 5vw 0 2.5vw;
+							width: 60vw;
 						}
 					}
 				}
@@ -251,20 +273,9 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 650px) {
+	@media screen and (max-width: 650px) {
 		.section {
 			&--body {
-				&--item,
-				&--item.reversed {
-					.image {
-						&__wrapper {
-							grid-column: 1/13;
-							grid-row: 2/3;
-							margin-left: 0;
-						}
-					}
-				}
-
 				&--item {
 					&:not(.reversed),
 					&.reversed {
@@ -285,6 +296,7 @@ export default styled.section`
 							grid-row: 3/4;
 							grid-column: 2/11;
 							padding: 0;
+							width: 75vw;
 						}
 					}
 				}
@@ -292,7 +304,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		.section {
 			&--body {
 				&--item {
@@ -324,14 +336,14 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 420px) {
+	@media screen and (max-width: 420px) {
 		.section {
 			&--body {
 				&--item {
 					&.reversed,
 					&:not(.reversed) {
 						.image__wrapper {
-							grid-column: 1/13;
+							grid-column: 2/12;
 						}
 					}
 				}

@@ -62,7 +62,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1200px) {
+	@media screen and (max-width: 1200px) {
 		margin-top: 135px;
 		margin-bottom: 20px;
 		.section {
@@ -72,7 +72,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 960px) {
+	@media screen and (max-width: 960px) {
 		margin-top: 120px;
 		margin-bottom: 60px;
 		.section--body {
@@ -84,7 +84,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 750px) {
+	@media screen and (max-width: 750px) {
 		.section--body {
 			padding: 25px 45px;
 			justify-content: center;
@@ -96,12 +96,12 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 550px) {
+	@media screen and (max-width: 550px) {
 		margin-top: 85px;
 		margin-bottom: 50px;
 	}
 
-	@media (max-width: 425px) {
+	@media screen and (max-width: 425px) {
 		.section--body {
 			padding: 25px 15px;
 			gap: 15px;

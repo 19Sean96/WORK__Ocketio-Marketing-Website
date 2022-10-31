@@ -29,7 +29,7 @@ export default styled.aside`
 		right: 35px;
 	}
 
-	@media (max-width: 1050px) {
+	@media screen and (max-width: 1050px) {
 		input {
 			padding: 20px 25% 20px 25px;
 			font-size: 15px;
@@ -41,7 +41,7 @@ export default styled.aside`
 			height: 27.5px;
 		}
 	}
-	@media (max-width: 750px) {
+	@media screen and (max-width: 750px) {
 		width: 100%;
 
 		input {
@@ -49,7 +49,7 @@ export default styled.aside`
 			padding: 27.5px 75px 27.5px 30px;
 		}
 	}
-    @media (max-width: 500px) {
+    @media screen and (max-width: 500px) {
 		input {
 			padding: 20px 70px 20px 20px;
 		}

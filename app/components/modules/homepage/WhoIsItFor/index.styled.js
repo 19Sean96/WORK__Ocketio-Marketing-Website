@@ -94,7 +94,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 1200px) {
+	@media screen and (max-width: 1200px) {
 		padding-top: 200px;
 		padding-bottom: 31px;
 
@@ -105,7 +105,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 960px) {
+	@media screen and (max-width: 960px) {
 		padding-top: 180px;
 
 		.section {
@@ -168,7 +168,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 700px) {
+	@media screen and (max-width: 700px) {
 		padding-top: 150px;
 		.card {
 			&--text {
@@ -177,7 +177,7 @@ export default styled.section`
 		}
 	}
 
-	@media (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		.card {
 			width: 100%;
 			min-width: 0px;
