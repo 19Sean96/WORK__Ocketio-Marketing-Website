@@ -58,7 +58,10 @@ export default styled.section`
 			margin-bottom: 0;
 			margin: 25px 0 35px;
 			text-align: center;
-			color: ${$primarywhite};
+
+			* {
+				color: ${$primarywhite};
+			}
 		}
 		h3 {
 			margin-bottom: 16px;
@@ -121,8 +124,8 @@ export default styled.section`
 			padding: 20px 25px 42px;
 			.btn {
 				width: 100%;
-				justify-self: flex-start;
 				margin-left: 0;
+				max-width: 400px;
 				min-width: 300px;
 			}
 
@@ -180,6 +183,7 @@ export default styled.section`
 			min-width: 0px;
 			padding-left: 0;
 			padding-right: 0;
+			padding: 0;
 			&:nth-child(odd),
 			&:nth-child(even) {
 				flex-direction: column;
@@ -187,9 +191,18 @@ export default styled.section`
 				.card {
 					&--text {
 						max-width: 100%;
+						margin: 12px 0 30px;
 						* {
 							text-align: center;
 						}
+						.h3 {
+							margin-bottom: 9px;
+						}
+					}
+
+					&--icon {
+						width: 80px;
+						height: 80px;
 					}
 				}
 			}
@@ -203,7 +216,7 @@ export default styled.section`
 			}
 
 			&__wrapper {
-				gap: 18px;
+				gap: 27px;
 			}
 
 			&__image {
@@ -218,6 +231,12 @@ export default styled.section`
 				.card__image__wrapper {
 					padding-left: 0vw;
 				}
+			}
+		}
+
+		.section {
+			&--heading {
+				grid-column: 2/12;
 			}
 		}
 	}

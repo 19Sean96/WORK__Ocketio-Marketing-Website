@@ -96,6 +96,9 @@ export default styled.section`
 			}
 		}
 	}
+	@media (max-width: 960px) {
+		padding-top: 95px;
+	}
 	@media (max-width: 850px) {
 		.blogs {
 			row-gap: 25px;
@@ -114,6 +117,10 @@ export default styled.section`
 					grid-row: 2/3;
 				}
 			}
+		}
+
+		#blogPosts {
+			margin-top: 5px;
 		}
 	}
 	@media (max-width: 650px) {
