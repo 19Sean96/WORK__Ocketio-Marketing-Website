@@ -15,7 +15,7 @@ export default styled.footer`
 		left: 50%;
 		z-index: 0;
 		transform: translate(-50%);
-		width: 100vw;
+		width: 101vw;
 		height: 100%;
 		background: ${({ darkMode }) => (darkMode ? $primaryblack : $primarywhite)};
 		pointer-events: none;
