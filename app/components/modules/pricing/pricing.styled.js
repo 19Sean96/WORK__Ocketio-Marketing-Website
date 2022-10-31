@@ -16,15 +16,16 @@ const Section = styled.section`
 
 	.section {
 		&--heading {
-			color: ${$primarywhite};
 			margin-bottom: 65px;
 
-			h1 {
+			.h1 {
 				font-weight: 600;
 				margin-bottom: 6px;
+				color: ${$primarywhite};
 			}
-			p {
+			.p-lg {
 				max-width: 500px;
+				color: ${$primarywhite};
 			}
 
 			@media (max-width: 875px) {
@@ -305,28 +306,32 @@ const StyledCard = styled(ScrollAnimation)`
 					min-height: 22px;
 				}
 
-				p {
+				.p-sm {
 					font-size: 15px;
+					color: ${$primarywhite};
 				}
 			}
 		}
+	}
+	@media (max-width: 875px) {
+		max-width: 600px;
+		width: 90vw;
+		min-width: 250px;
 
-		@media (max-width: 875px) {
-			max-width: 600px;
-			width: 90vw;
-			min-width: 250px;
-		}
+		padding: 57.5px 45px 65px;
+	}
 
-		@media (max-width: 625px) {
-			padding: 52px 40px 72px;
+	@media (max-width: 625px) {
+		padding: 52px 40px 72px;
+		.price-card {
 			&--description {
 				width: min(300px, 90%);
 				margin: 0 auto;
 			}
 		}
-		@media (max-width: 450px) {
-			padding: 48px 22px 42px;
-		}
+	}
+	@media (max-width: 450px) {
+		padding: 48px 22px 42px;
 	}
 `;
 
