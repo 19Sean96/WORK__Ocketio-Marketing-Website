@@ -1,4 +1,11 @@
-import { $bluelight, $gray4, $primaryblack, $primarywhite, $secondaryblack, $secondarywhite } from "@lib/Colors";
+import {
+	$bluelight,
+	$gray4,
+	$primaryblack,
+	$primarywhite,
+	$secondaryblack,
+	$secondarywhite,
+} from "@lib/Colors";
 import styled from "styled-components";
 
 export default styled.section`
@@ -60,12 +67,11 @@ export default styled.section`
 						margin: 0;
 					}
 					&--text {
-						h6 {
-							font-weight: 500;
+						.h6 {
 							font-size: 20px;
+							font-weight: 500;
 						}
-						p {
-							font-size: 16px;
+						.p-sm {
 							color: ${$secondaryblack};
 						}
 					}
@@ -78,7 +84,6 @@ export default styled.section`
 
 			.display {
 				position: relative;
-				transform: translateX(16px);
 				flex-grow: 1;
 				align-self: stretch;
 				padding: 0 3px;
@@ -167,20 +172,32 @@ export default styled.section`
 					background-color: ${$bluelight};
 				}
 			}
-
-			@media (max-width: 1450px) {
+			&--heading {
+				margin-bottom: 63px;
+				.p-large {
+					color: ${$primaryblack};
+					opacity: 1;
+					max-width: 872px;
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media (max-width: 1450px) {
+		.section {
+			&--body {
 				.cta-group {
 					margin-top: 65px;
 				}
 			}
+		}
+	}
 
-			@media (max-width: 1150px) {
-				column-gap: 0px;
+	@media (max-width: 1150px) {
+		.section {
+			&--body {
+				column-gap: 20px;
 				.tabs {
-					&__wrapper {
-						width: 45%;
-					}
-
 					.tab {
 						padding: 17px 18px 17px 15px;
 						gap: 12px;
@@ -195,46 +212,59 @@ export default styled.section`
 						}
 
 						&--text {
-							h6 {
+							.h6 {
 								font-size: 18px;
 							}
-
-							p {
+							.p-sm {
 								font-size: 14px;
 							}
 						}
 					}
 				}
 			}
-			@media (max-width: 1080px) {
+		}
+	}
+	@media (max-width: 1080px) {
+		margin-top: 145px;
+		.section {
+			&--heading {
+				grid-column: 3/11;
+			}
+			&--body {
 				.tabs {
 					&__wrapper {
-						width: 32%;
+						width: 40%;
 					}
-				}
-				.cta-group {
-					justify-content: center;
-					margin-top: 5px;
 				}
 			}
-			@media (max-width: 1000px) {
+		}
+	}
+	@media (max-width: 1000px) {
+		.section {
+			&--body {
+				column-gap: 10px;
 				.tabs {
 					margin-left: 0;
-					&__wrapper {
-						width: 37%;
-					}
 
 					.tab {
-						padding: 16px 15px 16px 10px;
+						padding: 15px 10px 15px 9px;
 						gap: 8px;
 
 						&--text {
-							h6 {
+							.h6 {
 								font-size: 17px;
 							}
-
-							p {
+							.p-sm {
 								font-size: 13px;
+							}
+						}
+
+						&--num {
+							font-size: 15px;
+
+							&::before {
+								width: 37px;
+								height: 37px;
 							}
 						}
 					}
@@ -245,19 +275,25 @@ export default styled.section`
 					min-height: 400px;
 				}
 			}
+		}
+	}
 
-			@media (max-width: 875px) {
+	@media (max-width: 875px) {
+		margin-top: 100px;
+		.section {
+
+			&--body {
 				justify-content: center;
 				align-items: center;
 				position: relative;
 				flex-direction: column;
-				margin-bottom: -75px;
 
 				.tabs {
 					position: relative;
 					z-index: 5;
 					justify-content: center;
 					width: 100%;
+
 					&__wrapper {
 						width: calc((100vw / 12) * 8);
 						min-width: 280px;
@@ -283,6 +319,7 @@ export default styled.section`
 				.display {
 					margin-inline: auto;
 					margin-top: 85px;
+					margin-bottom: 35px;
 					width: 75vw;
 					min-height: 290px;
 					min-width: 290px;
@@ -319,11 +356,16 @@ export default styled.section`
 					align-items: center;
 				}
 			}
+		}
+	}
 
-			@media (max-width: 575px) {
+	@media (max-width: 575px) {
+		.section {
+			&--heading {
+				grid-column: 2/12;
+			}
+			&--body {
 				.tabs {
-					width: 100%;
-
 					&__wrapper {
 						width: 95%;
 						order: 2;
@@ -434,8 +476,12 @@ export default styled.section`
 					}
 				}
 			}
+		}
+	}
 
-			@media (max-width: 420px) {
+	@media (max-width: 420px) {
+		.section {
+			&--body {
 				.tabs {
 					&__wrapper {
 						width: 85vw;
@@ -462,13 +508,17 @@ export default styled.section`
 				}
 			}
 		}
-		&--heading {
-			margin-bottom: 63px;
-			.p-large {
-				color: ${$primaryblack};
-				opacity: 1;
-				max-width: 872px;
-				width: 100%;
+	}
+
+	@media screen and (max-width: 375px) {
+		.section {
+			&--heading {
+				grid-column: 1/13;
+			}
+			&--body {
+				.display {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

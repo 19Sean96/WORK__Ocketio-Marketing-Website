@@ -40,8 +40,8 @@ export default styled.section`
 
 	.bg {
 		position: absolute;
-		width: 100vw;
-		height: 100%;
+		width: 101vw;
+		height: 105%;
 		background-color: ${$primaryblack};
 		top: 0;
 		left: 50%;
@@ -77,7 +77,7 @@ export default styled.section`
 		gap: 60px;
 
 		.text-block {
-			width: calc((100% / 2) - 60px);
+			width: calc(50% - 30px);
 
 			.h5 {
 				color: ${$mint};
@@ -96,26 +96,74 @@ export default styled.section`
 			}
 		}
 	}
+
+	@media screen and (max-width: 1650px) {
+		.decor-circle {
+			width: 400px;
+			height: 400px;
+			transform: translate(-25vw, -9vw) rotate(-55deg);
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		padding-top: 200px;
+	}
+
+	@media screen and (max-width: 1100px) {
+		.section {
+			&--body {
+				gap: 4vw;
+			}
+		}
+
+		.text-blocks {
+			gap: 40px;
+
+			.text-block {
+				width: calc(50% - 20px);
+			}
+		}
+	}
+
 	@media (max-width: 975px) {
+		padding-top: 150px;
+
+		.section {
+			&--heading {
+				grid-column: 3/11;
+			}
+		}
 		.img-block {
 			min-width: 400px;
-			max-width: unset;
 			width: 400px;
 		}
 
 		.text-blocks {
-			padding-left: 25px;
-			padding-right: 25px;
-			grid-column: 6/13;
-			gap: 20px;
+			gap: 35px;
 
 			.text-block {
 				width: 100%;
 
 				svg {
-					width: 33.3px;
-					margin-bottom: 4px;
+					width: 30px;
+					margin-bottom: 1px;
 				}
+				.h5 {
+					margin-bottom: 3px;
+				}
+			}
+		}
+
+		.decor-circle {
+			max-width: 20vw;
+			max-height: 20vw;
+			width: 300px;
+			height: 300px;
+			transform: translate(-5vw, 35vw) rotate(180deg);
+
+			&::after {
+				width: 75px;
+				height: 75px;
 			}
 		}
 	}
@@ -131,17 +179,32 @@ export default styled.section`
 			}
 		}
 
+		.img-block {
+			width: 80vw;
+			min-width: 350px;
+		}
+
 		.text-blocks {
 			margin-left: 0;
 			margin-top: 22px;
+			justify-content: center;
 
 			.text-block {
-				width: calc((100% / 2) - 60px);
+				width: calc(50% - 20px);
 			}
+		}
+		.decor-circle {
+			transform: translate(-5vw, 55vw) rotate(175deg);
 		}
 	}
 
 	@media (max-width: 575px) {
+		padding-top: 105px;
+		.section {
+			&--heading {
+				grid-column: 2/12;
+			}
+		}
 		.img-block {
 			grid-column: 2/12;
 			min-width: 0;
@@ -156,18 +219,25 @@ export default styled.section`
 
 			.text-block {
 				position: relative;
-				width: calc(100% - 60px);
-			}
+				width: 90%;
 
-			svg {
-				position: absolute;
-				top: 50%;
-				transform: translate(-50%, -50%);
-			}
+				.h5,
+				.p-sm {
+					padding-left: 35px;
+				}
 
-			.h6,
-			.p-small {
-				margin-left: 30px;
+				svg {
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.decor-circle {
+
+			&::after {
+				transform: translate(-80vw, 300%);
 			}
 		}
 	}

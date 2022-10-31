@@ -13,7 +13,7 @@ export default styled.section`
 	.bg {
 		position: absolute;
 		width: 100vw;
-		height: 100%;
+		height: 105%;
 		background-color: ${$primaryblack};
 		top: 0;
 		left: 50%;

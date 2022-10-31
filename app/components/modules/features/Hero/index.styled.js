@@ -423,6 +423,29 @@ export default styled.div`
 			.message {
 				margin-bottom: 50px;
 			}
+
+			.banner {
+				padding: 22px 20px;
+				.item {
+					gap: 15px;
+				}
+				.item-2 {
+					.item--img__wrapper {
+						gap: 11px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 350px) {
+			.banner {
+				.item {
+					padding: 8px;
+
+					.h6 {
+						width: 95px;
+					}
+				}
+			}
 		}
 	}
 
@@ -435,6 +458,12 @@ export default styled.div`
 	@media screen and (max-width: 1250px) {
 		.features-decor__single-circle {
 			transform: translate(15%, 20%);
+		}
+	}
+
+	@media screen and (max-width: 860px) {
+		.features-decor__single-circle {
+			transform: translate(15%, -20%);
 		}
 	}
 

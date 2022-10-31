@@ -9,7 +9,7 @@ export default styled.section`
 	align-content: flex-start;
 	align-items: flex-start;
 	margin-top: 80px;
-
+	padding-bottom: 35px;
 	.section--heading {
 		margin-bottom: 65px;
 	}
@@ -69,6 +69,10 @@ export default styled.section`
 	}
 
 	@media (max-width: 850px) {
+
+		.image_wrapper {
+			padding: 0 2.5vw;
+		}
 		.text-blocks {
 			flex-direction: column;
 			row-gap: 35px;
@@ -86,6 +90,14 @@ export default styled.section`
 	}
 
 	@media (max-width: 525px) {
+
+		.section--heading {
+			margin-bottom: 25px;
+		}
+
+		.image_wrapper {
+			margin-bottom: 35px;
+		}
 		.text-blocks {
 			padding: 20px 20px 0;
 		}

@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 export default styled.section`
 	.section {
+		&--heading {
+			margin-bottom: 75px;
+		}
 		&--body {
 			grid-row: 2/3;
 			grid-column: 1/13;
 			display: flex;
-			column-gap: 68px;
-			row-gap: 60px;
+			gap: 60px;
 			max-width: 95vw;
 			justify-self: center;
 
@@ -17,7 +19,7 @@ export default styled.section`
 				margin-top: 25px;
 				display: flex;
 				flex-direction: column;
-				justify-content: flex-start;
+				justify-content: space-between;
 				gap: 60px;
 			}
 
@@ -25,9 +27,8 @@ export default styled.section`
 				display: grid;
 				grid-template-rows: min-content 1fr;
 				grid-template-columns: min-content 1fr;
-				align-items: center;
-				column-gap: 9px;
-				row-gap: 0px;
+				align-items: flex-end;
+				gap: 8px;
 
 				.h5 {
 					grid-row: 1/2;
@@ -35,6 +36,9 @@ export default styled.section`
 					width: 100%;
 					align-items: center;
 					color: ${$bluemid};
+					br {
+						display: none;
+					}
 				}
 				p {
 					grid-row: 2/3;
@@ -49,7 +53,6 @@ export default styled.section`
 					height: auto;
 					transform-origin: 50% 100%;
 					transform: translate(-6px, 6px);
-					align-self: flex-start;
 				}
 			}
 
@@ -58,147 +61,167 @@ export default styled.section`
 				min-width: 500px;
 				max-width: 650px;
 			}
+		}
+	}
 
-			@media (max-width: 1200px) {
-				justify-content: center;
-				align-items: center;
-				display: grid;
-				grid-template-columns: 1fr 1fr min-content;
-				grid-template-rows: 1fr;
-				column-gap: 30px;
+	@media (max-width: 1200px) {
+		.section {
+			&--heading {
+				margin-bottom: 60px;
+			}
+			&--body {
+				gap: 30px;
+				align-items: stretch;
+
+				.text-blocks {
+					margin-top: 0;
+					gap: 45px;
+				}
+				.text-block {
+					.h5 {
+						br {
+							display: block;
+						}
+					}
+					svg {
+						transform: translate(-6px, 0);
+					}
+				}
 				.image__wrapper {
-					grid-column: 3/4;
-					align-self: center;
-					margin-left: 20px;
 					min-width: 420px;
 				}
-				.text-blocks {
-					order: 1;
-					height: 100%;
-					display: grid;
-					grid-template-columns: 1fr;
-					grid-template-rows: 1fr 1fr;
-
-					&_1 {
-						grid-column: 1/2;
-						grid-row: 1/2;
-					}
-
-					&_2 {
-						grid-column: 2/3;
-						grid-row: 1/2;
-					}
-				}
-
-				.text-block {
-					grid-template-columns: 1fr;
-					grid-template-rows: min-content min-content 1fr;
-					svg {
-						grid-column: 1/2;
-						grid-row: 1/2;
-						transform: unset;
-						margin-bottom: 9px;
-					}
-
-					h6 {
-						grid-column: 1/2;
-						grid-row: 2/3;
-					}
-					p {
-						grid-column: 1/2;
-						grid-row: 3/4;
-					}
-				}
 			}
+		}
+	}
 
-			@media (max-width: 975px) {
-				column-gap: 3vw;
-				row-gap: 20px;
+	@media screen and (max-width: 1100px) {
+		.section {
+			&--heading {
+				grid-column: 3/11;
+			}
+			&--body {
 				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: auto;
-
-				.text-blocks {
-					gap: 20px;
-					margin-top: 0;
-					padding: 0 25px;
-					&_1 {
-						grid-column: 1/2;
-						grid-row: 1/2;
-					}
-
-					&_2 {
-						grid-column: 1/2;
-						grid-row: 2/3;
-					}
-
-					.h6 {
-						margin-bottom: -7px;
-					}
-				}
-
-				.text-block {
-					column-gap: 14px;
-					row-gap: 7px;
-					grid-column: 1/2;
-
-					svg {
-						width: 33.3px;
-						align-self: flex-end;
-						margin-bottom: 0;
-					}
-				}
-
-				.image__wrapper {
-					grid-row: 1/5;
-					grid-column: 2/3;
-					align-self: center;
-				}
-			}
-
-			@media (max-width: 790px) {
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: min-content 1fr;
-				justify-content: center;
+				grid-column: 1fr 1fr;
+				grid-row: 1fr 1fr;
 				justify-items: center;
-				column-gap: 20px;
 				.text-blocks {
-					width: calc(100% - 60px);
-					padding: 0;
 					grid-row: 2/3;
 
 					&_1 {
-						padding-left: 25px;
 						grid-column: 1/2;
-						justify-self: flex-end;
+						margin-left: 5vw;
+					}
+					&_2 {
+						grid-column: 2/3;
+						margin-right: 5vw;
+					}
+				}
+				.text-block {
+					.h5 {
+						br {
+							display: none;
+						}
+					}
+					svg {
+						transform: translate(-6px, 6px);
+					}
+				}
+				.image__wrapper {
+					grid-column: 1/3;
+					grid-row: 1/2;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 975px) {
+		.section {
+			&--heading {
+				margin-bottom: 45px;
+			}
+			&--body {
+				row-gap: 15px;
+
+				.text-blocks {
+					gap: 28px;
+				}
+
+				.text-block {
+					.p-sm {
+						margin-top: -6px;
+					}
+					svg {
+						width: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 790px) {
+		.section {
+			&--heading {
+				margin-bottom: 10px;
+			}
+			&--body {
+				.text-blocks {
+					&_1 {
+						margin-left: 0;
 					}
 
 					&_2 {
-						padding-right: 25px;
-						grid-column: 2/3;
-						justify-self: flex-start;
+						margin-right: 0;
 					}
 				}
 
 				.image__wrapper {
-					grid-row: 1/2;
-					grid-column: 1/3;
-					margin: 0;
+					width: 80vw;
+					min-width: 350px;
 				}
 			}
+		}
+	}
 
-			@media (max-width: 575px) {
-				row-gap: 20px;
-				grid-template-rows: min-content min-content min-content;
+	@media screen and (max-width: 630px) {
+		.section {
 
+			&--body {
+
+				.text-block {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+					gap: 4px;
+					svg {
+						transform: unset;
+					}
+
+					.p-sm {
+						margin-top: -1px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		.section {
+
+			&--heading {
+				grid-column: 2/12;
+			}
+			&--body {
+				gap: 25px;
 				.text-blocks {
 					width: 100%;
-					grid-column: 1/3;
 					padding: 0 0 0 25px;
 					justify-content: center;
 					justify-self: center;
 					max-width: 95vw;
 					grid-template-rows: min-content min-content;
+					grid-column: 1/3;
+					gap: 25px;
 
 					&_1 {
 						grid-row: 2/3;
@@ -212,22 +235,9 @@ export default styled.section`
 				.text-block {
 					width: calc(100% - 40px);
 					max-width: 95vw;
-					grid-template-columns: min-content 1fr;
-					grid-template-rows: min-content 1fr;
-					margin-left: -1.75vw;
 
-					svg {
-						grid-column: 1/2;
-						grid-row: 1/3;
-						align-self: center;
-					}
-					h6 {
-						grid-column: 2/3;
-						grid-row: 1/2;
-					}
-					p {
-						grid-column: 2/3;
-						grid-row: 2/3;
+					.p-sm {
+						max-width: 60ch;
 					}
 				}
 
@@ -236,6 +246,14 @@ export default styled.section`
 					width: 500px;
 					max-width: 90vw;
 				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.section {
+			&--heading {
+				grid-column: 1/13;
 			}
 		}
 	}

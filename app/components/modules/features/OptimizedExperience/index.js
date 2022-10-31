@@ -1,14 +1,9 @@
 import ScrollAnimation from "react-animate-on-scroll";
 import ContentWrapper from "@util/ContentWrapper";
-import {
-	BsCloud,
-	BsHddStack,
-	BsWindow,
-	BsClock,
-} from "react-icons/bs";
+import { BsCloud, BsHddStack, BsWindow, BsClock } from "react-icons/bs";
 import { useAppContext } from "@context/app";
 import OptimizedExperienceImage from "@images/features/optimized-experience.svg";
-import Section from './index.styled'
+import Section from "./index.styled";
 const OptimizedExperience = () => {
 	const { isMobile } = useAppContext();
 
@@ -38,7 +33,10 @@ const OptimizedExperience = () => {
 							duration={1.2}
 							className="text-block text-block_1">
 							<BsCloud />
-							<h5 className="h5 capitalize">Cloud-based admin console</h5>
+							<h5 className="h5 capitalize">
+								Cloud-based <br />
+								admin console
+							</h5>
 							<p className="p-sm">
 								Manage core configuration and device permissions from a clean
 								web user interface
@@ -51,7 +49,10 @@ const OptimizedExperience = () => {
 							delay={300}
 							className="text-block text-block_2">
 							<BsHddStack />
-							<h5 className="h5 capitalize">Minimal on-prem footprint</h5>
+							<h5 className="h5 capitalize">
+								Minimal <br />
+								on-prem footprint
+							</h5>
 							<p className="p-sm">
 								Skip extra hardware and third-party applications for easier
 								training and tighter compliance
@@ -73,7 +74,10 @@ const OptimizedExperience = () => {
 							delay={600}
 							className="text-block text-block_3">
 							<BsWindow />
-							<h5 className="h5 capitalize">Streamlined setup wizard</h5>
+							<h5 className="h5 capitalize">
+								Streamlined <br />
+								setup wizard
+							</h5>
 							<p className="p-sm">
 								Get started in just minutes with a guided setup process that
 								ensures nothing is missed
@@ -86,7 +90,10 @@ const OptimizedExperience = () => {
 							delay={900}
 							className="text-block text-block_4">
 							<BsClock />
-							<h5 className="h5 capitalize">Always On Connection</h5>
+							<h5 className="h5 capitalize">
+								Always On <br />
+								Connection
+							</h5>
 							<p className="p-sm">
 								An uninterrupted conntection guarantees that your team members
 								connect seamlessly every time
@@ -99,4 +106,4 @@ const OptimizedExperience = () => {
 	);
 };
 
-export default OptimizedExperience
+export default OptimizedExperience;

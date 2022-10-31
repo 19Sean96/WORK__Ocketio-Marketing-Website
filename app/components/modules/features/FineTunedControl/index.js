@@ -22,7 +22,8 @@ const FineTunedControl = () => {
 						top: '0',
 						left: '0',
 						backgroundColor: $secondaryblack,
-						transform: "translate(-25vw, 0)"
+						transform: "translate(-25vw, 0)",
+						zIndex: "0"
 					}}
 					uniqueClass="decor-circle"
 				/>
