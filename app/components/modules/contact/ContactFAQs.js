@@ -17,6 +17,7 @@ export default () => (
 				backgroundColor: "#88E4C3",
 			}}
 			withRing={false}
+			uniqueClass="decor-circle-2"
 		/>
 		<SingleCircle
 			styles={{
@@ -28,6 +29,7 @@ export default () => (
 				backgroundColor: "#88E4C3",
 			}}
 			withRing={false}
+			uniqueClass="decor-circle-3"
 		/>
 		<Section
 			className=" section section__with-grid all-columns"

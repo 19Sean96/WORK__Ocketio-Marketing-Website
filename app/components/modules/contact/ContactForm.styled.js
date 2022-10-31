@@ -14,7 +14,7 @@ export default styled.section`
 		top: 0;
 		transform: translate(-50%, 5px);
 		z-index: 0;
-		width: 100vw;
+		width: 101vw;
 		height: 100%;
 		background-color: ${$primaryblack};
 		clip-path: polygon(0% 76%, 100% 30%, 100% 100%, 0% 100%);

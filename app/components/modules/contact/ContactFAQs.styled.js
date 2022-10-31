@@ -30,6 +30,7 @@ const Section = styled.section`
 		@media (max-width: 700px) {
 			&--body {
 				grid-column: 1/13;
+				margin: 0 5vw;
 			}
 		}
 	}
@@ -41,7 +42,7 @@ const Background = styled.div`
 	top: 0;
 	transform: translate(-50%, 0);
 	z-index: 0;
-	width: 100vw;
+	width: 101vw;
 	height: 100%;
 	background-color: ${$primaryblack};
 	clip-path: polygon(0% 0%, 100% 0%, 100% 580px, 0% 710px);

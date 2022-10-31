@@ -79,6 +79,7 @@ export default () => {
 					ringSize: "132.5%",
 				}}
 				withRing
+				uniqueClass="decor-circle-1"
 			/>
 			<Section
 				className="section section__with-grid all-columns"
